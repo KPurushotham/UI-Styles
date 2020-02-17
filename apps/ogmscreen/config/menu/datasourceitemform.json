@@ -1,0 +1,341 @@
+{
+  "name": "datasourceitemform",
+  "saveUrl": "vdi/reportConfig/tenant/datasource/items/save",
+  "getOneUrl": "vdi/reportConfig/tenant/datasource/items/getone",
+  "validationUrl": "",
+  "externalService": "dataSourceItemService",
+  "noWorkflow": true,
+  "submitted": false,
+  "sections": [
+    {
+
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "tenantDataSourceItemId",
+              "ignoreInServiceModel": true,
+              "fieldType": "hidden"
+            },
+            {
+              "modelKey": "tenantId",
+              "title": "Tenants",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "ignoreInServiceModel": true,
+              "disabledInEditMode": false,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "hasDependants": true,
+                  "handlerName": "tenantDropdownHandler"
+                }
+              ],
+              "dataConfig": {
+                "dataUrl": "vdi/admin/tenant/all",
+                "displayKey": "tenantTitle",
+                "valueKey": "tenantId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "dataSourceId",
+              "title": "DataSource",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "ignoreInServiceModel": true,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "dataSourceDropdownHandler"
+                }
+              ],
+              "disabledInEditMode": true,
+              "dependancyConfig": [
+                {
+                  "sourceKey": "tenantId",
+                  "event": "change",
+                  "loadData": {
+                    "keyParams": {
+                      "tenantId": "tenantId"
+                    }
+                  }
+                }
+              ],
+              "dataConfig": {
+                "dataUrl": "vdi/reportConfig/datasource/all",
+                "displayKey": "dataSourceCode",
+                "valueKey": "dataSourceId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "itemValue",
+              "cssClass": "col-md-2",
+              "title": "Object Text",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "itemtext",
+              "cssClass": "col-md-2",
+              "title": "Object Description",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "dataQueryRuleId",
+              "cssClass": "col-md-2",
+              "title": "Data QueryRule Id",
+              "ignoreInServiceModel": true,
+              "fieldType": "hidden"
+            },
+            {
+              "title": "Add to Grid",
+              "fieldType": "button",
+              "handlerName": "addToGrid",
+              "ignoreInServiceModel": true,
+              "cssClass": "col-md-2 butn-cls-margntop padding-lftrht0",
+              "required": false
+            },
+            {
+              "modelKey": "hideColumn",
+              "title": "Hide Criteria Type",
+              "defaultValue": false,
+              "fieldType": "checkbox",
+              "handlerName": "hideColumnsHandler",
+              "cssClass": "selectall col-md-2 margn-top20",
+              "required": false,
+              "show": true,
+              "ignoreInServiceModel": true
+
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "criteriaType",
+              "title": "Criteria Type",
+              "cssClass": "col-md-2",
+              "fieldType": "dropdown",
+              "disabledInEditMode": false,
+              "ignoreInServiceModel": true,
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "t.meet_type_id",
+                    "value": "t.meet_type_id"
+                  },
+                  {
+                    "text": "t.loc_no",
+                    "value": "t.loc_no"
+                  },
+                  {
+                    "text": "t.loc_type_id",
+                    "value": "t.loc_type_id"
+                  },
+                  {
+                    "text": "t.host_no",
+                    "value": "t.host_no"
+                  },
+                  {
+                    "text": "t.breed_type_id",
+                    "value": "t.breed_type_id"
+                  },
+                  {
+                    "text": "t.track_no",
+                    "value": "t.track_no"
+                  },
+                  {
+                    "text": "t.zone_id",
+                    "value": "t.zone_id"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "condition",
+              "title": "Condition",
+              "cssClass": "col-md-2",
+              "fieldType": "dropdown",
+              "disabledInEditMode": false,
+              "ignoreInServiceModel": true,
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "IN",
+                    "value": "IN"
+                  },
+                  {
+                    "text": "NOT IN",
+                    "value": "NOT IN"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "value",
+              "title": "Value",
+              "cssClass": "col-md-2",
+              "fieldType": "textbox",
+              "disabledInEditMode": false,
+              "ignoreInServiceModel": true,
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "whereClause",
+              "title": "Query",
+              "fieldType": "textarea",
+              "ignoreInServiceModel": true,
+              "cssClass": "col-md-12 padding-lftrht0",
+              "disabled": false
+            },
+            {
+              "modelKey": "queryRuleCode",
+              "cssClass": "col-width-14",
+              "ignoreInServiceModel": true,
+              "title": "QueryRule Code",
+              "fieldType": "hidden"
+            }
+          ]
+        }
+
+      ]
+    },
+
+    {
+      "title": "",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "ogmData",
+              "title": "",
+              "fieldType": "grid",
+              "initLoad": true,
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "total",
+              "gridConfig": {
+                "multiSelect": true,
+                "modelKeyMap": [
+                  "tenantDataSourceItemId",
+                  "operationType",
+                  "tenantId",
+                  "dataSourceId",
+                  "dataQueryRuleId",
+                  "queryRuleCode",
+                  "itemValue",
+                  "itemtext",
+                  "whereClause",
+                  "isActive"
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "toolPanelSuppressRowGroups": true,
+                  "enableSorting": true
+                },
+                "columns": [
+                  {
+                    "field": "tenantDataSourceItemId",
+                    "tooltipField": "tenantDataSourceItemId",
+                    "hide": true
+                  },
+                  {
+                    "field": "operationType",
+                    "tooltipField": "operationType",
+                    "hide": true
+                  },
+                  {
+                    "field": "tenantId",
+                    "headerName": "Tenant",
+                    "tooltipField": "tenantId",
+                    "hide": true
+                  },
+                  {
+                    "field": "dataQueryRuleId",
+                    "headerName": "Data Query Rule Id",
+                    "tooltipField": "dataQueryRuleId",
+                    "hide": true
+                  },
+                  {
+                    "field": "queryRuleCode",
+                    "headerName": "QueryRule Code",
+                    "tooltipField": "queryRuleCode",
+                    "hide": true
+                  },
+                  {
+                    "field": "dataSourceId",
+                    "headerName": "Data Source",
+                    "tooltipField": "dataSourceId",
+                    "hide": false
+                  },
+                  {
+                    "field": "itemValue",
+                    "headerName": "Object Text",
+                    "tooltipField": "itemValue",
+                    "hide": false
+                  },
+                  {
+                    "field": "itemtext",
+                    "headerName": "Object Description",
+                    "tooltipField": "itemtext",
+                    "hide": false
+                  },
+                  {
+                    "field": "whereClause",
+                    "headerName": "Query",
+                    "tooltipField": "whereClause",
+                    "hide": false
+                  },
+                  {
+                    "field": "isActive",
+                    "headerName": "Is Active",
+                    "tooltipField": "isActive",
+                    "hide": true
+                  },
+                  {
+                    "field": "deleteId",
+                    "headerName": "Delete",
+                    "actionType": "DELETE",
+                    "actionIconClass": "fa fa-trash",
+                    "actionToggleField": "isActive",
+                    "actionModeField": "tenantDataSourceItemId",
+                    "actionToggle": {
+                      "true": "fa fa-toggle-off",
+                      "false": "fa fa-toggle-on"
+                    },
+                    "handlerName": "deleteFromGrid"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

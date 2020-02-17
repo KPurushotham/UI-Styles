@@ -1,0 +1,56 @@
+{
+  "name": "scratchingform",
+  "saveUrl": "jockeyallowance/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [{
+    "rowDivisions": [{
+      "fields": [{
+        "modelKey": "effectiveFromDate",
+        "title": " Race Date",
+        "cssClass": "col_20",
+        "fieldType": "date",
+        "disabled": false,
+        "required": true
+      },{
+        "modelKey": "jockeyAge",
+        "title": "Race Day",
+        "fieldType": "textbox",
+        "cssClass": "col_20",
+        "disabled": true,
+        "required": true
+      }, {
+        "modelKey": "jockeyAge",
+        "title": "Race Season",
+        "fieldType": "textbox",
+        "cssClass": "col_19",
+        "disabled": true,
+        "required": true
+      }]
+    }, {
+      "fields": [{
+        "modelKey": "jockeyAge",
+        "title": "Race Name",
+        "cssClass": "col_9",
+        "fieldType": "dropdown",
+        "disabled": false,
+        "required": true
+      },{
+        "modelKey": "jockeyAge",
+        "title": "Race Classification",
+        "fieldType": "dropdown",
+        "disabled": true,
+        "required": true
+      }]
+    }]
+  }, {
+    "rowDivisions": [
+      {
+        "fields": [
+          {"fieldType": "gitview"
+          }]
+      }
+    ]
+  }
+  ]
+}

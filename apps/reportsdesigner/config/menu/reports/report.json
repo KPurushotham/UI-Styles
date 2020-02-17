@@ -1,0 +1,107 @@
+{
+  "name": "report",
+  "externalService": "reportconfigService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "reportsdesigner.reports.reportform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "reportId",
+      "headerName": "Report Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "applicationId",
+      "headerName": "Application Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "reportCode",
+      "headerName": "Report Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "reportName",
+      "headerName": "Report Name",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "description",
+      "headerName": "Description",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "version",
+      "headerName": "Version",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "serviceIdParam",
+      "headerName": "Service Id Param",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "uiCriteriaFields",
+      "headerName": "UI Criteria Fields",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "dataFormatMapper",
+      "headerName": "Data Format Mapper",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "configJson",
+      "headerName": "Config Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "dataQueryRuleId",
+      "headerName": "Data Query Rule Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "storeOnRun",
+      "headerName": "Store On Run",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "allowDirectAccess",
+      "headerName": "Allow Direct Access",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+
+  ],
+  "dataUrl": "vdi/reportsdesigner/report/get/all",
+  "editScreenState": "app.reportsdesigner.reports.reportform",
+  "rowKey": {
+    "reportId": "reportId"
+  },
+  "defaultSortColumn": "reportId"
+}

@@ -1,0 +1,43 @@
+﻿{
+  "columns": [
+   {
+      "key": "creditDebitId",
+      "headerText": "Code",
+      "filterMask": "Search"
+    },
+	 {
+      "key": "frequencyName",
+      "headerText": "Frequency",
+      "filterMask": "Search"
+    },
+   {
+      "key": "effectiveFromDate",
+      "headerText": "Effective From",
+      "filterMask": "Search"
+    },
+	
+   {
+      "key": "amount",
+      "headerText": "Amount",
+      "filterMask": "Search"
+    },
+   
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/racingaccount/offseasondepositnorms/all",
+
+  "rowKey": {
+  "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

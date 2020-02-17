@@ -1,0 +1,32 @@
+{
+  "name": "ogmscreenform",
+  "saveUrl": "vdi/reportConfig/datasource/save",
+  "getOneUrl": "vdi/reportConfig/datasource/getone",
+  "validationUrl": "",
+  "externalService": "dataSourceItemService",
+  "noWorkflow": true,
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "dataSourceId",
+              "cssClass": "col-md-2",
+              "title": "Data Source ID",
+              "fieldType": "hidden"
+            },
+            {
+              "modelKey": "dataSourceCode",
+              "cssClass": "col-md-2",
+              "title": "Data Source Code",
+              "fieldType": "textbox"
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}

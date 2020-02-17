@@ -1,0 +1,43 @@
+{
+  "name": "fieldtype",
+  "externalService": "fieldtypeconfigService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "reportsdesigner.fields.fieldtypeform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "fieldTypeCode",
+      "headerName": "Field Type Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "fieldTypeName",
+      "headerName": "Field Type Name",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "fieldTypeDescription",
+      "headerName": "Field Type Description",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+
+  ],
+  "dataUrl": "vdi/reportsdesigner/fieldtype/get/all",
+  "editScreenState": "app.reportsdesigner.fields.fieldtypeform",
+  "rowKey": {
+    "fieldTypeCode": "fieldTypeCode"
+  },
+  "defaultSortColumn": "fieldTypeCode"
+}

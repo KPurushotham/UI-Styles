@@ -1,0 +1,252 @@
+{
+  "name": "racingmetalbadgereceiptsform",
+  "saveUrl": "racingmetalbadgereceipts/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "showTitle": false,
+     "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "paymentMode",
+              "cssClass": "col_3",
+              "fieldType": "radio",
+              "defaultValue": "Cheque/DD",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Cheque/DD",
+                    "value": "Cheque/DD"
+                  },
+                  {
+                    "text": "Cash",
+                    "value": "Cash"
+                  }
+                ]
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "disabled": false,
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "financialYear",
+              "title": "Financial Year",
+              "codeKey": "value",
+              "fieldType": "dropdown",
+              "cssClass": "col_1",
+              "defaultValueByKey": "LS.financial_year",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/financialYear/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "date",
+              "title": "Date",
+              "fieldType": "date",
+              "cssClass": "col_1",
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "referenceNumber",
+              "title": "Reference Number",
+              "fieldType": "systemcode",
+              "cssClass": "col-1",
+              "keyGenConfig": {
+                "params": "entityCode=racingmetalbadge&entityGroupCode=rac&entityTypeCode=rac"
+              }
+            },
+            {
+              "modelKey": "amount",
+              "title": "Amount",
+              "fieldType": "textbox",
+              "cssClass": "col_2",
+              "disabled": false,
+              "required": false
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "partyTypeId",
+              "title": "Party Type",
+              "codeKey": "entityObjectId",
+              "fieldType": "dropdown",
+              "cssClass": "col_2",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Trainer",
+                    "value": "TRAINER"
+                  },
+                  {
+                    "text": "Jockey",
+                    "value": "JOCKEY"
+                  },
+                  {
+                    "text": "owner",
+                    "value": "OWNER"
+                  }
+                ]
+              },
+              "initLoad": true,
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "partyId",
+              "title": "Party",
+              "fieldType": "dropdown",
+              "cssClass": "col_6",
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "dependancyConfig": [
+                {
+                  "sourceKey": "partyTypeId",
+                  "event": "change",
+                  "dataConfigs": {
+                    "JOCKEY": {
+                      "dataUrl": "vdi/olims/racing/jockeyregistration/all?fk-status=ACTIVE",
+                      "displayKey": "jockeyName",
+                      "valueKey": "entityObjectId"
+                    },
+                    "TRAINER": {
+                      "dataUrl": "vdi/olims/racing/trainerregistration/all?fk-status=ACTIVE",
+                      "displayKey": "trainerName",
+                      "valueKey": "entityObjectId"
+                    },
+                    "OWNER": {
+                      "dataUrl": "vdi/olims/racing/ownerregistration/all?fk-status=ACTIVE",
+                      "displayKey": "ownerName",
+                      "valueKey": "entityObjectId"
+                    }
+
+                  },
+                  "loadData": {
+                    "keyParams": {
+                      "departmentId": "LS.departmentId"
+                    }
+                  },
+                  "defaultValue": "",
+                  "validations": {
+                    "disabled": false
+                  }
+                }
+              ],
+              "disabled": true,
+              "required": true
+            }
+          ]
+        }
+      ]
+
+    },
+
+    {
+      "dependancyConfig": [
+        {
+          "sourceKey": "paymentMode",
+          "event": "change",
+          "validations": {
+            "ifSourceValue": {
+              "in": [
+                "Cash",
+                "cash"
+              ],
+              "not-in": [ "Cheque/DD" ],
+              "rules": {
+                "show": false
+              }
+            }
+          }
+        }
+      ],
+      "showTitle": false,
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+
+              "modelKey": "bankName",
+              "title": "Bank",
+              "codeKey": "shortName",
+              "initLoad": true,
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/banknames/all",
+                "displayKey": "shortName",
+                "valueKey": "shortName"
+              },
+              "cssClass": "col_6",
+
+              "disabled": false,
+              "required": true
+            },
+
+            {
+              "modelKey": "chequeNumber",
+              "title": "Cheque Number",
+              "fieldType": "textbox",
+              "cssClass": "col_22",
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "chequeDate",
+              "title": "Cheque Date",
+              "cssClass": "col_22",
+              "fieldType": "date",
+              "disabled": false,
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+     "showTitle": false,
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "particulars",
+              "title": "Particulars",
+              "cssClass": "col_100",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": false
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}

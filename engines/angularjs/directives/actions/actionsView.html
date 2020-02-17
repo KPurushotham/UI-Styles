@@ -1,0 +1,11 @@
+
+<div class="buttons_container right" ng-if="actions">
+    <a class="btn" ng-repeat="action in actions" href="javascript:void(0);"
+       id="{{action.modelKey + fieldIndex}}"
+       ng-class="action.cssClass || 'green_btn'" ng-click="action.handler(action, df_form)"
+       ng-if="!action.showModes || (action.showModes.indexOf(screenMode) !=-1)">
+        <!--<span class="icon-btn {{action.iconCss || 'icon-plus'  }}"></span>-->
+        <span class="btn-text">{{action.title}}</span>
+    </a>
+
+</div>

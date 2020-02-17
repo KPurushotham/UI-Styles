@@ -1,0 +1,40 @@
+﻿{
+  "columns": [
+    {
+      "key": "reasonCode",
+      "headerText": "Code",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "reasonName",
+      "headerText": "Short Name",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "reasonDescription",
+      "headerText": "Description",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/racing/racereason/all",
+
+  "rowKey": {
+    "reasonCode": "reasonCode",
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

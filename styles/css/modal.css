@@ -1,0 +1,15 @@
+.modal-header {
+    color: #ffffff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: var(--main-bg-color);
+    font-weight: 600;
+    background: linear-gradient(45deg, #1c2b36, #27455b 80%) !important;
+}
+h3.modal-title {
+    font-size: 18px !important;
+}
+.modal .modal-footer {
+    border: none;
+    padding-top: 0;
+}

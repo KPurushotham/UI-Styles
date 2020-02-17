@@ -1,0 +1,53 @@
+﻿{
+  "columns": [
+    {
+      "key": "shiftCode",
+      "headerText": "Code",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "shortName",
+      "headerText": "Short Name",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "description",
+      "headerText": "Description",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "fromTime",
+      "headerText": "From Time",
+      "filterMask": "Search",
+      "type": "time"
+    },
+     {
+      "key": "toTime",
+      "headerText": "To Time",
+      "filterMask": "Search",
+      "type": "time"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+ 
+   "dataUrl": "vdi/olims/tote/shift/all",
+
+  "rowKey": {
+    "shiftCode": "shiftCode",
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

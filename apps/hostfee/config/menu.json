@@ -1,0 +1,199 @@
+﻿[
+  {
+    "key": "hostfee.contractdefinition",
+    "urlRoute": "contractdefinition",
+    "pattern": "LISTING",
+    "title": "Contract Definition",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "hostfee.contractdefinitionform",
+    "urlRoute": "contractdefinitionform",
+    "showInMenu": false,
+    "editKeys": [
+      "contractEntityId"
+    ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "contractAgentName"
+  },
+  {
+    "key": "hostfee.contractagentmapping",
+    "urlRoute": "contractagentmapping",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Contract Agent Mapping"
+  },
+  {
+    "key": "hostfee.contractagentmappingform",
+    "urlRoute": "contractagentmappingform",
+    "showInMenu": false,
+    "editKeys": [
+      "contractAgentEntityId",
+      "corporationEntityId"
+    ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "contractAgentName"
+  },
+  {
+    "key": "hostfee.contacts",
+    "urlRoute": "contacts",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Contacts"
+  },
+  {
+    "key": "hostfee.contacts.contractagent",
+    "urlRoute": "contractagent",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Contract Agent"
+  },
+  {
+    "key": "hostfee.contacts.contractagentform",
+    "urlRoute": "contractagentform",
+    "showInMenu": false,
+    "editKeys": [
+      "contractAgentEntityId"
+    ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "contractAgentName"
+  },
+  {
+    "key": "hostfee.contacts.hosts",
+    "urlRoute": "hosts",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Hosts"
+  },
+  {
+    "key": "hostfee.contacts.hostsform",
+    "urlRoute": "hostsform",
+    "showInMenu": false,
+    "editKeys": [
+      "hostEntityId"
+    ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "hostName"
+  },
+  {
+    "key": "hostfee.standardterms",
+    "urlRoute": "standardterms",
+    "pattern": "LISTING",
+    "showInMenu": true,
+    "viewName": "mainPagesection",
+    "title": "Standard Terms"
+  },
+  {
+    "key": "hostfee.standardtermsform",
+    "urlRoute": "standardtermsform",
+    "showInMenu": false,
+    "editKeys": [
+      "serialId"
+    ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "GenericTerms"
+  },
+  {
+    "key": "hostfee.administration",
+    "urlRoute": "administration",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Administration"
+  },
+  {
+    "key": "hostfee.administration.distribution",
+    "urlRoute": "distribution",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Distribution"
+  },
+  {
+    "key": "hostfee.administration.distributionform",
+    "urlRoute": "distributionform",
+    "showInMenu": false,
+    "editKeys": [
+      "entityId"
+    ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "distributionName"
+  },
+  {
+    "key": "hostfee.administration.approvalprocess",
+    "urlRoute": "approvalprocess",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Approval Workflow"
+  },
+  {
+    "key": "hostfee.administration.approvalprocessform",
+    "urlRoute": "approvalprocessform",
+    "showInMenu": false,
+    "editKeys": [
+      "workflowDefinitionId"
+    ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "workflowName"
+  },
+  {
+    "key": "hostfee.administration.usergroup",
+    "urlRoute": "usergroup",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Users Groups"
+  },
+  {
+    "key": "hostfee.administration.usergroupform",
+    "urlRoute": "usergroupform",
+    "showInMenu": false,
+    "editKeys": [
+      "roleId"
+    ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "roleName"
+  },
+  {
+    "key": "hostfee.reports",
+    "urlRoute": "reports",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Reports"
+  },
+  {
+    "key": "hostfee.reports.hostfeereports",
+    "urlRoute": "hostfeereports",
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Host Fee Rates Report",
+    "skipParentBreadcrumbMap": true
+  },
+  {
+    "key": "hostfee.auditreport",
+    "urlRoute": "auditreport",
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Audit Report",
+    "skipParentBreadcrumbMap": true
+  },
+  {
+    "key": "hostfee.mailday",
+    "urlRoute": "mailday",
+    "viewName": "mainPagesection",
+    "title": "MailDay"
+  }
+]

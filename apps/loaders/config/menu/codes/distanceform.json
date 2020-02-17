@@ -1,0 +1,59 @@
+{
+    "name": "distanceform",
+    "saveUrl": "vdi/racemaster/Distance/save",
+    "getOneUrl": "vdi/racemaster/Distance/one",
+    "externalService": "",
+    "validationUrl": "",
+    "noWorkflow": true,
+    "submitted": false,
+    "sections": [
+        {
+            "rowDivisions": [
+                {
+                    "fields": [
+                        {
+                            "modelKey": "distance",
+                            "title": "Distance",
+                            "disabledInEditMode": true,
+                            "cssClass": "col_2",
+                            "fieldType": "textbox",
+                            "required": true
+                        },
+                        {
+                            "modelKey": "distanceUnit",
+                            "title": "Distance Unit",
+                            "disabledInEditMode": true,
+                            "fieldType": "textbox",
+                            "cssClass": "col_2",
+                            "required": true
+                        },
+                        {
+                            "modelKey": "distanceAbout",
+                            "title": "Distance About",
+                            "disabledInEditMode": true,
+                            "fieldType": "textbox",
+                            "cssClass": "col_2",
+                            "required": true
+                        },
+                        {
+                            "modelKey": "disDescription",
+                            "title": "Description",
+                            "disabledInEditMode": true,
+                            "fieldType": "textbox",
+                            "cssClass": "col_2",
+                            "required": true
+                        },
+                        {
+                            "modelKey": "distPublishedValue",
+                            "title": "PublishedValue",
+                            "disabledInEditMode": true,
+                            "fieldType": "textbox",
+                            "cssClass": "col_2",
+                            "required": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

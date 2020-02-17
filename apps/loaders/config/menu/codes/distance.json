@@ -1,0 +1,50 @@
+{
+    "name":"distance",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.distanceform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "distanceId",
+        "headerName": "Distance Id",
+        "filter": "agSetColumnFilter",
+        "hide":"true"
+      },
+      {
+        "field": "distance",
+        "headerName": "Distance",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "distanceUnit",
+        "headerName": "Distance Unit",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "distanceAbout",
+        "headerName": "Distance About",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "disDescription",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "distPublishedValue",
+        "headerName": "PublishedValue",
+        "filter": "agSetColumnFilter"
+      }
+    ],
+    "dataUrl": "vdi/racemaster/Distance/all",
+    "editScreenState": "app.loaders.codes.distanceform",
+    "rowKey": {
+      "distanceId": "distanceId"
+    },
+    "defaultSortColumn": "distanceId"
+  }
+
+  

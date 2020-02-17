@@ -1,0 +1,57 @@
+﻿{
+  "columns": [
+    {
+      "key": "costCenterFrom",
+      "headerText": "From Cost Center",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "costCenterTo",
+      "headerText": "To Cost Center",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "budgetFrom",
+      "headerText": "From Budget",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "budgetTo",
+      "headerText": "To Budget",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "bdgAvailableAmt",
+      "headerText": "Available Amount",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "bdgAmtTransfer",
+      "headerText": "Transfer Amount",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/budget/budgetreallocation/all",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

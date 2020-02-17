@@ -1,0 +1,347 @@
+﻿[
+
+  {
+    "stateName": "racing.horseequipmenttypemaster",
+    "url": "horseequipmenttypemaster",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Equipment Types",
+      "addScreenStateName": "racing.horseequipmenttypeform"
+    }
+  },
+
+  {
+    "stateName": "racing.horseequipmenttypeform",
+    "url": "horseequipmenttypeform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "HORSE_EQUIPMENTS",
+    "fieldMap": {
+      "entityCode": "equipmentCode",
+      "shortName": "equipmentShortName",
+      "note": "equipmentDescription"
+    },
+    "codeKeyParam": "entityCode=equipment&entityGroupCode=rac&entityTypeCode=rac",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "racing.shoetypemaster",
+    "url": "shoetypemaster",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Shoe Types",
+      "addScreenStateName": "racing.shoetypeform"
+    }
+  },
+  {
+    "stateName": "racing.shoetypeform",
+    "url": "shoetypeform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "HORSE_SHOE_TYPES",
+    "fieldMap": {
+      "entityCode": "shoeCode",
+      "shortName": "shoeShortName",
+      "note": "shoeDescription"
+    },
+    "codeKeyParam": "entityCode=shoe&entityGroupCode=rac&entityTypeCode=rac",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+
+  {
+    "stateName": "racing.starterobservationtypemaster",
+    "url": "starterobservationtypemaster",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Starter Observation Types",
+      "addScreenStateName": "racing.starterobservationtypeform"
+    }
+  },
+  {
+    "stateName": "racing.starterobservationtypeform",
+    "url": "starterobservationtypeform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "STARTER_OBSERVATIONS",
+    "fieldMap": {
+      "entityCode": "starterObservationCode",
+      "shortName": "starterObservationShortName",
+      "note": "starterObservationDescription"
+    },
+    "codeKeyParam": "entityCode=observation&entityGroupCode=rac&entityTypeCode=rac",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+
+  {
+    "stateName": "racing.ownercolourmaster",
+    "url": "ownercolourmaster",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Registration of Silk",
+      "addScreenStateName": "racing.ownercolourform"
+    }
+  },
+  {
+    "stateName": "racing.ownercolourform",
+    "url": "ownercolourform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "OWNER_COLOR",
+    "fieldMap": {
+      "categoryCode": {
+        "jsonKey": "colorCtgId",
+        "title": "Dress Code",
+        "codeKey": "colorCtgShortName",
+        "dataUrl": "vdi/olims/racing/colorcategorybox/all?fk-status=ACTIVE",
+        "displayKey": "colorCtgDescription",
+        "valueKey": "id"
+      },
+      "entityCode": "ownerColorCode",
+      "shortName": "ownerColorShortName",
+      "note": "ownerColorDescription"
+    },
+    "codeKeyParam": "entityCode=ownercolor&entityGroupCode=rac&entityTypeCode=rac",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+
+  {
+    "stateName": "racing.reasonsmaster",
+    "url": "reasonsmaster",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Reasons",
+      "addScreenStateName": "racing.reasonsform"
+    }
+  },
+  {
+    "stateName": "racing.reasonsform",
+    "url": "reasonsform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "REASON",
+    "fieldMap": {
+      "entityCode": "reasonCode",
+      "shortName": "reasonName",
+      "note": "reasonDescription"
+    },
+    "codeKeyParam": "entityCode=reason&entityGroupCode=rac&entityTypeCode=rac",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+
+  {
+    "stateName": "racing.racingfinetypemaster",
+    "url": "racingfinetypemaster",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Racing Fine Types",
+      "addScreenStateName": "racing.racingfinetypeform"
+    }
+  },
+  {
+    "stateName": "racing.racingfinetypeform",
+    "url": "racingfinetypeform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "RACING_FINE_TYPE",
+    "fieldMap": {
+      "categoryCode": {
+        "jsonKey": "partyType",
+        "title": "Party Type",
+        "codeKey": "shortName",
+        "dataUrl": "vdi/olims/Party/partytype/all?departmentId=4&fk-status=ACTIVE",
+        "displayKey": "partyTypeCode-shortName",
+        "valueKey": "shortName"
+      },
+      "entityCode": "fineCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=racingfine&entityGroupCode=rac&entityTypeCode=rac",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "racing.licensetypemaster",
+    "url": "licensetypemaster",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+   
+    "data": {
+      "title": "License Types",
+      "addScreenStateName": "racing.licensetypeform"
+    }
+  },
+  {
+    "stateName": "racing.licensetypeform",
+    "url": "licensetypeform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "LICENSE_TYPE",
+    "fieldMap": {
+      "entityCode": "licenseTypeCode",
+      "shortName": "licenseTypeShortName",
+      "note": "licenseTypeDescription"
+    },
+    "codeKeyParam": "entityCode=licensetype&entityGroupCode=racac&entityTypeCode=racac",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "racing.horsedescription",
+    "url": "horsedescription",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Horse Description",
+      "addScreenStateName": "racing.horsedescriptionform"
+    }
+  },
+  {
+    "stateName": "racing.horsedescriptionform",
+    "url": "horsedescriptionform",
+    "showInLeftManu": false,
+    "editKeys": [ "horseDescCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+     "fieldMap": {
+    
+      "entityCode": "horseDescCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=horsedesc&entityGroupCode=rac&entityTypeCode=rac",
+    "entityType": "HORSE_DESCRIPTION",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "racing.horsesexmaster",
+    "url": "horsesexmaster",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "showInLeftManu": true,
+    "data": {
+      "title": "Horse Sex",
+      "addScreenStateName": "racing.horsesexform"
+    }
+  },
+  {
+    "stateName": "racing.horsesexform",
+    "url": "horsesexform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "HORSE_SEX",
+    "fieldMap": {
+      "entityCode": "horseSexCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=horsesex&entityGroupCode=rac&entityTypeCode=rac",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+   {
+    "stateName": "racing.horsesexformula",
+    "url": "horsesexformula",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Horse Sex Formula",
+      "addScreenStateName": "racing.horsesexformulaform"
+    }
+  },
+  {
+    "stateName": "racing.horsesexformulaform",
+    "url": "horsesexformulaform",
+    "showInLeftManu": false,
+    "editKeys": [ "horseSexFormulaCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "HORSE_SEX_FORMULA",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+
+  {
+    "stateName": "racing.horsesharemaster",
+    "url": "horsesharemaster",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Shares",
+      "addScreenStateName": "racing.horseshareform"
+    }
+  },
+  {
+    "stateName": "racing.horseshareform",
+    "url": "horseshareform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "HORSE_SHARE",
+    "fieldMap": {
+      "entityCode": "horseShareCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=horseshare&entityGroupCode=rac&entityTypeCode=rac",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "racing.horsecolourmaster",
+    "url": "horsecolourmaster",
+    "pattern": "LISTING",
+    "showInLeftManu": false,
+    "viewName": "racingSection",
+    "data": {
+      "title": "Registration of Silk",
+      "addScreenStateName": "racing.horsecolourform"
+    }
+  },
+  {
+    "stateName": "racing.horsecolourform",
+    "url": "horsecolourform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "HORSE_COLOUR",
+    "fieldMap": {
+      "entityCode": "horseColourMCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=horsecolour&entityGroupCode=rac&entityTypeCode=rac",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  }
+]

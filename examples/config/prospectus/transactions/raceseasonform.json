@@ -1,0 +1,82 @@
+﻿{
+  "name": "raceseasonform",
+  "saveUrl": "raceseason/save",
+  "validationUrl": "",
+  "submitted": false,
+  "alwaysEditMode": "true",
+  "externalService": "raceSeasonFactory",
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "financialYear",
+              "title": "Financial Year",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/financialYear/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "setRaceYear"
+                }
+              ],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "season",
+              "title": "Season",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/seasonmaster/all?fk-status=ACTIVE",
+                "displayKey": "shortName-seasonDescription",
+                "valueKey": "shortName"
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "setRaceYear"
+                }
+              ],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "raceYear",
+              "title": "Race Year",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "seasonPeriod",
+              "title": "Season Period",
+              "cssClass": "col_2",
+              "fieldType": "daterange",
+              "useFieldLevelModelKey": false,
+              "dateRangeConfig": {
+                "startDateModelKey": "startDate",
+                "endDateModelKey": "endDate"
+
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}

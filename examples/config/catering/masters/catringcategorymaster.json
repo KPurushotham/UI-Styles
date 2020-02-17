@@ -1,0 +1,38 @@
+﻿{
+  "columns": [
+    {
+      "key": "cateringCategoryCode",
+      "headerText": "Code",
+      "filterMask": "Search"
+    },
+    {
+      "key": "shortName",
+      "headerText": "Short Name",
+      "filterMask": "Search"
+    },
+    {
+      "key": "description",
+      "headerText": "Description",
+      "filterMask": "Search"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+ 
+   "dataUrl": "vdi/olims/catering/cateringcategory/all",
+
+  "rowKey": {
+    "cateringCategoryCode": "cateringCategoryCode",
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

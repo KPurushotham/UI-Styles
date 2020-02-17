@@ -1,0 +1,121 @@
+{
+  "name": "fieldform",
+  "saveUrl": "vdi/reportsdesigner/field/get/save",
+  "getOneUrl": "vdi/reportsdesigner/field/get/one",
+  "externalService": "fieldconfigService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "tenantId",
+              "cssClass": "col_1",
+              "title": "Tenant Id",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "fieldKey",
+              "cssClass": "col_1",
+              "title": "Field Key",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "title",
+              "cssClass": "col_1",
+              "title": "Title",
+              "fieldType": "textbox",
+              "required": true
+            },
+
+            {
+              "modelKey": "fieldTypeCode",
+              "cssClass": "col_1",
+              "title": "Field Type Code",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "dataSourceId",
+              "cssClass": "col_1",
+              "title": "Data Source Id",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "initLoadData",
+              "title": "Init Load Data",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            },
+            {
+              "modelKey": "isActive",
+              "title": "Is Active",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "dataKeyJson",
+              "cssClass": "col_2",
+              "title": "Data Key Json",
+              "fieldType": "ace",
+              "required": true
+            },
+            {
+              "modelKey": "dataFormatJson",
+              "cssClass": "col_2",
+              "title": "Data Format Json",
+              "fieldType": "ace",
+              "required": true
+            },
+            {
+              "modelKey": "configJson",
+              "cssClass": "col_2",
+              "title": "Config Json",
+              "fieldType": "ace",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

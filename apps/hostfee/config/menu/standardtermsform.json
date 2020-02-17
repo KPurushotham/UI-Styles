@@ -1,0 +1,91 @@
+{
+  "name": "standardtermsform",
+  "saveUrl": "vdi/hostfees/corporation/genericterms/save",
+  "getOneUrl": "vdi/hostfees/corporation/genericterms/getone",
+  "externalService": "genericTermsService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "corpEntityId",
+              "title": "Corporation Name",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "selectedIndex": 0,
+              "dataConfig": {
+                "dataUrl": "vdi/chrimsmasters/tenant/corporation/all",
+                "displayKey": "corpName",
+                "valueKey": "corpEntityId"
+              },
+              "show": false,
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "termsTitle",
+              "title": "Title",
+              "cssClass": "col-md-4",
+              "disabledInEditMode": true,
+              "fieldType": "textbox",
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "contractTypeCode",
+              "title": "Select Contract Type :",
+              "cssClass": "col-md-3 padding-lftrht0",
+              "fieldType": "radio",
+              "defaultValue": "E",
+              "disabledInEditMode": true,
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Export",
+                    "value": "E"
+                  },
+                  {
+                    "text": "Import",
+                    "value": "I"
+                  },
+                  {
+                    "text": "Both",
+                    "value": "B"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "isActive",
+              "title": "Is Active",
+              "fieldType": "checkbox",
+              "cssClass": "col-md-2 butn-cls-margntop",
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "title": "Terms",
+              "modelKey": "genericTerms",
+              "fieldType": "textarea",
+              "cssClass": "full_width zindex max_height",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

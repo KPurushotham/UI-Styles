@@ -1,0 +1,30 @@
+{
+    "name":"horsesex",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.horsesexform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/HorseSex/all",
+    "editScreenState": "app.loaders.codes.horsesexform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

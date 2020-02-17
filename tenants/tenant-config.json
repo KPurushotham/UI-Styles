@@ -1,0 +1,22 @@
+﻿{
+  "stronach": {
+    "logo": "tenants/stronach/images/logo.jpg",
+    "title": "The Stronach Group"
+  },
+  "mjc": {
+    "logo": "tenants/mjc/images/logo.jpg",
+    "title": "MJC"
+  },
+  "monarch": {
+    "logo": "tenants/monarch/images/logo.jpg",
+    "title": "Monarch"
+  },
+  "emerald": {
+    "logo": "tenants/emerald/images/logo.jpg",
+    "title": "Emerald"
+  },
+  "portland": {
+    "logo": "tenants/portland/images/logo.jpg",
+    "title": "Portland"
+  }
+  }

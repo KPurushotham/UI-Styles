@@ -1,0 +1,81 @@
+ {
+  "name": "projectform",
+  "saveUrl": "projectmaster/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "department",
+              "title": "Department",
+              "fieldType": "dropdown",
+			  "cssClass": "col_3",	
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/departmentlist/all?fk-status=ACTIVE",
+                "displayKey": "departmentCode-name",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+               {
+              "modelKey": "section",
+              "title": "Section",
+             "fieldType": "dropdown",
+			 "cssClass": "col_3",	   
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/sections/all?fk-status=ACTIVE",
+                "displayKey": "sectionCode-sectionName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "costCenter",
+              "title": "Cost Center",
+              "fieldType": "dropdown",
+			  "cssClass": "col_3",	
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/costcenter/all?fk-status=ACTIVE",
+                "displayKey": "costCenterCode-costCenterName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "budget",
+              "title": "Budget",
+              "fieldType": "dropdown",
+		      "cssClass": "col_3",		
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/budgetm/all?fk-status=ACTIVE",
+                "displayKey": "budgetCode-shortName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "work",
+              "title": "Work",
+              "fieldType": "dropdown",
+			  "cssClass": "col_3",	
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/projectmaster/all?fk-status=ACTIVE",
+                "displayKey": "projectCode-shortName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

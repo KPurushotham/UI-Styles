@@ -1,0 +1,90 @@
+{
+  "columns": [
+
+    {
+      "key": "trainerName",
+      "headerText": "Season",
+      "type": "uppercase"
+    },
+    {
+      "key": "arrivalDate",
+      "headerText": "Race Date",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "horseName",
+      "headerText": "Race Day",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Race Name",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Race No.",
+      "type": "uppercase"
+    },
+
+    {
+      "key": "trainerName",
+      "headerText": "Running Race No.",
+      "type": "uppercase"
+    },
+
+    {
+      "key": "trainerName",
+      "headerText": "Race Category",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Race Classifications",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Horse",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Last Run",
+      "type": "uppercase"
+    },
+
+    {
+      "key": "trainerName",
+      "headerText": "Last Place",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Jockey",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Draw No.",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Shoeing",
+      "type": "uppercase"
+    }
+
+
+
+  ],
+
+  "dataUrl": "vdi/olims/veterinary/horsecodeallotment/all",
+
+  "rowKey": {
+    "horseColourMCode": "horseColourMCode",
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

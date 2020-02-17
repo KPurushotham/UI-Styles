@@ -1,0 +1,10 @@
+[
+  {
+    "key": "moneyroom.mainscreen",
+    "pattern": "FORM",
+    "title": "Main Screen",
+    "viewName": "mainPagesection",
+    "urlRoute": "mainscreen"
+  }
+]
+

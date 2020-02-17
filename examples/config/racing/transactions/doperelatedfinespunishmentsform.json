@@ -1,0 +1,196 @@
+﻿ {
+  "name": "doperelatedfinespunishmentsform",
+  "saveUrl": "dopefinespunishments/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+
+      "rowDivisions": [
+        {
+         
+          "fields": [
+
+            {
+              "modelKey": "raceDate",
+              "title": "Race Date",
+                "cssClass": "col_1",
+              "fieldType": "date",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/prospectus/racecalendar/all?fk-status=ACTIVE",
+                "displayKey": "raceDates",
+                "valueKey": "raceDates"
+              },
+                "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "modelKeyMapTobeFilled": {
+                    "raceDay": "raceDay",
+                    "season": "season"
+                  }
+                }
+              ],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "raceDay",
+              "title": "Race Day",
+                "ignoreInServiceModel": true,
+                "cssClass": "col_1",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "season",
+              "title": "Race Season",
+                "ignoreInServiceModel": true,
+                "cssClass": "col_1",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "raceName",
+              "title": "Race Name",
+              "cssClass": "col_6",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/prospectus/racenames/all?fk-status=ACTIVE",
+                "displayKey": "description",
+                "valueKey": "entityObjectId"
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "modelKeyMapTobeFilled": {
+                    "raceNo": "raceNo",
+                    "runningRaceNo": "runningRaceNo"
+                  }
+                }
+              ],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "raceNo",
+              "title": "Race No",
+              "cssClass": "col_1",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "runningRaceNo",
+              "title": "Running Race No",
+              "cssClass": "col_1",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "horseName",
+              "title": "Horse",
+              "cssClass": "col_6",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/veterinary/horse/all?status=ACTIVE",
+                "displayKey": "name",
+                "valueKey": "entityObjectId"
+              },
+              "fieldType": "dropdown",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "trainer",
+              "title": "Trainer",
+              "cssClass": "col_6",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "taxApplicable",
+              "title": "Suspension",
+              "cssClass": "col_1",
+              "fieldType": "checkbox",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+
+            },
+            {
+              "modelKey": "effectiveFromDate",
+              "title": "Effective From-To",
+              "cssClass": "col_1",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "drugUsed",
+              "title": "Drug Used",
+              "cssClass": "col_5",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "punishedDate",
+              "title": "Punished Date",
+              "cssClass": "col_1",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "amountTypeId",
+              "title": "Fee Amount",
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "punishments",
+              "title": "Punishment",
+              "cssClass": "col_9",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+
+ }

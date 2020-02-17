@@ -1,0 +1,18 @@
+        <div ng-if="field.show" class="guage-charts left {{field.cssClass}}"
+             ng-class="(parentForm.save_submit && parentForm.df_form[field.modelKey+ fieldIndex].$error.required)? 'form_error_field' : ''">
+            <ng-gauge size="{{field.size}}"
+                      type="{{field.type}}"
+                      thick="{{field.thick}}"
+                      value="field.value"
+                      cap="{{field.cap}}"
+                      label="{{field.label}}"
+                      append="{{field.append}}"
+                      foreground-color="{{field.fColor}}"
+                      background-color="{{field.bgColor}}"
+                      dependancy-events="field.dependancyEvents"
+                      dynamic-name="field.modelKey+ fieldIndex"
+                      ng-model="field.modelValue">
+            </ng-gauge>
+            <div class=" {{field.titlecssClass}}">{{field.title}}</div>
+        </div>
+    

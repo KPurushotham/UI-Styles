@@ -1,0 +1,100 @@
+{
+  "name": "distributionform",
+  "externalService": "datasyncService",
+  "noWorkflow": true,
+  "submitted": false,
+  "entityGroupCode": "hostfees",
+  "entityTypeCode": "hostfees",
+  "isManidatoryRequired": false,
+  "actions": [],
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "tableList",
+              "cssClass": "col_2",
+              "title": "Table",
+              "fieldType": "dropdown",
+              "ignoreInServiceModel": true,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "tableChangeHandler"
+                }
+              ],
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Hosts",
+                    "value": "HOSTSYNC"
+                  },
+                  {
+                    "text": "Tracks",
+                    "value": "tracks"
+                  },
+                  {
+                    "text": "Locations",
+                    "value": "LOCSYNC"
+                  },
+                  {
+                    "text": "Loc To Host",
+                    "value": "locToHost"
+                  },
+                  {
+                    "text": "Host To Track",
+                    "value": "hostToTrack"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "btnUpdateSync",
+              "title": "Update Data",
+              "fieldType": "button",
+              "handlerName": "updateSyncData",
+              "ignoreInServiceModel": true,
+              "required": false
+             
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "dataSyncResult",
+              "title": "Corp Map",
+              "fieldType": "grid",
+              "initLoad": true,
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "total",
+              "gridConfig": {
+                "multiSelect": true,
+                "modelKeyMap": [
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "toolPanelSuppressRowGroups": true,
+                  "enableSorting": true
+                },
+                "columns":[]
+                  
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

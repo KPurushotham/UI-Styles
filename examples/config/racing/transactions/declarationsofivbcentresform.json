@@ -1,0 +1,211 @@
+{
+  "name": "declarationsofivbcentresform",
+  "saveUrl": "jockeyallowance/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [{
+      "rowDivisions": [{
+
+          "fields": [
+
+            {
+              "modelKey": "raceDate",
+              "title": " Race Date",
+              "cssClass": "col_20",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+            }, {
+              "modelKey": "raceDay",
+              "title": "Race Day",
+              "fieldType": "textbox",
+              "cssClass": "col_20",
+              "disabled": true,
+              "required": true
+
+            },
+
+            {
+              "modelKey": "season",
+              "title": "Race Season",
+              "fieldType": "textbox",
+               "cssClass": "col_19",
+              "disabled": true,
+              "required": true
+
+            }
+
+          ]
+        }, {
+
+          "fields": [
+
+            {
+              "modelKey": "jockeyAge",
+              "title": "Venue",
+              "cssClass": "col_9",
+              "fieldType": "dropdown",
+              "disabled": false,
+              "required": true
+            }
+
+          ]
+        }, {
+
+          "fields": [{
+            "modelKey": "raceNameId",
+            "title": "Race Name",
+            "cssClass": "col_9",
+            "fieldType": "dropdown",
+            "dataConfig": {
+              "dataUrl": "vdi/olims/prospectus/racenames/all?fk-status=ACTIVE",
+              "displayKey": "description",
+              "valueKey": "entityObjectId"
+            },
+            "dependancyEvents": [{
+              "eventName": "change",
+              "modelKeyMapTobeFilled": {
+                "raceNo": "raceNo",
+                "runningRaceNo": "runningRaceNo"
+              }
+            }],
+            "disabled": false,
+            "required": true
+          }, {
+            "modelKey": "raceNo",
+            "title": "Race No",
+            "ignoreInServiceModel": true,
+            "fieldType": "textbox",
+            "cssClass": "col_1",
+            "disabled": true,
+            "required": true
+          }, {
+            "modelKey": "runningRaceNo",
+            "title": "Race Running No",
+            "ignoreInServiceModel": true,
+            "fieldType": "textbox",
+            "cssClass": "col_1",
+            "disabled": true,
+            "required": true
+          }]
+        }
+
+      ]
+    }, {
+      "title": "Declarations For Horses",
+       "rowDivisions": [{
+        "fields": [{
+              "fieldType": "grid",
+              "initLoad": true,
+              "gridConfig": {
+                "gridFeatures": [ "selection" ],
+                "multiSelect": true,
+                "dataUrl": "vdi/olims/racing/handicapping/all",
+            "modelKeyMap": ["horse", "age", "sex", "rating", "weight"],
+                "columns": [
+                  {
+              "key": "horse",
+
+              "headerText": "Horse",
+              "filterMask": "Search",
+              "type": "uppercase",
+              "cssClass": "col_1",
+               "editable": true
+            }, {
+              "key": "status",
+              "headerText": "Status",
+              "filterMask": "Search",
+              "type": "uppercase",
+              "cssClass": "col_1",
+              "editable": true
+              
+            }, {
+              "key": "lastRunDate",
+              "headerText": "Last Run Date",
+              "filterMask": "Search",
+              "type": "uppercase",
+              "cssClass": "col_1",
+              "editable": true
+              
+            }, {
+              "key": "lastPlace",
+              "headerText": "Last Place",
+              "filterMask": "Search",
+              "type": "uppercase",
+              "editable": true
+              
+            }, {
+              "key": "drawNumber",
+              "headerText": "Draw Number",
+              "filterMask": "Search",
+              "cssClass": "col_1",
+              "type": "uppercase",
+              "editable": true
+               },
+                {
+              "key": "jockeyName",
+              "headerText": "Jockey Name",
+              "filterMask": "Search",
+              "type": "uppercase",
+              "editable": true
+              
+            }, {
+              "key": "shoeingDetails",
+              "headerText": "Shoeing Details",
+              "filterMask": "Search",
+              "type": "uppercase",
+              "editable": true
+              
+            },
+             {
+              "key": "owenerName",
+              "headerText": "Owener Name",
+              "filterMask": "Search",
+              "type": "uppercase",
+              "editable": true
+              
+            },
+             {
+              "key": "trainerName",
+              "headerText": "Trainer Name",
+              "filterMask": "Search",
+              "type": "uppercase",
+              "editable": true
+              
+            }
+                ]
+              },
+               "dependancyConfig": [
+                {
+                  "sourceKey": "departmentCode",
+                  "event": "change",
+                  "loadData": {
+                    "keyParams": { "departmentId": "departmentId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "show": true }
+
+                }
+              ],
+              
+          "disabled": false,
+          "required": true
+        }
+         
+        ]
+      }]
+    }, {
+
+      "rowDivisions": [{
+        "fields": [{
+          "modelKey": "totalNoOfHorses",
+          "title": "Total No Of Horses",
+          "fieldType": "textbox",
+          "disabled": false,
+          "required": true
+        }]
+      }]
+    }
+
+  ]
+}

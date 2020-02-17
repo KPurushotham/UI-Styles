@@ -1,0 +1,247 @@
+{
+    "name": "countriesform",
+    "noWorkflow": true,
+    "submitted": false,
+    "externalService": "countriesService",
+    "actions": [],
+    "isManidatoryRequired": false,
+    "sections": [
+      {
+        "rowDivisions": [
+          {
+            "fields": [
+              {
+                "modelKey": "accountType",
+                "title": "Account Type:",
+                "cssClass": "col_2",
+                "fieldType": "radio",
+                "defaultValue": "1",
+                "disabledInEditMode": true,
+                "dataConfig": {
+                  "localData": [
+                    {
+                      "text": "Master Account",
+                      "value": "1"
+                    },
+                    {
+                      "text": "Clients",
+                      "value": "2"
+                    }
+                  ]
+                },
+                "disabled": false,
+                "required": false
+              },
+              {
+                "modelKey": "clientsDropdown",
+                "title": "Clients",
+                "fieldType": "dropdown",
+                "cssClass": "col-md-2",
+                "style":"display: none;",
+                "dataConfig": {
+                    "dataUrl": "vdi/postget/gapp/GetClients/Clients",
+                    "displayKey": "userName",
+                    "valueKey": "id"
+                  },
+                  "parentmultiple":false,
+                  "childmultiple":false,
+                  "ignoreInServiceModel": false,
+                  "disabled": false,
+                  "required": false
+                  
+              },
+              {
+                "modelKey": "country",
+                "title": "Country",
+                "fieldType": "dropdown",
+                "cssClass": "col-md-2",
+                "dataConfig": {
+                    "dataUrl": "vdi/gapp/Countries/CommunityCountries?@AccountId=31&@CommunityCodeId=2&@Active=1",
+                    "displayKey": "countryDescription",
+                    "valueKey": "countryId"
+                  },
+                  "parentmultiple":false,
+                  "childmultiple":false,
+                  "ignoreInServiceModel": false,
+                  "disabled": false,
+                  "required": false
+              },
+              {
+                "modelKey": "view",
+                "title": "View",
+                "fieldType": "button",
+                "cssClass": "col-md-2",
+                "ignoreInServiceModel": true,
+                "handlerName": "viewHandler",
+                "required": false
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "modelKey": "community",
+                "title": "Community",
+                "fieldType": "dropdown",
+                "cssClass": "col-md-2",
+                "dataConfig": {
+                    "dataUrl": "vdi/gapp/communities/details?@AccountId=43&@Active=1",
+                    "displayKey": "communityCodeId",
+                    "valueKey": "communityId"
+                  },
+                  "parentmultiple":false,
+                  "childmultiple":false,
+                  "ignoreInServiceModel": false,
+                  "disabled": false,
+                  "required": false
+              },
+              {
+                "modelKey": "add",
+                "title": "Add",
+                "fieldType": "button",
+                "style":"display: none;",
+                "cssClass": "col-md-2",
+                "ignoreInServiceModel": true,
+                "handlerName": "addHandler",
+                "required": false,
+                "modalform": {
+                  "title":"Create New Rates",
+                  "saveButtonTilte":"Save",
+                  "handlerName": "saveModelForm",
+                  "sections": [
+                    {
+                      "rowDivisions": [
+                        {
+                          "fields": [
+                            {
+                              "modelKey": "name",
+                              "title": "Name",
+                              "fieldType": "textbox",
+                              "cssClass": "col-md-2",
+                              "ignoreInServiceModel": false,
+                              "required": false
+                            },
+                            {
+                              "modelKey": "description",
+                              "title": "Description",
+                              "fieldType": "textbox",
+                              "cssClass": "col-md-2",
+                              "ignoreInServiceModel": false,
+                              "required": false
+                            },
+                            {
+                              "modelKey": "reducedTakeOut",
+                              "title": "Reduced TakeOut",
+                              "fieldType": "textbox",
+                              "cssClass": "col-md-2",
+                              "ignoreInServiceModel": false,
+                              "required": false
+                            }
+                          ]
+                        },
+                        {
+                          "fields": [
+                            
+                            {
+                              "modelKey": "retention",
+                              "title": "Retention",
+                              "fieldType": "textbox",
+                              "cssClass": "col-md-2",
+                              "ignoreInServiceModel": false,
+                              "required": false
+                            },
+                            {
+                              "modelKey": "startDate",
+                              "title": "Start Date",
+                              "fieldType": "date",
+                              "cssClass": "col-md-2",
+                              "ignoreInServiceModel": false,
+                              "required": false
+                            },
+                            {
+                              "modelKey": "endDate",
+                              "title": "End Date",
+                              "fieldType": "date",
+                              "cssClass": "col-md-2",
+                              "ignoreInServiceModel": false,
+                              "required": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "rowDivisions": [
+            {
+                "fields": [
+                    {
+                        "modelKey": "countrygrid",
+                        "title": "Country Details",
+                        "fieldType": "grid",
+                        "initLoad": true,
+                        "style": "display: none;",
+                        "localData": true,
+                        "show": false,
+                        "gridSummaryLabel": "total",
+                        "gridConfig": {
+                            "modelKeyMap": [],
+                            "features": {
+                                "enableGridMenu": false,
+                                "floatingFilter": false,
+                                "enableFilter": true,
+                                "enableSorting": true,
+                                "toolPanelSuppressRowGroups": true,
+                                "suppressSizeToFit": true,
+                                "groupDefaultExpanded": true
+                            },
+                            "columns": [
+                                {
+                                    "field": "countryId",
+                                    "headerName": "Country Id",
+                                    "tooltipField": "countryId",
+                                    "hide": true
+                                },
+                                {
+                                  "field": "countryCode",
+                                  "tooltipField": "Code",
+                                  "headerName": "countryCode",
+                                  "hide": false
+                                },
+                                {
+                                    "field": "countryDescription",
+                                    "headerName": "Description",
+                                    "tooltipField": "countryDescription",
+                                    "hide": false
+                                },
+                                {
+                                    "field": "activeRebatePercentage",
+                                    "headerName": "Active Rebate",
+                                    "tooltipField": "activeRebatePercentage",
+                                    "hide": false
+                                },
+                                {
+                                    "field": "Active Retention",
+                                    "headerName": "activeRetentionPercentage",
+                                    "tooltipField": "activeRetentionPercentage",
+                                    "hide": false
+                                }
+                            ]
+                        },
+                        "disabled": false,
+                        "required": true
+                    }
+                ]
+            }
+       
+        ]
+      }
+
+    ]
+  }

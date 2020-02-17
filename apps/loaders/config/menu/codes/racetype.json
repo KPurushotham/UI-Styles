@@ -1,0 +1,30 @@
+{
+    "name":"racetype",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.racetypeform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/RaceType/all",
+    "editScreenState": "app.loaders.codes.ridertypeform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

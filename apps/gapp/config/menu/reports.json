@@ -1,0 +1,46 @@
+{
+  "name": "reports",
+  "externalService": "",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "gapp.reportsform"
+    }
+  ],
+  "queryStringParams": {
+    "@AccountId": "738"
+  },
+  "columns": [
+    {
+      "field": "name",
+      "headerName": "Name",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "startdate",
+      "headerName": "StartDate",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "endDate",
+      "headerName": "EndDate",
+      "filter": "agSetColumnFilter",
+      "hide": false,
+      "formatType": "Date"
+    },
+    {
+      "field": "download",
+      "headerName": "Download",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+  ],
+  "dataUrl": "vdi/postget/gapp/accountsreports/gwgaccountsreports",
+  "editScreenState": "app.gapp.reportsform",
+  "rowKey": {
+    "dataViewId": ""
+  },
+  "defaultSortColumn": ""
+}

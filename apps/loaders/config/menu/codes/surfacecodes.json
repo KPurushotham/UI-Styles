@@ -1,0 +1,30 @@
+{
+    "name":"surfacecodes",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.surfacecodesform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/SurfaceCodes/all",
+    "editScreenState": "app.loaders.codes.surfacecodesform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

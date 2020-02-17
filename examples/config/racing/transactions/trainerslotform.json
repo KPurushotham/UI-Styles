@@ -1,0 +1,133 @@
+{
+  "name": "trainseslotform",
+  "saveUrl": "trainseslotform/save",
+  "getOneUrl": "vdi/olims/racing/trainseslotform/getone",
+  "queryStringParams": { "trainerId": "entityObjectId" },
+  "noWorkflow": true,
+  "workflowUrl": "",
+  "validationUrl": "",
+  "submitted": false,
+  "alwaysUpdateMode": true,
+  "mainModelName": "horseEquipmentLinkData",
+  "titleByKey": "UP.trainerId",
+  "entityTypeKey": "entityType",
+  "defaultStatus": "Active",
+  "getOneMultipleItems": true,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "entityObjectId",
+              "title": "Trainer",
+              "cssClass": "col_9",
+              "initLoad": true,
+              "fieldType": "dropdown",
+              "defaultValueByKey": "UP.entityObjectId",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/trainerregistration/all",
+                "displayKey": "trainerName",
+                "valueKey": "trainerId"
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "disabled": true,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Existing Horse Details:",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+
+              "title": "Existing Horse Details:",
+              "initLoad": true,
+              "fieldType": "grid",
+              "show": true,
+              "externalActions": [ { "actionLabel": "Reorder" } ],
+              "gridSummaryLabel": "Total Horses: ",
+              "gridConfig": {
+                "gridFeatures": [ "selection", "edit", "row-edit" ],
+                "multiSelect": true,
+                "dataUrl": "vdi/olims/racing/trainerslot/horses",
+                "modelKeyMap": [ "effectiveFrom", "horse" ],
+                "columns": [
+                  {
+
+                    "key": "horse",
+                    "headerText": "HorseName",
+                    "filterMask": "Search",
+                    "edittype": "textbox",
+                    "editable": false,
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "effectiveFrom",
+                    "headerText": "Effective From",
+                    "filterMask": "Search",
+                    "edittype": "date",
+                    "editable": true
+                  }
+                ]
+              },
+              "dependancyConfig": [
+                {
+                  "sourceKey": "entityObjectId",
+                  "event": "change",
+                  "loadData": {
+                    "keyParams": { "trainerId": "UP.entityObjectId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "show": true }
+                }
+              ],
+
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Map New Trainer:",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "toTrainerId",
+              "title": "New Trainer",
+              "cssClass": "col_9",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/trainerregistration/all",
+                "displayKey": "trainerName",
+                "valueKey": "entityObjectId"
+              },
+
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "effectiveFrom",
+              "title": " Effective From",
+              "cssClass": "col_20",
+              "fieldType": "date",
+              "disabled": false,
+              "required": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

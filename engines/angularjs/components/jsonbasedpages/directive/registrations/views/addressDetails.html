@@ -1,0 +1,84 @@
+<div class="non_paid_vendor_container full_width">
+    <div class="sub_heading full_width no-margin">
+        <h5 class="full_width">Address Details - Permanent</h5>
+    </div>
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.addressLine1.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Address Line 1 <span class="mandatory">*</span></label>
+        <input type="text" class="full_width uppercase" name="addressLine1" ng-disabled="disableFlag" ng-model="partyModel.address.addressLine1" required>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Address Line 2</label>
+        <input type="text" class="full_width uppercase" name="addressLine2" ng-disabled="disableFlag" ng-model="partyModel.address.addressLine2">
+
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Address Line 3</label>
+        <input type="text" class="full_width uppercase" name="addressLine3" ng-disabled="disableFlag"  ng-model="partyModel.address.addressLine3"   >
+
+    </div>
+    <div class="select_field col_3 left" ng-class="(saveSubmit && partyForm.addressCountry.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Country <span class="mandatory">*</span></label>
+        <select class="optionsuppercase nya-selectpicker" ng-disabled="disableFlag" data-none-selected-text="Please Select" title="Please Select" data-live-search="true" data-container="body" name="addressCountry" ng-change="changeCountry(partyModel.address.country, 'ADDRESS')" placeholder='Select' ng-options='c as c.text for c in dropDownData.countryDD track by c.value' ng-model="partyModel.address.country" required></select>
+    </div>
+
+    <div class="select_field col_3 left" ng-class="(saveSubmit && partyForm.addressState.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">State <span class="mandatory">*</span></label>
+        <select class="optionsuppercase nya-selectpicker" ng-disabled="disableFlag" data-none-selected-text="Please Select" title="Please Select" data-live-search="true" data-container="body" name="addressState" ng-change="changeState(partyModel.address.state, partyModel.address.country, 'ADDRESS')" placeholder='Select' ng-options='c as c.text for c in dropDownData.stateAddressDD track by c.value' ng-model="partyModel.address.state" required></select>
+    </div>
+     <div class="select_field col_3 left" ng-class="(saveSubmit && partyForm.addressCity.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">City <span class="mandatory">*</span></label>
+        <select class="optionsuppercase nya-selectpicker" ng-disabled="disableFlag" data-none-selected-text="Please Select" title="Please Select" data-live-search="true" data-container="body" name="addressCity" ng-change="changeCity()" placeholder='Select' ng-options='c as c.text for c in dropDownData.cityAddressDD track by c.value' ng-model="partyModel.address.city" required></select>
+    </div>
+
+
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.zipCode.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">PIN Code<span class="mandatory">*</span></label>
+        <input type="text" class="full_width" name="pinCode" ng-disabled="disableFlag" ng-model="partyModel.address.pinCode" required numbers-only>
+    </div>
+</div>
+
+<div class="non_paid_vendor_container full_width">
+  <div class="sub_heading full_width no-margin">
+		<h5 class="full_width">Address Details - Current</h5>
+		<div class="inline_checkbox default_checkbox right office_checkbox">
+			<label class="control control--checkbox">
+				<input type="checkbox" ng-change="samAsPermenent()" id="isSameAddress" name="isSameAddress" ng-model="isSameAddress"/>
+				<div class="control__indicator"></div>
+				<span class="left">Same as permanent</span>
+			</label>
+		</div>
+  </div>
+  <div class="full_width" ng-show="!isSameAddress">
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.addressLine1.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Address Line 1 <span class="mandatory">*</span></label>
+        <input type="text"   class="full_width uppercase" name="addressLine1" ng-disabled="disableFlag" ng-model="partyModel.address1.addressLine1" required>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Address Line 2</label>
+        <input type="text" class="full_width uppercase" name="addressLine2" ng-disabled="disableFlag" ng-model="partyModel.address1.addressLine2">
+
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Address Line 3</label>
+        <input type="text" class="full_width uppercase" name="addressLine3" ng-disabled="disableFlag"  ng-model="partyModel.address1.addressLine3"   >
+
+    </div>
+    <div class="select_field col_3 left" ng-class="(saveSubmit && partyForm.addressCountry.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Country <span class="mandatory">*</span></label>
+        <select class="optionsuppercase nya-selectpicker" ng-disabled="disableFlag" data-none-selected-text="Please Select" title="Please Select" data-live-search="true" data-container="body" name="addressCountry" ng-change="changeCountry(partyModel.address1.country, 'ADDRESS')" placeholder='Select' ng-options='c as c.text for c in dropDownData.countryDD track by c.value' ng-model="partyModel.address1.country" required></select>
+    </div>
+
+    <div class="select_field col_3 left" ng-class="(saveSubmit && partyForm.addressState.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">State <span class="mandatory">*</span></label>
+        <select class="optionsuppercase nya-selectpicker" ng-disabled="disableFlag" data-none-selected-text="Please Select" title="Please Select" data-live-search="true" data-container="body" name="addressState" ng-change="changeState(partyModel.address1.state, partyModel.address1.country, 'ADDRESS')" placeholder='Select' ng-options='c as c.text for c in dropDownData.stateAddressDD track by c.value' ng-model="partyModel.address1.state" required></select>
+    </div>
+    <div class="select_field col_3 left" ng-class="(saveSubmit && partyForm.addressCity.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">City <span class="mandatory">*</span></label>
+        <select class="optionsuppercase nya-selectpicker" ng-disabled="disableFlag" data-none-selected-text="Please Select" title="Please Select" data-live-search="true" data-container="body" name="addressCity" ng-change="changeCity()" placeholder='Select' ng-options='c as c.text for c in dropDownData.cityAddressDD track by c.value' ng-model="partyModel.address1.city" required></select>
+    </div>
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.zipCode.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">PIN Code<span class="mandatory">*</span></label>
+        <input type="text" class="full_width" name="zipCode" ng-disabled="disableFlag" ng-model="partyModel.address1.pinCode" required numbers-only>
+    </div>
+  </div>
+</div>

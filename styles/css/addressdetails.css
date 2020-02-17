@@ -1,0 +1,165 @@
+/* --- common styles --- */
+.full_width {
+    width: 100%;
+    float: left;
+}
+.left {
+    float: left;
+}
+.no-margin {
+    margin: 0px !important;
+}
+.no-margin {
+    margin: 0px !important;
+}
+.right {
+    float: right;
+}
+/* --- common styles --- */
+
+.input_field {
+    padding: 0px 0px 0px 0px;
+}
+
+    .input_field label {
+        font-size: 14px !important;
+        color: #666 !important;
+        margin-bottom: 1px;
+        font-weight: 600;
+    }
+
+        .input_field label a, .select_field label a {
+            text-decoration: none;
+            font-size: 13px;
+            color: #3c873c;
+        }
+
+            .input_field label a:focus, .select_field label a:focus {
+                text-decoration: underline;
+            }
+
+            .input_field label a span, .select_field label a span {
+                font-size: 12px;
+            }
+
+    .input_field input {
+        transition: .3s all;
+        border: 1px solid #ddd !important;
+        font-size: 12px !important;
+        border-radius: 0px;
+        padding: 0px 4px !important;
+        height: 28px;
+    }
+
+        .input_field input[disabled], .textarea_field textarea[disabled] {
+            background-color: rgb(211, 211, 211) !important;
+            cursor: not-allowed;
+            color: #978c8c;
+            border-bottom: 1px solid #c4bbbb;
+        }
+        .input_field input:-moz-read-only {
+            background-color: rgb(243, 241, 241) !important;
+            cursor: not-allowed;
+            color: #978c8c;
+            border-bottom: 1px solid #c4bbbb;
+        }
+
+        .input_field input:focus, .textarea_field textarea:focus {
+            border: 1px solid #444;
+            box-shadow: 0px 0px 2px #ccc;
+        }
+    .input_field .fin_year {
+        padding-right: 10px;
+    }
+.mandatory {
+    font-size: 13px;
+    font-weight: 600;
+    color: #cb0707;
+}
+.inline_checkbox {
+    margin-top: 22px;
+    position: relative;
+}
+
+    .inline_checkbox span {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 26px;
+    }
+.default_checkbox {
+    margin: 0px 0px 20px 0px;
+}
+.office_checkbox {
+    margin-top: -30px;
+}
+.control {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+    .control input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+        .control input:focus ~ .control__indicator {
+            background: #fff;
+            border: 1px solid #444;
+            box-shadow: 0 0 2px #ccc;
+        }
+
+        .control input:checked ~ .control__indicator {
+            background: #509f50;
+            border: 1px solid transparent;
+            box-shadow: none;
+        }
+
+        .control input:disabled ~ .control__indicator {
+            background: #e6e6e6;
+            border: 1px solid #b2b2b2;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        .control input:checked ~ .control__indicator:after {
+            display: block;
+        }
+.control--checkbox .control__indicator:after {
+    left: 6px;
+    top: 3px;
+    width: 7px;
+    height: 11px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.control--checkbox input:disabled ~ .control__indicator:after {
+    border-color: #444444;
+}
+.control__indicator:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+.control__indicator {
+    background: #fff none repeat scroll 0 0;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    width: 20px;
+}
+.control__indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background: #fff;
+    border: 1px solid #b2b2b2;
+}
+   

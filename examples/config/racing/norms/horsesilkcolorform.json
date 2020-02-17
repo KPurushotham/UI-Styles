@@ -1,0 +1,72 @@
+{
+	"name": "horsesilkcolorform",
+	"saveUrl": "horsesilkcolor/save",
+	"validationUrl": "",
+	"submitted": false,
+	"sections": [
+		{
+			"rowDivisions": [
+				{
+					"fields": [
+								{
+									"modelKey": "horseId",
+									"title": "Horse ",
+									"cssClass": "col_3",
+									"fieldType": "dropdown",
+									"dataConfig": {
+										"dataUrl": "vdi/olims/veterinary/horse/all",
+										"displayKey": "name",
+										"valueKey": "entityObjectId"
+									},
+									"disabled": false,
+									"required": true
+
+								},
+								{
+									"modelKey": "silkColorOwnerCode",
+									"title": "Owner Silk Color",
+									"cssClass": "col_3",
+									"fieldType": "dropdown",
+									"dataConfig": {
+										"dataUrl": "vdi/olims/racing/ownercolorctg/all?colorCtgId=1",
+										"displayKey": "ownerColorDescription",
+										"valueKey": "entityObjectId"
+									},
+									"disabled": false,
+									"required": true
+
+								},
+						        {
+									"modelKey": "effectiveOnPeriod",
+									"title": "Effective On Period",
+									"cssClass": "col_3",
+									"fieldType": "daterange",
+									"useFieldLevelModelKey": false,
+									"dateRangeConfig": {
+										"startDateModelKey": "equipmentOnDate",
+										"endDateModelKey": "equipmentOffDate",
+										"range": "1Y",
+										"minDate": {
+											"fromModelKey": "expiryDate||currentDate",
+											"addtion": "1D"
+										},
+										"maxDate": {
+											"fromModelKey": "currentFinancialYearEndDate"
+										},
+										"stateDate": {
+											"value": "",
+											"fromModelKey": "expiryDate||currentDate",
+											"addtion": "1D"
+										}
+									},
+									"disabled": false,
+									"required": true
+								}
+
+					]
+				}
+
+			]
+		}
+	]
+}

@@ -1,0 +1,135 @@
+﻿{
+  "name": "creditdebitnormsform",
+  "saveUrl": "creditdebitnorms/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "creditDebitId",
+              "title": "Code ",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "",
+                "displayKey": "",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "indicator",
+              "title": "Indicator",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "withStakes",
+              "title": "With Stakes",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "account",
+              "title": "Account",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": true
+            }
+
+          ]
+        }
+
+      ]
+    },
+      { "title": "Credit/Debit Details" ,
+        "rowDivisions": [
+          {
+            "fields": [
+              {
+                "modelKey": "partyType",
+                "title": "Party Type",
+                "fieldType": "dropdown",
+                "dataConfig": {
+                  "dataUrl": "vdi/olims/Party/partytype/all?departmentId=4&fk-status=ACTIVE",
+                  "displayKey": "partyTypeCode-shortName",
+                  "valueKey": "shortName"
+                },
+                "disabled": false,
+                "required": true
+
+              },
+              {
+                "modelKey": "amountTypeId",
+                "title": "Value/Percentage",
+                "fieldType": "dropdown",
+                "dataConfig": {
+                  "dataUrl": "vdi/olims/functional/amounttypebox/all",
+                  "displayKey": "text",
+                  "valueKey": "value"
+                },
+                "disabled": false,
+                "required": true
+
+              },
+              {
+                "modelKey": "amount",
+                "title": "CRDR Value",
+                "fieldType": "textbox",
+                "disabled": false,
+                "required": true
+              },
+              {
+                "modelKey": "frequencyId",
+                "title": "Frequency",
+                "fieldType": "dropdown",
+                "dataConfig": {
+                  "dataUrl": "vdi/olims/racingaccount/frequencybox/all",
+                  "displayKey": "text",
+                  "valueKey": "value"
+                },
+                "disabled": false,
+                "required": true
+
+              }
+            ]
+          },
+           {
+            "fields": [
+             
+              {
+                "modelKey": "effectiveFromDate",
+                "title": "Effective From",
+                "fieldType": "date",
+                "disabled": false,
+                "required": true
+              },
+               {
+              "modelKey": "taxApplicable",
+              "title": "Tax Applicable",
+              "fieldType": "checkbox",
+
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+
+            }
+            ]
+          }
+        ]
+        }
+      ]
+    }

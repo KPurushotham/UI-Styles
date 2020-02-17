@@ -1,0 +1,250 @@
+{
+    "name": "maintenanceform",
+    "saveUrl": "",
+    "getOneUrl": "",
+    "validationUrl": "",
+    "externalService": "",
+    "noWorkflow": true,
+    "submitted": false,
+    "actions": [
+    ],
+    "sections": [
+      {
+        "rowDivisions": [
+          {
+            "fields": [
+              
+              {
+                "modelKey": "raceDate",
+                "title": "Race Date",
+                "fieldType": "daterange",
+                "cssClass": "col-md-2",
+                "required": true
+              },
+              {
+                "modelKey": "track",
+                "title": "Track",
+                "cssClass": "col_2",
+                "fieldType": "dropdown",
+                "ismultiple": true,
+                "dataConfig": {
+                  "dataUrl": "",
+                  "displayKey": "track",
+                  "valueKey": "trackId"
+                },
+                "parentmultiple":true,
+                "childmultiple":false,
+                "ignoreInServiceModel": true,
+                "disabled": false,
+                "required": false
+              },
+              {
+                "modelKey": "genderRestriction",
+                "title": "Gender Restriction",
+                "cssClass": "col_2",
+                "fieldType": "dropdown",
+                "ismultiple": true,
+                "dataConfig": {
+                  "dataUrl": "",
+                  "displayKey": "track",
+                  "valueKey": "trackId"
+                },
+                "parentmultiple":true,
+                "childmultiple":false,
+                "ignoreInServiceModel": true,
+                "disabled": false,
+                "required": false
+              },
+              {
+                "modelKey": "ageRestriction",
+                "title": "Age Restriction",
+                "cssClass": "col_2",
+                "fieldType": "dropdown",
+                "ismultiple": true,
+                "dataConfig": {
+                  "dataUrl": "",
+                  "displayKey": "track",
+                  "valueKey": "trackId"
+                },
+                "parentmultiple":true,
+                "childmultiple":false,
+                "ignoreInServiceModel": true,
+                "disabled": false,
+                "required": false
+              },
+              {
+                "modelKey": "numberOfRunners",
+                "title": "Number Of Runners",
+                "fieldType": "textbox",
+                "cssClass": "col-md-2",
+                "required": true
+              }
+
+            ]
+          }
+         
+        ]
+      },
+      {
+        "rowDivisions": [
+          {
+            "fields": [
+              {
+                "modelKey": "breedType",
+                "title": "Breed Type",
+                "cssClass": "col_2",
+                "fieldType": "dropdown",
+                "ismultiple": true,
+                "dataConfig": {
+                  "dataUrl": "",
+                  "displayKey": "track",
+                  "valueKey": "trackId"
+                },
+                "parentmultiple":true,
+                "childmultiple":false,
+                "ignoreInServiceModel": true,
+                "disabled": false,
+                "required": false
+              },
+              {
+                "modelKey": "raceType",
+                "title": "Race Type",
+                "cssClass": "col_2",
+                "fieldType": "dropdown",
+                "ismultiple": true,
+                "dataConfig": {
+                  "dataUrl": "",
+                  "displayKey": "track",
+                  "valueKey": "trackId"
+                },
+                "parentmultiple":true,
+                "childmultiple":false,
+                "ignoreInServiceModel": true,
+                "disabled": false,
+                "required": false
+              },
+              {
+                "modelKey": "raceNumber",
+                "title": "Race Number",
+                "fieldType": "textbox",
+                "cssClass": "col-md-2",
+                "required": true
+              },
+              {
+                "modelKey": "distance",
+                "title": "Distance",
+                "fieldType": "textbox",
+                "cssClass": "col-md-2",
+                "required": true
+              },
+              {
+                "modelKey": "trackCondition",
+                "title": "Track Condition",
+                "fieldType": "textbox",
+                "cssClass": "col-md-2",
+                "required": true
+              }
+            ]
+          }
+         
+        ]
+      },
+      {
+        "rowDivisions": [
+          {
+            "fields": [
+              {
+                "modelKey": "pursePaid",
+                "title": "Purse Paid",
+                "fieldType": "textbox",
+                "cssClass": "col-md-2",
+                "required": true
+              },
+              {
+                "modelKey": "AddedMoney",
+                "title": "Added Money",
+                "fieldType": "textbox",
+                "cssClass": "col-md-2",
+                "required": true
+              },
+              {
+                "modelKey": "allowance",
+                "title": "Allowance",
+                "fieldType": "textbox",
+                "cssClass": "col-md-2",
+                "required": true
+              },
+              {
+                "modelKey": "claimingPrice",
+                "title": "Claiming Price",
+                "fieldType": "textbox",
+                "cssClass": "col-md-2",
+                "required": true
+              },
+              {
+                "modelKey": "classifiedhcp",
+                "title": "classified HCP",
+                "fieldType": "textbox",
+                "cssClass": "col-md-2",
+                "required": true
+              },
+              {
+                "modelKey": "overnighthcp",
+                "title": "Overnight HCP",
+                "fieldType": "textbox",
+                "cssClass": "col-md-2",
+                "required": true
+              },
+              {
+                "modelKey": "stakes",
+                "title": "Stakes",
+                "fieldType": "textbox",
+                "cssClass": "col-md-2",
+                "required": true
+              }
+            ]
+          }
+         
+        ]
+      },
+      {
+        "rowDivisions": [
+          {
+            "fields": [
+              {
+                "modelKey": "specialEvent",
+                "title": "Special Event",
+                "fieldType": "textbox",
+                "cssClass": "col-md-2",
+                "required": true
+              },
+              {
+                "modelKey": "specialconditions",
+                "title": "Special Conditions",
+                "fieldType": "textbox",
+                "cssClass": "col-md-2",
+                "required": true
+              },
+              {
+                "modelKey": "handle",
+                "title": "Handle",
+                "fieldType": "textbox",
+                "cssClass": "col-md-2",
+                "required": true
+              },
+              {
+                "modelKey": "update",
+                "title": "Update",
+                "fieldType": "button",
+                "ignoreInServiceModel": true,
+                "handlerName": "updateEntireDataset",
+                "cssClass": "col-md-2",
+                "required": true
+              }
+            ]
+          }
+         
+        ]
+      }
+    ]
+  }

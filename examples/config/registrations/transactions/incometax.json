@@ -1,0 +1,89 @@
+﻿{
+  "columns": [
+    {
+      "key": "partyType",
+      "headerText": "party Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "party",
+      "headerText": "party",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "submissionDate",
+      "headerText": "submissionDate",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+
+    {
+      "key": "financialYear",
+      "headerText": "Financial Year ",
+      "filterMask": "Search",
+      "type": "date"
+    },
+    {
+      "key": "AssesmentYear",
+      "headerText": " Assesment Year ",
+      "filterMask": "Search",
+      "type": "date"
+    },
+    {
+      "key": "acknowledge Number",
+      "headerText": " AcknowledgeNumber",
+      "filterMask": "Search",
+      "type": "date"
+    }
+
+  ],
+  "childColumns": [
+
+    {
+      "key": "partyType",
+      "headerText": "Party Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "party",
+      "headerText": "Party",
+      "type": "uppercase",
+      "filterMask": "Search"
+    },
+    {
+      "key": "authorizationEntities",
+      "headerText": "Authorization Entities",
+      "type": "uppercase",
+      "filterMask": "Search"
+
+
+    },
+    {
+      "key": "effectiveFromDate",
+      "headerText": "Effective From Date",
+      "type": "date",
+      "filterMask": "Search"
+
+
+    },
+    {
+      "key": "effectiveToDate",
+      "headerText": "Effective To Date",
+      "type": "date",
+      "filterMask": "Search"
+
+
+    }
+  ],
+  "dataUrl": "vdi/olims/racing/authority/all",
+  "childDataUrl": "vdi/olims/racing/authoritydetails/all?authorityId=2",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "partyType",
+  "childDefaultSortColumn": "lastUpdatedDate"
+}

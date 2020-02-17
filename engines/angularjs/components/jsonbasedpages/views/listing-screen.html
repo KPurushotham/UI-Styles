@@ -1,0 +1,52 @@
+
+<div class="grid-container-design">
+    <div class="grid-container-table">
+
+        <div class="inrpage-back-to-report-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3"><h3 class="left">{{title}}</h3></div>
+                    <div class="col-md-6"></div>
+                    <div class="col-md-3">
+                        <div class="department_field financial_year_field left"
+                             ng-if="showFilter">
+                            <label class="left">{{filter.title}}</label>
+                            <div class="select_field left no-padding">
+                                <select class="optionsuppercase nya-selectpicker" title="Please
+                    Select" data-live-search="true" data-container="body"
+                                        id="dataFilter" ng-change="onChangeLoadGrid(this)"
+                                        placeholder='Select' name="dataFilter"
+                                        ng-options="c.value as c.text for c in screenConfig"
+                                        ng-model="filterKeyValue"
+                                        required></select>
+                            </div>
+                        </div>
+                        <actions-directive actions="actions"></actions-directive>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12 padding-lft padding-rht">
+                                <div class="inrpage-forms-section">
+                                    <form name="df_form" novalidate=''
+                                          ng-init="setForm(df_form)">
+
+                                        <div class="criteria_container col-md-12 padding0">
+                                            <div class="col-md-12 padding0">
+                                                <dynamic-form-directive form="form"
+                                                                        form-data-model="criteriaDataModel"></dynamic-form-directive>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+        </div>

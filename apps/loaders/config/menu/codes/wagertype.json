@@ -1,0 +1,30 @@
+{
+    "name":"wagertype",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.wagertypeform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/WagerType/all",
+    "editScreenState": "app.loaders.codes.wagertypeform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

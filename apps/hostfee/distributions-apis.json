@@ -1,0 +1,76 @@
+﻿{
+  "that": {
+    "where": "entity_id IN (@that.entityId)",
+    "attributeMap": {
+      "entity_id": "@that.entityId",
+      "is_active": "@that.isActive",
+      "description": "@that.description",
+      "entity_code": "@that.entityCode",
+      "distribution_code": "@that.distributionCode",
+      "distribution_name": "@that.distributionName"
+    },
+    "dataViewCode": "distribution_m",
+    "updateIgnoreAttributes": [ "entity_id", "entity_code" ]
+  },
+  "that.corpDist": {
+    "where": "distribution_entity_id IN (@that.distributionEntityId) and serial_id IN (@that.id)",
+    "attributeMap": {
+      "end_date": "@that.endDate",
+      "serial_id": "@that.id",
+      "begin_date": "@that.beginDate",
+      "corp_entity_id": "@that.corpEntityId",
+      "distribution_entity_id": "@that.distributionEntityId"
+    },
+    "dataViewCode": "corp_distribution",
+    "updateIgnoreAttributes": [ "corp_entity_id", "serial_id", "distribution_entity_id" ]
+  }
+}
+
+//vdi/hostfees/distributions/all 	(datacode: distributions_all)
+
+{
+  "this": {
+    "attributeMap": {
+      "end_date": "endDate",
+      "corp_name": "corpName",
+      "entity_id": "entityId",
+      "is_active": "isActive",
+      "serial_id": "id",
+      "begin_date": "beginDate",
+      "description": "description",
+      "entity_code": "entityCode",
+      "distribution_code": "distributionCode",
+      "distribution_name": "distributionName"
+    },
+    "dataViewCode": "vdistributionsall"
+  }
+}
+
+//vdi/hostfees/distributions/getone 	(datacode: distributions_getone)
+
+{
+  "this": {
+    "where": "entity_id IN (@that.entityId)",
+    "attributeMap": {
+      "entity_id": "entityId",
+      "is_active": "isActive",
+      "description": "description",
+      "entity_code": "Entitycode",
+      "distribution_code": "distributionCode",
+      "distribution_name": "distributionName"
+    },
+    "dataViewCode": "distribution_m"
+  },
+  "this.corpDist": {
+    "where": "distribution_entity_id IN (@that.entityId)",
+    "attributeMap": {
+      "end_date": "endDate",
+      "corp_name": "corpName",
+      "serial_id": "id",
+      "begin_date": "beginDate",
+      "corp_entity_id": "corpEntityId",
+      "distribution_entity_id": "distributionEntityId"
+    },
+    "dataViewCode": "vdistributiongetone"
+  }
+}

@@ -1,0 +1,598 @@
+﻿[
+  {
+    "text": "Owner",
+    "value": "OWNER",
+    "config": {
+      "columns": [
+        {
+          "key": "ownerCode",
+          "headerText": "Owner Code",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "ownerName",
+          "headerText": "Owner Name",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },        
+        {
+          "key": "qualification",
+          "headerText": "Qualification",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+
+        {
+          "key": "status",
+          "headerText": "Status",
+          "filterMask": "Search"
+        },
+        {
+          "key": "lastUpdatedDate",
+          "headerText": "Last Updated Date",
+          "type": "date"
+        }
+      ],
+      "dataUrl": "vdi/olims/racing/ownerregistration/all",
+
+      "rowKey": {
+        "entityType": "entityType",
+        "entityObjectId": "entityObjectId"
+      },
+
+      "defaultSortColumn": "lastUpdatedDate"
+    }
+  },
+  {
+    "text": "Trainer",
+    "value": "TRAINER",
+    "config": {
+      "columns": [
+        {
+          "key": "trainerCode",
+          "headerText": "Trainer Code",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "trainerName",
+          "headerText": "Trainer Name",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "licensedAt",
+          "headerText": "Licensed At",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "qualification",
+          "headerText": "Qualification",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "status",
+          "headerText": "Status",
+          "filterMask": "Search"
+        },
+        {
+          "key": "lastUpdatedDate",
+          "headerText": "Last Updated Date",
+          "type": "date"
+        }
+      ],
+      "dataUrl": "vdi/olims/racing/trainerregistration/all",
+
+      "rowKey": {
+        "entityType": "entityType",
+        "entityObjectId": "entityObjectId"
+      },
+
+      "defaultSortColumn": "lastUpdatedDate"
+    }
+  },
+
+  {
+    "text": "Agent",
+    "value": "AGENT",
+    "config": {
+      "columns": [
+        {
+          "key": "agentCode",
+          "headerText": "Agent Code",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "agentName",
+          "headerText": "Agent Name",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "dob",
+          "headerText": "Date Of Birth",
+          "filterMask": "Search",
+          "type": "date"
+        },
+      
+        {
+          "key": "qualification",
+          "headerText": "Qualification",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "licensedAt",
+          "headerText": "Club",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "status",
+          "headerText": "Status",
+          "filterMask": "Search"
+        },
+        {
+          "key": "lastUpdatedDate",
+          "headerText": "Last Updated Date",
+          "type": "date"
+        }
+      ],
+      "dataUrl": "vdi/olims/racing/agentregistration/all",
+
+      "rowKey": {
+        "entityType": "entityType",
+        "entityObjectId": "entityObjectId"
+      },
+
+      "defaultSortColumn": "lastUpdatedDate"
+    }
+  },
+
+  {
+    "text": "Book Maker Assistant",
+    "value": "BOOK_MAKER_ASSISTANT",
+    "config": {
+      "columns": [
+        {
+          "key": "bmAssiCode",
+          "headerText": "Code",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "bmAssiName",
+          "headerText": "Name",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "assistantDesignation",
+          "headerText": "Designation",
+          "show": false,
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "dob",
+          "headerText": "Date Of Birth",
+          "filterMask": "Search",
+          "type": "date"
+        },
+        {
+          "key": "qualification",
+          "headerText": "Qualification",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "bookmaker",
+          "headerText": "Book Maker",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+
+        {
+          "key": "status",
+          "headerText": "Status",
+          "filterMask": "Search"
+        },
+        {
+          "key": "lastUpdatedDate",
+          "headerText": "Last Updated Date",
+          "type": "date"
+        }
+      ],
+      "dataUrl": "vdi/olims/racing/bookmakerassistantregistration/all",
+
+      "rowKey": {
+        "entityType": "entityType",
+        "entityObjectId": "entityObjectId"
+      },
+
+      "defaultSortColumn": "lastUpdatedDate"
+    }
+  },
+
+  {
+    "text": "Book Maker Partner",
+    "value": "BOOK_MAKER_PARTNER",
+    "config": {
+      "columns": [
+        {
+          "key": "bmPartnerCode",
+          "headerText": "Code",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "bmPartnerName",
+          "headerText": "Name",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "shareValue",
+          "headerText": "Share Value",
+          "show": false,
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "dob",
+          "headerText": "Date Of Birth",
+          "filterMask": "Search",
+          "type": "date"
+        },
+        {
+          "key": "qualification",
+          "headerText": "Qualification",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "bookmaker",
+          "headerText": "Book Maker",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+
+        {
+          "key": "status",
+          "headerText": "Status",
+          "filterMask": "Search"
+        },
+        {
+          "key": "lastUpdatedDate",
+          "headerText": "Last Updated Date",
+          "type": "date"
+        }
+      ],
+      "dataUrl": "vdi/olims/racing/bookmakerpartnerregistration/all",
+
+      "rowKey": {
+        "entityType": "entityType",
+        "entityObjectId": "entityObjectId"
+      },
+
+      "defaultSortColumn": "lastUpdatedDate"
+    }
+  },
+
+  {
+    "text": "Book Maker",
+    "value": "BOOK_MAKER",
+    "config": {
+      "columns": [
+        {
+          "key": "bookMakerCode",
+          "headerText": "Code",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "bookMakerName",
+          "headerText": "Name",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "bnakGuaranteeDetails",
+          "headerText": "Guarantee Details",
+          "show": false,
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "initialDeposit",
+          "headerText": "Initial Deposit",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "liability",
+          "headerText": "Liability",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+
+        {
+          "key": "status",
+          "headerText": "Status",
+          "filterMask": "Search"
+        },
+        {
+          "key": "lastUpdatedDate",
+          "headerText": "Last Updated Date",
+          "type": "date"
+        }
+      ],
+      "dataUrl": "vdi/olims/racing/bookmakerregistration/all",
+
+      "rowKey": {
+        "entityType": "entityType",
+        "entityObjectId": "entityObjectId"
+      },
+
+      "defaultSortColumn": "lastUpdatedDate"
+    }
+  },
+
+  {
+    "text": "Farrier",
+    "value": "FARRIER",
+    "config": {
+      "columns": [
+        {
+          "key": "farrierCode",
+          "headerText": "Farrier Code",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "farrierName",
+          "headerText": "Farrier Name",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "employedBy",
+          "headerText": "Employed By",
+          "show": false,
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "dob",
+          "headerText": "Date Of Birth",
+          "filterMask": "Search",
+          "type": "date"
+        },
+        {
+          "key": "qualification",
+          "headerText": "Qualification",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "licensedAt",
+          "headerText": "Club",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "status",
+          "headerText": "Status",
+          "filterMask": "Search"
+        },
+        {
+          "key": "lastUpdatedDate",
+          "headerText": "Last Updated Date",
+          "type": "date"
+        }
+      ],
+      "dataUrl": "vdi/olims/racing/farrierregistration/all",
+
+      "rowKey": {
+        "entityType": "entityType",
+        "entityObjectId": "entityObjectId"
+      },
+
+      "defaultSortColumn": "lastUpdatedDate"
+    }
+  },
+
+  {
+    "text": "Jamadar",
+    "value": "JAMADAR",
+    "config": {
+      "columns": [
+        {
+          "key": "jamedarCode",
+          "headerText": "Jamedar Code",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "jamedarName",
+          "headerText": "Jamedar Name",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "employedBy",
+          "headerText": "Employed By",
+          "show": false,
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "dob",
+          "headerText": "DOB",
+          "filterMask": "Search",
+          "type": "date"
+        },
+        {
+          "key": "qualification",
+          "headerText": "Qualification",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "licensedAt",
+          "headerText": "Club",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "status",
+          "headerText": "Status",
+          "filterMask": "Search"
+        },
+        {
+          "key": "lastUpdatedDate",
+          "headerText": "Last Updated Date",
+          "type": "date"
+        }
+      ],
+      "dataUrl": "vdi/olims/racing/jamedarregistration/all",
+
+      "rowKey": {
+        "entityType": "entityType",
+        "entityObjectId": "entityObjectId"
+      },
+
+      "defaultSortColumn": "lastUpdatedDate"
+    }
+  },
+
+  {
+    "text": "Jockey",
+    "value": "JOCKEY",
+    "config": {
+      "columns": [
+        {
+          "key": "jockeyCode",
+          "headerText": "Jockey Code",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "jockeyName",
+          "headerText": "Jockey Name",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "dob",
+          "headerText": "DOB",
+          "filterMask": "Search",
+          "type": "date"
+        },
+        {
+          "key": "qualification",
+          "headerText": "Qualification",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "licensedAt",
+          "headerText": "Club",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "nationality",
+          "headerText": "Nationality",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "status",
+          "headerText": "Status",
+          "filterMask": "Search"
+        },
+        {
+          "key": "lastUpdatedDate",
+          "headerText": "Last Updated Date",
+          "type": "date"
+        }
+      ],
+      "dataUrl": "vdi/olims/racing/jockeyregistration/all",
+
+      "rowKey": {
+        "entityType": "entityType",
+        "entityObjectId": "entityObjectId"
+      },
+
+      "defaultSortColumn": "lastUpdatedDate"
+    }
+  },
+
+  {
+    "text": "Riding Boy",
+    "value": "RIDING_BOY",
+    "config": {
+      "columns": [
+        {
+          "key": "ridingBoyCode",
+          "headerText": "Riding Boy Code",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "ridingBoyName",
+          "headerText": "Riding Boy Name",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "employedBy",
+          "headerText": "Employed By",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "dob",
+          "headerText": "DOB",
+          "filterMask": "Search",
+           "type": "date"
+        },
+        {
+          "key": "qualification",
+          "headerText": "Qualification",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "licensedAt",
+          "headerText": "Club",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "status",
+          "headerText": "Status",
+          "filterMask": "Search"
+        },
+        {
+          "key": "lastUpdatedDate",
+          "headerText": "Last Updated Date",
+          "type": "date"
+        }
+      ],
+      "dataUrl": "vdi/olims/racing/ridingboyregistration/all",
+
+      "rowKey": {
+        "entityType": "entityType",
+        "entityObjectId": "entityObjectId"
+      },
+
+      "defaultSortColumn": "lastUpdatedDate"
+    }
+  }
+]

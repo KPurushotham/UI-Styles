@@ -1,0 +1,47 @@
+{
+  "name": "stakeform",
+  "saveUrl": "stakes/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+               {
+              "modelKey": "stakesCode",
+              "title": "Code",
+			  "cssClass": "col-2",	   
+              "fieldType": "systemcode",
+                "keyGenConfig": {
+                  "params": "entityCode=stakes&entityGroupCode=pro&entityTypeCode=pro"
+                }
+            },
+            {
+              "modelKey": "shortName",
+              "title": "Short Name",
+			  "cssClass": "col_6",	
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": false
+
+            },
+             {
+              "modelKey": "financialYear",
+              "title": "Race Year",
+			  "cssClass": "col_3",	 
+                 "defaultValueByKey": "LS.financial_year",
+               "fieldType": "textbox",
+              "disabled": false,
+              "required": false
+
+            }
+
+
+          ]
+        }
+
+      ]
+    }
+  ]
+}

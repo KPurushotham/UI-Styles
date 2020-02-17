@@ -1,0 +1,20 @@
+<div ng-if="field.show" class="input_field left date-full-width-gap {{field.cssClass}}" style="{{field.style}}" ng-class="(parentForm.save_submit && parentForm.df_form[field.modelKey+ fieldIndex].$error.required)? 'form_error_field' : ''">
+    <label ng-class="{'hide' :!field.showTitle }" class="full_width">{{field.title}} <span ng-if="field.required" class="mandatory">*</span></label>
+    <div class="datepicker_field date-full-width full_width">
+        <input type="text" autocomplete="off" class="full_width" id="{{field.modelKey+ fieldIndex}}" date-input-chars dynamic-name="field.modelKey+ fieldIndex"
+               ng-model="field.modelValue" simple-date-pick sdp-format="MM/DD/YYYY"
+               ng-required="field.required" ng-disabled="(field.disabled || parentForm.readOnlyForm ||(parentForm.screenMode=='EDIT' && field.disabledInEditMode)) ? true :false" event-dependents="field.dependants" />
+    </div>
+</div>
+
+<!-- <div ng-if="field.show" class="input_field left {{field.cssClass}}" style ="{{field.style}}"
+    ng-class="(parentForm.save_submit && parentForm.df_form[field.modelKey+ fieldIndex].$error.required)? 'form_error_field' : ''">
+    <md-input-container class="datepicker_field full_width" ng-if="field.show"
+        class="input_field left {{field.cssClass}}"
+        ng-class="(parentForm.save_submit && parentForm.df_form[field.modelKey+ fieldIndex].$error.required)? 'form_error_field' : ''">
+        <md-datepicker ng-model="field.modelValue" sdp-format="MM/DD/YYYY"  md-placeholder={{field.title}}  md-open-on-focus class=""
+            ng-required="field.required"
+            ng-disabled="(field.disabled || parentForm.readOnlyForm ||(parentForm.screenMode=='EDIT' && field.disabledInEditMode)) ? true :false"
+            event-dependents="field.dependants" />
+    </md-input-container>
+</div> -->

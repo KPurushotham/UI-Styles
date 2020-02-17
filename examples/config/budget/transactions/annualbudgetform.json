@@ -1,0 +1,180 @@
+  {
+  "name": "annualbudgetform",
+  "saveUrl": "annualbudget/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "financialYear",
+              "title": "Financial Year",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "defaultValueByKey": "LS.financial_year",
+              "disabled": true
+            },
+            {
+              "modelKey": "department",
+              "title": "Department",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "defaultValueByKey": "LS.departmentCode-LS.department",
+              "dependancyEvents": [ "change" ],
+              "disabled": true
+            },
+            {
+              "modelKey": "costCenterId",
+              "fieldType": "hidden"
+            },
+            {
+              "modelKey": "costCenter",
+              "title": "Cost Center",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/deptcostcenters/all",
+                "displayKey": "costCenterCode-costCenterName",
+                "valueKey": "entityObjectId"
+              },
+              "initLoad": true,
+              "dependancyConfig": [
+                {
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "dependancyEvents": [ "change" ],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "expensesUpto",
+              "title": "Expenses Upto",
+              "fieldType": "date",
+              "cssClass": "col_3",
+              "defaultValue": "31/12/2017",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "sanctionedAmount",
+              "titleDynamicKeys":{"prevFinancialYear":"prev_financial_year"},
+              "title": "Approved Budget For The Financial Year {{prevFinancialYear}}",
+              "fieldType": "textbox",
+              "cssClass": "col_6",
+              "defaultValue": "0.00",
+              "disabled": true,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Budget Item Requisition Details",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "budget",
+              "fieldType": "grid",
+              "show": true,
+              "gridConfig": {
+                "gridFeatures": [ "row-edit", "edit" ],
+                "multiSelect": false,
+                "dataUrl": "vdi/olims/budget/annualbudgetapproval/all",
+                "modelKeyMap": [ "requestedBudget" ],
+                "columns": [
+                  {
+                    "key": "budgets",
+                    "headerText": "Budget Code - Description",
+                    "filterMask": "Search",
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "approvedBudget",
+                    "headerText": "Total Sanctioned Amount",
+                    "filterMask": "Search",
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "requestedBudget",
+                    "headerText": "Expenses",
+                    "filterMask": "Search",
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "requestedBudget",
+                    "headerText": "Projected Expenses",
+                    "filterMask": "Search",
+                    "type": "uppercase",
+                    "editable": true
+                  },
+                  {
+                    "key": "requestedBudget",
+                    "headerText": "Total Expenses",
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "approvedBudget",
+                    "headerText": "Required Budget",
+                    "filterMask": "Search",
+                    "type": "uppercase",
+                    "editable": true
+                  }
+                ]
+              },
+              "dependancyConfig": [
+                {
+                  "sourceKey": "costCenter",
+                  "event": "change",
+                  "loadData": {
+                    "keyParams": { "costCenterId": "costCenterId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "show": true }
+                }
+              ],
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "requested",
+              "title": "Requested",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "difference",
+              "title": "Difference",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "justification",
+              "title": "Justification",
+              "fieldType": "textarea",
+			  "cssClass": "full_width",	
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+          ]
+        }

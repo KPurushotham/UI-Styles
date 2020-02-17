@@ -1,0 +1,238 @@
+﻿[
+  {
+    "stateName": "budget.costcentermaster",
+    "url": "costcentermaster",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "data": {
+      "title": "Cost Center",
+      "addScreenStateName": "budget.costcenterform"
+    }
+  },
+  {
+    "stateName": "budget.costcenterform",
+    "url": "costcenterform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "COST_CENTER",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  },
+
+   {
+    "stateName": "budget.budgetmaster",
+    "url": "budgetmaster",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "data": {
+      "title": "Budget",
+      "addScreenStateName": "budget.budgetform"
+    }
+  },
+  {
+    "stateName": "budget.budgetform",
+    "url": "budgetform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "BUDGET",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  },
+
+   {
+    "stateName": "budget.componentcategorymaster",
+    "url": "componentcategorymaster",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "showInLeftManu": false,
+    "data": {
+      "title": "Component Category",
+      "addScreenStateName": "budget.componentcategoryform"
+    }
+  },
+   {
+    "stateName": "budget.componentcategoryform",
+    "url": "componentcategoryform",
+    "showInLeftManu": false,
+    "editKeys": [ "componentCategoryCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "COMPONENT_CATEGORY",
+     "fieldMap": {
+      "categoryCode": {
+        "modelKey": "department",
+        "title": "Department",
+        "fieldType": "textbox",
+        "disabled": "true",
+        "displayKey": "departmentCode-name",
+        "valueKey": "entityObjectId"
+      },
+      "entityCode": "componentCategoryCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=componentctg&entityGroupCode=bud&entityTypeCode=bud",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  },
+
+  {
+    "stateName": "budget.componentmaster",
+    "url": "componentmaster",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "showInLeftManu": false,
+    "data": {
+      "title": "Component",
+      "addScreenStateName": "budget.componentform"
+    }
+  },
+  {
+    "stateName": "budget.componentform",
+    "url": "componentform",
+    "showInLeftManu": false,
+    "editKeys": [ "componentCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "COMPONENT",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  },
+
+   {
+    "stateName": "budget.budgetwisecomponentmaster",
+    "url": "budgetwisecomponentmaster",
+    "showInLeftManu": false,
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "data": {
+      "title": "Budget Wise Component",
+      "addScreenStateName": "budget.budgetwisecomponentform"
+    }
+  },
+  {
+    "stateName": "budget.budgetwisecomponentform",
+    "url": "budgetwisecomponentform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "BUDGET_WISE_COMPONENT",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "budget.budgetitemwiseworkmaster",
+    "url": "budgetitemwiseworkmaster",
+    "showInLeftManu": false,
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "data": {
+      "title": "Budget Item Wise Work",
+      "addScreenStateName": "budget.budgetitemwiseworkform"
+    }
+  },
+   {
+    "stateName": "budget.budgetitemwiseworkform",
+    "url": "budgetitemwiseworkform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "BUDGET_ITEM_WISE_WORK",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  },
+
+   {
+    "stateName": "budget.workmaster",
+    "url": "workmaster",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "showInLeftManu": false,
+    "data": {
+      "title": "Work",
+      "addScreenStateName": "budget.workform"
+    }
+  },
+   {
+    "stateName": "budget.workform",
+    "url": "workform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "WORK_MASTER  ",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  },
+
+   {
+    "stateName": "budget.projectmaster",
+    "url": "projectmaster",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "showInLeftManu": false,
+    "data": {
+      "title": "Project",
+      "addScreenStateName": "budget.projectform"
+    }
+  },
+  {
+    "stateName": "budget.projectform",
+    "url": "projectform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "PROJECT_MASTER  ",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  },
+   {
+    "stateName": "budget.sectionwisecostcentermaster",
+    "url": "sectionwisecostcentermaster",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "data": {
+      "title": "Section Wise Cost Center Allocation",
+      "addScreenStateName": "budget.sectionwisecostcenterform"
+    }
+  },
+  {
+    "stateName": "budget.sectionwisecostcenterform",
+    "url": "sectionwisecostcenterform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "SECTIONWISE_BUDGET",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "budget.gridpoclist",
+    "url": "gridpoclist",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "data": {
+      "title": "Grid POC",
+      "addScreenStateName": "budget.gridpocform"
+    }
+  },
+  {
+    "stateName": "budget.gridpocform",
+    "url": "gridpocform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "POC",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  }
+]

@@ -1,0 +1,35 @@
+/* --- common styles --- */
+.full_width {
+    width: 100%;
+    float: left;
+}
+.no-margin {
+    margin: 0px !important;
+}
+.left {
+    float: left;
+}
+/* --- common styles --- */
+
+
+.sub_heading {
+    margin: 10px 0px 15px 0px !important;
+    float: left;
+    width: 100%;
+}
+
+    .sub_heading h5 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0baa9a;
+    }
+
+.negative-margin {
+    margin-top: -10px;
+}
+
+.sub_heading .small_buttons {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}

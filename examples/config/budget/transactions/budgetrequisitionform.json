@@ -1,0 +1,133 @@
+{
+  "name": "budgetrequisitionform",
+  "saveUrl": "budgetrequisition/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "budgetType",
+              "title": "Budget Type",
+              "fieldType": "radio",
+              "cssClass": "col_85",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Additional Budget",
+                    "value": "Additional"
+                  },
+                  {
+                    "text": "Special Budget",
+                    "value": "Special"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "financialYear",
+              "title": "Financial Year",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "defaultValueByKey": "LS.financial_year",
+              "disabled": true
+            },
+            {
+              "modelKey": "department",
+              "title": "Department",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "defaultValueByKey": "LS.departmentCode-LS.department",
+              "dependancyEvents": [ "change" ],
+              "disabled": true
+            },
+            {
+              "modelKey": "costCenter",
+              "title": "Cost Center",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/deptcostcenters/all",
+                "displayKey": "costCenterCode-costCenterName",
+                "valueKey": "entityObjectId"
+              },
+              "initLoad": true,
+              "dependancyConfig": [
+                {
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "dependancyEvents": [ "change" ],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "budget",
+              "title": "Budget",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/costcenterbudgets/all",
+                "displayKey": "budgetCode-shortName",
+                "valueKey": "entityObjectId"
+              },
+              "dependancyConfig": [
+                {
+                  "sourceKey": "costCenter",
+                  "event": "change",
+                  "loadData": {
+                    "keyParams": { "costCenterId": "costCenter" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "budgetAmount",
+              "title": "Proposed Budget Amount",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "reason",
+              "title": "Reason",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/racereason/all",
+                "displayKey": "reasonCode-reasonDescription",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+			{
+              "modelKey": "justification",
+              "title": "Justification",
+              "fieldType": "textarea",
+			  "cssClass": "full_width",	
+              "disabled": false,
+              "required": true
+            }  
+          ]
+        }
+      ]
+    }
+  ]
+}

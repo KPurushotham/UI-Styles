@@ -1,0 +1,11 @@
+<div ng-if="field.show" class="input_field left {{field.cssClass}}" 
+     ng-class="(parentForm.df_form[field.modelKey].$error.required || parentForm.df_form[field.modelKey+ fieldIndex].$error.pattern)? 'form_error_field' : ''">
+    <label class="full_width" ng-class="{'hide' :!field.showTitle }" >{{field.title}} <span ng-if="field.required" class="mandatory">*</span></label>
+    <div>
+        <input type="text" class="full_width"  id="{{field.modelKey+ fieldIndex}}"
+               ng-class="{'uppercase': field.uppercase}" dynamic-name="field.modelKey+ fieldIndex" ng-model="field.modelValue" ng-required="field.required"  ng-pattern="fieldPattern" step="0.01"
+               ng-disabled="(field.disabled || parentForm.readOnlyForm) ? true :false" event-dependents="field.dependants"/>
+        <!-- <span class="required-error"  ng-show="field.field_required && !field.field_value">* required</span>-->
+    </div>
+   
+</div>

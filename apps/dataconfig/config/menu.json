@@ -1,0 +1,21 @@
+[
+  {
+    "key": "dataconfig.reportentry",
+    "urlRoute": "dataconfig",
+    "pattern": "LISTING",
+    "title": "Report Entry Screen",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "dataconfig.reportentryform",
+    "urlRoute": "reportentryform",
+    "showInMenu": false,
+    "editKeys": [ "rptElementId","hostGroupId" ],
+    "pattern": "FORM",
+    "title": "Add",
+    "viewName": "mainPagesection"
+  }
+]
+
+
+

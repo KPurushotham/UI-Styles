@@ -1,0 +1,115 @@
+.simpleDemo {
+    min-height: 550px;
+    padding: 5px;
+    overflow: auto;
+    margin:0px;
+    width:100%;
+    float:left;
+    /*background:#fafafa;*/
+}
+.simpleDemo ul[dnd-list] {
+    min-height: 42px;
+    padding-left: 0px;
+}
+.simpleDemo ul[dnd-list] .dndDraggingSource {
+    display: none;
+}
+.simpleDemo ul[dnd-list] .dndPlaceholder {
+    background-color: #ddd;
+    display: block;
+    min-height: 42px;
+}
+.simpleDemo ul[dnd-list] li.selected {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+.mainList {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    display: inline;
+    width: 24.5%;
+    margin: 0 0.25%;
+    padding: 2px;
+    float: left;
+}
+.containerHeaderRow {
+    margin: 1px !important;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #044758;
+    /*background: linear-gradient(45deg, #247da7, #1a6b92);*/
+    /*background: linear-gradient(45deg, #247da7, #37728d);*/
+}
+.containerHeaderRow i {
+    padding: 10px 0;
+    outline:0px;
+}
+.childList {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    display: block;
+    padding: 10px 12px;
+    margin: 4px 0;
+    width: 100% !important;
+    border-radius: 4px;
+}
+.simpleDemo ul {
+    width:100%;
+    /*float:left;*/
+}
+.kanbanStepTitle {
+    padding: 8px 0px;
+    float:left;
+}
+a.kanban-add-newstep {
+    float: right;
+    margin: 4px 4px;
+    font-size: 14px;
+    font-weight: 600;
+    /*color: #0baa9a;*/
+    /*color: #56b1a8;*/
+    color: #09b5b7;
+}
+.kanban-action-icon {
+    margin-right: 10px !important;
+    font-size: 16px !important;
+    /*color: #166179;*/
+    color: #fff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    float: right;
+}
+.paneltitle a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+}
+.step-details {
+    width: 100%;
+    padding: 5px 10px;
+    /*float: left;*/
+    background: #f4f9fa;
+}
+.step-details div {
+    font-size: 13px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 5px;
+}
+.step-details div span {
+    font-size: 13px;
+    font-weight: 400;
+    color: #56b1a8;
+}
+.inr-child-list {
+    background: #f4f9fa;
+    border: 1px solid #eff6f8;
+    font-size: 14px;
+    color:#666;
+}
+.inr-child-list i {
+    color: #56b1a8;
+}

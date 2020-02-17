@@ -1,0 +1,504 @@
+﻿{
+  "name": "contractdefinition",
+  "externalService": "contractDefinitionService",
+  "initLoad": true,
+  "actions": [
+    {
+      "title": "Add",
+      "modelKey": "addButton",
+      "navigateTo": "hostfee.contractdefinitionform"
+    }
+  ],
+  "modalforms": {
+    "bulkCopyPopUp": {
+      "title": "Bulk Contracts Copy",
+      "saveButtonTilte": "Save",
+      "handlerName": "saveBulkContracts",
+      "externalService": "contractDefinitionService",
+      "sections": [
+        {
+          "rowDivisions": [
+            {
+              "fields": [
+                {
+                  "title": "Contract Period",
+                  "cssClass": "col_2 marginBottom20",
+                  "fieldType": "daterange",
+                  "modelKey": "contractPeriod",
+                  "dependancyEvents": [
+                    {
+                      "eventName": "change",
+                      "handlerName": "bcContractPeriodChangeHandler"
+                    }
+                  ],
+                  "disabledInEditMode": true,
+                  "useFieldLevelModelKey": false,
+                  "dateRangeConfig": {
+                    "startDateModelKey": "beginDate",
+                    "endDateModelKey": "endDate"
+                  },
+                  "disabled": false,
+                  "required": true
+                }
+              ]
+            },
+            {
+              "hideInViewMode": true,
+              "fields": [
+                {
+                  "modelKey": "selectedContractsInfo",
+                  "title": "Bulk Copy",
+                  "fieldType": "grid",
+                  "initLoad": true,
+                  "localData": true,
+                  "show": false,
+                  "gridSummaryLabel": "total",
+                  "gridConfig": {
+                    "multiSelect": true,
+                    "modelKeyMap": [],
+                    "features": {
+                      "enableSorting": true,
+                      "masterDetail": true,
+                      "keepDetailRows": true,
+                      "detailRowHeight": 200,
+                      "pagination": true,
+                      "paginationAutoPageSize": false,
+                      "paginationPageSize": 100,
+                      "detailCellRendererParams": {
+                        "detailGridOptions": {
+                          "columnDefs": [
+                            {
+                              "field": "serialid",
+                              "hide": true
+                            },
+                            {
+                              "field": "tenantid",
+                              "hide": true
+                            },
+                            {
+                              "field": "contractentityid",
+                              "hide": true
+                            },
+                            {
+                              "field": "corpentityid",
+                              "hide": true
+                            },
+                            {
+                              "field": "contractagententityid",
+                              "hide": true
+                            },
+                            {
+                              "field": "hostentityid",
+                              "hide": true
+                            },
+                            {
+                              "field": "hostname",
+                              "headerName": "Host",
+                              "width": 80,
+                              "hide": false
+                            },
+                            {
+                              "field": "trackentityid",
+                              "hide": true
+                            },
+                            {
+                              "field": "trackname",
+                              "headerName": "Track",
+                              "width": 140,
+                              "hide": false
+                            },
+                            {
+                              "field": "locentityid",
+                              "hide": true
+                            },
+                            {
+                              "field": "locname",
+                              "headerName": "Location",
+                              "width": 140,
+                              "hide": false
+                            },
+                            {
+                              "field": "breedtypecode",
+                              "hide": true
+                            },
+                            {
+                              "field": "distributionentityid",
+                              "hide": true
+                            },
+                            {
+                              "field": "caltype",
+                              "headerName": "Calc Type",
+                              "width": 80,
+                              "hide": false
+                            },
+                            {
+                              "field": "condition",
+                              "headerName": "Condition",
+                              "width": 80,
+                              "hide": false
+                            },
+                            {
+                              "field": "conventionalamount",
+                              "headerName": "Conv Host Fee",
+                              "width": 80,
+                              "hide": false
+                            },
+                            {
+                              "field": "exoticvalue",
+                              "headerName": "Exotic Host Fee",
+                              "width": 80,
+                              "hide": false
+                            },
+                            {
+                              "field": "amount",
+                              "headerName": "Amount",
+                              "width": 80,
+                              "hide": false
+                            },
+                            {
+                              "field": "begindate",
+                              "headerName": "Begin Date",
+                              "width": 80,
+                              "hide": false
+                            },
+                            {
+                              "field": "enddate",
+                              "headerName": "End Date",
+                              "width": 80,
+                              "hide": false
+                            },
+                            {
+                              "field": "validflag",
+                              "headerName": "Valid Flag",
+                              "width": 80,
+                              "hide": true
+                            },
+                            {
+                              "field": "remarks",
+                              "headerName": "Remarks",
+                              "width": 80,
+                              "hide": false
+                            }
+                          ]
+                        },
+                        "getDetailRowDataKey": "contractDetails",
+                        "getDetailRowDataUrl": "vdi/postget/hostfees/contract/details/validation/getone",
+                        "getDetailRowDataParams": [
+                          "icontractEntityId",
+                          "iCAMappingEntityIds",
+                          "icontractType"
+                        ]
+                      }
+                    },
+                    "columns": [
+                      {
+                        "field": "contractEntityId",
+                        "hide": true
+                      },
+                      {
+                        "field": "entityTypeCode",
+                        "hide": true
+                      },
+                      {
+                        "field": "tenantId",
+                        "hide": true
+                      },
+                      {
+                        "field": "corpEntityId",
+                        "hide": true
+                      },
+                      {
+                        "field": "corpName",
+                        "headerName": "Corporation",
+                        "type": "uppercase",
+                        "filter": "agSetColumnFilter",
+                        "hide": true
+                      },
+                      {
+                        "field": "contractAgentEntityId",
+                        "hide": true
+                      },
+                      {
+                        "field": "contractAgentName",
+                        "headerName": "Contract Agent",
+                        "filter": "agSetColumnFilter",
+                        "cellRenderer": "agGroupCellRenderer"
+                      },
+                      {
+                        "field": "contractTypeCode",
+                        "headerName": "Contract Type Code",
+                        "hide": true
+                      },
+                      {
+                        "field": "contractTypeName",
+                        "headerName": "Contract Type",
+                        "filter": "agSetColumnFilter"
+                      },
+                      {
+                        "field": "createdDate",
+                        "headerName": "Created Date",
+                        "filter": "agSetColumnFilter",
+                        "formatType": "Date",
+                        "hide": true
+                      },
+                      {
+                        "field": "startDate",
+                        "headerName": "Begin Date",
+                        "filter": "agSetColumnFilter",
+                        "formatType": "Date"
+                      },
+                      {
+                        "field": "expiryDate",
+                        "headerName": "End Date",
+                        "filter": "agSetColumnFilter",
+                        "formatType": "Date"
+                      },
+                      {
+                        "field": "isValidFlag",
+                        "headerName": "Validate Info",
+                        "filter": "agSetColumnFilter",
+                        "hide": true
+                      },
+                      {
+                        "field": "remarks",
+                        "headerName": "Remarks",
+                        "filter": "agSetColumnFilter",
+                        "tooltipField": "remarks"
+                      },
+                      {
+                        "field": "imappingIdList",
+                        "headerName": "Items List",
+                        "filter": "agSetColumnFilter",
+                        "hide": true
+                      },
+                      {
+                        "field": "icontractType",
+                        "headerName": "Contract Type",
+                        "filter": "agSetColumnFilter",
+                        "hide": true
+                      },
+                      {
+                        "field": "isSelect",
+                        "headerName": "Select",
+                        "hide": false,
+                        "selected": true,
+                        "checkboxSelection": true,
+                        "headerCheckboxSelection": true,
+                        "headerCheckboxSelectionFilteredOnly": true
+                      }
+                    ]
+                  },
+                  "disabled": false,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "features": {
+    "enableGridMenu": false,
+    "groupSelectsChildren": true,
+    "rowSelection": "multiple",
+    "suppressRowClickSelection": true,
+    "domLayout": "autoHeight"
+  },
+  "criteria": {
+    "showButton": true,
+    "cssClass": "col-md-12 padding0",
+    "rowDivisions": [
+      {
+        "cssClass": "col-md-12 padding0 cd-criteria-row",
+        "columns": [
+          {
+            "cssClass": "cd-criteria-column",
+            "fields": [
+              {
+                "modelKey": "notificationicon",
+                "cssClass": "padding-lftrht0 right",
+                "fieldType": "notification",
+                "handlerName": "notificationHandler",
+                "ignoreInServiceModel": true,
+                "expiryDays": 60,
+                "monthsGap": 6,
+                "dataCount": 0,
+                "disabled": false,
+                "required": false,
+                "show": true
+              },
+              {
+                "cssClass": "padding0 right",
+                "title": "Bulk Copy",
+                "fieldType": "button",
+                "modelKey": "bulkCopyButton",
+                "handlerName": "bulkCopy",
+                "ignoreInServiceModel": true,
+                "required": false,
+                "show": true
+              },
+              {
+                "cssClass": "padding0 right",
+                "title": "Send Email",
+                "fieldType": "button",
+                "modelKey": "sendMailButton",
+                "handlerName": "sendEmail",
+                "ignoreInServiceModel": true,
+                "required": false
+              },
+              {
+                "cssClass": "padding0 right",
+                "title": "Get Results",
+                "fieldType": "button",
+                "modelKey": "getResultsButton",
+                "handlerName": "getResults",
+                "ignoreInServiceModel": true,
+                "required": false
+              },
+              {
+                "modelKey": "isFuture",
+                "fieldType": "checkbox",
+                "ignoreInServiceModel": false,
+                "defaultValue": false,
+                "title": "Future Contracts",
+                "cssClass": "default-css right",
+                "required": false,
+                "show": true,
+                "style": "width:17% !important;"
+              },
+              {
+                "modelKey": "isCurrent",
+                "fieldType": "checkbox",
+                "ignoreInServiceModel": false,
+                "title": "Current Contracts",
+                "defaultValue": true,
+                "cssClass": "default-css right",
+                "required": false,
+                "show": true,
+                "style": "width:16% !important;"
+              },
+              {
+                "modelKey": "isPast",
+                "fieldType": "checkbox",
+                "ignoreInServiceModel": false,
+                "defaultValue": false,
+                "title": "Past Contracts",
+                "cssClass": "default-css right",
+                "required": false,
+                "show": true,
+                "style": "width:14% !important;"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "columns": [
+    {
+      "field": "contractEntityId",
+      "hide": true
+    },
+    {
+      "field": "corpEntityId",
+      "hide": true
+    },
+    {
+      "field": "corporation",
+      "headerName": "Corporation Name",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter",
+      "showRowGroup": "Corporation",
+      "hide": true
+    },
+    {
+      "field": "contractAgentEntityId",
+      "hide": true
+    },
+    {
+      "field": "contractAgentName",
+      "headerName": "Contract Agent",
+      "filter": "agSetColumnFilter",
+      "hide": true,
+      "skipDetailScreenNavigation": true,
+      "rowGroupIndex": 0,
+      "cellRenderer": "agGroupCellRenderer",
+      "cellRendererParams": {
+        "checkbox": true
+      }
+    },
+    {
+      "field": "contractTypeName",
+      "headerName": "Contract Type",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "createdDate",
+      "headerName": "Created Date",
+      "filter": "agSetColumnFilter",
+      "formatType": "Date"
+    },
+    {
+      "field": "startDate",
+      "headerName": "Begin Date",
+      "filter": "agSetColumnFilter",
+      "formatType": "Date"
+    },
+    {
+      "field": "expiryDate",
+      "headerName": "End Date",
+      "filter": "agSetColumnFilter",
+      "formatType": "Date"
+    },
+    {
+      "field": "contractStatusCode",
+      "headerName": "Status",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "id",
+      "headerName": "Actions",
+      "multiActions": [
+        {
+          "title": "Download Contract",
+          "actionType": "PRINT",
+          "actionIconClass": "fa fa-file-pdf-o actionStyle",
+          "handlerName": "printFromGrid",
+          "hide": false,
+          "skipInGroupColumn": true
+        },
+        {
+          "title": "View Contract",
+          "actionType": "VIEW",
+          "actionIconClass": "fa fa-eye actionStyle",
+          "handlerName": "viewContract",
+          "hide": false,
+          "skipInGroupColumn": true
+        },
+        {
+          "title": "Duplicate Contract",
+          "actionType": "COPY",
+          "actionIconClass": "fa fa-copy actionStyle",
+          "handlerName": "dupilcateContractFromListingScreen",
+          "hide": false,
+          "skipInGroupColumn": true
+        }
+      ]
+    },
+    {
+      "field": "isSendMail",
+      "headerName": "Select",
+      "hide": false,
+      "checkboxSelection": true,
+      "headerCheckboxSelection": true,
+      "headerCheckboxSelectionFilteredOnly": true
+    }
+  ],
+  "dataUrl": "vdi/hostfees/contract/definition/all",
+  "editScreenState": "app.hostfee.contractdefinitionform",
+  "rowKey": {
+    "contractEntityId": "contractEntityId"
+  },
+  "defaultSortColumn": "entity_id"
+}

@@ -1,0 +1,30 @@
+{
+    "name":"officialindicator",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.officialindicatorform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/OfficialIndicator/all",
+    "editScreenState": "app.loaders.codes.officialindicatorform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

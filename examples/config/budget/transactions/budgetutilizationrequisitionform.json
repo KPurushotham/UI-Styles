@@ -1,0 +1,189 @@
+ {
+  "name": "budgetutilizationrequisition",
+  "saveUrl": "budgetutilizationrequisition/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "materialWorkService",
+              "title": "Material/Service/Work/Other",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Material",
+                    "value": "material"
+                  },
+                  {
+                    "text": "Service",
+                    "value": "service"
+                  },
+                  {
+                    "text": "Work",
+                    "value": "work"
+                  },
+                  {
+                    "text": "Other",
+                    "value": "other"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "processType",
+              "title": "Type",
+              "fieldType": "radio",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Tender",
+                    "value": ""
+                  },
+                  {
+                    "text": "Enquiry",
+                    "value": ""
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "entityObjectId",
+              "title": "Reference Number",
+              "fieldType": "dropdown",
+              "cssClass": "col_37",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/budgetm/all",
+                "displayKey": "entityObjectId",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "reason",
+              "title": "Reason",
+              "fieldType": "dropdown",
+              "cssClass": "col_37",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/racereason/all",
+                "displayKey": "reasonCode-reasonName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "recommendations",
+              "title": "Recommendations of Head-Of-The-Department",
+              "fieldType": "textbox",
+              "cssClass": "full_width",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Material/Service/Work Details-Budget Utilization Requisition Details",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "fieldType": "grid",
+              "show": true,
+              "gridConfig": {
+                "gridFeatures": [ "selection", "row-edit" , "edit"],
+                "multiSelect": true,
+                "dataUrl": "vdi/olims/budget/annualbudgetapproval/all",
+                "modelKeyMap": [ "" ],
+                "columns": [
+                  {
+                    "key": "budget",
+                    "headerText": "Material/Service/Work Description",
+                    "filterMask": "Search",
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "requestedBudget",
+                    "headerText": "Quantity Required",
+                    "filterMask": "Search",
+                    "type": "uppercase",
+                    "editable": true
+                  },
+                  {
+                    "key": "status",
+                    "headerText": "Unit Of Measurement",
+                    "filterMask": "Search",
+                    "type": "uppercase",
+                    "editable": true
+                  },
+                  {
+                    "key": "lastUpdatedDate",
+                    "headerText": "Unit",
+                    "filterMask": "Search",
+                    "type": "uppercase",
+                    "editable": true
+                  },
+                  {
+                    "key": "department",
+                    "headerText": "Unit Rate",
+                    "filterMask": "Search",
+                    "type": "uppercase",
+                    "editable": true
+                  },
+                  {
+                    "key": "approvedBudget",
+                    "headerText": "Value(Rs)",
+                    "filterMask": "Search",
+                    "type": "uppercase",
+                    "editable": true
+                  },
+                  {
+                    "key": "costCenter",
+                    "headerText": "Cost Center",
+                    "filterMask": "Search",
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "budget",
+                    "headerText": "Budget",
+                    "filterMask": "Search",
+                    "type": "uppercase"
+                  }
+                ]
+              },
+              "initLoad": true,
+              "dependancyConfig": [
+                {
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "show": true }
+
+                }
+              ],
+              "disabled": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

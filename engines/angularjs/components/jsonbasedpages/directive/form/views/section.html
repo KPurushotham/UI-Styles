@@ -1,0 +1,23 @@
+
+<div class="full_width">
+    <div class="full_width " style="text-align: left;{{section.style}}" ng-show="section.show && section.rowDivisions" ng-repeat="rowDivision in section.rowDivisions">
+        <row-division-directive row-division="rowDivision" parent-form="parentForm" parent-section="section" form-data-model="formDataModel" section-data-model="sectionDataModel">
+        </row-division-directive>
+    </div>
+    <div class="full_width tabSection" ng-if="section.show && section.tabs">
+        <md-content class="md-padding">
+            <md-tabs md-selected="selectedIndex" class="tabHeight tab-settings"  md-border-bottom md-autoselect md-swipe-content>
+                <md-tab ng-repeat="tab in section.tabs"
+                        ng-disabled="tab.disabled"
+                        label="{{tab.title}}">
+                    <div class="demo-tab tab{{$index%4}}" style="padding: 25px; {{section.style}}">
+                        <div class="full_width" ng-repeat="rowDivision in tab.rowDivisions">
+                            <row-division-directive row-division="rowDivision" parent-form="parentForm" parent-section="section" form-data-model="formDataModel" section-data-model="sectionDataModel">
+                            </row-division-directive>
+                        </div>
+                    </div>
+                </md-tab>
+            </md-tabs>
+        </md-content>
+    </div>
+</div>

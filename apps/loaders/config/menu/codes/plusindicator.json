@@ -1,0 +1,28 @@
+{
+    "name":"plusindicator",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.plusindicatorform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/PlusIndicator/all",
+    "editScreenState": "app.loaders.codes.plusindicatorform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }

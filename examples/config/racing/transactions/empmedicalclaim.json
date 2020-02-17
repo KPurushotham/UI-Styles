@@ -1,0 +1,42 @@
+{
+  "columns": [    
+    {
+      "key": "partyTypeId",
+      "headerText": "Party Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+
+    {
+      "key": "partyCodeName",
+      "headerText": "Party",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "agencyId",
+      "headerText": "Agency",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "amount",
+      "headerText": "Amount",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "amountSanctioned",
+      "headerText": "Amount Sanctioned",
+      "filterMask": "Search",
+      "type": "uppercase"
+    }
+  ],
+
+  "dataUrl": "vdi/olims/racing/empmedclaim/all",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

@@ -1,0 +1,64 @@
+{
+  "columns": [
+    {
+      "key": "horseName",
+      "headerText": "Horse",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "locality",
+      "headerText": "Locality",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+   
+    {
+      "key": "raceName",
+      "headerText": "Race Name",
+      "filterMask": "Search"
+    },
+    {
+      "key": "raceDate",
+      "headerText": "Race Date",
+      "type": "date"
+    },
+  
+    {
+      "key": "distance",
+      "headerText": "Distance",
+      "filterMask": "Search"
+    },
+ 
+    {
+      "key": "weight",
+      "headerText": "Weight",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "rating",
+      "headerText": "Rating",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+   
+    {
+      "key": "trainerName",
+      "headerText": "Trainer",
+      "filterMask": "Search"
+    },
+    {
+      "key": "jockeyName",
+      "headerText": "Jockey",
+      "type": "date"
+    }
+  ],
+
+  "dataUrl": "vdi/olims/racing/horseperformance/all",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

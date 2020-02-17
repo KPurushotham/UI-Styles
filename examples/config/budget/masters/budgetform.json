@@ -1,0 +1,128 @@
+{
+  "name": "budgetform",
+  "saveUrl": "budgetm/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "department",
+              "title": "Department",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "defaultValueByKey": "LS.departmentCode-LS.department",
+              "dependancyEvents": [ "change" ],
+              "disabled": true,
+              "valueKey": "entityObjectId"
+            },
+            {
+              "modelKey": "departmentCode",
+              "fieldType": "hidden",
+              "defaultValueByKey": "LS.departmentId"
+            },
+            {
+              "modelKey": "costCenter",
+              "title": "Cost Center",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/deptcostcenters/all",
+                "displayKey": "costCenterCode-costCenterName",
+                "valueKey": "entityObjectId"
+              },
+              "initLoad": true,
+              "dependancyConfig": [
+                {
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "dependancyEvents": [ "change" ],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "budgetCategory",
+              "title": "Budget Category",
+			  "cssClass": "col_3",	
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/budgetcategory/all",
+                "displayKey": "shortName-description",
+                "valueKey": "id"
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "materialServiceWork",
+              "title": "Material/Service/Work/Other",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Material",
+                    "value": "material"
+                  },
+                  {
+                    "text": "Service",
+                    "value": "service"
+                  },
+                  {
+                    "text": "Work",
+                    "value": "work"
+                  },
+                  {
+                    "text": "Other",
+                    "value": "other"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "budgetCode",
+              "title": "Code",
+              "fieldType": "systemcode",
+              "cssClass": "col-2",
+              "keyGenConfig": {
+                "params": "entityCode=budget&entityGroupCode=bud&entityTypeCode=bud"
+              }
+            },
+            {
+              "modelKey": "shortName",
+              "title": "Short Name",
+              "fieldType": "textbox",
+              "cssClass": "col_6",
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "description",
+              "title": "Description",
+              "fieldType": "textbox",
+              "cssClass": "full_width",
+              "disabled": false,
+              "required": false
+
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

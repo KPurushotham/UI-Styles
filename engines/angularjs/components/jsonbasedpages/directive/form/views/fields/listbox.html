@@ -1,0 +1,8 @@
+<div ng-if="field.show" class="list-box-field row {{field.cssClass}}"  style="{{field.style}}">
+    <ul dnd-list="field.options">       
+        <li ng-repeat="item in field.options" dnd-draggable="item" dnd-effect-allowed="move"
+            dnd-moved="field.options.splice($index, 1)" class="col-md-12">
+                <i class="fa fa-ellipsis-v bluecolor"></i>{{item.text}}
+        </li>
+    </ul>
+</div>

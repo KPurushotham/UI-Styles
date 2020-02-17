@@ -1,0 +1,62 @@
+﻿{
+  
+  "columns": [
+   {
+      "key": "ownerId",
+      "headerText": "Owner",
+    "filterMask": "Search",
+     "type": "uppercase"
+    },
+	
+  
+	{
+      "key": "banTypeCode",
+      "headerText": "Ban Type Code",
+    "filterMask": "Search",
+     "type": "uppercase"
+    },
+
+    {
+      "key": "clubId",
+      "headerText": "Club Id",
+      "filterMask": "Search",
+     "type": "uppercase"
+    }, {
+      "key": "effectiveFrom",
+      "headerText": "Ban Effect Form",
+      "filterMask": "Search",
+     "type": "date"
+    },
+   {
+      "key": "effectiveTo",
+      "headerText": "Effecive To",
+      "filterMask": "Search",
+     "type": "date"
+    },
+	
+      {
+        "key": "status",
+        "headerText": "Status",
+        "filterMask": "Search"
+      },
+      {
+        "key": "lastUpdatedDate",
+        "headerText": "Last Updated Date",
+        "type": "date"
+      }
+  ],
+  "dataUrl": "vdi/olims/racing/banentry/all",
+
+  "rowKey": {
+  "entityObjectId": "entityObjectId"
+  },
+
+
+  "defaultSortColumn": "lastUpdatedDate"
+}
+
+
+
+
+
+

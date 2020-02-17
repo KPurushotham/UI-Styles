@@ -1,0 +1,62 @@
+{
+ "columns": [
+    {
+        "key": "trainerName",
+          "headerText": "Trainer Name",
+          "filterMask": "Search",
+          "type": "uppercase"
+ },
+      {
+          "key": "age",
+          "headerText": "Age",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "qualification",
+          "headerText": "Qualification",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+
+        {
+          "key": "status",
+          "headerText": "Status",
+          "filterMask": "Search"
+        },
+        {
+          "key": "lastUpdatedDate",
+          "headerText": "Last Updated Date",
+          "type": "date"
+        }
+ ],
+    "childColumns" :
+    [
+      {
+        "key": "horseName",
+      "headerText": "Horse",
+      "filterMask": "Search",
+        "type": "uppercase"
+      },
+      {
+       "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search",
+        "type": "uppercase"
+      },
+      {
+       "key": "effectiveFrom",
+      "headerText": "EffectiveFrom",
+      "filterMask": "Search",
+      "type": "date"
+      }
+    ],
+  "dataUrl": "vdi/olims/racing/trainerregistration/all",
+"childDataUrl":"vdi/olims/racing/trainerslot/getone?trainerId=",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "trainerName",
+  "childDefaultSortColumn": "lastUpdatedDate"
+}

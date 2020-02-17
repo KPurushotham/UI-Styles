@@ -1,0 +1,21 @@
+[
+  {
+    "key": "reportdataconfig.budgetentry",
+    "urlRoute": "budgetentry",
+    "pattern": "LISTING",
+    "title": "Budget Entry Screen",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "reportdataconfig.budgetentryform",
+    "urlRoute": "budgetentryform",
+    "showInMenu": false,
+    "editKeys": [ "Id" ],
+    "pattern": "FORM",
+    "title": "Add",
+    "viewName": "mainPagesection"
+  }
+]
+
+
+

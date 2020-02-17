@@ -1,0 +1,87 @@
+{
+  "name": "tenantdatasourceitemform",
+  "saveUrl": "vdi/reportsdesigner/tenantdatasourceitem/get/save",
+  "getOneUrl": "vdi/reportsdesigner/tenantdatasourceitem/get/one",
+  "externalService": "tenantdatasourceitemconfigService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "tenantId",
+              "cssClass": "col_1",
+              "title": "Tenant Id",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "dataSourceId",
+              "cssClass": "col_1",
+              "title": "Data Source Id",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "itemValue",
+              "cssClass": "col_1",
+              "title": "Item Value",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "itemText",
+              "cssClass": "col_1",
+              "title": "Item Text",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "childDataSourceId",
+              "cssClass": "col_1",
+              "title": "Child Data Source Id",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "dataQueryRuleId",
+              "cssClass": "col_1",
+              "title": "Data Query Rule Id",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "beginDate",
+              "cssClass": "col_1",
+              "title": "Begin Date",
+              "fieldType": "date",
+              "required": true
+            },
+            {
+              "modelKey": "endDate",
+              "cssClass": "col_1",
+              "title": "End Date",
+              "fieldType": "date",
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "configJson",
+              "cssClass": "col_2",
+              "title": "Config Json",
+              "fieldType": "ace",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+<div class="paid_vendor_container full_width">
+    <div class="sub_heading full_width no-margin">
+        <h5 class="full_width">Insurance Information</h5>
+    </div>
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.nominee.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Nominee <span class="mandatory">*</span></label>
+        <div>
+            <input type="text" class="full_width" name="nominee" ng-disabled="disableFlag" ng-model="partyModel.insurance.nominee" required>
+        </div>
+    </div>
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.relation.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Relation <span class="mandatory">*</span></label>
+        <div>
+            <input type="text" class="full_width" name="relation" ng-disabled="disableFlag" ng-model="partyModel.insurance.relation" required>
+        </div>
+    </div>
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.insuredAmount.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Insured Amount <span class="mandatory">*</span></label>
+        <input type="text" class="full_width" name="insuredAmount" ng-disabled="disableFlag" ng-model="partyModel.insurance.insuredAmount" required numbers-only>
+    </div>
+    <div class="input_field full_width">
+        <label class="full_width">Remarks</label>
+        <input type="text" class="full_width" name="remarks" ng-disabled="disableFlag" ng-model="partyModel.insurance.remarks">
+    </div>
+</div>

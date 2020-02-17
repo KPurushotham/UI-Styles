@@ -1,0 +1,60 @@
+{
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "chrimscore.tracksform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "entityId",
+      "hide": true
+    },
+
+    {
+      "field": "trackNo",
+      "headerName": "Track No",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "trackName",
+      "headerName": "Tracks Name",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+
+    {
+      "field": "shortEventCode",
+      "headerName": "Short Event Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "eventCode",
+      "headerName": "Event Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "entityTypeCode",
+      "headerName": "Entity Type Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+
+  ],
+  "dataUrl": "vdi/chrimsmasters/tracks/details",
+  "editScreenState": "app.chrimscore.tracksform",
+  "rowKey": {
+    "trackNo": "trackNo"
+  },
+  "defaultSortColumn": "trackNo"
+}

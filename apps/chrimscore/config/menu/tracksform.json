@@ -1,0 +1,66 @@
+{
+  "name": "tracksform",
+  "saveUrl": "vdi/chrimsmasters/tracks/details/save",
+  "getOneUrl": "vdi/chrimsmasters/tracks/details/getone",
+  "externalService": "",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "trackNo",
+              "title": "Track Number",
+              "fieldType": "textbox",
+              "cssClass": "col_2",
+              "required": true
+            },
+    
+            {
+              "modelKey": "trackName",
+              "title": "Track Name",
+              "fieldType": "textbox",
+              "cssClass": "col_2",
+              "required": true
+            },
+            {
+              "modelKey": "shortEventCode",
+              "title": "Short Event Code",
+              "cssClass": "col_2",
+              "fieldType": "textbox",
+              "required": true
+            }
+
+          ]
+        },
+        {
+          "fields": [
+             {
+              "modelKey": "eventCode",
+              "title": "Event Code",
+              "cssClass": "col_2",
+              "disabledInEditMode": false,
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "entityTypeCode",
+              "title": "Entity Type Code",
+              "defaultValue": "TRACK",
+              "cssClass": "col_2",
+              "fieldType": "hidden",
+              "required": false
+            }
+          ]
+        }
+
+
+      ]
+    }
+
+  ]
+}

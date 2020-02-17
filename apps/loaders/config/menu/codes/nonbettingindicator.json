@@ -1,0 +1,30 @@
+{
+    "name":"nonbettingindicator",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.nonbettingindicatorform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/NonBettingIndicator/all",
+    "editScreenState": "app.loaders.codes.nonbettingindicatorform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

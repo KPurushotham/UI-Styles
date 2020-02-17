@@ -1,0 +1,137 @@
+﻿[
+  {
+    "stateName": "tote.venuemaster",
+    "url": "venuemaster",
+    "pattern": "LISTING",
+    "viewName": "toteSection",
+    "data": {
+      "title": "Venue",
+      "addScreenStateName": "tote.venueform"
+    }
+  },
+  {
+    "stateName": "tote.venueform",
+    "url": "venueform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId"],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "VENUE",
+    "fieldMap": {
+       "entityCode": "venueCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=venue&entityGroupCode=tote&entityTypeCode=tote",
+    "viewName": "toteSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "tote.enclosuremaster",
+    "url": "enclosuremaster",
+    "pattern": "LISTING",
+    "viewName": "toteSection",
+    "data": {
+      "title": "Enclosure",
+      "addScreenStateName": "tote.enclosureform"
+    }
+  },
+   {
+    "stateName": "tote.enclosureform",
+    "url": "enclosureform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId"],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "LOCATION_TYPE_ENCLOSURE",
+    "fieldMap": {
+       "entityCode": "enclosureCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=enclosure&entityGroupCode=tote&entityTypeCode=tote",
+    "viewName": "toteSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "tote.designationmaster",
+    "url": "designationmaster",
+    "pattern": "LISTING",
+    "viewName": "toteSection",
+    "data": {
+      "title": "Designation",
+      "addScreenStateName": "tote.designationform"
+    }
+  },
+  {
+    "stateName": "tote.designationform",
+    "url": "designationform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId"],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "DESIGNATION",
+    "fieldMap": {
+       "entityCode": "designationCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=designation&entityGroupCode=tote&entityTypeCode=tote",
+    "viewName": "toteSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "tote.allowancemaster",
+    "url": "allowancemaster",
+    "pattern": "LISTING",
+    "viewName": "toteSection",
+    "data": {
+      "title": "Allowance",
+      "addScreenStateName": "tote.allowanceform"
+    }
+  },
+  {
+    "stateName": "tote.allowanceform",
+    "url": "allowanceform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId"],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "ALLOWANCE",
+    "fieldMap": {
+       "entityCode": "allowanceCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=allowance&entityGroupCode=tote&entityTypeCode=tote",
+    "viewName": "toteSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "tote.shiftmaster",
+    "url": "shiftmaster",
+    "pattern": "LISTING",
+    "viewName": "toteSection",
+    "data": {
+      "title": "Shift",
+      "addScreenStateName": "tote.shiftform"
+    }
+  },
+  {
+    "stateName": "tote.shiftform",
+    "url": "shiftform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId"],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "SHIFT",
+    "fieldMap": {
+       "entityCode": "shiftCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=shift&entityGroupCode=tote&entityTypeCode=tote",
+    "viewName": "toteSection",
+    "data": { "title": "New" }
+  }
+]

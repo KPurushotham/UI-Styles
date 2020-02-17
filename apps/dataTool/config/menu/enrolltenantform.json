@@ -1,0 +1,178 @@
+{
+  "name": "enrolltenantform",
+  "saveUrl": "",
+  "getOneUrl": "",
+  "externalService": "",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "tenantId",
+              "cssClass": "col_2",
+              "title": "Tenant Id",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "entityTypeCode",
+              "cssClass": "col_2",
+              "title": "Entity Type Code",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "tenantCode",
+              "cssClass": "col_2",
+              "title": "Tenant Code",
+              "fieldType": "textbox",
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+
+            {
+              "modelKey": "title",
+              "cssClass": "col_2",
+              "title": "Title",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "logo",
+              "cssClass": "col_2",
+              "title": "Logo",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "isActive",
+              "defaultValue": "true",
+              "title": "Is Active",
+              "fieldType": "singleradio",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "value": "true"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "tenantId",
+              "cssClass": "col_2",
+              "title": "Sub Tenant Id",
+              "fieldType": "dropdown",
+              "ismultiple": true,
+              "required": true
+            },
+            {
+              "title": "Add to Grid",
+              "fieldType": "button",
+              "handlerName": "addToGrid",
+              "cssClass": "col_1",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "",
+              "title": "",
+              "fieldType": "grid",
+              "initLoad": true,
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "total",
+              "gridConfig": {
+                "multiSelect": true,
+                "modelKeyMap": [
+                  "tenantId",
+                  "entityTypeCode",
+                  "tenantCode",
+                  "title",
+                  "logo",
+                  "isActive"
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "toolPanelSuppressRowGroups": true
+                },
+                "columns": [
+                  {
+                    "field": "tenantId",
+                    "headerName": "Tenant Id",
+                    "hide": false,
+                    "editable": false
+                  },
+                  {
+                    "field": "entityTypeCode",
+                    "headerName": "Entity Type Code",
+                    "hide": false,
+                    "editable": false
+                  },
+                  {
+                    "field": "tenantCode",
+                    "headerName": "Tenant Code",
+                    "hide": false,
+                    "editable": false
+                  },
+                  {
+                    "field": "title",
+                    "headerName": "Title",
+                    "hide": false,
+                    "editable": false
+                  },
+                  {
+                    "field": "logo",
+                    "headerName": "Logo",
+                    "hide": false,
+                    "editable": false
+                  },
+                  {
+                    "field": "isActive",
+                    "headerName": "Is Active",
+                    "hide": false,
+                    "editable": true
+                  },
+                  {
+                    "field": "id",
+                    "headerName": "Delete",
+                    "actionType": "DELETE",
+                    "actionIconClass": "fa fa-trash",
+                    "handlerName": "deleteFromGrid"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

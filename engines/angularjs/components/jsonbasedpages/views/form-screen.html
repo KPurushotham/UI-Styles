@@ -1,0 +1,204 @@
+<div class="form-page-design">
+    <div class="inrpage-back-to-report-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3"><breadcrumb-directive breadcrumb-map="form.breadcrumbMap" active-page-title="form.activePageTitle"></breadcrumb-directive></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-6"><actions-directive actions="actions" screen-mode="form.screenMode"></actions-directive></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--<form name="df_form" novalidate=''>
+
+        <div class="form_container full_width" ng-init="setForm(df_form)">
+            <div class="full_width">
+                <div class="right buttons_container container_top">
+                    <a class="btn" href="javascript:void(0);" name="edit-icon" ng-class="form.screenMode=='VIEW'?'show_block':'hide_block'" ng-click="form.showInEditMode()" ng-disabled = "disableSubmit">
+                        <span class="icon-btn icon-note"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="full_width">
+                <small class="mandatory_message" ng-show="form.screenMode!='VIEW' && form.isManidatoryRequired == true">
+                    Fields with asterisk (*) mark is mandatory
+                </small>
+            </div>
+            <dynamic-form-directive form="form" form-data-model="formDataModel"></dynamic-form-directive>
+        </div>
+
+    </form>-->
+
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 padding-lft padding-rht">
+            <div class="inrpage-forms-section">
+                <form name="df_form" novalidate=''>
+
+                    <div class="form_container full_width" ng-init="setForm(df_form)">
+                        <div class="full_width">
+                            <div class="right buttons_container container_top">
+                                <a class="btn" href="javascript:void(0);" name="edit-icon" ng-class="(form.screenMode=='VIEW' && form.noWorkflow) || (form.screenMode=='VIEW' && form.workflowState=='ENABLE_EDITING' && !form.noWorkflow) ?'show_block':'hide_block'" ng-click="form.showInEditMode()" ng-disabled="disableSubmit">
+                                    <!--<span class="icon-btn icon-note"></span>-->
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="full_width">
+                            <small class="mandatory_message" ng-show="form.screenMode!='VIEW' && form.isManidatoryRequired == true">
+                                Fields with asterisk (*) mark is mandatory
+                            </small>
+                        </div>
+                        <dynamic-form-directive form="form" form-data-model="formDataModel"></dynamic-form-directive>
+                    </div>
+
+                </form>
+
+
+            </div>
+            </div>
+    </div>
+</div>
+
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">{{datas.title}}</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        <form name="df_form" novalidate=''>
+            <dynamic-form-directive form="datas.modalform" form-data-model="formDataModel">
+            </dynamic-form-directive>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="ok()">{{datas.modalform["saveButtonTilte"] || Save}}</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+<style>
+    .statebar-snippet {
+        width:100%;
+        margin:0px 0 20px;
+        padding:10px 0;
+        float:left;
+        text-align:center;
+        border-bottom:1px dashed #c3dcdc;
+        background:#faf9f9;
+    }
+    .bs-wizard {
+        margin-top: 0px;
+    }
+    /*Form Wizard*/
+    .bs-wizard {
+        border-bottom: solid 1px #e0e0e0;
+        padding: 0;
+    }
+
+        .bs-wizard > .bs-wizard-step {
+            padding: 0;
+            position: relative;
+        }
+
+            .bs-wizard > .bs-wizard-step + .bs-wizard-step {
+            }
+
+            .bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
+                /*color: #595959;*/
+                color: #508c8c;
+                font-size: 13px;
+                margin-bottom: 0px;
+                position: relative;
+                left: -5px;
+                top: 0px;
+                text-transform:uppercase;
+            }
+
+            .bs-wizard > .bs-wizard-step .bs-wizard-info {
+                color: #999;
+                font-size: 14px;
+            }
+
+            .bs-wizard > .bs-wizard-step > .bs-wizard-dot {
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                display: block;
+                /*background: #fbe8aa;*/
+                background: #d7ece3;
+                top: 18px;
+                left: 50%;
+                margin-top: -15px;
+                margin-left: -15px;
+                border-radius: 50%;
+            }
+
+                .bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {
+                    content: ' ';
+                    width: 8px;
+                    height: 8px;
+                    /*background: #fbbd19;*/
+                    background: #0f9960;
+                    border-radius: 50px;
+                    position: absolute;
+                    top: 4px;
+                    left: 4px;
+                }
+
+            .bs-wizard > .bs-wizard-step > .progress {
+                position: relative;
+                border-radius: 0px;
+                height: 3px;
+                box-shadow: none;
+                margin: 10px 0;
+                background-color:#cdcdcd;
+            }
+
+                .bs-wizard > .bs-wizard-step > .progress > .progress-bar {
+                    width: 0px;
+                    box-shadow: none;
+                    /*background: #fbe8aa;*/
+                    background: #a8e2c7;
+                }
+
+            .bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {
+                width: 100%;
+            }
+
+            .bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {
+                width: 50%;
+            }
+
+            .bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
+                width: 0%;
+            }
+
+            .bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {
+                width: 100%;
+            }
+
+            .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
+                /*background-color: #f5f5f5;*/
+                background-color: #dedede;
+            }
+
+                .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {
+                    opacity: 0;
+                }
+
+            .bs-wizard > .bs-wizard-step:first-child > .progress {
+                left: 50%;
+                width: 50%;
+            }
+
+            .bs-wizard > .bs-wizard-step:last-child > .progress {
+                width: 50%;
+            }
+
+            .bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot {
+                pointer-events: none;
+            }
+    /*END Form Wizard*/
+</style>

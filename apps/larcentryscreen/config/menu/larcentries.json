@@ -1,0 +1,124 @@
+{
+  "name": "larcentries",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "larcentryscreen.larcentriesform"
+    }
+  ],
+  "criteria": {
+    "showButton": true,
+    "rowDivisions": [
+      {
+        "fields": [
+          {
+            "modelKey": "startdate",
+            "cssClass": "col-md-2 padding-lftrht0",
+            "title": "Begin Date",
+            "fieldType": "date",
+            "required": true
+          },
+          {
+            "modelKey": "enddate",
+            "cssClass": "col-md-2 padding-lftrht0",
+            "title": "End Date",
+            "fieldType": "date",
+            "required": true
+          }
+        ]
+      }
+    ]
+  },
+  "columns": [
+    {
+      "field": "hostgroupid",
+      "headerName": "Host Group Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "hostno",
+      "headerName": "Host No",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "startdate",
+      "headerName": "Start Date",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "enddate",
+      "headerName": "End Date",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "fromtrackno",
+      "headerName": "From Track No",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "fromeventcode",
+      "headerName": "From Event Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "totrackno",
+      "headerName": "To Track No",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "toeventcode",
+      "headerName": "To Event Code",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "fromraceno",
+      "headerName": "From Race No",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "toraceno",
+      "headerName": "To Race No",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "prepostprocess",
+      "headerName": "Pre Post Process",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "createdate",
+      "headerName": "Create Date",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "lastupdate",
+      "headerName": "Last Update",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "lastupdateby",
+      "headerName": "Last Update By",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    }
+  ],
+  "dataUrl": "/vdi/entryscreen/application/by_racedate_get_one",
+  "editScreenState": "app.larcentryscreen.larcentriesform",
+  "rowKey": {
+    "remapEventId": "remapEventId"
+  },
+  "defaultSortColumn": "hostgroupid"
+}

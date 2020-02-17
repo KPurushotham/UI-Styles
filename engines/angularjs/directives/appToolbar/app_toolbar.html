@@ -1,0 +1,91 @@
+<div class="app-toolbar fixed-sub-menu clearfix" scroll-position="scrolled" max-height="30" ng-class="{'scrolled': scrolled}" ng-disabled="{{appDropDown}}">
+    <!--<div class="app-toolbar fixed-sub-menu clearfix" scroll-position="scrolled" max-height="50" ng-class="{'scrolled': scrolled}">-->
+
+    <div class="tenant-app-list clearfix">
+        <div class="al-tenant-app" uib-dropdown ng-if="showTenantPortion !==undefined && showTenantPortion==true">
+
+            <div class="tenat-app-logo">
+                <div class="toolbar-tenant-img-cls {{activeTenantCode}}-icon"></div><span><strong>{{activeTenantName || 'CHRIMS'}}</strong></span>
+                
+                <!-- <b class="fa fa-angle-down" style="font-size: 23px !important;color: white;" ui-sref-active="fa-angle-up">
+    </b>-->
+            </div>
+            <div class="tenats-apps-dropmenu" ng-if="hasSubTenants">
+                <a data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+                <ul class="dropdown-menu" uib-dropdown-menu style="width:250px;">
+                    <h4>Tenants</h4>
+                    <li><i class="dropdown-arr"></i></li>
+                    <li>
+                        <div class=" app-pos">
+                            <div class="col-md-4" ng-repeat="(tenantKey,tenant) in tenantList">
+                                <div class="app-toolbar-pos app-toolbar-pos2">
+                                    <!-- <a ng-click="navigateToAppsDashboad(tenantKey, tenant) || appDropDown()"  href="javascript:void(0);" ng-disabled="appDropDown" > -->
+                                    <a ng-click="navigateToAppsDashboad(tenantKey, tenant)" href="javascript:void(0);" ng-disabled="appDropDown">
+                                        <!--<i class="fa fa-user"></i>--><div class="toolbar-tenant-dropdown-img-cls {{tenant.tenantCode}}-icon"></div><span style="color:darkgray">{{tenant.title}}</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="al-tenant-app tenats-apps-dropmenu" uib-dropdown ng-if="showAppPortion !==undefined && showAppPortion==true">
+
+            <a data-toggle="dropdown" class="dropdown-toggle">
+                <div class="toolbar-app-img-cls {{activeAppKey}}-icon"></div><span><strong>{{activeAppName || 'Dashboard'}}</strong></span>
+                <!--<b class="fa fa-angle-down" style="font-size: 23px !important;" ui-sref-active="fa-angle-up"></b>-->
+                <b class="fa fa-ellipsis-v" style="font-size: 14px !important; margin: 7px 7px 0 7px;" ui-sref-active="fa fa-ellipsis-v"></b>
+            </a>
+            <ul class="dropdown-menu" uib-dropdown-menu style="width:250px;">
+                <h4>Applications</h4>
+                <li><i class="dropdown-arr"></i></li>
+                <li>
+                    <!--<div class=" app-pos" id="appDropDown">-->
+                    <div class=" app-pos" ng-disabled="(appDropDown)">
+                        <div class="col-md-4" ng-repeat="appDef in appDefList">
+                            <div class="app-toolbar-pos app-toolbar-pos1">
+                                <a ng-click="navigateToAppMenu(appDef.key)" href="javascript:void(0);" ng-disabled="appDropDown">
+                                    <!-- <a ng-click="navigateToAppMenu(appDef.key) || appDropDown()" href="javascript:void(0);" ng-disabled="appDropDown"> -->
+                                    <!--<i class="fa fa-user">--></i><div class="toolbar-app-dropdown-img-cls {{appDef.key}}-icon"></div><span style="color:darkgray">{{appDef.title}}</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+    <ids-side-menu dashboard-screen="isDashboardScreen"></ids-side-menu>
+
+    <a href class="collapse-menu-link ion-navicon  {{$idsSideMenuService.menuPosition ? 'hide ':'show'}}" ids-side-menu-toggle-menu></a>
+
+</div>
+
+<!--<div class="tenant-app-list clearfix">
+        <div class="al-tenant-app" uib-dropdown>
+            <a uib-dropdown-toggle data-toggle="dropdown" class="profile-toggle-link dropdown-toggle">
+                <span style="color:white"><strong>{{activeAppKey || 'Dashboard'}}</strong></span>
+                <b class="fa fa-angle-down" style="font-size: 23px !important;color: white;" ui-sref-active="fa-angle-up"></b>
+            </a>
+            <ul style="margin:0;z-index: 905!important;right: -50px!important" class="top-dropdown-menu app-dropdown dropdown-menu" uib-dropdown-menu>
+                <li><i class="dropdown-arr"></i></li>
+                <li>
+                    <a data-ui-sref="app.nsadmin" href="javascript:void(0);">
+                        <i class="fa fa-user"></i><span style="color:darkgray">NS Admin</span>
+                    </a>
+                </li>
+                <li>
+                    <a data-ui-sref="app.hostfee" href="javascript:void(0);">
+                        <i class="fa fa-cog"></i><span style="color:darkgray">Host Fee</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>-->

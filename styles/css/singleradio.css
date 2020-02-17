@@ -1,0 +1,25 @@
+.radio_fields_wrapper h5.radio-heading {
+    color: #444444 !important;
+    font-size: 13px !important;
+    margin-bottom: 12px !important;
+}
+
+.radio_fields_wrapper label {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+    .radio_fields_wrapper label input {
+        width: 18px;
+        height: 18px;
+        margin: 0px 5px 0px 0px;
+    }
+
+    .radio_fields_wrapper label span {
+        color: #3b4046;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+.dynamic_radio_fields label {
+    margin-top: 17px;
+}

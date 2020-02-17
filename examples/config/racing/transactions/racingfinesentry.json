@@ -1,0 +1,61 @@
+{
+  "columns": [
+     {  
+      "key": "transactionDate",
+      "headerText": "Transaction Date",
+      "filterMask": "Search",
+      "type": "date"
+      
+    }, 
+    {
+      "key": "partyTypeId",
+      "headerText": "Party Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+
+    },
+    {
+      "key": "partyId",
+      "headerText": "Party",
+      "filterMask": "Search",
+      "type": "uppercase"
+
+    },
+     {
+      "key": "raceDate",
+      "headerText": "Race Date",
+      "filterMask": "Search",
+      "type": "date"
+
+    },
+    {
+      "key": "fineTypeId",
+      "headerText": "Fine Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+
+    },
+    {
+      "key": "raceNameId",
+      "headerText": "Race Name",
+      "filterMask": "Search"
+
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/racing/racefinesentry/all",
+  
+  "rowKey": {  
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

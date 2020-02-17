@@ -1,0 +1,436 @@
+.ag-body, .ag-header-cell-text {
+    font-family: "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+    font-size: 13px !important;
+}
+
+.ag-theme-bootstrap .ag-header-cell {
+    border-right: 1px solid #2091b2 !important;
+    /*border-right: 1px solid #5b996a !important;*/
+    /*border-top: 1px solid #5b996a !important;*/
+    /*border-top: 1px solid #f0f0f0 !important;*/
+}
+
+.ag-theme-bootstrap .ag-header-group-cell-with-group {
+    /*border-right: 1px solid #f0f0f0 !important;*/
+    border-right: 1px solid #1b6f85 !important;
+}
+
+.ag-header-group-cell-label {
+    text-align: center;
+}
+
+.ag-theme-bootstrap .ag-header-group-cell-label span {
+    float: none !important;
+    width: 100%;
+    text-align: center;
+}
+
+.ag-theme-bootstrap .ag-row {
+    font-family: "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 400;
+    /*color: #454545;*/
+    color: #666;
+}
+
+.ag-theme-bootstrap .ag-row-hover {
+    font-size: 13px !important;
+    font-weight: 500;
+    color: #454545 !important;
+    background-color: #ebd57f !important;
+}
+.ag-theme-bootstrap .ag-ltr .ag-cell {
+    border-right: 1px solid #e5e5e5 !important;
+    /*text-align:center;*/
+}
+.ag-theme-bootstrap .ag-body-viewport {
+    background-color: transparent !important;
+}
+/*.ag-theme-bootstrap .ag-header {
+    background-color: #eee !important;
+}*/
+
+
+/* new grid style */
+.ag-row {
+    white-space: nowrap;
+    width: 100%;
+    border-bottom: 1px solid #f5f5f5 !important;
+}
+
+.ag-grid-cell-style-reportby {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.ag-grid-cell-style {
+    text-align: right !important;
+    padding-left: 0px !important;
+}
+
+.ag-grid-row-style {
+    font-size: 7pt !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.ag-footer-grid-row-style {
+    font-size: 7pt !important;
+    font-weight: bold;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.report-grid-field .ag-header-cell-text {
+    font-size: 11px !important;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.report-grid-field .ag-header-cell {
+    padding: 0px !important;
+}
+
+.ag-grid-header-style {
+    font-size: 11px !important;
+    text-align: right;
+    word-wrap: break-word;
+}
+
+[col-id="ag-Grid-AutoColumn-reportBy"] {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.ag-header-row {
+    height: 30px !important;
+    width: 100% !important;
+    float: left;
+    position: relative !important;
+    top: 0px !important;
+    display:block !important;
+    color: #fff !important;
+    font-weight: 400;
+}
+
+#reportFooterGrid {
+    height: 30px !important;
+    /*background: #f00;*/
+    float: left;
+    width: 100%;
+    position: relative !important;
+    top: 0px;
+    z-index: 999999;
+    display: block !important;
+}
+
+/* new grid style */
+.ag-grid-header-style-left {
+    font-size: 11px !important;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.ag-grid-cell-style-left {
+    text-align: left !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.ag-grid-header-style-right {
+    font-size: 11px !important;
+    text-align: right;
+    word-wrap: break-word;
+}
+
+.ag-grid-cell-style-right {
+    text-align: right !important;
+    padding-left: 0px !important;
+}
+
+/* --- */
+
+/*.ag-theme-bootstrap .ag-body-viewport {
+    background-color: transparent !important;
+}*/
+
+.ag-layout-normal {
+    /*min-height: 490px !important;*/
+    /*min-height: 100px !important;*/
+    height:100% !important;
+}
+
+.ag-root-wrapper.ag-layout-normal {
+    height: auto !important;
+}
+
+.ag-theme-bootstrap .ag-header {
+    /*background-color: var(--grid-header-bg-color) !important;*/
+    /*background: linear-gradient(45deg, #247da7, #1a6b92) !important;*/
+    /*background: #6db07d !important;*/
+    background: #1ea8d1 !important;
+}
+ag-theme-bootstrap .ag-ltr .ag-cell {
+    border-right: 1px solid #e5e5e5 !important;
+}
+
+span.ag-selection-checkbox {
+    margin: 0 auto;
+}
+
+/* --- */
+
+/*.ag-details-grid.ag-theme-bootstrap {
+    overflow-y: scroll;
+    height: inherit;
+}*/
+
+.ag-layout-normal .ag-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: auto !important;
+    min-height: 0px;
+}
+
+.ag-layout-normal .ag-root-wrapper-body {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    min-height: 0px;
+}
+
+.ag-center-cols-viewport {
+    /*width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: scroll !important;*/
+    /*height: 133px !important;*/
+    /*height: auto !important;
+    min-height: 100px;*/
+}
+#groupusers .ag-layout-normal {
+    min-height: 90px !important;
+}
+#contracts .ag-root-wrapper.ag-layout-normal {
+    /*height: auto !important;*/
+    height: inherit !important;
+}
+#contracts .ag-header-row {
+    height: 30px !important;
+}
+#gridData .ag-layout-normal {
+    min-height: 90px !important;
+}
+#reportGrid .ag-layout-normal {
+    min-height: 90px !important;
+}
+#tenantUser .ag-layout-normal {
+    min-height: 90px !important;
+}
+#tenantApplicationUser .ag-layout-normal {
+    min-height: 90px !important;
+}
+#tenantUserRole .ag-layout-normal {
+    min-height: 90px !important;
+}
+#permissionsSave .ag-layout-normal {
+    min-height: 90px !important;
+}
+#jobGrid .ag-layout-normal {
+    min-height: 90px !important;
+}
+#reportConfig .ag-layout-normal {
+    min-height: 90px !important;
+}
+#ogmData .ag-layout-normal {
+    min-height: 90px !important;
+}
+#tenantApplication .ag-layout-normal {
+    min-height: 90px !important;
+}
+#caPersonsGrid .ag-layout-normal {
+    min-height: 90px !important;
+}
+#gridData .ag-root-wrapper.ag-layout-normal {
+    width: 100%;
+    float: left;
+    height: 100% !important;
+}
+
+#selectedContractsInfo .ag-layout-normal {
+    min-height: 200px !important;
+}
+
+#caPersonsGrid .ag-layout-normal {
+    min-height: 150px !important;
+}
+.grid-container-table .ag-header-container {
+    /*width: 100% !important;*/
+    /*height: 45px !important;*/
+    height: 60px !important;
+    float:left;
+}
+#selectedContractsInfo .ag-root-wrapper.ag-layout-normal {
+    height: inherit !important;
+}
+/*.ag-theme-material .ag-tooltip {
+    background-color: #535353;
+      color: rgba(0, 0, 0, 0.87);
+      border-radius: 2px;
+      border-color: #ebebeb;
+    padding: 5px;
+    border-width: 1px;
+    border-style: solid;
+    transition: opacity 1s;
+}
+.ag-theme-material.ag-popup > div:not(.ag-tooltip-custom) {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.ag-theme-material .ag-tooltip.ag-tooltip-hiding {
+    opacity: 0;
+}
+.ag-theme-fresh .ag-tooltip {
+    background-color: #f00 !important;
+    color: black;
+    border-radius: 2px;
+    padding: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ebebeb;
+    transition: opacity 1s;
+}
+.ag-theme-fresh.ag-popup > div:not(.ag-tooltip-custom) {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.ag-theme-fresh .ag-tooltip.ag-tooltip-hiding {
+    opacity: 0;
+}
+.ag-theme-blue .ag-tooltip {
+    background-color: #f00 !important;
+    color: #222222;
+    border-radius: 2px;
+    padding: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ebebeb;
+    transition: opacity 1s;
+}
+.ag-theme-blue .ag-tooltip.ag-tooltip-hiding {
+    opacity: 0;
+}*/
+.ag-theme-bootstrap .ag-tooltip {
+    background-color: #ebd57f !important;
+    color: #666 !important;
+    border-radius: 3px !important;
+    padding: 7px !important;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c4b26e !important;
+    transition: opacity 1s;
+    /*width: 240px !important;*/
+    width: 100px !important;
+    margin: 0px 0 0 -75px !important;
+    float: left !important;
+    line-height: 18px !important;
+    text-align: center !important;
+    z-index: 9999999999 !important;
+}
+
+#selectedContractsInfo .ag-theme-bootstrap .ag-tooltip {
+    background-color: #ebd57f !important;
+    color: #666 !important;
+    border-radius: 3px !important;
+    padding: 7px !important;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cdcdcd !important;
+    transition: opacity 1s;
+    width: 400px !important;
+    margin: 0px 0 0 -75px !important;
+    float: left !important;
+    line-height: 18px !important;
+    text-align: justify !important;
+    z-index: 9999999999 !important;
+}
+
+.ag-theme-bootstrap .ag-tooltip.ag-tooltip-hiding {
+    opacity: 0;
+}
+.ag-theme-bootstrap.ag-popup > div:not(.ag-tooltip-custom) {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0) !important;
+}
+#reportFooterGrid .ag-body-viewport .ag-center-cols-clipper {
+    height: 30px !important;
+}
+.ag-cell-wrapper .ag-cell-value, .ag-cell-wrapper .ag-group-value {
+    overflow:visible !important;
+}
+.ag-theme-bootstrap .ag-root {
+    border:0px !important;
+}
+
+.grid-container-design {
+    float: left;
+    width: 100%;
+    background: #f6f6f6;
+    /*height: 36px;
+    display: block;*/
+    margin-top: 0px;
+}
+
+.grid-container-table {
+    width: 100%;
+    margin: 0px auto;
+}
+
+.viewRejectedBets{
+    font-size: 16px !important;
+}
+.grid-container-table .ag-column-drop-row-group {
+    display: none;
+}
+
+.ag-theme-bootstrap .ag-icon, .actionStyle {
+    /*color: #4b8459 !important;*/
+    /*color: #4b8076 !important;*/
+    color: #057096 !important;
+}
+
+.ag-cell span svg {
+    color: #1692cc;
+}
+/*.ag-theme-bootstrap .ag-ltr .ag-cell span svg {
+    color:#f00;
+}*/
+#tracks .ag-layout-normal, #locations .ag-layout-normal {
+    min-height: 90px !important;
+}
+.ag-theme-bootstrap .ag-row-selected {
+}
+#contracts .ag-layout-normal {
+    min-height: 90px !important;
+}
+/*.ag-root-wrapper .ag-layout-auto-height123 {
+    max-height: 500px !important;
+    overflow-y: scroll !important;
+}*/
+/*.ag-root-wrapper {
+    max-height: 500px !important;
+    overflow-y: scroll !important;
+}*/
+.ag-body-viewport {
+    max-height: 450px !important;
+    overflow-y: scroll !important;
+}
+.ag-theme-bootstrap .ag-input-wrapper input[type="text"] {
+    font-size: 13px;
+    color: #666;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-color: #999 !important;
+}
+/*.ag-header.ag-pivot-off {
+    height: 30px !important;
+    min-height: 30px !important;
+}*/

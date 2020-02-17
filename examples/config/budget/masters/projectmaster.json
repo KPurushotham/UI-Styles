@@ -1,0 +1,57 @@
+﻿{
+  "columns": [
+    {
+      "key": "department",
+      "headerText": "Department",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+     {
+      "key": "section",
+      "headerText": "Section",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "costCenter",
+      "headerText": "Cost Center",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+     {
+      "key": "budget",
+      "headerText": "Budget",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "work",
+      "headerText": "Work",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+   
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    },
+    {
+      "key": "lastUpdatedBy",
+      "headerText": "Last Updated By",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/budget/projectmaster/all",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

@@ -1,0 +1,9 @@
+﻿<div ng-if="field.show" class="input_field left {{field.cssClass}}" ng-class="(parentForm.save_submit && parentForm.df_form[field.modelKey+ fieldIndex].$error.required)? 'form_error_field' : ''">
+    <label ng-class="{'hide' :!field.showTitle }" class="full_width">{{field.title}} <span ng-if="field.required" class="mandatory">*</span></label>
+ <div  ng-class="(parentForm.save_submit && parentForm.df_form[field.modelKey+ fieldIndex].$error.required)? 'form_error_field' : ''">
+        <input ng-required="field.required" numeric-stepper id="{{field.modelKey+ fieldIndex}}" dynamic-name="field.modelKey+ fieldIndex" ng-disabled="(field.disabled || parentForm.readOnlyForm ||(parentForm.screenMode=='EDIT' && field.disabledInEditMode)) ? true :false" 
+            type="text" min="{{field.min}}" max="{{field.max}}" step-size="{{field.step}}"
+            event-dependents="field.dependants" ng-model="field.modelValue"> 
+    </div>
+ 
+</div>

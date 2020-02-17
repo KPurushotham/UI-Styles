@@ -1,0 +1,140 @@
+{
+  "name": "datasourceitem",
+  "externalService": "dataSourceItemService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "ogmscreen.datasourceitemform"
+    }
+  ],
+  "criteria": {
+    "showButton": true,
+    "rowDivisions": [
+      {
+        "columns": [
+          {
+            "fields": [
+              {
+                "modelKey": "tenantId",
+                "title": "Tenant Id",
+                "cssClass": "col-md-2",
+                "fieldType": "dropdown",
+                "dependancyEvents": [
+                  {
+                    "eventName": "change",
+                    "handlerName": "listingTenantDropdownHandler"
+                  }
+                ],
+                "dataConfig": {
+                  "dataUrl": "vdi/admin/tenant/all",
+                  "displayKey": "tenantTitle",
+                  "valueKey": "tenantId"
+                },
+                "cssClass": "col-md-2"
+              },
+              {
+                "modelKey": "dataSourceId",
+                "title": "Data SourceId",
+                "cssClass": "col-md-2",
+                "fieldType": "dropdown",
+                "dependancyEvents": [
+                  {
+                    "eventName": "change",
+                    "handlerName": "listingDataSourceDropdownHandler"
+                  }
+                ],
+                "dataConfig": {
+                  "dataUrl": "vdi/reportConfig/datasource/all",
+                  "displayKey": "dataSourceCode",
+                  "valueKey": "dataSourceId"
+                },
+                "cssClass": "col-md-2"
+              },
+              {
+                "cssClass": "col-md-2 butn-cls-margntop padding-lftrht0",
+                "title": "GET RESULts",
+                "fieldType": "button",
+                "modelKey": "resultsButton",
+                "handlerName": "getResults",
+                "ignoreInServiceModel": true,
+                "required": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "columns": [
+    {
+      "field": "tenantId",
+      "headerName": "Tenant Id",
+      "filter": "agSetColumnFilter",
+      "tooltipField": "tenantId",
+      "hide": true
+    },
+    {
+      "field": "dataSourceId",
+      "headerName": "Data SourceId",
+      "tooltipField": "dataSourceId",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "dataSourceCode",
+      "headerName": "Data Source Code",
+      "tooltipField": "dataSourceCode",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "dataQueryRuleId",
+      "headerName": "Data QueryRule",
+      "tooltipField": "dataQueryRuleId",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "itemValue",
+      "headerName": "Object Text",
+      "tooltipField": "itemValue",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "itemText",
+      "headerName": "Object Description",
+      "tooltipField": "itemText",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "whereClause",
+      "headerName": "Query",
+      "filter": "agSetColumnFilter",
+      "tooltipField": "whereClause",
+      "hide": false
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "tenantDataSourceItemId",
+      "headerName": "Tenant DataSource ItemId",
+      "tooltipField": "tenantDataSourceItemId",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+  ],
+  "dataUrl": "vdi/reportConfig/tenant/datasource/items/all",
+  "editScreenState": "app.ogmscreen.datasourceitemform",
+  "rowKey": {
+    "dataQueryRuleId": "dataQueryRuleId",
+    "dataSourceId": "dataSourceId",
+    "tenantDataSourceItemId": "tenantDataSourceItemId"
+  },
+  "defaultSortColumn": "dataQueryRuleId"
+}

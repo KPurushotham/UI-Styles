@@ -1,0 +1,11 @@
+﻿
+[
+  {
+    "key": "purseloader.dataload",
+    "urlRoute": "dataload",
+    "showInMenu": true,
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Purse Data Loader"
+  } 
+]

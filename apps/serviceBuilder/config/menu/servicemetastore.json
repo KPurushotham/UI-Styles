@@ -1,0 +1,62 @@
+{
+  "name": "servicemetastore",
+  "externalService": "servicemetastoreService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "serviceBuilder.servicemetastoreform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "serviceMetaStoreId",
+      "headerName": "Service Meta Store Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "apiCode",
+      "headerName": "Api Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "contextCode",
+      "headerName": "Context Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "serviceCode",
+      "headerName": "Service Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "metaJson",
+      "headerName": "Meta Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "tenantId",
+      "headerName": "Tenant Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+
+  ],
+  "dataUrl": "vdi/servicebuilder/servicemetastore/get/all",
+  "editScreenState": "app.serviceBuilder.servicemetastoreform",
+  "rowKey": {
+    "serviceMetaStoreId": "serviceMetaStoreId"
+  },
+  "defaultSortColumn": "serviceMetaStoreId"
+}

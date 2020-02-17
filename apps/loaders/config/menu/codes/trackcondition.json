@@ -1,0 +1,30 @@
+{
+    "name":"trackcondition",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.trackconditionform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/TrackCondition/all",
+    "editScreenState": "app.loaders.codes.trackconditionform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

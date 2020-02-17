@@ -1,0 +1,30 @@
+{
+    "name":"course",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.courseform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/Course/all",
+    "editScreenState": "app.loaders.codes.courseform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

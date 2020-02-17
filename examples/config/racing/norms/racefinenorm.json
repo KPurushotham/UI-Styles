@@ -1,0 +1,45 @@
+﻿{
+  "columns": [
+   {
+      "key": "partyType",
+      "headerText": "Party Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "fineTypes",
+      "headerText": "Fine Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+	 {
+      "key": "amount",
+      "headerText": "Amount",
+      "filterMask": "Search"
+    },
+    {
+      "key": "effectiveFromDate",
+      "headerText": "Effective From",
+      "filterMask": "Search",
+       "type": "date"
+    },
+   
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/racing/racingfines/all",
+
+  "rowKey": {
+  "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

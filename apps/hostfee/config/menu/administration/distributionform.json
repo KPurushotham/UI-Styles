@@ -1,0 +1,182 @@
+{
+  "name": "distributionform",
+  "saveUrl": "vdi/hostfees/distributions/save",
+  "getOneUrl": "vdi/hostfees/distributions/getone",
+  "externalService": "distributionService",
+  "validationUrl": "vdi/hostfees/distributions/code/getone",
+  "noWorkflow": true,
+  "submitted": false,
+  "entityGroupCode": "hostfees",
+  "entityTypeCode": "hostfees",
+
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "distributionCode",
+              "title": "Distribution Code",
+              "disabledInEditMode": true,
+              "fieldType": "textbox",
+              "cssClass": "col-md-2",
+              "required": true
+            },
+            {
+              "modelKey": "distributionName",
+              "title": "Distribution Name",
+              "disabledInEditMode": true,
+              "cssClass": "col-md-2",
+              "fieldType": "textbox",
+              "required": true
+            }
+          ]
+        },
+        {
+          "hideInViewMode": true,
+          "fields": [
+            {
+              "modelKey": "corpName",
+              "title": "Corporation",
+              "cssClass": "col-md-2",
+              "fieldType": "dropdown",
+              "ismultiple": true,
+              "dataConfig": {
+                "dataUrl": "vdi/chrimsmasters/corporations/list/all",
+                "displayKey": "corpName",
+                "valueKey": "entityId"
+              },
+              "parentmultiple": true,
+              "childmultiple": false,
+              "ignoreInServiceModel": true,
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "beginDate",
+              "title": "Begin Date",
+              "fieldType": "date",
+              "cssClass": "col-md-2 padding-lft padding-rht",
+              "ignoreInServiceModel": true,
+              "required": false
+            },
+            {
+              "modelKey": "endDate",
+              "title": "End Date",
+              "fieldType": "date",
+              "cssClass": "col-md-2 padding-lft padding-rht",
+              "ignoreInServiceModel": true,
+              "required": false
+            },
+            {
+              "title": "Add to Grid",
+              "fieldType": "button",
+              "modelKey": "applyToGrid",
+              "ignoreInServiceModel": true,
+              "handlerName": "addToGrid",
+              "cssClass": "col-md-2 butn-cls-margntop padding-lftrht0",
+              "required": false
+            }
+          ]
+        }
+
+      ]
+    },
+    {
+      "title": "",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "corpDist",
+              "title": "Corp Map",
+              "fieldType": "grid",
+              "initLoad": true,
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "total",
+              "gridConfig": {
+                "multiSelect": true,
+                "modelKeyMap": [
+                  "id",
+                  "distributionEntityId",
+                  "corpEntityId",
+                  "operationType",
+                  "beginDate",
+                  "endDate",
+                  "isActive",
+                  "id"
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "toolPanelSuppressRowGroups": true,
+                  "enableSorting": true
+                },
+                "columns": [
+                  {
+                    "field": "corpEntityId",
+                    "hide": true
+                  },
+                  {
+                    "field": "distributionEntityId",
+                    "hide": true
+                  },
+                  {
+                    "field": "id",
+                    "hide": true
+                  },
+                  {
+                    "field": "operationType",
+                    "hide": true
+                  },
+                  {
+                    "field": "corpName",
+                    "headerName": "Corporation",
+                    "sort": "asc",
+                    "hide": false,
+                    "editable": false
+                  },
+                  {
+                    "field": "beginDate",
+                    "headerName": "Begin Date",
+                    "hide": false,
+                    "editable": true,
+                    "cellEditor": "datePicker",
+                    "formatType": "Date"
+                  },
+                  {
+                    "field": "endDate",
+                    "headerName": "End Date",
+                    "editable": true,
+                    "cellEditor": "datePicker",
+                    "formatType": "Date"
+                  },
+                  {
+                    "field": "corpDistFlag",
+                    "headerName": "Corp Dist Flag",
+                    "hide": true
+                  },
+                  {
+                    "field": "deleteId",
+                    "headerName": "Action",
+                    "actionType": "DELETE",
+                    "actionIconClass": "fa fa-trash",
+                    "actionToggleField": "corpDistFlag",
+                    "actionModeField": "id",
+                    "actionToggle": {
+                      "true": "fa fa-toggle-off",
+                      "false": "fa fa-toggle-on"
+                    },
+                    "handlerName": "deleteFromGrid"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "name":"racedatechangeform",
+  "saveUrl":"horsecodeallotment/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "arrivalDate",
+              "title": "Race Date",
+              "fieldType": "date",
+              "cssClass": "col_2",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "horseName",
+              "title": "Race Day",
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "horseName",
+              "title": "Race Season",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    { "title": "Change To" ,
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "arrivalDate",
+              "title": "New Race Date",
+              "fieldType": "date",
+              "cssClass": "col_2",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "horseName",
+              "title": "New Race Day",
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "horseName",
+              "title": "Race Season",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+            }
+          ]
+        },
+        {
+          "fields": [
+
+            {
+              "modelKey": "horseName",
+              "title": "Remarks",
+              "fieldType": "textarea",
+              "cssClass": "col_9",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+
+
+
+
+
+
+}

@@ -1,0 +1,571 @@
+﻿[
+
+  {
+    "groupName": "Horse",
+    "stateName": "racing.codeallotment",
+    "url": "codeallotment",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "hideNewButton": true,
+      "isEditable": true,
+      "title": "Code Allotment",
+      "addScreenStateName": "racing.codeallotmentform"
+    }
+  },
+  {
+    "stateName": "racing.codeallotmentform",
+    "url": "codeallotmentform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "TRAINER_LOT",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+  {
+    "groupName": "Horse",
+    "stateName": "racing.performanceentry",
+    "url": "performanceentry",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Outstation Performance Entry",
+      "addScreenStateName": "racing.performanceentryform"
+    }
+  },
+  {
+    "stateName": "racing.performanceentryform",
+    "url": "performanceentryform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "HORSE_PERFORMANCE",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+  {
+    "groupName": "Horse",
+    "stateName": "racing.equipmentlinking",
+    "url": "equipmentlinking",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Equipment Linking",
+      "hideNewButton": true,
+      "addScreenStateName": "racing.equipmentlinkingform"
+    }
+  },
+  {
+    "stateName": "racing.equipmentlinkingform",
+    "url": "equipmentlinkingform",
+    "showInLeftManu": false,
+    "editKeys": [ "horseId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "HORSE_EQUIPMENT_LINK",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "racing.authoritymappingform",
+    "url": "authoritymappingform",
+    "showInLeftManu": true,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "AUTHORITY",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+  {
+    "groupName": "Horse Parties",
+    "stateName": "racing.authoritymapping",
+    "url": "authoritymapping",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Authority Mapping",
+      "addScreenStateName": "racing.authoritymappingform"
+    }
+  },
+  {
+    "groupName": "Horse Parties",
+    "stateName": "racing.ownercolourlinking",
+    "url": "ownercolourlinking",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Owner Colour Linking",
+      "hideNewButton": true,
+      "addScreenStateName": "racing.ownercolourlinkingform"
+    }
+  },
+  {
+    "stateName": "racing.ownercolourlinkingform",
+    "url": "ownercolourlinkingform",
+    "showInLeftManu": false,
+    "editKeys": [ "ownerId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "OWNER_COLOR_LINK",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+  {
+    "groupName": "Horse Parties",
+    "stateName": "racing.trainerslot",
+    "url": "trainerslot",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Trainers Lot",
+      "hideNewButton": true,
+      "addScreenStateName": "racing.trainerslotform"
+    }
+  },
+  {
+    "stateName": "racing.trainerslotform",
+    "url": "trainerslotform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "TRAINER_LOT",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+  {
+    "groupName": "Horse Parties",
+    "stateName": "racing.trainerjockeystats",
+    "url": "trainerjockeystats",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Outstation Statistics of Trainer & Jockey",
+      "addScreenStateName": "racing.trainerjockeystatsform"
+    }
+  },
+  {
+    "stateName": "racing.trainerjockeystatsform",
+    "url": "trainerjockeystatsform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "TRAINER_JOCKEY_STATISTICS",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "racing.racingmetalbadgereceiptsform",
+    "url": "racingmetalbadgereceiptsform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "RACING_METAL_BADGE",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+  {
+    "groupName": "Horse Parties",
+    "stateName": "racing.racingmetalbadgereceipts",
+    "url": "racingmetalbadgereceipts",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Racing Metal Badge Receipts",
+      "addScreenStateName": "racing.racingmetalbadgereceiptsform"
+    }
+  },
+  {
+    "stateName": "racing.outstationwinsjockeyform",
+    "url": "outstationwinsjockeyform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "JOCKEY_WINS_DETAILS",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+  {
+    "groupName": "Horse Parties",
+    "stateName": "racing.outstationwinsjockey",
+    "url": "outstationwinsjockey",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Outstation Wins of App.Jockey",
+      "addScreenStateName": "racing.outstationwinsjockeyform",
+      "hideNewButton": true
+    }
+  },
+  {
+    "stateName": "racing.empmedicalclaimform",
+    "url": "empmedicalclaimform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "emp_med_claim",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+  {
+    "groupName": "Horse Parties",
+    "stateName": "racing.empmedicalclaim",
+    "url": "empmedicalclaim",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Injured Jockey's & Stable Employees Medical Claim",
+      "addScreenStateName": "racing.empmedicalclaimform"
+    }
+  },
+
+  {
+    "groupName": "Racing",
+    "stateName": "racing.racedashboard",
+    "url": "racedashboard",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Race Dashboard",
+      "hideNewButton": true,
+      "addScreenStateName": "racing.racedetailsview"
+
+    }
+  },
+  {
+    "groupName": "Racing",
+    "stateName": "racing.racedetailsview",
+    "url": "racedetailsview",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "RACE",
+    "viewName": "racingSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "groupName": "Racing",
+    "stateName": "racing.entries",
+    "url": "entries",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Entries",
+      "addScreenStateName": "racing.entriesform"
+    }
+  },
+  {
+    "stateName": "racing.entriesform",
+    "url": "entriesform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "RACE_HORSE_ENTRIES",
+    "viewName": "racingSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "groupName": "Racing",
+    "stateName": "racing.racingfinesentry",
+    "url": "racingfinesentry",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Racing Fines Entry",
+      "addScreenStateName": "racing.racingfinesentryform"
+    }
+  },
+  {
+    "stateName": "racing.racingfinesentryform",
+    "url": "racingfinesentryform",
+    "showInLeftManu": false,
+    "editKeys": [
+      "entityObjectId"
+    ],
+    "notificationKey": [
+      "notificationId"
+    ],
+    "pattern": "CF",
+    "entityType": "RACE_FINE_ENTRY",
+    "viewName": "racingSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "groupName": "Racing",
+    "stateName": "racing.banentry",
+    "url": "banentry",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Ban Entry(Other Clubs)",
+      "addScreenStateName": "racing.banentryform"
+    }
+  },
+  {
+    "stateName": "racing.banentryform",
+    "url": "banentryform",
+    "showInLeftManu": false,
+    "editKeys": [
+      "entityObjectId"
+    ],
+    "notificationKey": [
+      "notificationId"
+    ],
+    "pattern": "CF",
+    "entityType": "BAN_ENTRY",
+    "viewName": "racingSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "groupName": "Racing",
+    "stateName": "racing.doperelatedfinespunishments",
+    "url": "doperelatedfinespunishments",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Dope Related Fines & Punishments",
+      "addScreenStateName": "racing.doperelatedfinespunishmentsform"
+    }
+  },
+  {
+    "stateName": "racing.doperelatedfinespunishmentsform",
+    "url": "doperelatedfinespunishmentsform",
+    "showInLeftManu": false,
+    "editKeys": [
+      "entityObjectId"
+    ],
+    "notificationKey": [
+      "notificationId"
+    ],
+    "pattern": "CF",
+    "entityType": "DOPE_FINES_PUNISHMENTS",
+    "viewName": "racingSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "groupName": "Racing",
+    "stateName": "racing.racepool",
+    "url": "racepool",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Race Pool",
+      "addScreenStateName": "racing.racepoolform"
+    }
+  },
+  {
+    "stateName": "racing.racepoolform",
+    "url": "racepoolform",
+    "showInLeftManu": false,
+    "editKeys": [
+      "entityObjectId"
+    ],
+    "notificationKey": [
+      "notificationId"
+    ],
+    "pattern": "CF",
+    "entityType": "RACE_POOL",
+    "viewName": "racingSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "groupName": "Racing",
+    "stateName": "racing.raceincidentsentry",
+    "url": "raceincidentsentry",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Race Incidents Entry",
+      "addScreenStateName": "racing.raceincidentsentryform"
+    }
+  },
+  {
+    "stateName": "racing.raceincidentsentryform",
+    "url": "raceincidentsentryform",
+    "showInLeftManu": false,
+    "editKeys": [
+      "entityObjectId"
+    ],
+    "notificationKey": [
+      "notificationId"
+    ],
+    "pattern": "CF",
+    "entityType": "RACE_INCIDENT_ENTRY",
+    "viewName": "racingSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "groupName": "Racing",
+    "stateName": "racing.starterobservationentry",
+    "url": "starterobservationentry",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Starter Observation Entry",
+      "addScreenStateName": "racing.starterobservationentryform"
+    }
+  },
+  {
+    "stateName": "racing.starterobservationentryform",
+    "url": "starterobservationentryform",
+    "showInLeftManu": false,
+    "editKeys": [
+      "entityObjectId"
+    ],
+    "notificationKey": [
+      "notificationId"
+    ],
+    "pattern": "CF",
+    "entityType": "STAETER_OBSERVATION_ENTRY",
+    "viewName": "racingSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "groupName": "Weighting Room Operations",
+    "stateName": "racing.horseweightentry",
+    "url": "horseweightentry",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Horse Weight Entry",
+      "addScreenStateName": "racing.horseweightentryform"
+    }
+  },
+  {
+
+    "stateName": "racing.horseweightentryform",
+    "url": "horseweightentryform",
+    "showInLeftManu": false,
+    "editKeys": [
+      "entityObjectId"
+    ],
+    "notificationKey": [
+      "notificationId"
+    ],
+    "pattern": "CF",
+    "entityType": "HORSE_WEIGHT_ENTRY",
+    "viewName": "racingSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "groupName": "Weighting Room Operations",
+    "stateName": "racing.pressrelease",
+    "url": "pressrelease",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Press Release",
+      "addScreenStateName": "racing.pressreleaseform"
+    }
+  },
+
+  {
+
+    "stateName": "racing.pressreleaseform",
+    "url": "pressreleaseform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "PRESS_RELEASE",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+
+  },
+  {
+    "groupName": "Racing",
+    "stateName": "racing.makeeligibilities",
+    "url": "makeeligibilities",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Eligibilites",
+      "addScreenStateName": "racing.makeeligibilitiesform"
+    }
+  },
+  {
+    "stateName": "racing.makeeligibilitiesform",
+    "url": "makeeligibilitiesform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "ELIGIBILITES",
+    "viewName": "racingSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "groupName": "Weighting Room Operations",
+    "stateName": "racing.sscissue",
+    "url": "sscissuerestore",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "SSC Issue Restore",
+      "addScreenStateName": "racing.sscissueform"
+    }
+  },
+  {
+    "stateName": "racing.sscissuerestoreform",
+    "url": "sscissuerestoreform",
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "showInLeftManu": false,
+    "entityType": "SSC_ISSUE_RESTORE",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  },
+  {
+    "groupName": "Weighting Room Operations",
+    "stateName": "racing.sscrevoke",
+    "url": "sscrevoke",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "SSC Revoke",
+      "addScreenStateName": "racing.sscrevokeform"
+    }
+  },
+  {
+    "stateName": "racing.sscrevokeform",
+    "url": "sscrevokeform",
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "showInLeftManu": false,
+    "pattern": "CF",
+    "entityType": "SSC",
+    "viewName": "racingSection",
+    "data": { "title": "New" }
+  }
+]

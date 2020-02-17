@@ -1,0 +1,226 @@
+{
+  "name": "racedataform",
+  "noWorkflow": true,
+  "submitted": false,
+  "externalService": "raceDataLoaderDataService",
+  "actions": [
+  ],
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            
+            {
+              "modelKey": "raceDate",
+              "title": "Race Date",
+              "fieldType": "daterange",
+              "cssClass": "col-md-2",
+              "style": "padding-left: 10px !important",
+              "required": true
+            },
+            {
+              "modelKey": "getData",
+              "title": "Get Data",
+              "fieldType": "button",
+              "cssClass": "col-md-2",
+              "ignoreInServiceModel": true,
+              "handlerName": "getDataHandler",
+              "required": false
+            },
+            {
+              "modelKey": "getExcel",
+              "title": "Download Excel",
+              "fieldType": "button",
+              "cssClass": "col-md-2",
+              "ignoreInServiceModel": true,
+              "handlerName": "getExcel",
+              "required": false
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "jobGrid",
+              "title": "RaceData",
+              "fieldType": "grid",
+              "initLoad": true,
+              "style": "display: none;",
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "total",
+              "gridConfig": {
+                "modelKeyMap": [
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "floatingFilter": false,
+                  "enableFilter": true,
+                  "enableSorting": true,
+                  "toolPanelSuppressRowGroups": true,
+                  "suppressSizeToFit": true,
+                  "groupDefaultExpanded": true
+                },
+                "columns": [
+
+
+                  {
+                    "field": "Track",
+                    "headerName": "Track ",
+                    "tooltipField": "Track",
+                    "rowGroup": true,
+                    "showRowGroup": "raceHeaderId",
+                    "hide": true
+                  },
+                  {
+                    "field": "trackName",
+                    "tooltipField": "trackName",
+                    "headerName": "Track Name",
+                    "hide": false
+                  },
+                  {
+                    "field": "raceHeaderId",
+                    "headerName": "Race Header",
+                    "tooltipField": "raceHeaderId",
+                    "hide": true
+                  },
+                  {
+                    "field": "raceDate",
+                    "headerName": "Race Date",
+                    "tooltipField": "raceDate",
+                    "hide": false,
+                    "cellEditor": "datePicker"
+                  },
+                  {
+                    "field": "raceNumber",
+                    "headerName": "Race Number",
+                    "tooltipField": "raceNumber",
+                    "hide": false
+                  },
+                  {
+                    "field": "raceName",
+                    "headerName": "Race Name",
+                    "tooltipField": "raceName",
+                    "hide": false
+                  },
+                  {
+                    "field": "postTime",
+                    "headerName": "Post Time",
+                    "tooltipField": "postTime",
+                    "hide": false
+                  },
+
+                  {
+                    "field": "offTime",
+                    "headerName": "Off Time",
+                    "tooltipField": "offTime",
+                    "hide": false
+                  },
+                  {
+                    "field": "dayEvening",
+                    "headerName": "Day Evening",
+                    "tooltipField": "dayEvening",
+                    "hide": false
+                  },
+                  {
+                    "field": "conditionsOfRace",
+                    "headerName": "Race Conditions",
+                    "tooltipField": "conditionsOfRace",
+                    "hide": false
+                  },
+                  {
+                    "field": "surfaceCode",
+                    "headerName": "Surface",
+                    "tooltipField": "surfaceCode",
+                    "hide": false
+                  },
+                  {
+                    "field": "division",
+                    "headerName": "Division",
+                    "tooltipField": "division",
+                    "hide": false
+                  },
+                  {
+                    "field": "ageRestriction",
+                    "headerName": "Age Restriction",
+                    "tooltipField": "ageRestriction",
+                    "hide": false
+                  },
+                  {
+                    "field": "breedTypeCode",
+                    "headerName": "Breed Type Code",
+                    "tooltipField": "breedTypeCode",
+                    "hide": false
+                  },
+                  {
+                    "field": "purse",
+                    "headerName": "Purse",
+                    "tooltipField": "purse",
+                    "hide": false
+                  },
+                  {
+                    "field": "purseAmount",
+                    "headerName": "Purse Amount",
+                    "tooltipField": "purseAmount",
+                    "hide": false
+                  },
+                  {
+                    "field": "revertsMoney",
+                    "headerName": "Reverts Money",
+                    "tooltipField": "revertsMoney",
+                    "hide": false
+                  },
+                  {
+                    "field": "raceTypeCode",
+                    "headerName": "Race Type Code",
+                    "tooltipField": "raceTypeCode",
+                    "hide": false
+                  },
+                  {
+                    "field": "maximumClaimPrice",
+                    "headerName": "Maximum Claim Price",
+                    "tooltipField": "maximumClaimPrice",
+                    "hide": false
+                  },
+                  {
+                    "field": "numberOfRunners",
+                    "headerName": "Number Of Runners",
+                    "tooltipField": "numberOfRunners",
+                    "hide": false
+                  },
+                  {
+                    "field": "loationTypeCode",
+                    "headerName": "Loation Type Code",
+                    "tooltipField": "loationTypeCode",
+                    "hide": false
+                  },
+                  {
+                    "field": "locationTypeDescription",
+                    "headerName": "Location Type Description",
+                    "tooltipField": "locationTypeDescription",
+                    "hide": false
+                  },
+                  {
+                    "field": "sourceCode",
+                    "headerName": "Source Code",
+                    "tooltipField": "sourceCode",
+                    "hide": false
+                  },
+                  {
+                    "field": "fileTypeCode",
+                    "headerName": "File Type",
+                    "tooltipField": "fileTypeCode",
+                    "hide": false
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

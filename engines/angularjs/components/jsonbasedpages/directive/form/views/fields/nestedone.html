@@ -1,0 +1,19 @@
+<!-- nestedOne Disable-- {{field.disabledInEditMode}}
+nestedOne ParentForm -- {{parentForm.screenMode}} -->
+<nested-select 
+  options="field.options"
+  class="input_field left {{field.cssClass}}"
+    placeholder="Search items"
+    label="{{field.title}}"
+    id="{{field.modelKey+ fieldIndex}}"
+    dynamic-name="field.modelKey+ fieldIndex"
+    dependancy-events="field.dependancyEvents"
+    modelValue="field.modelValue"
+    defaultvalue="{{field.defaultValue}}"
+    defaultselectedindex="{{field.defaultselectedindex}}"
+    ng-disabled="(field.disabledInEditMode) ? true :false"
+    isloaded="{{field.isLoaded}}"
+    showSelectAll="false"
+    show-selection
+></nested-select>
+

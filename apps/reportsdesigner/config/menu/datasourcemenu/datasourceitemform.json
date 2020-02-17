@@ -1,0 +1,86 @@
+{
+  "name": "datasourceitemform",
+  "saveUrl": "vdi/reportsdesigner/datasourceitem/get/save",
+  "getOneUrl": "vdi/reportsdesigner/datasourceitem/get/one",
+  "externalService": "datasourceitemconfigService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "dataSourceId",
+              "cssClass": "col_1",
+              "title": "Data Source Id",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "itemValue",
+              "cssClass": "col_1",
+              "title": "Item Value",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "itemText",
+              "cssClass": "col_1",
+              "title": "Item Text",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "childDataSourceId",
+              "cssClass": "col_1",
+              "title": "Child Data Source Id",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "dataQueryRuleId",
+              "cssClass": "col_1",
+              "title": "Data Query Rule Id",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "isActive",
+              "title": "Is Active",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "configJson",
+              "cssClass": "col_2",
+              "title": "Config Json",
+              "fieldType": "ace",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

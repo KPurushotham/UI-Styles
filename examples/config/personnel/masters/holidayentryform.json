@@ -1,0 +1,119 @@
+{
+  "name": "attendancedatesform",
+  "saveUrl": "attendancedates/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "employee",
+              "title": "Employee",
+              "cssClass": "col_3",
+              "fieldType": "radio",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Permanent",
+                    "value": "Permanent"
+                   
+                  },
+                  {
+                    "text": "Contract",
+                    "value": "Contract"
+                     
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+
+            },
+               {
+              "modelKey": "type",
+              "title": "Type",
+                "fieldType": "radio",
+                "cssClass": "col_9",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "All",
+                    "value": "All"
+                  },
+                  {
+                    "text": "Official",
+                    "value": "Official"
+                  },
+                    {
+                    "text": "Employee",
+                    "value": "Employee"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+
+            }
+          ]
+        },
+
+          
+        {
+          "fields": [
+            {
+              "modelKey": "date",
+              "title": "Date",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "club",
+              "title": "Club",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/Party/club/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+
+            {
+              "modelKey": "entryStatus",
+              "title": "Status",
+              "fieldType": "dropdown",
+               "dataConfig": {
+                "dataUrl": "vdi/olims/personnel/holidaystatus/all",
+                "displayKey": "description",
+                "valueKey": "id"
+              },
+              "disabled": false,
+              "required": true
+
+
+            }
+          ]
+        },
+
+         {
+          "fields": [
+            {
+              "modelKey": "remarks",
+              "title": "Remarks",
+              "fieldType": "textbox",
+                "cssClass": "full_width",
+              "disabled": false,
+              "required": false
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+[
+  {
+    "text": "Trainer",
+    "value": "TRAINER",
+    "config": {
+      "columns": [
+        {
+          "key": "trainerName",
+          "headerText": "Trainer",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "lastUpdatedDate",
+          "headerText": "Last Updated Date",
+          "type": "date"
+        }
+      ],
+      "childColumns": [
+        {
+          "key": "raceYear",
+          "headerText": "Race Year",
+          "filterMask": "Search",
+          "type": "textbox"
+        },
+        {
+          "key": "season",
+          "headerText": "Season",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "winType",
+          "headerText": "Win Type",
+          "type": "uppercase",
+          "filterMask": "Search"
+        },
+        {
+          "key": "count",
+          "headerText": "Count",
+          "type": "numeric",
+          "filterMask": "Search"
+        }
+
+      ],
+      "dataUrl": "vdi/olims/racing/trainerregistration/all",
+      "childDataUrl": "vdi/olims/racing/trainerjockeystatistics/all?partyId=",
+      "rowKey": {
+        "entityObjectId": "entityObjectId"
+      },
+      "defaultSortColumn": "trainerName",
+      "childDefaultSortColumn": "lastUpdatedDate"
+    }
+  },
+  {
+    "text": "Jockey",
+    "value": "JOCKEY",
+    "config": {
+      "columns": [
+        {
+          "key": "jockeyName",
+          "headerText": "Jockey",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "lastUpdatedDate",
+          "headerText": "Last Updated Date",
+          "type": "date"
+        }
+      ],
+      "childColumns": [
+        {
+          "key": "raceYear",
+          "headerText": "Race Year",
+          "filterMask": "Search",
+          "type": "textbox"
+        },
+        {
+          "key": "season",
+          "headerText": "Season",
+          "filterMask": "Search",
+          "type": "uppercase"
+        },
+        {
+          "key": "winType",
+          "headerText": "Win Type",
+          "type": "uppercase",
+          "filterMask": "Search"
+        },
+        {
+          "key": "count",
+          "headerText": "Count",
+          "type": "numeric",
+          "filterMask": "Search"
+        }
+      ],
+      "dataUrl": "vdi/olims/racing/jockeyregistration/all",
+      "childDataUrl": "vdi/olims/racing/trainerjockeystatistics/all?partyId=",
+      "rowKey": {
+        "entityObjectId": "entityObjectId"
+      },
+      "defaultSortColumn": "jockeyName",
+      "childDefaultSortColumn": "lastUpdatedDate"
+    }
+  }
+]

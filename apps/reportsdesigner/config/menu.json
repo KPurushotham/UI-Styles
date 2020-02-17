@@ -1,0 +1,159 @@
+[
+  {
+    "key": "reportsdesigner.dataqueryrule",
+    "urlRoute": "dataqueryrule",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Data Query Rule"
+  },
+  {
+    "key": "reportsdesigner.dataqueryruleform",
+    "urlRoute": "dataqueryruleform",
+    "showInMenu": false,
+    "editKeys": [ "dataQueryRuleId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "queryRuleCode"
+  },
+  {
+    "key": "reportsdesigner.reports",
+    "urlRoute": "reports",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Reports"
+  },
+  {
+    "key": "reportsdesigner.reports.report",
+    "urlRoute": "report",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Report"
+  },
+  {
+    "key": "reportsdesigner.reports.reportform",
+    "urlRoute": "reportform",
+    "showInMenu": false,
+    "editKeys": [ "reportId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "reportCode"
+  },
+  {
+    "key": "reportsdesigner.reports.reportcriteria",
+    "urlRoute": "reportcriteria",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Report Criteria"
+  },
+  {
+    "key": "reportsdesigner.reports.reportcriteriaform",
+    "urlRoute": "reportcriteriaform",
+    "showInMenu": false,
+    "editKeys": [ "reportCriteriaId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "reportCriteriaId"
+  },
+  {
+    "key": "reportsdesigner.fields",
+    "urlRoute": "fields",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Fields"
+  },
+  {
+    "key": "reportsdesigner.fields.field",
+    "urlRoute": "field",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Field"
+  },
+  {
+    "key": "reportsdesigner.fields.fieldform",
+    "urlRoute": "fieldform",
+    "showInMenu": false,
+    "editKeys": [ "fieldId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "title"
+  },
+  {
+    "key": "reportsdesigner.fields.fieldtype",
+    "urlRoute": "fieldtype",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Field Type"
+  },
+  {
+    "key": "reportsdesigner.fields.fieldtypeform",
+    "urlRoute": "fieldtypeform",
+    "showInMenu": false,
+    "editKeys": [ "fieldTypeCode" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "fieldTypeName"
+  },
+  {
+    "key": "reportsdesigner.datasourcemenu",
+    "urlRoute": "datasourcemenu",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Data Source Menu"
+  },
+  {
+    "key": "reportsdesigner.datasourcemenu.datasource",
+    "urlRoute": "datasource",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Data Source"
+  },
+  {
+    "key": "reportsdesigner.datasourcemenu.datasourceform",
+    "urlRoute": "datasourceform",
+    "showInMenu": false,
+    "editKeys": [ "dataSourceId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "dataSourceCode"
+  },
+  {
+    "key": "reportsdesigner.datasourcemenu.datasourceitem",
+    "urlRoute": "datasourceitem",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Data Source Item"
+  },
+  {
+    "key": "reportsdesigner.datasourcemenu.datasourceitemform",
+    "urlRoute": "datasourceitemform",
+    "showInMenu": false,
+    "editKeys": [ "dataSourceItemId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "itemValue"
+  },
+  {
+    "key": "reportsdesigner.datasourcemenu.tenantdatasourceitem",
+    "urlRoute": "tenantdatasourceitem",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Tenant Data Source Item"
+  },
+  {
+    "key": "reportsdesigner.datasourcemenu.tenantdatasourceitemform",
+    "urlRoute": "tenantdatasourceitemform",
+    "showInMenu": false,
+    "editKeys": [ "tenantDataSourceItemId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "itemValue"
+  }
+]

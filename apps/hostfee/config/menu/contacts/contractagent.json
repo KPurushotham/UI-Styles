@@ -1,0 +1,69 @@
+﻿{
+  "name": "contractagent",
+  "actions": [
+  ],
+  "columns": [
+    {
+      "field": "contractAgentEntityId",
+      "hide": true
+    },
+    {
+      "field": "addressEntityId",
+      "hide": true
+    },
+    {
+      "field": "contractAgentName",
+      "headerName": "Contract Agent",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "cityCode",
+      "headerName": "City",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "stateCode",
+      "headerName": "State",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "countryCode",
+      "headerName": "Country",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "contactPersonName",
+      "headerName": "Primary Contact",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "contactPersonEmail",
+      "headerName": "Email",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "mobile",
+      "headerName": "Phone",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter"
+
+    },
+    {
+      "field": "status",
+      "headerName": "Status",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter"
+
+    }
+  ],
+  "dataUrl": "vdi/hostfees/contractagent/get/all",
+  "editScreenState": "app.hostfee.contacts.contractagentform",
+  "rowKey": {
+    "contractAgentEntityId": "contractAgentEntityId"
+  },
+  "defaultSortColumn": "entity_id"
+}

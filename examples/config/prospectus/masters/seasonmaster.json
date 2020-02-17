@@ -1,0 +1,40 @@
+{
+  "columns": [
+    {
+      "key": "seasonCode",
+      "headerText": "Code",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "shortName",
+      "headerText": "Short Name",
+      "filterMask": "Search",
+      "type": "text"
+    },
+    {
+      "key": "seasonDescription",
+      "headerText": "Description",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/core/seasonmaster/all",
+
+  "rowKey": {
+    "seasonCode": "seasonCode",
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

@@ -1,0 +1,369 @@
+{
+  "externalService": "",
+  "globalDataServices": [
+
+  ],
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "cssClass": "col-md-3 paddingleft0 dropdownwidth20",
+          "fields": [
+            {
+              "title": "Report Period",
+              "cssClass": "col-md-12",
+              "fieldType": "daterange",
+              "modelKey": "reportPeriod",
+              "disabledInEditMode": true,
+              "useFieldLevelModelKey": false,
+              "dateRangeConfig": {
+                "startDateModelKey": "beginDate",
+                "endDateModelKey": "endDate",
+                "startDate": {
+                  "fromModelKey": "currentDate"
+                },
+                "endDate": {
+                  "fromModelKey": "currentDate",
+                  "addtion": "1Y"
+                }
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "sourceType",
+              "title": "Source Type",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-12 minheight",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "All Types",
+                    "value": "AllTypes"
+                  },
+                  {
+                    "text": "Licensed ADW",
+                    "value": "LicensedADW"
+                  },
+                  {
+                    "text": "All but Licensed ADW",
+                    "value": "AllbutLicensedADW"
+                  }
+                ]
+              }
+            },
+            {
+              "modelKey": "raceType",
+              "title": "Race Type",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-12 minheight",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "International",
+                    "value": "International"
+                  },
+                  {
+                    "text": "Intl AB509",
+                    "value": "IntlAB509"
+                  },
+                  {
+                    "text": "Intra State",
+                    "value": "IntraState"
+                  },
+                  {
+                    "text": "Live",
+                    "value": "Live"
+                  },
+                  {
+                    "text": "Out of State",
+                    "value": "OutofState"
+                  },
+                  {
+                    "text": "Rebroadcast",
+                    "value": "Rebroadcast"
+                  }
+                ]
+              }
+            },
+            {
+              "modelKey": "reportBy",
+              "title": "Report By",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-12 minheight",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Location",
+                    "value": "Location"
+                  },
+                  {
+                    "text": "Host",
+                    "value": "Host"
+                  },
+                  {
+                    "text": "Location Type",
+                    "value": "LocationType"
+                  },
+                  {
+                    "text": "Breed Type",
+                    "value": "BreedType"
+                  },
+                  {
+                    "text": "On/Off Track",
+                    "value": "On/OffTrack"
+                  },
+                  {
+                    "text": "Race Date",
+                    "value": "RaceDate"
+                  },
+                  {
+                    "text": "Race Type",
+                    "value": "RaceType"
+                  },
+                  {
+                    "text": "Track",
+                    "value": "Track"
+                  },
+                  {
+                    "text": "Reporting Group",
+                    "value": "ReportingGroup"
+                  },
+                  {
+                    "text": "Event Code",
+                    "value": "EventCode"
+                  }
+                ]
+              }
+            },
+            {
+              "modelKey": "advancedOptions",
+              "title": "Advanced Options",
+              "fieldType": "hyperlink",
+              "href": "javascript:void(0)",
+              "eventName": "click",
+              "handlerName": "showAdvancedOptions",
+              "cssClass": "col-md-12 paddinghyperlink hyperlink"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cssClass": " sectionWidth",
+      "title": "Advanced Options",
+      "rowDivisions": [
+        {
+          "cssClass": "col-md-3 paddingleft0 dropdownwidth25",
+          "fields": [
+            {
+              "modelKey": "hosts",
+              "title": "Hosts",
+              "fieldType": "dropdown",
+              "ismultiple": true,
+              "cssClass": "col-md-12 paddingleft0"
+            },
+            {
+              "modelKey": "simulcastLocations",
+              "title": "Simulcast Locations",
+              "fieldType": "dropdown",
+              "ismultiple": true,
+              "cssClass": "col-md-12 paddingleft0",
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "tracks",
+              "title": "Tracks",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-12 paddingleft0"
+            },
+            {
+              "modelKey": "settleAgents",
+              "title": "Settle Agents",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-12 paddingleft0"
+            }
+          ]
+        },
+        {
+          "cssClass": "col-md-3 paddingleft0 dropdownwidth20",
+          "fields": [
+            {
+              "modelKey": "locationType",
+              "title": "Location Type",
+              "fieldType": "dropdown",
+              "ismultiple": true,
+              "cssClass": "col-md-12 paddingleft0"
+            },
+            {
+              "modelKey": "breedType",
+              "title": "Breed Type",
+              "fieldType": "dropdown",
+              "ismultiple": true,
+              "cssClass": "col-md-12 paddingleft0",
+              "dataConfig": {
+                "dataUrl": "vdi/reports/criteria/breed/types",
+                "displayKey": "breedDescr",
+                "valueKey": "breedTypeId"
+              },
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "onOffTrack",
+              "title": "On / Off Track",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-12 paddingleft0"
+            },
+            {
+              "modelKey": "dayNight",
+              "title": "Day / Night",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-12 paddingleft0"
+            },
+            {
+              "modelKey": "weekDay",
+              "title": "Weekday",
+              "fieldType": "dropdown",
+              "ismultiple": true,
+              "cssClass": "col-md-12 paddingleft0",
+              "dataConfig": {
+                "dataUrl": "vdi/reports/criteria/week/days",
+                "displayKey": "weekDayDescr",
+                "valueKey": "weekDayId"
+              },
+              "disabled": false,
+              "required": false
+            }
+          ]
+        }
+
+      ]
+    },
+    {
+      "cssClass": "showHide paddingleft0 toolpanel sectionWidth",
+      "title": "Advanced Options",
+      "rowDivisions": [
+        {
+          "cssClass": "col-md-12 paddingleft0",
+          "columns": [
+            {
+              "cssClass": "col-md-6 paddingleft0",
+              "fields": [
+                {
+                  "fieldType": "label",
+                  "modelKey": "note",
+                  "innerHtml": "<span style=\"font-weight:bold; font-size:13px; color:#a8a8a8\">Hosts:</span>",
+                  "ignoreInServiceModel": true,
+                  "cssClass": "col-md-12",
+                  "disabled": true,
+                  "required": false
+                },
+                {
+                  "fieldType": "label",
+                  "modelKey": "note",
+                  "innerHtml": "<span style=\"font-weight:bold; font-size:13px; color:#a8a8a8\">Simulcast Locations:</span>",
+                  "ignoreInServiceModel": true,
+                  "cssClass": "col-md-12 ",
+                  "disabled": true,
+                  "required": false
+                },
+                {
+                  "fieldType": "label",
+                  "modelKey": "note",
+                  "innerHtml": "<span style=\"font-weight:bold; font-size:13px; color:#a8a8a8\">Tracks:</span>",
+                  "ignoreInServiceModel": true,
+                  "cssClass": "col-md-12",
+                  "disabled": true,
+                  "required": false
+                },
+                {
+                  "fieldType": "label",
+                  "modelKey": "note",
+                  "innerHtml": "<span style=\"font-weight:bold; font-size:13px; color:#a8a8a8\">Settle Agents:</span>",
+                  "ignoreInServiceModel": true,
+                  "cssClass": "col-md-12",
+                  "disabled": true,
+                  "required": false
+                }
+              ]
+            },
+            {
+              "cssClass": "col-md-6 paddingleft0",
+              "fields": [
+                {
+                  "fieldType": "label",
+                  "modelKey": "note",
+                  "innerHtml": "<span style=\"font-weight:bold; font-size:13px; color:#a8a8a8\">Location Type:</span>",
+                  "ignoreInServiceModel": true,
+                  "cssClass": "col-md-12",
+                  "disabled": true,
+                  "required": false
+                },
+                {
+                  "fieldType": "label",
+                  "modelKey": "note",
+                  "innerHtml": "<span style=\"font-weight:bold; font-size:13px; color:#a8a8a8\">Breed Type:</span>",
+                  "ignoreInServiceModel": true,
+                  "cssClass": "col-md-12",
+                  "disabled": true,
+                  "required": false
+                },
+                {
+                  "fieldType": "label",
+                  "modelKey": "note",
+                  "innerHtml": "<span style=\"font-weight:bold; font-size:13px; color:#a8a8a8\">On / Off Track:</span>",
+                  "ignoreInServiceModel": true,
+                  "cssClass": "col-md-12",
+                  "disabled": true,
+                  "required": false
+                },
+                {
+                  "fieldType": "label",
+                  "modelKey": "note",
+                  "innerHtml": "<span style=\"font-weight:bold; font-size:13px; color:#a8a8a8\">Day / Night:</span>",
+                  "ignoreInServiceModel": true,
+                  "cssClass": "col-md-12",
+                  "disabled": true,
+                  "required": false
+                },
+                {
+                  "fieldType": "label",
+                  "modelKey": "note",
+                  "innerHtml": "<span style=\"font-weight:bold; font-size:13px; color:#a8a8a8\">Weekday:</span>",
+                  "ignoreInServiceModel": true,
+                  "cssClass": "col-md-12",
+                  "disabled": true,
+                  "required": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "btnSubmit",
+              "title": "Submit",
+              "handlerName": "toSubmit",
+              "fieldType": "button",
+              "cssClass": "col_1"
+            },
+            {
+              "modelKey": "btnReset",
+              "title": "Reset",
+              "fieldType": "button",
+              "handlerName": "toReset",
+              "cssClass": "col_1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

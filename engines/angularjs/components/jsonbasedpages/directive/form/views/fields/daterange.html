@@ -1,0 +1,9 @@
+<div ng-if="field.show" class="input_field left date-full-width-gap padding-lft0 padding-rht0 {{field.cssClass}}" ng-class="(parentForm.save_submit && parentForm.df_form[field.modelKey+ fieldIndex].$error.required)? 'form_error_field' : ''">
+    <label  ng-class="{'hide' :!field.showTitle }" class="full_width">{{field.title}} <span ng-if="field.required" class="mandatory">*</span></label>
+ <div class="datepicker_field date-full-width full_width">
+        <input type="text" autocomplete="off" class="full_width form-control date-picker" id="{{field.modelKey+ fieldIndex}}" 
+               date-input-chars dynamic-name="field.modelKey+ fieldIndex" ng-model="field.modelValue" 
+              date-range-picker
+               ng-required="field.required" ng-disabled="(field.disabled || parentForm.readOnlyForm ||(parentForm.screenMode=='EDIT' && field.disabledInEditMode)) ? true :false" event-dependents="field.dependants" options="dateRangePickerOptions" />
+    </div>
+</div>

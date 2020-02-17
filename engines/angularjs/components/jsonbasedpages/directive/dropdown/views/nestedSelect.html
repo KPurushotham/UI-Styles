@@ -1,0 +1,36 @@
+<md-input-container
+ ng-class="{'md-input-has-value': ($ctrl.hasValue() || $ctrl.fixedMenu), 'md-input-focused': $ctrl.hasFocus(), 'form_error_field': (parentForm.save_submit && parentForm.df_form[field.modelKey+fieldIndex].$error.required)}">
+    <label>{{$ctrl.label}}</label> <span ng-if="field.required" class="mandatory">*</span>
+    <nested-select-selection ng-if="$ctrl.showSelection" 
+        ng-click="$ctrl.onClickSelection()" 
+        ng-disable = "$ctrl.disableInEditMode"
+        ng-class="{'menu-open': $ctrl.showMenu, focused: $ctrl.hasFocus(),'nested_error':!$ctrl.hasValue()}"
+        ng-required="field.required"
+        class="nested-select-selection md-select-value ng-invalid ng-invalid-required ng-touched" tabindex="0">
+        <span ng-bind="$ctrl.getSelectionText()" ng-attr-title="{{$ctrl.SelectedText}}"></span>
+        <div ng-show="!($ctrl.options.length >0 )">
+            <i class="fa fa-spinner fa-spin"></i>
+        </div>
+        <div ng-show="$ctrl.options.length >0 || $ctrl.options.length == 0">
+            <span class="md-select-icon"></span>
+        </div>
+    </nested-select-selection>
+</md-input-container>
+<nested-select-menu ng-class="{visible: $ctrl.showMenu}" md-whiteframe="2" tabindex="-1">
+    <nested-select-header ng-if="$ctrl.placeholder" >
+        <input type="search" placeholder="{{$ctrl.placeholder}}" 
+            ng-model="$ctrl.filter" ng-change="$ctrl.onChangeFilter()" />
+        <md-button class="md-icon-button" ng-if="$ctrl.multiple && $ctrl.allowSelectAll" 
+            ng-click="$ctrl.onClickAll()">
+            <ng-md-icon ng-if="$ctrl.showSelectAll" title='Select All' icon="playlist_add_check" style="fill: currentColor"></ng-md-icon>
+        </md-button>
+    </nested-select-header>
+    <md-content ng-class="{filtering: $ctrl.filter.length}">
+        <nested-select-options 
+        options="$ctrl.options" 
+        collapsible="$ctrl.collapsible" 
+        parentmultiple ="$ctrl.parentmultiple"
+        childtmultiple ="$ctrl.childtmultiple"
+        multiple="$ctrl.multiple" depth="0" on-change="$ctrl.onOptionChange($event)">
+    </md-content>
+</nested-select-menu>

@@ -1,0 +1,104 @@
+.form-page-design {
+    float: left;
+    width: 100%;
+    /*padding: 5px 5px;*/
+}
+.form_container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.form_container::-webkit-scrollbar-track {
+    background-color: #eaeaea;
+    border-left: 1px solid #ccc;
+}
+
+.form_container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
+
+    .form_container::-webkit-scrollbar-thumb:hover {
+        background-color: #aaa;
+    }
+
+.form_container h4 {
+    font-size: 22px;
+    color: #20202c;
+    margin: 0px 0px 20px 0px;
+}
+
+.form_container h5 {
+    font-size: 18px;
+    color: #20202c;
+    margin: 0px 0px 20px 0px;
+}
+
+.form_container .horizontal-row {
+    width: 98%;
+    height: 1px;
+    margin: 10px 0 20px 0;
+    background: #d8d8d8;
+}
+.form_container h6 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0px;
+}
+.form_container .details_container h6 {
+    margin-top: 8px;
+}
+.container_top {
+    position: absolute;
+    right: 0px;
+    top: 8px;
+    z-index: 100;
+}
+.container_top a svg {
+    font-size:20px;
+}
+
+.icon-note:before {
+    content: "\e90e";
+}
+
+.page-container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    margin-top: 0px;
+}
+.mandatory_message {
+    font-size: 11px;
+    color: #f00;
+    font-weight: 600;
+    margin: 5px 5px 0px 0px;
+    /* width: 100%; */
+    width: auto;
+    float: right;
+}
+.slots-grid {
+    width: 100%;
+    float: left;
+}
+
+.slots-grid h5 {
+    font-size: 16px;
+    color: #0baa9a;
+    margin: 10px 0px 5px 0px;
+    font-weight: 600;
+}
+.editor {
+    height: 200px;
+    width: 100%;
+    border: 1px solid #cdcdcd;
+}
+.field-show label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #666;
+}
+.editor-reportby .ace_editor {
+    height: 90px;
+} 
+.fullWidth{
+    width:100%;
+}

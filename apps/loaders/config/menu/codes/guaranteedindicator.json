@@ -1,0 +1,30 @@
+{
+    "name":"guaranteedindicator",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.guaranteedindicatorform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/GuaranteedIndicator/all",
+    "editScreenState": "app.loaders.codes.guaranteedindicatorform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

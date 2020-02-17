@@ -1,0 +1,98 @@
+{
+  "name": "partyinsuranceform",
+  "saveUrl": "insurance/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+       "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "partyType",
+              "title": "Party Type",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/party/partytypebox/all?departmentId=4&fk-status=ACTIVE",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "insuranceType",
+              "title": "Insurance Type",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/insurancetypebox/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "insuranceAmount",
+              "title": "Amount",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+
+            },
+             {
+              "modelKey": "effectiveFromDate",
+              "title": "EffectiveFrom",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+
+            }
+            
+          ]
+        },
+       
+        {
+          "fields": [
+            {
+              "modelKey": "taxApplicable",
+              "title": "Service Tax Applicable",
+			  "cssClass": "col_2 no_tp_mr",	
+              "fieldType": "checkbox",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "jvApplicable",
+              "title": "JV Applicable",
+			  "cssClass": "col_2 no_tp_mr",		
+              "fieldType": "checkbox",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  }
+                ]
+              },
+              "disabled": false
+             
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}

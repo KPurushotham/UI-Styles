@@ -1,0 +1,65 @@
+[
+  {
+    "stateName": "registrations.feetypesnormnorm",
+    "url": "feetypesnormnorm",
+    "pattern": "LISTING",
+    "viewName": "registrationSection",
+    "data": {
+      "title": "Party Fee Types Norms",
+      "addScreenStateName": "registrations.feetypesnormform"
+    }
+  },
+  {
+    "stateName": "registrations.feetypesnormform",
+    "url": "feetypesnormform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "FEE_TYPE_NORM",
+    "viewName": "registrationSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "registrations.horsenameregfeenormnorm",
+    "url": "horsenameregfeenormnorm",
+    "pattern": "LISTING",
+    "viewName": "registrationSection",
+    "data": {
+      "title": "Horse Name Registration Fee Norm",
+      "addScreenStateName": "registrations.horsenameregfeenormform"
+    }
+  },
+  {
+    "stateName": "registrations.horsenameregfeenormform",
+    "url": "horsenameregfeenormform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "HORSE_NAME_REG_FEE_NORM",
+    "viewName": "registrationSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "registrations.horseregfeenorm",
+    "url": "horseregfeenorm",
+    "pattern": "LISTING",
+    "viewName": "registrationSection",
+    "data": {
+      "title": "Horse Registration Fee Norm",
+      "addScreenStateName": "registrations.horseregfeeform"
+    }
+  },
+  {
+    "stateName": "registrations.horseregfeeform",
+    "url": "horseregfeeform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "HORSE_REG_FEE_NORM",
+    "viewName": "registrationSection",
+    "data": { "title": "New" }
+  }
+]

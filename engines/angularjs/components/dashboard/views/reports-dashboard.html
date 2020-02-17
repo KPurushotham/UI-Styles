@@ -1,0 +1,103 @@
+<div class="portal-viewlist">
+    <md-progress-linear md-mode="indeterminate" ng-disabled="reportListProgress_activated"></md-progress-linear>
+    <!--<div class="">-->
+
+        <div class="breadcrumb-design">
+            <div class="portal-viewlist-serch">
+                <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12"></div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                    <div class="search-design search-dashboard-div paddingleft0" style="display: none;">
+                        <input ng-model="searchReports" class="form-control search-dashboard-items paddingleft0"
+                               placeholder="Search Reports...." />
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12 dashboard-icons-padding pull-right">
+                    <ul class="list-inline dashboard-ul">
+                        <li class="dashboard-search-icon" ng-click="dashboardSearchbar()"><i class="fa fa-search"></i></li>
+                        <li class="dashboard-fav-icon dashboard-icons"><a href="javascript:void(0)"><i class="fa fa-heart-o heart"
+                                    aria-hidden="true"></i></a></li>
+                        <li class="dashboard-grid-icon dashboard-icons dashboard-icons-selected" ng-click="reportsdashboardView('grid')"><a
+                                href="javascript:void(0)"><i class="fa fa-th-large" aria-hidden="true"></i></a></li>
+                        <li class="dashboard-list-icon dashboard-icons" ng-click="reportsdashboardView('list')"><a href="javascript:void(0)"><i
+                                    class="fa fa-bars" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <!--</div>-->
+</div>
+
+<section layout="grid" layout-align="center start" class="dashboard-grid report-dashboard-grid" style="display:block;">
+    
+    <ul class="main-dashbord">        
+        <li class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 reports-dashboard-width" style="padding-left:0px !important;padding-right:0px !important;" ng-repeat="report in reportList  | filter: {reportName:searchReports}" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()" ng-click="navigateToReportMenu(report)" href="javascript:void(0);">         
+            <a href="app/{{tenantCode}}/report/{{report.reportCode}}" style="text-decoration: none;">
+                <div class="dashboard-li bordr-animation foo">
+                    <div class="col-xl-12 col-lg-12 col-md-12 report-dashboard-li111 dashboard-grid-padding">
+                        <div class="col-xl-4 col-lg-4 col-md-4 paddingleft0">
+                            <div class="portal-logo">
+                                <!--<img class="portal-logo-img-width report-dashboard-img" ng-src="{{report.logo}}" onerror="this.src='images/reporticons/report.png';">-->
+                                <div class="dashboard-report-img-cls {{report.reportCode}}-icon"></div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-8 dashboard-grid-padding">
+                            <div class="col-xl-12 col-lg-12 col-md-12 dashboard-grid-padding margn-botm8">
+                                <div class="col-xl-11 col-lg-11 col-md-11 dashboard-grid-padding">
+                                    <h6 class="reports-db-heading"><span>{{report.reportName}}</span></h6>
+                                </div>
+                                <div class="col-xl-1 col-lg-1 col-md-1 dashboard-grid-padding">
+                                    <a class="like-icon pull-right" href="" style="padding-left:23px;">
+                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 dashboard-report-grid-padding">
+                                <span class="reports-dashboard-grid-table-th">{{report.description}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+</a>
+        </li>
+     
+    </ul>
+
+</section>
+
+<section class="report-dashboard-list" style="display:none;">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 padding-lft padding-rht">
+                <div class="inrpage-forms-section">
+                    <table class="table table-bordered report-db-tble">
+                        <thead>
+                            <tr>
+                                <th class="dashboard-listview-th">Logo</th>
+                                <th class="dashboard-listview-th">Report Name</th>
+                                <th class="dashboard-listview-th">Report Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="listview-tr" ng-repeat="report in reportList | filter: {reportName:searchReports}" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
+                                <a href="app/{{tenantCode}}/report/{{report.reportCode}}">
+                                    <td class="dashboard-listview-td" style="width:70px !important" ng-click="navigateToAppMenu(appDef.key)" href="javascript:void(0);">
+                                        <!--<img class="portal-logo-img-width" src="" onerror="this.src='images/logo.jpg';" style="width: 50px;">-->
+                                        <div class="dashboard-reportlist-img-cls {{report.reportCode}}-icon"></div>
+                                    </td>
+                                    <td class="dashboard-listview-td" ng-click="navigateToReportMenu(report)" href="javascript:void(0);"><h6><Strong>{{report.reportName}}</Strong></h6></td>
+                                    <td class="dashboard-listview-td"><h6><Strong>{{report.description}}</Strong></></h6></td>
+                                </a>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+

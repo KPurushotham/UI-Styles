@@ -1,0 +1,50 @@
+﻿[
+  {
+    "stateName": "catering.outletmaster",
+    "url": "outletmaster",
+    "pattern": "LISTING",
+    "viewName": "cateringSection",
+    "data": {
+      "title": "Outlets",
+      "addScreenStateName": "catering.outletform"
+    }
+  },
+   {
+    "stateName": "catering.outletform",
+    "url": "outletform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId"],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "OUTLETS",
+    "viewName": "cateringSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "catering.catringcategorymaster",
+    "url": "catringcategorymaster",
+    "pattern": "LISTING",
+    "viewName": "cateringSection",
+    "data": {
+      "title": "Catering Category",
+      "addScreenStateName": "catering.catringcategoryform"
+    }
+  },
+   {
+    "stateName": "catering.catringcategoryform",
+    "url": "catringcategoryform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId"],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "CATERING_CATEGORY",
+    "fieldMap": {
+       "entityCode": "cateringCategoryCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=category&entityGroupCode=cat&entityTypeCode=cat",
+    "viewName": "cateringSection",
+    "data": { "title": "New" }
+  }
+  ]

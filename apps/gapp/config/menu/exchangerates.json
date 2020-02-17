@@ -1,0 +1,48 @@
+{
+  "name": "exchangerates",
+  "externalService": "",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "gapp.exchangeratesform"
+    }
+  ],
+  "queryStringParams": {
+    "@Query": "",
+    "@PageNumber": "1",
+    "@PageSize": "2147483647"
+  },
+  "columns": [
+    {
+      "field": "fromCurrencyCode",
+      "headerName": "FromCurrencyCode",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "toCurrencyCode",
+      "headerName": "ToCurrencyCode",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "currencyEffectiveDate",
+      "headerName": "ExchangeDate",
+      "filter": "agSetColumnFilter",
+      "hide": false,
+      "formatType":  "Date"
+    },
+    {
+      "field": "exchangeRate",
+      "headerName": "ExchangeRate",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+  ],
+  "dataUrl": "vdi/postget/gapp/exchange_rates/getall",
+  "editScreenState": "app.gapp.exchangeratesform",
+  "rowKey": {
+    "dataViewId": ""
+  },
+  "defaultSortColumn": ""
+}

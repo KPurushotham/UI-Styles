@@ -1,0 +1,362 @@
+﻿[
+  {
+    "stateName": "prospectus.seasonmaster",
+    "url": "seasonmaster",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Season Master",
+      "addScreenStateName": "prospectus.seasonmasterform"
+    }
+  },
+  {
+    "stateName": "prospectus.seasonmasterform",
+    "url": "seasonmasterform",
+    "showInLeftManu": false,
+    "editKeys": [
+      "entityCode",
+      "entityObjectId"
+    ],
+    "notificationKey": [
+      "notificationId"
+    ],
+    "pattern": "SF",
+    "entityType": "SEASON",
+    "fieldMap": {
+      "entityCode": "seasonCode",
+      "shortName": {
+        "modelKey": "shortName",
+        "title": "Short Name"
+      },
+      "note": "seasonDescription"
+    },
+    "codeKeyParam": "entityCode=season&entityGroupCode=core&entityTypeCode=core",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "stateName": "prospectus.distancemaster",
+    "url": "distancemaster",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Distance",
+      "addScreenStateName": "prospectus.distanceform"
+    }
+  },
+  {
+    "stateName": "prospectus.distanceform",
+    "url": "distanceform",
+    "showInLeftManu": false,
+    "editKeys": [
+      "entityCode",
+      "entityObjectId"
+    ],
+    "notificationKey": [
+      "notificationId"
+    ],
+    "pattern": "SF",
+    "entityType": "DISTANCE_MASTER",
+    "fieldMap": {
+      "entityCode": "distanceCode",
+      "shortName": {
+        "modelKey": "shortCode",
+        "title": "Distance in Meters",
+        "type": "number"
+      },
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=distance&entityGroupCode=pro&entityTypeCode=pro",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "stateName": "prospectus.stakesmaster",
+    "url": "stakesmaster",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": { "title": "Stakes",
+      "addScreenStateName": "prospectus.stakesform" }
+  },
+  {
+    "stateName": "prospectus.stakesform",
+    "url": "stakesform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode","entityObjectId"],
+    "notificationKey": ["notificationId" ],
+    "pattern": "CF",
+    "entityType": "STAKES_MASTER",
+    "viewName": "prospectusSection",
+    "data": { "title": "New"}
+  },
+  {
+    "stateName": "prospectus.trophiemaster",
+    "url": "trophiemaster",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Trophies",
+      "addScreenStateName": "prospectus.trophieform"
+    }
+  },
+  {
+    "stateName": "prospectus.trophieform",
+    "url": "trophieform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": ["notificationId" ],
+    "pattern": "CF",
+    "entityType": "TROPHY",
+    "viewName": "prospectusSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "prospectus.presentedbymaster",
+    "url": "presentedbymaster",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": " Trophie Presenter",
+      "addScreenStateName": "prospectus.presentedbyform"
+    }
+  },
+  {
+    "stateName": "prospectus.presentedbyform",
+    "url": "presentedbyform",
+    "showInLeftManu": false,
+    "editKeys": [
+      "presentedCode",
+      "entityObjectId"
+    ],
+    "notificationKey": [
+      "notificationId"
+    ],
+    "pattern": "SF",
+    "entityType": "PRESENTED_BY",
+    "fieldMap": {
+      "entityCode": "presentedCode",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=presentedby&entityGroupCode=pro&entityTypeCode=pro",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "stateName": "prospectus.racetypemaster",
+    "url": "racetypemaster",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Race Type",
+      "addScreenStateName": "prospectus.racetypeform"
+    }
+  },
+  {
+    "stateName": "prospectus.racetypeform",
+    "url": "racetypeform",
+    "showInLeftManu": false,
+    "editKeys": [ "raceTypeCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId"],
+    "pattern": "SF",
+    "entityType": "RACE_TYPE",
+    "fieldMap": {
+      "entityCode": "raceTypeCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=racetype&entityGroupCode=pro&entityTypeCode=pro",
+    "viewName": "prospectusSection",
+    "data": { "title": "New"  }
+  },
+  {
+    "stateName": "prospectus.racesubtypemaster",
+    "url": "racesubtypemaster",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Race Subtype",
+      "addScreenStateName": "prospectus.racesubtypeform"
+    }
+  },
+  {
+    "stateName": "prospectus.racesubtypeform",
+    "url": "racesubtypeform",
+    "showInLeftManu": false,
+    "editKeys": [
+      "raceSubTypeCode",
+      "entityObjectId"
+    ],
+    "notificationKey": ["notificationId"],
+    "pattern": "SF",
+    "entityType": "RACE_SUB_TYPE",
+    "fieldMap": {
+      "categoryCode": {
+        "jsonKey": "raceTypeId",
+        "title": "Race Type",
+        "dataUrl": "vdi/olims/prospectus/racetype/all?fk-status=ACTIVE",
+        "displayKey": "raceTypeCode-shortName",
+        "valueKey": "entityObjectId"
+      },
+      "entityCode": "raceSubtypeCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=racesubtype&entityGroupCode=pro&entityTypeCode=pro",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "stateName": "prospectus.racegrademaster",
+    "url": "racegrademaster",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Race Grade",
+      "addScreenStateName": "prospectus.racegradetypeform"
+    }
+  },
+  {
+    "stateName": "prospectus.racegradetypeform",
+    "url": "racegradetypeform",
+    "showInLeftManu": false,
+    "editKeys": [ "raceGradeCode", "entityObjectId"],
+    "notificationKey": ["notificationId" ],
+    "pattern": "SF",
+    "entityType": "RACE_GRADE",
+    "fieldMap": {
+      "categoryCode": {
+        "jsonKey": "raceSubtypeCode",
+        "title": "Race Subtype",
+        "dataUrl": "vdi/olims/prospectus/racesubtype/all?fk-status=ACTIVE",
+        "displayKey": "raceSubTypeCode-shortName",
+        "valueKey": "entityObjectId"
+      },
+      "entityCode": "raceGradeCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=racegrade&entityGroupCode=pro&entityTypeCode=pro",
+    "viewName": "prospectusSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "prospectus.racenamemaster",
+    "url": "racenamemaster",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Race Name",
+      "addScreenStateName": "prospectus.racenameform"
+    }
+  },
+  {
+    "stateName": "prospectus.racenameform",
+    "url": "racenameform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "RACE_NAMES_MASTER",
+    "fieldMap": {
+      "entityCode": "racesNamesCode",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=racename&entityGroupCode=pro&entityTypeCode=pro",
+    "viewName": "prospectusSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "prospectus.raceconditionmaster",
+    "url": "raceconditionmaster",
+    "showInLeftManu": false,
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Race Condition",
+      "addScreenStateName": "prospectus.raceconditionform"
+    }
+  },
+  {
+    "stateName": "prospectus.raceconditionform",
+    "url": "raceconditionform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "RACE_CONDITION",
+    "fieldMap": {
+      "entityCode": "raceConditionCode",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=racecondition&entityGroupCode=pro&entityTypeCode=pro",
+    "viewName": "prospectusSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "prospectus.trainersbeneloventfundmaster",
+    "url": "trainersbeneloventfundmaster",
+    "showInLeftManu": false,
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Trainers Benelovent Fund",
+      "addScreenStateName": "prospectus.trainersbeneloventfundform"
+    }
+  },
+  {
+    "stateName": "prospectus.trainersbeneloventfundform",
+    "url": "trainersbeneloventfundform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [
+      "notificationId"
+    ],
+    "pattern": "CF",
+    "entityType": "TRAINERS_BENELOVENT_FUND",
+    "viewName": "prospectusSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "prospectus.subsidymaster",
+    "url": "subsidymaster",
+    "showInLeftManu": false,
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Subsidy",
+      "addScreenStateName": "prospectus.subsidyform"
+    }
+  },
+  {
+    "stateName": "prospectus.subsidyform",
+    "url": "subsidyform",
+    "showInLeftManu": false,
+    "editKeys": [
+      "entityCode",
+      "entityObjectId"
+    ],
+    "notificationKey": [
+      "notificationId"
+    ],
+    "pattern": "SF",
+    "entityType": "SUBSIDY",
+    "fieldMap": {
+      "entityCode": "subsidyCode",
+      "shortName": "subsidyName",
+      "note": "subsidyDescription"
+    },
+    "codeKeyParam": "entityCode=subsidy&entityGroupCode=pro&entityTypeCode=pro",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "New"
+    }
+  }
+]

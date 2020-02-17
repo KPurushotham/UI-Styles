@@ -1,0 +1,54 @@
+﻿{
+  "columns": [
+    {
+      "key": "department",
+      "headerText": "Department",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "componentCategory",
+      "headerText": "Component Category",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    
+    {
+      "key": "componentCode",
+      "headerText": "Code",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "shortName",
+      "headerText": "Short Name",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "description",
+      "headerText": "Description",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+  
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/budget/component/all",
+
+  "rowKey": {
+    "componentCode": "componentCode",
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

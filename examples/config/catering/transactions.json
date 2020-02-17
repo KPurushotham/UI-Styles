@@ -1,0 +1,11 @@
+﻿[
+
+  {
+    "stateName": "racing.authorities",
+    "url": "authorities",
+    "pattern": "common-master",
+    "viewName": "racingSection",
+    "data": { "title": "Authorities" }
+
+  }
+]

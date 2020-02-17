@@ -1,0 +1,115 @@
+﻿{
+	"name": "pressreleaseform",
+	"saveUrl": "pressrelease/save",
+	"validationUrl": "",
+	"submitted": false,
+	"sections": [{
+		"rowDivisions": [{
+				"fields": [{
+					"modelKey": "raceDate",
+					"title": "Race Date",
+					"fieldType": "date",
+					"disabled": false,
+					"required": true
+				}, {
+					"modelKey": "raceDay",
+					"title": "Race Day",
+          "fieldType": "textbox",
+          "defaultValue": "0",
+					"disabled": true,
+          "required": false
+       
+				}, {
+					"modelKey": "season",
+					"title": "Race Season",
+          "fieldType": "textbox",
+          "defaultValue": "Winter",
+					"disabled": true,
+					"required": true
+				}]
+			}, {
+				"fields": [
+
+					{
+						"modelKey": "raceNameId",
+						"title": "Race Name",
+						"cssClass": "col_9",
+						"fieldType": "dropdown",
+						"dataConfig": {
+							"dataUrl": "vdi/olims/prospectus/racenames/all?fk-status=ACTIVE",
+							"displayKey": "description",
+							"valueKey": "entityObjectId"
+						},
+						"dependancyEvents": [{
+							"eventName": "change",
+							"modelKeyMapTobeFilled": {
+								"raceNo": "raceNo",
+								"runningRaceNo": "runningRaceNo"
+							}
+						}],
+						"disabled": false,
+						"required": true
+					}, {
+						"modelKey": "raceNo",
+            "title": "Race No",
+             "ignoreInServiceModel": true,
+						"fieldType": "textbox",
+						"cssClass": "col_1",
+						"disabled": true,
+						"required": false
+					}, {
+						"modelKey": "runningRaceNo",
+            "title": "Race Running No",
+             "ignoreInServiceModel": true,
+						"fieldType": "textbox",
+						"cssClass": "col_1",
+						"disabled": true,
+						"required": false
+					}
+				]
+			}, {
+				"fields": [{
+
+					"modelKey": "horsename",
+					"title": "Horse Name",
+					"cssClass": "col_9",
+					"fieldType": "dropdown",
+					"dataConfig": {
+						"dataUrl": "vdi/olims/veterinary/horse/all?status=ACTIVE",
+						"displayKey": "name",
+						"valueKey": "entityObjectId"
+					},
+					"dependancyEvents": [{
+						"eventName": "change",
+						"modelKeyMapTobeFilled": {
+							"Category": "Category"
+						}
+					}],
+					"disabled": false,
+					"required": true
+				}, {
+					"modelKey": "horseNameId",
+					"title": "Category",
+          "fieldType": "textbox",
+           "defaultValue": "1",
+					"disabled": true,
+					"required": true
+				}]
+			}, {
+				"fields": [{
+						"modelKey": "remarks",
+						"title": "Remarks & Observations",
+						"fieldType": "textarea",
+						"cssClass": "col_9"
+					}
+
+
+				]
+			}
+
+
+
+		]
+	}]
+
+}

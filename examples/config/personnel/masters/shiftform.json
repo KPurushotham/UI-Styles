@@ -1,0 +1,64 @@
+ {
+  "name": "shiftform",
+  "saveUrl": "shift/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "shiftCode",
+              "title": "Code",
+			  "cssClass": "col-2",	
+              "fieldType": "systemcode",
+              "keyGenConfig": {
+                "params": "entityCode=shift&entityGroupCode=tote&entityTypeCode=tote"
+              }
+            },
+            {
+              "modelKey": "shortName",
+              "title": "Short Name",
+			  "cssClass": "col_3",		
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+
+            },
+          {
+              "modelKey": "description",
+              "title": "Description",
+			  "cssClass": "col_6",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "fromTime",
+              "title": "From Time",
+			  "cssClass": "col-2",	
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "toTime",
+              "title": "To Time",
+			  "cssClass": "col-2",	
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}

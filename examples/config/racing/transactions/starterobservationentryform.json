@@ -1,0 +1,90 @@
+﻿ {
+  "name": "starterobservationentryform",
+  "saveUrl": "starterobservationentry/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+			{
+				"rowDivisions": [
+					{
+						"fields": [
+							{
+								"fieldType": "raceday",
+								"modelKeyMap": [ "raceDay", "raceNameId","raceNo","raceRunningNo" ],
+															"hideFields": [ "entryType", "raceClassification", "Race Category " ],
+								"disabled": false,
+								"required": true
+							}
+						]
+					}
+				]
+			},{
+				"rowDivisions": [
+					{
+						"fields": [
+													{
+														"modelKey": "horceId",
+														"title": "Horse",
+														"fieldType": "dropdown",
+														"cssClass": "col_9",
+														"dataConfig": {
+															"dataUrl": "vdi/olims/veterinary/horse/all",
+															"displayKey": "name",
+															"valueKey": "entityObjectId"
+														},
+														"dependancyConfig": [
+															{
+																"sourceKey": "raceNameId",
+																"event": "change",
+																"loadData": {
+																	"keyParams": { "raceNameId": "entityObjectId" }
+																},
+																"defaultValue": "",
+																"validations": { "show": true }
+
+															}
+														],
+														"disabled": false,
+														"required": true
+													}
+						]
+					},
+					{
+						"fields": [
+							{
+								"modelKey": "trainer",
+								"title": "Trainer",
+								"cssClass": "col_9",
+								"fieldType": "textbox",
+								"disabled": true,
+								"required": false
+							},
+							{
+								"modelKey": "trackNumber",
+								"title": "Track Number",
+								"cssClass": "col_16",
+								"fieldType": "textbox",
+								"disabled": false,
+								"required": false
+							}
+
+						]
+					},
+					{
+						"fields": [
+							{
+								"modelKey": "remarks",
+								"title": "Remarks & Observations",
+								"cssClass": "col_100",
+								"fieldType": "textarea",
+								"disabled": false,
+								"required": true
+							}
+
+						]
+					}
+				]
+
+			}
+  ]
+}

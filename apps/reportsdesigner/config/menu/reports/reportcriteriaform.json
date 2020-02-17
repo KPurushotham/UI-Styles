@@ -1,0 +1,176 @@
+{
+  "name": "reportcriteriaform",
+  "saveUrl": "vdi/reportsdesigner/reportcriteria/get/save",
+  "getOneUrl": "vdi/reportsdesigner/reportcriteria/get/one",
+  "externalService": "reportcriteriaconfigService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "tenantId",
+              "cssClass": "col_1",
+              "title": "Tenant Id",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "reportId",
+              "cssClass": "col_1",
+              "title": "Report Id",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "fieldId",
+              "cssClass": "col_1",
+              "title": "Field Id",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "title",
+              "cssClass": "col_1",
+              "title": "Title",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "defaultValue",
+              "cssClass": "col_1",
+              "title": "Default Value",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "defaultValueByKey",
+              "cssClass": "col_1",
+              "title": "Default Value By Key",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "sectionNo",
+              "cssClass": "col_1",
+              "title": "Section No",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "rowNo",
+              "cssClass": "col_1",
+              "title": "Row No",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "colNo",
+              "cssClass": "col_1",
+              "title": "Col No",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "effectsResultFormat",
+              "title": "Effects Result Format",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            },
+            {
+              "modelKey": "isActive",
+              "title": "Is Active",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "dataKeyJson",
+              "cssClass": "col_2",
+              "title": "Data Key Json",
+              "fieldType": "ace",
+              "required": true
+            },
+            {
+              "modelKey": "dataFormatJson",
+              "cssClass": "col_2",
+              "title": "Data Format Json",
+              "fieldType": "ace",
+              "required": true
+            },
+            {
+              "modelKey": "dependancyEventsJson",
+              "cssClass": "col_2",
+              "title": "Dependancy Events Json",
+              "fieldType": "ace",
+              "required": true
+            },
+            {
+              "modelKey": "dependancyConfigJson",
+              "cssClass": "col_2",
+              "title": "Dependancy Config Json",
+              "fieldType": "ace",
+              "required": true
+            },
+            {
+              "modelKey": "styleConfigJson",
+              "cssClass": "col_2",
+              "title": "Style Config Json",
+              "fieldType": "ace",
+              "required": true
+            },
+            {
+              "modelKey": "ruleConfigJson",
+              "cssClass": "col_2",
+              "title": "Rule Config Json",
+              "fieldType": "ace",
+              "required": true
+            },
+            {
+              "modelKey": "configJson",
+              "cssClass": "col_2",
+              "title": "Config Json",
+              "fieldType": "ace",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

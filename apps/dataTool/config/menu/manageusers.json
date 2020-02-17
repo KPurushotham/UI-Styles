@@ -1,0 +1,54 @@
+{
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "dataTool.manageusersform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "userEntityId",
+      "headerName": "User Tenant Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "entityTypeCode",
+      "headerName": "Entity Type Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "userName",
+      "headerName": "User Name",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "password",
+      "headerName": "Password",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "email",
+      "headerName": "Email",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "additionalConfig",
+      "headerName": "Additional Config",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+
+  ],
+  "dataUrl": "vdi/platform/users/get/all"
+}

@@ -1,0 +1,91 @@
+[
+  {
+    "stateName": "registrations.partyregistration",
+    "url": "partyregistration",
+    "pattern": "LISTING",
+    "viewName": "registrationSection",
+    "data": {
+      "title": "Party Registrations",
+      "addScreenStateName": "registrations.partyregistrationform"
+    }
+  },
+  {
+    "stateName": "registrations.partyregistrationform",
+    "url": "partyregistrationform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityType", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "views": [
+      {
+        "name": "registrationSection",
+        "templateUrl": "views/registrations/transaction/party_registration.html",
+        "controllerUrl": "registrations/party_registration_ctrl"
+      }
+    ],
+    "data": {
+      "title": ""
+    }
+  },
+  {
+    "stateName": "registrations.partylicensing",
+    "url": "partylicensing",
+    "pattern": "LISTING",
+    "viewName": "registrationSection",
+    "data": {
+      "title": "Party Licensing",
+      "addScreenStateName": "registrations.partylicensingform"
+    }
+  },
+  {
+    "stateName": "registrations.partylicensingform",
+    "url": "partylicensingform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityType", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "viewName": "registrationSection",
+    "pattern": "CF",
+    "entityType": "PARTY_LICENSE_REGISTRATION",
+    "data": {
+      "title": "NEW"
+    }
+  },
+  {
+    "stateName": "registrations.vendorform",
+    "url": "vendorform",
+    "showInLeftManu": true,
+    "views": [
+      {
+        "name": "registrationSection",
+        "templateUrl": "views/registrations/vendor-form.html",
+        "controllerUrl": "registrations/vendorform_ctrl"
+      }
+    ],
+    "data": {
+      "title": "Vendor Registration"
+    }
+  },
+
+  {
+    "stateName": "registrations.incometax",
+    "url": "incometax",
+    "pattern": "LISTING",
+    "viewName": "registrationSection",
+    "data": {
+      "title": "Income Tax Deatils",
+      "addScreenStateName": "registrations.incometaxform"
+    }
+  },
+  {
+    "stateName": "registrations.incometaxform",
+    "url": "incometaxform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "INCOMTAX_DETAILS",
+    "viewName": "registrationSection",
+    "data": {
+      "title": "New"
+    }
+  }
+]

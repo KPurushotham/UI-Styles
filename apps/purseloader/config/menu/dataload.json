@@ -1,0 +1,166 @@
+{
+  "name": "dataload",
+  "noWorkflow": true,
+  "submitted": false,
+  "externalService": "dataloadService",
+  "actions": [
+  ],
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "jobCode",
+              "title": "Source",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "selectedIndex":"-1",
+              "dataConfig": {
+                "localData": [
+           
+                  {
+                    "text": "Purse",
+                    "value": "purse"
+                  }
+                ]
+              },
+              "required": true
+            },
+            {
+              "modelKey": "raceDate",
+              "title": "Race Date",
+              "fieldType": "date",
+              "cssClass": "col-md-2",
+              "style": "padding-left: 10px !important",
+              "required": true
+            },
+            {
+              "modelKey": "runJob",
+              "title": "Run Job",
+              "fieldType": "button",
+              "cssClass": "col-md-2 butn-cls-margntop padding-lftrht0",
+              "ignoreInServiceModel": true,
+              "handlerName": "runJobHandler",
+              "required": false
+            },
+            {
+              "modelKey": "refreshGrid",
+              "title": "Refresh Grid",
+              "style": "margin-top:25px; padding-left:14px; ",
+              "fieldType": "refresh",
+              "handlerName": "refreshHandler",
+              "ignoreInServiceModel": true,
+              "useFieldLevelModelKey": false,
+              "disabled": false,
+              "required": false
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "jobGrid",
+              "title": "Job Details",
+              "fieldType": "grid",
+              "initLoad": true,
+              "style": "display: none;",
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "total",
+              "gridConfig": {
+                "modelKeyMap": [
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "toolPanelSuppressRowGroups": true,
+                  "groupDefaultExpanded":true
+                },
+                "columns": [
+                  {
+                    "field": "jobName",
+                    "headerName": "Job Name",
+                    "tooltipField": "jobName",
+                    "rowGroup": true,
+                    "showRowGroup": "jobName",
+                    "hide": true
+                  },
+                  {
+                    "field": "stepName",
+                    "headerName": "Step Name",
+                    "tooltipField": "stepName",
+                    "hide": false
+                  },
+                  {
+                    "field": "stepStatus",
+                    "headerName": "Step Status",
+                    "tooltipField": "stepStatus",
+                    "hide": false
+                  },
+                  {
+                    "field": "jobInstanceId",
+                    "tooltipField": "jobInstanceId",
+                    "headerName": "Job Instance Id",
+                    "hide": false
+                  },
+                  {
+                    "field": "stepMessage",
+                    "headerName": "Step Message",
+                    "tooltipField": "stepMessage",
+                    "hide": true
+                  },
+                  {
+                    "field": "stepStartTime",
+                    "headerName": "Step Start Time",
+                    "tooltipField": "stepStartTime",
+                    "hide": false,
+                    "cellEditor": "datePicker",
+                    "formatType": "DateTime"
+                  },
+                  {
+                    "field": "stepEndTime",
+                    "headerName": "Step End Time",
+                    "tooltipField": "stepEndTime",
+                    "hide": false,
+                    "cellEditor": "datePicker",
+                    "formatType": "DateTime"
+                  },
+                  {
+                    "field": "jobStatus",
+                    "headerName": "Job Status",
+                    "tooltipField": "jobStatus",
+                    "hide": false
+                  },
+                  {
+                    "field": "jobMessage",
+                    "headerName": "Job Message",
+                    "tooltipField": "jobMessage",
+                    "hide": false
+                  },
+                  {
+                    "field": "jobStartTime",
+                    "headerName": "Job Start Time",
+                    "tooltipField": "jobStartTime",
+                    "hide": false,
+                    "cellEditor": "datePicker",
+                    "formatType": "DateTime"
+                  },
+                  {
+                    "field": "jobEndTime",
+                    "headerName": "Job End Time",
+                    "tooltipField": "jobEndTime",
+                    "hide": false,
+                    "cellEditor": "datePicker",
+                    "formatType": "DateTime"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

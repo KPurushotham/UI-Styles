@@ -1,0 +1,46 @@
+{
+  "columns": [{
+    "key": "raceDate",
+    "headerText": "Race Date",
+    "filterMask": "Search",
+    "type": "date"
+  }, {
+    "key": "raceDay",
+    "headerText": "Race Day",
+    "filterMask": "Search"
+  }, {
+    "key": "raceName",
+    "headerText": "Race Name",
+    "filterMask": "Search"
+  },
+    {
+      "key": "season",
+      "headerText": "Season",
+      "filterMask": "Search",
+      "type": "uppercase"
+    }
+  ],
+  "childColumns": [{
+    "key": "horseEntryName",
+    "headerText": "Horse Name",
+    "filterMask": "Search"
+  }, {
+    "key": "horseEligibilitiesStatus",
+    "headerText": "Status",
+    "filterMask": "Search",
+      "type": "uppercase"
+  }, {
+    "key": "reason",
+    "headerText": "Reason",
+    "filterMask": "Search",
+      "type": "uppercase"
+  }
+  ],
+  "dataUrl": "vdi/olims/racing/makeeligibilites/all",
+  "childDataUrl": "vdi/olims/racing/eligibilitiesdetails/all",
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

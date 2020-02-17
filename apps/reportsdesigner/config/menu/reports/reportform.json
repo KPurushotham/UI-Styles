@@ -1,0 +1,154 @@
+{
+  "name": "reportform",
+  "saveUrl": "vdi/reportsdesigner/report/get/save",
+  "getOneUrl": "vdi/reportsdesigner/report/get/one",
+  "externalService": "reportconfigService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "applicationId",
+              "cssClass": "col_1",
+              "title": "Application Id",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "reportCode",
+              "cssClass": "col_1",
+              "title": "Report Code",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "reportName",
+              "cssClass": "col_1",
+              "title": "Report Name",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "description",
+              "cssClass": "col_1",
+              "title": "Description",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "version",
+              "cssClass": "col_1",
+              "title": "Version",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "dataQueryRuleId",
+              "cssClass": "col_1",
+              "title": "Data Query Rule Id",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "storeOnRun",
+              "title": "Store On Run",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            },
+            {
+              "modelKey": "allowDirectAccess",
+              "title": "Allow Direct Access",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            },
+            {
+              "modelKey": "isActive",
+              "title": "Is Active",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "serviceIdParam",
+              "cssClass": "col_2",
+              "title": "Service Id Param",
+              "fieldType": "ace",
+              "required": true
+            },
+            {
+              "modelKey": "uiCriteriaFields",
+              "cssClass": "col_2",
+              "title": "UI Criteria Fields",
+              "fieldType": "ace",
+              "required": true
+            },
+            {
+              "modelKey": "dataFormatMapper",
+              "cssClass": "col_2",
+              "title": "Data Format Mapper",
+              "fieldType": "ace",
+              "required": true
+            },
+            {
+              "modelKey": "configJson",
+              "cssClass": "col_2",
+              "title": "Config Json",
+              "fieldType": "ace",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

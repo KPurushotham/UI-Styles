@@ -1,0 +1,35 @@
+{
+    "name": "sexrestrictionform",
+    "saveUrl": "vdi/racemaster/ScratchReason/save",
+    "getOneUrl": "vdi/racemaster/ScratchReason/one",
+    "externalService": "",
+    "validationUrl": "",
+    "noWorkflow": true,
+    "submitted": false,
+  
+    "sections": [
+      {
+        "rowDivisions": [
+          {
+            "fields": [
+              {
+                "modelKey": "code",
+                "title": "Code",
+                "disabledInEditMode": true,
+                "fieldType": "textbox",
+                "required": true
+              },
+              {
+                "modelKey": "description",
+                "title": "Description",
+                "disabledInEditMode": true,
+                "fieldType": "textbox",
+                "required": true
+              }
+            ]
+          }
+  
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CHRIMS APPS-Invoice</title>
+    <link type="text/css" rel="stylesheet" href="https://invoices.chrims.com/ui/css/invoice.css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css' />
+    <script type="text/javascript" src="https://invoices.chrims.com/ui/plugins/jquery.min.js"></script>
+    <!--[if IE 7]>
+    <script type="text/javascript" src="engines/common-lib/json3.js"></script>
+    <![endif]-->
+    <!--[if IE 5]>
+    <script type="text/javascript" src="engines/common-lib/json3.js"></script>
+    <![endif]-->
+   
+    <style>
+        .pdflink {
+            float: left;
+            text-align: center;
+            width: 100%;
+        }
+
+            .pdflink .pdf-btn {
+                background-color: #3a57af;
+                color: white;
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 600;
+                height: 27px;
+                margin: 30px 20px 20px 0;
+                padding: 6px 25px 0 20px;
+                position: relative;
+                text-decoration: none;
+                top: 0;
+                transition: all 0.1s linear 0s;
+                width: 120px;
+            }
+    </style>
+</head>
+<body class="ma_bgRed">
+    <div style="align-content:center!important; font-weigth:bold; font-size:40px;background-color:yellow;">
+        <!--[if lt IE 10]>
+        <center> <p>The recommended browser is chrome for better readibility <a href="https://outdatedbrowser.com/en">Click Here,</a> you to install <strong>chrome</strong> </p> </center>
+         <![endif]-->
+    </div>
+    <section id="ma_loading" style="display: none;">
+        <span class="ma_form_loader" style="display: none;"></span>
+    </section>
+    <div class="message" style="display:none;">
+        <div class="success-accept invalid_token" style="display:none">
+            <img src="https://invoices.chrims.com/ui/images/rejected.png" />
+            <h4>Invaid Access Token!</h4>
+        </div>
+        <div class="success-accept">
+            <br /><br /><br />
+            <div class='success_msg' style="display:none">
+                <img src="https://invoices.chrims.com/ui/images/sender-address.png" />
+                <h4>You have accepted your invoice successfully..!</h4>
+            </div>
+            <div class="error_msg" style="display:none">
+                <img src="https://invoices.chrims.com/ui/images/rejected.png" />
+                <h4>Invoice rejected..!</h4>
+            </div>
+
+            <p class="error_text" style="display:none">Your feedback/comments has been submitted to billing team.</p>
+        </div>
+    </div>
+
+    <div id="mainContent"  style="display:none;">
+        <div class="testbox">
+            <!--<body class="ma_bgRed">-->
+            <!-- <h1>Please review and confirm the invoice</h1> -->
+
+            <hr />
+
+            <div class="pdflink">
+                <br /><br />
+                <p><b>PDF view is not available here, please download the invoice using below 'Download Pdf' button</b></p>
+                <a id="aDownloadPDF" class="pdf-btn" target="_blank">Download Pdf</a>
+            </div>
+
+            <div class="accept-btndesign" id="invoice-criteria">
+
+                <textarea class="form-control z-depth-1" style="border-color: black;" id="txtComments" rows="4"
+                          cols="50"></textarea>
+                <br />
+                <br />
+                <div>
+                    <a href="javascript:void(0)" class="button acceptme" onclick="updateStatus('ACCEPTED')">Accept</a>
+                    <a href="javascript:void(0)" class="button rejectme" onclick="updateStatus('REJECTED')">Reject</a>
+                </div>
+            </div>
+
+            <p class='terms'>By clicking on accept, you agree to the Invoice</p>
+
+
+        </div>
+
+        <div id="status-criteria" style="display: none;">
+
+            <table style="margin-left:auto; margin-right: auto; margin-top:20px;">
+                <tr>
+                    <th>Status</th>
+                    <th>&nbsp; :- &nbsp;</th>
+                    <td>
+                        <label id="lblStatus"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Comments</th>
+                    <th>&nbsp; :- &nbsp;</th>
+                    <td>
+                        <label id="lblcomment"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Action Time</th>
+                    <th>&nbsp; :- &nbsp;</th>
+                    <td>
+                        <label id="lblactionTime"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Action Done By</th>
+                    <th>&nbsp; :- &nbsp;</th>
+                    <td>
+                        <label id="lblactionby"></label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var tokenid = getUrlVars()["tokenid"];
+            getAccessCode(tokenid);
+        });
+
+        function displayInvoiceActionOrDetails(status, resultSet) {
+            if (status === 'PENDING') {
+                $("#invoice-criteria").show();
+                $("#status-criteria").hide();
+                $(".acceptme").attr("disabled", false);
+                $(".rejectme").attr("disabled", false);
+                //   document.getElementById("accept").disabled = false;
+                //   document.getElementById("reject").disabled = false;
+                $('.terms').show();
+            } else {
+                $('.terms').hide();
+                $("#invoice-criteria").hide();
+                $("#status-criteria").show();
+                var date = resultSet.actionDateTime ? new Date(resultSet.actionDateTime) : new Date();
+                dateString = date.toGMTString();
+                $("#lblStatus").html(status);
+                var comments = resultSet.comments || $("#txtComments").val();
+                $("#lblcomment").html(comments);
+                $("#lblactionTime").html(dateString);
+                var actionDoneBy = resultSet.actionDoneBy || resultSet.recipientEmailId;
+                    $("#lblactionby").html(actionDoneBy);
+            }
+        };
+        function getAccessCode(accessToken) {
+
+           // var URL = api_url + 'public/email/campaign/item/preview/access/' + accessToken + "?recipientEmailId=" + new Date().getMilliseconds() + "@gmail.com";
+            var URL ='RestProxy.php?servicecode=INVOICE_ACCESS&accesscode=' + accessToken;
+
+            //  console.log("accessToken=", accessToken, URL);
+            $.getJSON(URL, function (data, status, jqXHR) {
+                if (data.success === "true" && data.dataset && data.dataset.length > 0) {
+                    var dataset = data.dataset;
+                    var resultSet = data.dataset[0];
+                    for (var i = 0; i < dataset.length; i++) {
+                        var result = dataset[i];
+                        if (result.recipientTypeCode == "TO") {
+                            resultSet = result;
+                            break;
+                        }
+                    }
+
+                    $("#invoice-criteria").data("result", resultSet);
+
+                    var downloadUrl = resultSet.emailData.attach_file;
+                    $("#aDownloadPDF").attr("href", downloadUrl);
+                    console.log(" download link =", downloadUrl);
+
+                    var actionCode = resultSet.actionCode || resultSet.campaignItemActionStatusCode; 
+                    displayInvoiceActionOrDetails(actionCode, resultSet);
+                    $('#mainContent').show(); 
+                }
+                else {
+                    // invalid access token
+                    $('.message').show();
+                    $('#mainContent').hide(); 
+                    $('.invalid_token').show();
+                }
+
+            });
+        }
+        function updateStatus(status) {
+            $('#ma_loading').show();
+            $('.ma_form_loader').show();
+            $(".acceptme").attr("disabled", true);
+            $(".rejectme").attr("disabled", true);
+
+            var comments = $("#txtComments").val();
+            var result = $("#invoice-criteria").data("result");
+            
+            var inVoiceNum = result.campaignItemApplicationObjectId;
+            //  console.log("inVoiceNum", inVoiceNum);
+            var clientName = result.clientName;
+            var senderName = result.senderName;
+            var emailSubject = "Invoice : " + inVoiceNum + " has been " + status + " by " + clientName + " : " + senderName;
+
+            var params = {
+                "directAccessToken": result.directAccessToken,
+                "campaignItemId": result.campaignItemId,
+                "statusCode": status,
+                "comments": comments,
+                "actionDoneBy": result.recipientEmailId,
+                "isActive": "t",
+                "tenantId": result.tenantId,
+                "emailSubject": emailSubject
+            };
+
+            //$.support.cors = true;
+            $.ajax({
+                type: "POST",
+                beforeSend: function (request) {
+                    request.setRequestHeader("X-TenantId", result.tenantId)
+                },
+                url: 'RestProxy.php?servicecode=INVOICE_ACTION_SAVE',
+                data: params,
+               success: function (msg) {
+                    displayInvoiceActionOrDetails(status, result);
+                    
+                    $('#ma_loading').hide();
+                    $('.ma_form_loader').hide();
+                },
+                error: function (err) {
+                    console.log("Error:-", err)
+                    $('#ma_loading').hide();
+                    $('.ma_form_loader').hide();
+                }
+            });
+        }
+        function getUrlVars() {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+    </script>
+
+</body>
+</html>

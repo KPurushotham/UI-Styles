@@ -1,0 +1,26 @@
+﻿<!--{{field.show}}-->
+<div ng-if="field.show" class="table_container full_width table_container-grid   ag-theme-bootstrap {{field.cssClass}}" style="{{field.style}}">
+    <label ng-class="{'hide' :!field.showTitle }" class="full_width">{{field.title}}</label>
+    <div>
+        <a class="btn green_btn" ng-click="actionHanlder(action, this, sectionDataModel);" ng-repeat="action in field.externalActions">
+            <span class="icon-btn icon-check"></span>
+            <span class="btn-text">{{action.actionLabel}}</span>
+        </a>
+    </div>
+
+    <div dynamic-name="field.modelKey+ fieldIndex" id="{{field.modelKey+ fieldIndex }}" ag-grid="field.gridOptions" ng-model="field.modelValue"
+         ng-disabled="(field.disabled || parentForm.readOnlyForm ||(parentForm.screenMode=='EDIT' && field.disabledInEditMode)) ? true :false"
+         grid-features="gridFeatures" class="grid ag-theme-bootstrap {{field.cssClass}}" style="{{field.style}}" >
+        <!--<div class="no-rows ag-theme-bootstrap" ng-show="!field.gridOptions.data.length">
+            <div class="msg">
+                <span>{{field.gridLoadData}}</span>
+            </div>
+        </div> -->
+    </div>
+    <!--    <div ng-show="field.gridSummaryLabel!=null" class="gridSummaryDetails">
+           <strong>{{field.gridSummaryLabel }}:</strong>
+
+           {{ (field.gridOptions.data!=null ? field.gridOptions.data.length : 0) | number }}
+       </div> -->
+
+</div>

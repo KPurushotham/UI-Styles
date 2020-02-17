@@ -1,0 +1,21 @@
+[
+  {
+    "key": "reportby.reportby",
+    "urlRoute": "reportby",
+    "pattern": "LISTING",
+    "title": "Report BY",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "reportby.reportbyform",
+    "urlRoute": "reportbyform",
+    "showInMenu": false,
+    "editKeys": [ "dataSourceItemId","tenantId"],
+    "pattern": "FORM",
+    "title": "Add",
+    "viewName": "mainPagesection"
+  }
+]
+
+
+

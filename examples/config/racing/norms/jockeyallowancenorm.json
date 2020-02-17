@@ -1,0 +1,62 @@
+﻿{
+  "columns": [
+    {
+      "key": "jockeyAgeId",
+      "headerText": "Age Limit",
+      "filterMask": "Search"
+    },
+    {
+      "key": "effectiveFromDate",
+      "headerText": "Effective From",
+      "filterMask": "Search",
+      "type": "date"
+    },
+  
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+   "childColumns": [
+    {
+      "key": "noOfWinsFrom",
+      "headerText": "No. of Wins From",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "noOfWinsTo",
+      "headerText": "No. of Wins To",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "jockeyKages",
+      "headerText": "Jockey Kages",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+     {
+      "key": "jockeyGrams",
+      "headerText": "Jockey Grams",
+      "filterMask": "Search",
+      "type": "uppercase"
+    }
+  ],
+
+  "dataUrl": "vdi/olims/racing/jockeyallowances/all",
+    "childDataUrl": "vdi/olims/racing/jockeyallowances/getone?entityObjectId=",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "jockeyAgeId",
+   "childDefaultSortColumn": "lastUpdatedDate" 
+}

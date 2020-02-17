@@ -1,0 +1,105 @@
+﻿[
+  {
+    "stateName": "racing",
+    "url": "/racing",
+    "views": [
+      {
+        "name": "bodysection",
+        "templateUrl": "views/racing/index.html",
+        "controllerUrl": "module_loader_ctrl"
+      }
+    ]
+  },
+  {
+    "stateName": "racingaccounts",
+    "url": "/racingaccounts",
+    "views": [
+      {
+        "name": "bodysection",
+        "templateUrl": "views/racingaccounts/index.html",
+        "controllerUrl": "module_loader_ctrl"
+      }
+    ]
+  },
+  {
+    "stateName": "prospectus",
+    "url": "/prospectus",
+    "views": [
+      {
+        "name": "bodysection",
+        "templateUrl": "views/prospectus/index.html",
+        "controllerUrl": "module_loader_ctrl"
+      }
+    ]
+  },
+  {
+    "stateName": "tote",
+    "url": "/tote",
+    "views": [
+      {
+        "name": "bodysection",
+        "templateUrl": "views/tote/index.html",
+        "controllerUrl": "module_loader_ctrl"
+      }
+    ]
+  },
+  {
+    "stateName": "catering",
+    "url": "/catering",
+    "views": [
+      {
+        "name": "bodysection",
+        "templateUrl": "views/catering/index.html",
+        "controllerUrl": "module_loader_ctrl"
+      }
+    ]
+  },
+  {
+
+    "stateName": "personnel",
+    "url": "/personnel",
+    "views": [
+      {
+        "name": "bodysection",
+        "templateUrl": "views/personnel/index.html",
+        "controllerUrl": "module_loader_ctrl"
+      }
+    ]
+  },
+  {
+
+    "stateName": "budget",
+    "url": "/budget",
+    "views": [
+      {
+        "name": "bodysection",
+        "templateUrl": "views/budget/index.html",
+        "controllerUrl": "module_loader_ctrl"
+      }
+    ]
+  },
+  {
+
+    "stateName": "generalaccounts",
+    "url": "/generalaccounts",
+    "views": [
+      {
+        "name": "bodysection",
+        "templateUrl": "views/generalaccounts/index.html",
+        "controllerUrl": "module_loader_ctrl"
+      }
+    ]
+  },
+  {
+
+    "stateName": "it",
+    "url": "/it",
+    "views": [
+      {
+        "name": "bodysection",
+        "templateUrl": "views/it/index.html",
+        "controllerUrl": "module_loader_ctrl"
+      }
+    ]
+  }
+]

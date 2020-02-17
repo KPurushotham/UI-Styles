@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "app-platform", "http://localhost/app-platform", "{2E3DE477-3377-42C9-9217-AD866E3090F1}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/app-platform"
+		Debug.AspNetCompiler.PhysicalPath = "E:\WorkSpace\Code\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\app-platform\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/app-platform"
+		Release.AspNetCompiler.PhysicalPath = "E:\WorkSpace\Code\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\app-platform\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "E:\WorkSpace\Code\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E3DE477-3377-42C9-9217-AD866E3090F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E3DE477-3377-42C9-9217-AD866E3090F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10A59B58-4F5D-4B0F-ABAE-4334204C771F}
+	EndGlobalSection
+EndGlobal

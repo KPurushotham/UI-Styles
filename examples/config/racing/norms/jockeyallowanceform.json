@@ -1,0 +1,146 @@
+﻿﻿{
+  "name": "jockeyallowancenorm",
+  "saveUrl": "jockeyallowancesservices/save",
+  "getOneUrl": "vdi/olims/racing/jockeyallowances/getone",
+  "queryStringParams": { "entityObjectId": "entityObjectId" },
+  "noWorkflow": true,
+  "workflowUrl": "",
+  "validationUrl": "",
+  "submitted": false,
+  "alwaysUpdateMode": true,
+  "mainModelName": "wins",
+  "titleByKey": "UP.entityObjectId",
+  "entityTypeKey": "entityType",
+  "defaultStatus": "ACTIVE",
+  "getOneMultipleItems": true,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "jockeyAgeMain",
+              "ignoreInServiceModel": true,
+              "title": "Age",
+              "fieldType": "numeric",
+              "min": 0,
+              "max": 25,
+              "step": 1,
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+
+              ],
+              "disabled": false,
+              "required": true
+            },
+
+            {
+              "modelKey": "effectiveFromDateMain",
+              "ignoreInServiceModel": true,
+              "title": "Effective From",
+              "cssClass": "col_20",
+              "fieldType": "date",
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+
+              ],
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "No Of Wins",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "useGetOneModelAsFieldDataModel": true,
+              "fieldType": "composite-repeater-field",
+              "existingItemConfig": {
+                "removable": false,
+                "updatable": true
+              },
+              "modelKeyMap": [ "effectiveFromDate", "jockeyAge", "noOfWinsFrom", "noOffWinsTo", "entityObjectId", "jockeyKages", "jockeyGrams" ],
+              "compositefields": [
+                {
+                  "modelKey": "jockeyAge",
+                  "fieldType": "hidden",
+                  "defaultValueByKey": "UP.jockeyAge"
+
+                },
+                {
+                  "modelKey": "entityObjectId",
+                  "fieldType": "hidden",
+                  "ignoreInModelIfNull": true
+                },
+
+                {
+                  "modelKey": "effectiveFromDate",
+                  "fieldType": "hidden",
+                  "defaultValueByKey": "effectiveFromDateMain",
+                  "dependancyConfig": [
+                    {
+                      "sourceKey": "effectiveFromDateMain",
+                      "event": "change",
+                      "defaultValueByKey": "effectiveFromDateMain"
+                    }
+                  ]
+                },
+                {
+                  "modelKey": "noOfWinsFrom",
+                  "title": "MAX WINS",
+                  "cssClass": "col_22",
+                  "fieldType": "textbox",
+                  "disabled": false,
+                  "required": true
+                },
+                {
+                  "modelKey": "noOffWinsTo",
+                  "fieldType": "textbox",
+                  "title": "MIN WINS ",
+                  "cssClass": "col_22",
+                  "disabled": false,
+                  "required": false
+                },
+                {
+                  "fieldType": "label",
+                  "defaultValue": "=",
+                  "title": "=",
+                  "cssClass": "tenpxwidth",
+                  "disabled": true,
+                  "required": false
+                },
+
+                {
+                  "modelKey": "jockeyKages",
+                  "title": "Kages",
+                  "fieldType": "textbox",
+                  "cssClass": "col_22",
+
+                  "disabled": false,
+                  "required": true
+                },
+
+                {
+                  "modelKey": "jockeyGrams",
+                  "fieldType": "textbox",
+                  "title": " Grams",
+                  "cssClass": "col_22",
+                  "disabled": false,
+                  "required": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

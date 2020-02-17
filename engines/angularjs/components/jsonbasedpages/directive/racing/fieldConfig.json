@@ -1,0 +1,212 @@
+﻿{
+  "globalDataServices": [
+    {
+      "url": "vdi/olims/prospectus/racecalendar/all",
+      "fieldServiceModelMap": {
+        "raceYear": {
+          "text": "financialYear",
+          "value": "financialYear",
+          "defaultValueByKey": "LS.financial_year",
+          "dependantFields": {
+            "season": {
+              "text": "season",
+              "value": "season",
+              "defaultValueByOtherKeyValue": { "status": "Active" },
+              "dependantFields": {
+                "raceDate": {
+                  "datasourceKeyName": "raceCalenderDates",
+                  "text": "raceDay-raceDates",
+                  "value": "raceDates",
+                  "defaultValueByIndex": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "entryType",
+              "title": "Entries Type",
+              "fieldType": "dropdown",
+              "cssClass": "col_2",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/racehorseentriestype/all",
+                "displayKey": "description",
+                "valueKey": "type"
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "raceYear",
+              "title": "Race Year",
+              "fieldType": "dropdown",
+              "cssClass": "col_1",
+              "defaultValueByKey": "LS.financial_year",
+              "disabled": false,
+              "required": true,
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "dependancyConfig": [
+                {
+                  "sourceKey": "entryType",
+
+                  "event": "change",
+                  "validations": {
+                    
+                    "ifSourceValue": {
+                      "in": [
+                        "Regular"
+                      ],
+                      "rules": {
+                        "disabled": true
+                      }
+                    }
+                  }
+
+                }
+              ]
+            },
+            {
+              "modelKey": "season",
+              "title": "Season",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "defaultValue": "M",
+              "disabled": true,
+              "required": true,
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "dependancyConfig": [
+                {
+                  "sourceKey": "raceYear",
+                  "event": "change",
+                  "validations": { "disabled": false }
+
+                }
+              ]
+            },
+            {
+              "modelKey": "raceDate",
+              "title": "Race Date",
+              "cssClass": "col_3",
+              "fieldType": "dropdown",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "modelKeyMapTobeFilled": {
+                    "raceDay": "raceDay"
+                  }
+                }
+              ],
+              "dependancyConfig": [
+                {
+                  "sourceKey": "season",
+                  "event": "change",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "raceDay",
+              "title": "Race Day",
+              "ignoreInServiceModel": true,
+              "cssClass": "col_1",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "raceNameId",
+              "title": "Race Name",
+              "cssClass": "col_9",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/prospectus/prospectusentry/all",
+                "displayKey": "raceName",
+                "valueKey": "entityObjectId"
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "modelKeyMapTobeFilled": {
+                    "raceNo": "raceNo",
+                    "category": "category",
+                    "raceClassification": "raceClassification"
+                  }
+                }
+
+              ],
+              "dependancyConfig": [
+                {
+                  "sourceKey": "raceDate",
+                  "event": "change",
+                   "loadData": {
+                    "keyParams": { "raceDay": "raceDay", "raceYear": "raceYear", "season":  "season" }
+                  },
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "raceNo",
+              "title": "Race No",
+              "ignoreInServiceModel": true,
+              "cssClass": "col_1",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "category",
+              "title": "Race Category",
+              "ignoreInServiceModel": true,
+              "cssClass": "col_1",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "raceClassification",
+              "title": "Race Classification",
+              "ignoreInServiceModel": true,
+              "cssClass": "col_3",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+
+}

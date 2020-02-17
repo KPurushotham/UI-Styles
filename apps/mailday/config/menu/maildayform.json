@@ -1,0 +1,7 @@
+{
+  "name": "maildayform",
+  "noWorkflow": true,
+  "submitted": false,
+  "externalService": "maildayService",
+ 
+}

@@ -1,0 +1,120 @@
+﻿{
+  "criteria": {
+    "showButton": true, 
+  
+    "rowDivisions": [
+      {
+        "fields": [
+
+          {
+            "modelKey": "entryType",
+            "title": "Entries Type",
+            "fieldType": "dropdown",
+            "dataConfig": {
+              "dataUrl": "vdi/olims/racing/racehorseentriestype/all",
+              "displayKey": "description",
+              "valueKey": "type"
+            },
+            "disabled": false,
+            "required": true
+          },
+          {
+            "modelKey": "raceYear",
+            "title": "Race Year",
+            "fieldType": "dropdown",
+            "dataConfig": {
+              "dataUrl": "vdi/olims/core/financialYear/all",
+              "displayKey": "text",
+              "valueKey": "value"
+            },
+            "disabled": false,
+            "required": true
+
+          },
+          {
+            "modelKey": "season",
+            "title": "Season",
+            "fieldType": "dropdown",
+            "dataConfig": {
+              "dataUrl": "vdi/olims/core/seasonmaster/all?fk-status=ACTIVE",
+              "displayKey": "shortName-seasonDescription",
+              "valueKey": "shortName"
+            },
+            "disabled": false,
+            "required": true
+
+          },
+          {
+            "modelKey": "raceDate",
+            "title": "Race Date",
+            "defaultValueByKey": "currentDate",
+
+            "fieldType": "date",
+            "disabled": true,
+            "required": true
+          }
+
+        ]
+      }
+    ]
+  },
+
+  "initLoad": false,
+  "columns": [
+    {
+      "key": "entryDate",
+      "headerText": "Entries Date",
+      "filterMask": "Search",
+      "type": "date"
+    },
+    {
+      "key": "raceYear",
+      "headerText": "Race Year",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "season",
+      "headerText": "Season",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "raceId",
+      "headerText": "Race Name",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "horseId",
+      "headerText": "Horse",
+      "filterMask": "Search"
+    },
+    {
+      "key": "partyId",
+      "headerText": "Applicant Name",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerId",
+      "headerText": "Trainer Name",
+      "type": "date"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/racing/racehorseentries/all",
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

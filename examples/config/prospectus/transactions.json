@@ -1,0 +1,47 @@
+﻿[
+  {
+    "stateName": "prospectus.raceseason",
+    "url": "raceseason",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Season Dates",
+      "addScreenStateName": "prospectus.raceseasonform"
+    }
+  },
+  {
+    "stateName": "prospectus.raceseasonform",
+    "url": "raceseasonform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "RACE_SEASON",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "stateName": "prospectus.prospectusdates",
+    "url": "prospectusdates",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Prospectus Dates",
+      "addScreenStateName": "prospectus.prospectusdatesform"
+    }
+  },
+  {
+    "stateName": "prospectus.prospectusdatesform",
+    "url": "prospectusdatesform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "PROSPECTUS_RACE_DATES",
+    "viewName": "prospectusSection",
+    "data": { "title": "New" }
+  }
+
+]

@@ -1,0 +1,80 @@
+<div class="page-top clearfix" scroll-position="scrolled" max-height="40px"
+     ng-class="{'scrolled': scrolled}">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+                <div class="logo-header">
+                    <a ng-click="navigateToTenantsDashboad()"
+                       href="javascript:void(0);" class="al-logo clearfix">
+                        <img src="images/logo.png">
+                    </a>
+                </div>
+            </div>
+
+            <!-- <div ng-show="{{showAppToolBar}}" class="col-md-8 page-top-padding"> -->
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 page-top-padding">
+                <app-toolbar ng-show="{{showAppToolBar}}"
+                             show-tenant-portion="true" show-app-portion="true"></app-toolbar>
+            </div>
+
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12 page-top-padding">
+
+                <div class="user-profile header-user-profile clearfix">
+                    <!-- <div class="{{UserSettingCss}}" uib-dropdown> -->
+                    <div class="pointing-cls" ng-show="env !='PROD'">
+                        <label class="btn-primary1 btn-sm1">{{env}}</label>
+                    </div>
+                    <div class="al-user-profile" uib-dropdown>
+                        <a uib-dropdown-toggle data-toggle="dropdown"
+                           class="profile-toggle-link dropdown-toggle">
+                            <img src="images/default-user.png">
+                            <p id="userName">{{userName}}</p>
+                        </a>
+                        <ul class="top-dropdown-menu profile-dropdown
+                            dropdown-menu" uib-dropdown-menu>
+                            <li></li>
+                            <li>
+                                <i class="dropdown-arr"></i>
+                            </li>
+                            <li>
+                                <a href="#/profile" class="hide">
+                                    <i class="fa fa-user"></i>Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="hide">
+                                    <i class="fa fa-cog"></i>Settings
+                                </a>
+                            </li>
+                            <li class="show">
+                                <a href="">
+                                    <i class="fa fa-paint-brush"></i>Themes
+                                </a>
+                                <div>
+                                    <ul style="display: flex">
+                                        <li style="width:50%;background-color:rgba(28, 43, 54,1)"
+                                            ng-click="onThemeChange('28, 43, 54')">&nbsp;</li>
+                                        <li style="width:50%;background-color:rgba(42, 112, 203,1)"
+                                            ng-click="onThemeChange('42, 112, 203')">&nbsp;</li>
+                                        <li style="width:50%;background-color:rgba(45, 181, 176,1)"
+                                            ng-click="onThemeChange('45, 181, 176')">&nbsp;</li>
+
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-ui-sref="app.logout"
+                                   href="javascript:void(0);" class="signout">
+                                    <i class="fa fa-power-off"></i>Sign out
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

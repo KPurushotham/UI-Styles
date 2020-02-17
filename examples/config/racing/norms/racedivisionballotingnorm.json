@@ -1,0 +1,45 @@
+﻿{
+  "columns": [
+    {
+      "key": "distantCategory",
+      "headerText": "Distant Category",
+      "filterMask": "Search",
+         "type": "uppercase"
+    },
+    {
+      "key": "numberOfDivision",
+      "headerText": "Number Of Division",
+      "filterMask": "Search"
+    },
+
+    {
+      "key": "maxDivisionCount",
+      "headerText": "Max NO. Of Acceptors",
+      "filterMask": "Search"
+    },
+    {
+      "key": "effectiveFromDate",
+      "headerText": "Effective From Date",
+      "filterMask": "Search",
+       "type": "date"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+
+  "dataUrl": "vdi/olims/racing/division/all",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

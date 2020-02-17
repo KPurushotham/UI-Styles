@@ -1,0 +1,69 @@
+{
+  "name": "dataqueryrule",
+  "externalService": "dataqueryruleconfigService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "reportsdesigner.dataqueryruleform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "dataQueryRuleId",
+      "headerName": "Data Query Rule Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "queryRuleCode",
+      "headerName": "Query Rule Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "fromClause",
+      "headerName": "From Clause",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "groupByClause",
+      "headerName": "Group By Clause",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "whereClause",
+      "headerName": "Where Clause",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "procConfigJson",
+      "headerName": "Proc Config Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "selectClause",
+      "headerName": "Select Clause",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    }
+
+  ],
+  "dataUrl": "vdi/reportsdesigner/dataqueryrule/get/all",
+  "editScreenState": "app.reportsdesigner.dataqueryruleform",
+  "rowKey": {
+    "dataQueryRuleId": "dataQueryRuleId"
+  },
+  "defaultSortColumn": "dataQueryRuleId"
+}

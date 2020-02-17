@@ -1,0 +1,30 @@
+{
+    "name":"trackrecord",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.trackrecordform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/TrackRecord/all",
+    "editScreenState": "app.loaders.codes.trackrecordform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

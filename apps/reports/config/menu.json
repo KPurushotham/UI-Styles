@@ -1,0 +1,12 @@
+﻿[
+  {
+    "key": "report.auditcheckform",
+    "pattern": "REPORT",
+    "title": "Audit Check Report",
+    "viewName": "mainPagesection",
+    "urlRoute": "auditcheckform",
+    "editKeys": [
+      "reportCode"
+    ]
+  }
+]

@@ -1,0 +1,45 @@
+﻿{
+  "columns": [
+     {
+      "key": "partyType",
+      "headerText": "Party Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "feeTypeId",
+      "headerText": "Fee Types",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "creditAccountId",
+      "headerText": "Credit Account",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+     {
+      "key": "debitAccountId",
+      "headerText": "Debit Account",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/racingaccount/feetypeac/all",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

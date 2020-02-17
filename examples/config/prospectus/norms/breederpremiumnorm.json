@@ -1,0 +1,51 @@
+﻿{
+  "columns": [
+   {
+      "key": "breederPremiumId",
+      "headerText": "Code",
+      "filterMask": "Search"
+    },
+	 {
+      "key": "amount",
+      "headerText": "amount",
+      "filterMask": "Search"
+    },
+   {
+      "key": "amountTypes",
+      "headerText": "amount Type",
+      "filterMask": "Search"
+    },
+	
+   {
+      "key": "frequencyName",
+      "headerText": "Frequency",
+      "filterMask": "Search"
+    },
+	 
+	
+	{
+      "key": "effectiveFromDate",
+      "headerText": "Effective From",
+    "filterMask": "Search",
+     "type": "date"
+    },
+   
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/prospectus/breederpremium/all",
+
+  "rowKey": {
+  "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

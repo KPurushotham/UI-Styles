@@ -1,0 +1,76 @@
+ {
+  "name": "componentform",
+  "saveUrl": "component/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "department",
+              "title": "Department",
+              "fieldType": "dropdown",	
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/departmentlist/all?fk-status=ACTIVE",
+                "displayKey": "departmentCode-name",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "componentCategory",
+              "title": "Component Category",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/componentcategory/all?fk-status=ACTIVE",
+                "displayKey": "componentCategoryCode-shortName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+             {
+              "modelKey": "componentCode",
+              "title": "code",
+              "fieldType": "systemcode",
+			  "cssClass": "col_3",	 
+              "keyGenConfig": {
+                "params": "entityCode=component&entityGroupCode=bud&entityTypeCode=bud"
+              }
+            }
+           
+          ]
+        },
+        {
+          "fields": [
+           
+           
+            {
+              "modelKey": "shortName",
+              "title": "Short Name",
+              "fieldType": "textbox",
+			  "cssClass": "col_3",	
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "description",
+              "title": "Description",
+              "fieldType": "textbox",
+			  "cssClass": "col_3",	
+              "disabled": false,
+              "required": false
+
+            }
+          ]
+        }
+      
+
+      ]
+    }
+  ]
+}

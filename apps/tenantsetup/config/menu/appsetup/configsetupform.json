@@ -1,0 +1,80 @@
+{
+  "name": "configsetupform",
+  "saveUrl": "vdi/admin/application/config/save",
+  "getOneUrl": "vdi/admin/application/config/getone",
+  "externalService": "configsetupService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+
+  "sections": [
+    {
+      "modelKey": "applicationSave",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "applicationEntityId",
+              "fieldType": "hidden",
+              "required": false
+            },
+            {
+              "modelKey": "entityTypeCode",
+              "title": "Entity Type Code",
+              "fieldType": "hidden",
+              "defaultValue": "APPLICATION"
+            },
+            {
+              "modelKey": "appKey",
+              "cssClass": "col-md-2",
+              "title": "App Key",
+              "fieldType": "textbox",
+              "disabledInEditMode": true,
+              "required": true
+            },
+            {
+              "modelKey": "applicationTitle",
+              "cssClass": "col-md-2",
+              "title": "Application Title",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "logo",
+              "cssClass": "col-md-2",
+              "title": "Application Logo",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "urlRoute",
+              "cssClass": "col-md-2",
+              "title": "Url Route",
+              "fieldType": "textbox",
+              "required": false
+            },
+            {
+              "modelKey": "urlKey",
+              "title": "Check for Url Map",
+              "defaultValue": false,
+              "fieldType": "checkbox",
+              "cssClass": "col-md-2 selectall butn-cls-margntop",
+              "required": false,
+              "show": true,
+              "ignoreInServiceModel": true,
+              "handlerName": "urlRouteOrMapHandler"
+            },
+            {
+              "modelKey": "urlMap",
+              "cssClass": "field-hide",
+              "title": "Url Map",
+              "fieldType": "ace",
+              "required": false,
+              "disabled": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

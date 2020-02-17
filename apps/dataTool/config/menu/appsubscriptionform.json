@@ -1,0 +1,21 @@
+{
+  "getOneUrl": "vdi/servicebuilder/dataview/get/all",
+  "externalService": "appSubscription",
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "serviceData",
+              "fieldType": "ace",
+              "disabled": false,
+              "required": false
+            }
+          ]
+        }
+      ]
+    }
+
+  ]
+}

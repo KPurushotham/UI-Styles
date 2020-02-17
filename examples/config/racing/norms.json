@@ -1,0 +1,144 @@
+﻿[
+  {
+    "stateName": "racing.jockeyallowancenorm",
+    "url": "jockeyallowancenorm",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Jockey Allowances",
+      "addScreenStateName": "racing.jockeyallowanceform"
+    }
+  },
+  {
+    "stateName": "racing.jockeyallowanceform",
+    "url": "jockeyallowanceform",
+    "showInLeftManu": false,
+    "editKeys": ["entityObjectId"],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "JOCKEY_ALLOWANCE_NORM",
+    "viewName": "racingSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "stateName": "racing.partyinsurancenorm",
+    "url": "partyinsurancenorm",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Party Insurances",
+      "addScreenStateName": "racing.partyinsuranceform"
+    }
+  },
+  {
+    "stateName": "racing.partyinsuranceform",
+    "url": "partyinsuranceform",
+    "showInLeftManu": false,
+    "editKeys": ["entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "INSURANCE",
+    "viewName": "racingSection",
+    "data": {
+      "title": "New"
+    }
+  },
+
+  {
+    "stateName": "racing.racevoidnorm",
+    "url": "racevoidnorm",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Race Voiding",
+      "addScreenStateName": "racing.racevoidform"
+    }
+  },
+  {
+    "stateName": "racing.racevoidform",
+    "url": "racevoidform",
+    "showInLeftManu": false,
+    "editKeys": ["entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "RACE_VOID",
+    "viewName": "racingSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "stateName": "racing.racedivisionballotingnorm",
+    "url": "racedivisionballotingnorm",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Race Division & Balloting",
+       "addScreenStateName": "racing.racedivisionballotingform"
+    }
+  },
+  {
+    "stateName": "racing.racedivisionballotingform",
+    "url": "racedivisionballotingform",
+    "showInLeftManu": false,
+    "views": [
+      {
+        "name": "racingSection",
+        "templateUrl": "views/racing/norms/racing_dnb_norms.html",
+        "controllerUrl": "racing/norms/racing_dnb_norms_ctrl"
+      }
+    ],
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "stateName": "racing.racefinenorm",
+    "url": "racefinenorm",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Racing Fines",
+      "addScreenStateName": "racing.racefineform"
+    }
+  },
+  {
+    "stateName": "racing.racefineform",
+    "url": "racefineform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "RACING_FINE",
+    "viewName": "racingSection",
+    "data": {
+      "title": "New"
+    }
+  },
+
+   {
+  "stateName": "racing.horsesilkcolornorm",
+  "url": "horsesilkcolornorm",
+  "pattern": "LISTING",
+  "viewName": "racingSection",
+   "data": {
+    "title": "Horse Silk Color ",
+    "addScreenStateName": "racing.horsesilkcolorform"
+   }
+ },
+ {
+  "stateName": "racing.horsesilkcolorform",
+  "url": "horsesilkcolorform",
+  "showInLeftManu": false,
+  "editKeys": [ "entityObjectId" ],
+  "notificationKey": [ "notificationId" ],
+  "pattern": "CF",
+  "entityType": "Horse_Silk_Color",
+  "viewName": "racingSection",
+  "data": {
+   "title": "New"
+  }
+ }
+]

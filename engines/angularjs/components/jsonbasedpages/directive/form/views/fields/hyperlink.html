@@ -1,0 +1,10 @@
+<div ng-if="field.show" style="{{field.style}}" class="select_field left {{field.cssClass}}" >
+   
+    <a ng-class="action.cssClass || 'green_btn'" ng-click="eventHandler()" ng-href="{{field.href}}"
+       ng-if="action.showAlways || ((action.show==undefined || action.show)&& !readOnlyMode)">
+        <span class="btn-text"  ng-bind-html="field.trustedHtml"></span>
+        <span class="btn-text" >{{field.title}}</span>
+
+
+    </a>
+</div>

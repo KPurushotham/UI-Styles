@@ -1,0 +1,48 @@
+{
+  "name": "transactions",
+  "externalService": "",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "gapp.transactionsform"
+    }
+  ],
+  "queryStringParams": {
+    "@AccountId": 1,
+    "@ToteProviderId": 1,
+    "@StartDate": "12/18/2018",
+    "@EndDate":"12/19/2018"
+  },
+  "columns": [
+    {
+      "field": "activity",
+      "headerName": "Activity",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "amount",
+      "headerName": "Amount",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "comment",
+      "headerName": "Comment",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "date",
+      "headerName": "Date",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+  ],
+  "dataUrl": "vdi/postget/gapp/TransActions/Listview",
+  "editScreenState": "app.gapp.transactionsform",
+  "rowKey": {
+    "": ""
+  },
+  "defaultSortColumn": ""
+}

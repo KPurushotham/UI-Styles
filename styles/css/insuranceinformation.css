@@ -1,0 +1,13 @@
+/* --- common styles --- */
+.full_width {
+    width: 100%;
+    float: left;
+}
+.no-margin {
+    margin: 0px !important;
+}
+.left {
+    float: left;
+}
+
+/* --- common styles --- */

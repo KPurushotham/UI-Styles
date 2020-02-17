@@ -1,0 +1,46 @@
+﻿{
+  "columns": [
+   {
+      "key": "raceCategoryType",
+      "headerText": "Race Category",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "stage",
+      "headerText": "Stage",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+	 {
+      "key": "noOfAcceptors",
+      "headerText": "No.Of.Acceptors",
+    "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "effectiveFromDate",
+      "headerText": "Effective From",
+      "filterMask": "Search",
+      "type": "date"
+    },
+   
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/racing/racevoid/all",
+
+  "rowKey": {
+  "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

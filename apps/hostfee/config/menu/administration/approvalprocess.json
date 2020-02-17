@@ -1,0 +1,69 @@
+{
+  "name": "approvalprocess",
+  "externalService": "approvalProcessService",
+  "actions": [
+    {
+      "title": "Add",
+      "modelKey": "addButton",
+      "navigateTo": "hostfee.administration.approvalprocessform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "workflowDefinitionId",
+      "headerName": "Workflow Definition Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "tenantId",
+      "headerName": "Tenant Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "applicationEntityId",
+      "headerName": "Application Entity Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "workflowName",
+      "headerName": "Workflow Name",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "stepsCount",
+      "headerName": "Steps Count",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "status",
+      "headerName": "Status",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "id",
+      "headerName": "Action",
+      "actionType": "DELETE",
+      "handlerName": "makeWorkflowActiveHandler",
+      "actionToggleField": "isActive",
+      "actionToggle": {
+        "true": "fa fa-toggle-off",
+        "false": "fa fa-toggle-on"
+      }
+    }
+  ],
+  "dataUrl": "vdi/workflow/approvalprocess/get/all",
+  "editScreenState": "app.hostfee.administration.approvalprocessform",
+  "rowKey": {
+    "workflowDefinitionId": "workflowDefinitionId"
+  },
+  "defaultSortColumn": "workflowDefinitionId"
+}

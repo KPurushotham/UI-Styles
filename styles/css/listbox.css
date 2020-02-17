@@ -1,0 +1,36 @@
+.list-box-field {
+    border: 1px solid #ddd;
+    min-height: 40px;
+    padding: 0px 4px;
+    margin-top: 20px;
+    margin-bottom:5px;
+}
+.list-box-field ul li {
+    list-style-type: none;
+    font-size: 13px;
+    color: #666;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 1px;
+}
+.list-box-field i {
+    /*margin-bottom: 1px;*/
+}
+i.bluecolor, .list-box-field ul li svg {
+    font-size: 14px !important;
+    color: #fff;
+    /*background: #0b92aa;*/
+    /*background: #3695c1;*/
+    background: #1692cc;
+    padding: 3px 0px;
+    margin-right: 4px;
+    width: 6px;
+    text-align: center;
+}
+.paddinghyperlink {
+    padding-top: 24px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    /*padding-left: 30px !important;*/
+}

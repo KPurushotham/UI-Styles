@@ -1,0 +1,59 @@
+{
+  "columns": [
+    {
+      "key": "jockeyName",
+      "headerText": "Jockey Name",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "age",
+      "headerText": "Age",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "hrcWins",
+      "headerText": "Hrc wins",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+
+    {
+      "key": "outstationWins",
+      "headerText": "Out Station Wins",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "totalWins",
+      "headerText": "Total Wins",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "allowance",
+      "headerText": "Allowances",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "filterMask": "Search",
+      "type": "date"
+    }
+  ],
+
+  "dataUrl": "vdi/olims/racing/appjockeyoutwins/all?fk-status=ACTIVE&fk-licenseType=A",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

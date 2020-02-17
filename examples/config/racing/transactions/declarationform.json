@@ -1,0 +1,140 @@
+{
+  "name": "declarationform",
+  "saveUrl": "horsecodeallotment/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "arrivalDate",
+              "title": "Race Date",
+              "fieldType": "date",
+              "cssClass": "col_2",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "horseName",
+              "title": "Race Day",
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "horseName",
+              "title": "Race Season",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+            }
+          ]
+        },
+        {
+          "fields": [
+
+            {
+              "modelKey": "entity_type",
+              "title": "Race Name",
+              "cssClass": "col_7",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/prospectus/racenames/all?fk-status=ACTIVE",
+                "displayKey": "description",
+                "valueKey": "entityObjectId"
+              },
+              "dependancyEvents": [{
+                "eventName": "change",
+                "modelKeyMapTobeFilled": {
+                  "raceNo": "raceNo",
+                  "runningRaceNo": "runningRaceNo"
+                }
+              }],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "handicaps_publish_date",
+              "title": "Race No.",
+              "fieldType": "textbox",
+              "cssClass": "col_2",
+              "disabled": true,
+              "required": false
+
+            },
+            {
+              "modelKey": "entity_type",
+              "title": "Race Running No.",
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+
+            }
+
+          ]
+        },
+
+        {
+          "fields": [
+
+            {
+              "modelKey": "entity_type",
+              "title": "Race Category",
+              "cssClass": "col_3",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "entity_type",
+              "title": "Race Classification",
+              "cssClass": "col_3",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+
+            }
+
+
+          ]
+        }
+
+      ]
+    },
+    {  "title": "Declaration for the Horses" ,
+      "rowDivisions": [
+        {
+          "fields": [
+
+          ]
+        }
+
+      ]
+    }
+  ]
+
+}

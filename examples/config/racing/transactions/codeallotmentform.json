@@ -1,0 +1,154 @@
+{
+  "name": "codeallotmentform",
+  "saveUrl": "vdi/olims/racing/horseallotmentcode/save",
+  "noWorkflow": true,
+  "validationUrl": "",
+  "alwaysUpdateMode": true,
+  "mainModelName": "horseCodeAllotmentData",
+  "submitted": false,
+  "titleByKey": "sire-dam",
+  "sections": [
+    {
+
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "horseCode",
+              "title": "Horse Code",
+              "fieldType": "systemcode",
+              "generateInEdit": true,
+              "keyGenConfig": {
+                "params": "entityCode=HORSE&entityGroupCode=vet&entityTypeCode=vet"
+              }
+            },
+            {
+              "modelKey": "yearOfFoaling",
+              "title": "Year of Foaling",
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "dateOfBirth",
+              "title": "Date of Birth",
+              "fieldType": "date",
+              "cssClass": "col_1",
+              "disabled": false,
+              "required": false
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "igpNumber",
+              "title": "IGP No.",
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "name",
+              "title": "Horse Name",
+              "fieldType": "textbox",
+              "cssClass": "col_25",
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "sire",
+              "title": "Sire",
+              "cssClass": "col_25",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "dam",
+              "title": "Dam",
+              "cssClass": "col_25",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": false
+            }
+          ]
+        },
+        {
+          "fields": [
+
+            {
+              "modelKey": "age",
+              "title": "Age",
+              "cssClass": "col_1",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "sex",
+              "title": "Sex",
+              "codeKey": "description",
+              "fieldType": "dropdown",
+              "cssClass": "col_1",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/horsesex/all",
+                "displayKey": "description",
+                "valueKey": "description"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "color",
+              "title": "Colour",
+              "codeKey": "description",
+              "fieldType": "dropdown",
+              "cssClass": "col_1",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/horsecolour/all",
+                "displayKey": "description",
+                "valueKey": "description"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "arrivalDate",
+              "title": "Arrival Date",
+              "fieldType": "date",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "trainerName",
+              "title": "Trainer",
+              "fieldType": "textbox",
+              "cssClass": "col_30",
+              "disabled": true,
+              "required": false
+            }
+          ]
+        },
+        {
+          "fields": [
+
+
+            {
+              "modelKey": "entityType",
+              "fieldType": "hidden",
+              "defaultValue": "HORSE"
+            },
+            {
+              "modelKey": "entityObjectId",
+              "fieldType": "hidden"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

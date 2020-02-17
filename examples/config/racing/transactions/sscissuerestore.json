@@ -1,0 +1,47 @@
+{
+  "columns": [
+    {
+      "key": "trainer",
+      "headerText": "Trainer",
+      "filterMask": "Search",
+      "type": "textbox"
+
+    },
+    {
+      "key": "horse",
+      "headerText": "Horse",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+
+    {
+      "key": "pedigree",
+      "headerText": "Pedigree",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "currentSscStatus",
+      "headerText": "Current SSC Status",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "starterObsrRemarksId",
+      "headerText": "Observation Remarks",
+      "filterMask": "Search"
+
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Incident Date",
+      "filterMask": "Search",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/racing/sscissuerestore/all",
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

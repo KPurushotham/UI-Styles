@@ -1,0 +1,692 @@
+{
+  "name": "partylicensingform",
+  "saveUrl": "vdi/olims/party/license/save",
+  "validationUrl": "",
+  "submitted": false,
+  "pageTitleModelKey": "licenseDetails.partyType",
+  "externalService": "partyLicensingFactory",
+  "sections": [
+    {
+      "modelKey": "partyDetails",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "partyType",
+              "title": "Party Type",
+              "fieldType": "dropdown",
+              "cssClass": "col_2",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/party/partytype/all?fk-licenseApplicable=1",
+                "displayKey": "description",
+                "valueKey": "shortName"
+              },
+              "initLoad": true,
+              "dependancyConfig": [
+                {
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "dependancyEvents": [
+                {
+                  "eventName": "change" ,
+                  "handlerName": "setPartyType"
+                }
+              ],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "partyRegEntityId",
+              "title": "Party",
+              "fieldType": "dropdown",
+              "cssClass": "col_6",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "modelKeyMapTobeFilled": {
+                    "dob": "dob",
+                    "qualification": "qualification"
+                  }
+                }
+              ],
+              "dependancyConfig": [
+                {
+                  "sourceKey": "partyType",
+                  "event": "change",
+                  "dataConfigs": {
+                    "TRAINER": {
+                      "dataUrl": "vdi/olims/racing/trainerregistration/all?fk-status=ACTIVE",
+                      "displayKey": "trainerName",
+                      "valueKey": "entityObjectId"
+                    },
+                    "JOCKEY": {
+                      "dataUrl": "vdi/olims/racing/jockeyregistration/all?fk-status=ACTIVE",
+                      "displayKey": "jockeyName",
+                      "valueKey": "entityObjectId"
+                    }
+                  },
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "feeAmount",
+              "title": "License Fee Amount",
+              "ignoreInServiceModel": true,
+              "cssClass": "col_2",
+              "fieldType": "currency",
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "EmployedBy",
+              "title": "Employed By",
+              "ignoreInServiceModel": true,
+              "cssClass": "col_2",
+              "fieldType": "textbox",
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "jockeyType",
+              "title": "Jockey By",
+              "cssClass": "col_2",
+              "fieldType": "textbox",
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "NoofWins",
+              "title": "No.of Wins",
+              "cssClass": "col_2",
+              "fieldType": "textbox",
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": true,
+              "required": false
+            },
+			{
+              "modelKey": "age",
+              "title": "Age",
+              "ignoreInServiceModel": true,
+              "cssClass": "col_1",
+              "fieldType": "textbox",
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": true,
+              "required": false
+
+            },
+            {
+              "modelKey": "qualification",
+              "title": "Qualification",
+              "ignoreInServiceModel": true,
+              "cssClass": "col_2",
+              "fieldType": "textbox",
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": true,
+              "required": false
+
+            }  
+          ]
+        }
+      ]
+    },
+    {
+       "title": "License Details",
+      "modelKey": "licenseDetails",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "licenseTypeCode",
+              "title": "License Type",
+              "cssClass": "col_2",
+              "fieldType": "radio",
+              "disabled": false,
+              "required": true,
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racingaccount/licensetype/all?fk-status=ACTIVE",
+                "displayKey": "licenseTypeShortName-licenseTypeDescription",
+                "valueKey": "licenseTypeShortName"
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "setPartyType"
+                }
+              ]
+            },
+            {
+              "modelKey": "feeType",
+              "title": "Fee Type",
+              "cssClass": "col_2",
+              "fieldType": "textbox",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "setPartyType"
+                }
+              ],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "amount",
+              "title": "Amount",
+              "cssClass": "col_2",
+              "fieldType": "textbox",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "setPartyType"
+                }
+              ],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "expiryDate",
+              "title": "Expiry Date",
+              "cssClass": "col_2",
+              "fieldType": "date",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "setPartyType"
+                }
+              ],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "licensePeriod",
+              "title": "Effective",
+              "cssClass": "col_2",
+              "fieldType": "daterange",
+              "useFieldLevelModelKey": true,
+              "dateRangeConfig": {
+                "startDateModelKey": "effectiveFromDate",
+                "endDateModelKey": "effectiveToDate",
+                "range": "1Y",
+                "minDate": {
+                  "fromModelKey": "expiryDate||currentDate",
+                  "addtion": "1D"
+                },
+                "maxDate": {
+                  "fromModelKey": "currentFinancialYearEndDate"
+                },
+                "stateDate": {
+                  "value": "",
+                  "fromModelKey": "expiryDate||currentDate",
+                  "addtion": "1D"
+                }
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "setPartyType"
+                }
+              ],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "finanacialYear",
+              "title": "Finanacial Year",
+              "cssClass": "col_4",
+              "defaultValueByKey": "LS.financial_year",
+              "fieldType": "textbox",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "setPartyType"
+                }
+              ],
+              "disabled": true,
+              "required": true
+
+            },
+            {
+              "modelKey": "dob",
+              "title": "Date Of Birth",
+              "ignoreInServiceModel": true,
+              "cssClass": "col_2",
+              "fieldType": "date",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "setPartyType"
+                }
+              ],
+              "disabled": true,
+              "required": false
+
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "applicationDate",
+              "title": "Application Date",
+              "cssClass": "col_2",
+              "fieldType": "date",
+              "disabled": false,
+              "defaultValueByKey": "currentDate",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "setPartyType"
+                }
+              ],
+              "required": true
+
+            },
+            {
+              "modelKey": "applicationNumber",
+              "title": "Application Number",
+              "cssClass": "col_2",
+              "fieldType": "textbox",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "setPartyType"
+                }
+              ],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "referenceNumber",
+              "title": "Reference Number",
+              "cssClass": "col_2",
+              "fieldType": "textbox",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "setPartyType"
+                }
+              ],
+              "disabled": false,
+              "required": true
+
+            }
+          ]
+        }
+
+      ]
+    },
+    {
+      "title": "Incometax Details",
+      "modelKey": "incometaxDetails",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "submitStatus",
+              "title": "Submit Status",
+              "cssClass": "col_3",
+              "fieldType": "textbox",
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "submitDate",
+              "title": "Submition Date",
+              "cssClass": "col_3",
+              "fieldType": "date",
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "assessmentYear",
+              "title": "Assessment Year",
+              "cssClass": "col_3",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/financialYear/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "acknowledgementNumber",
+              "title": "Acknowledgement Number",
+              "cssClass": "col_3",
+              "fieldType": "textbox",
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": false,
+              "required": true
+
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Application Details",
+      "modelKey": "ApplicationDetails",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "contactPerson",
+              "title": "Contact Person",
+              "fieldType": "textbox",
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "apprenticeshipDetails",
+              "title": "Apprenticeship Details",
+              "fieldType": "textbox",
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "licTurfAuthDetails",
+              "title": "License Turf Authorities Details",
+              "fieldType": "textbox",
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": false,
+              "required": true
+            }
+
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "authorities",
+              "title": "Authorities",
+              "fieldType": "textbox",
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": false,
+              "required": true
+
+            },
+
+            {
+              "modelKey": "retainedPartyId",
+              "title": "Retained Party Details",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/financialYear/all",
+                "displayKey": "",
+                "valueKey": ""
+              },
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": true,
+              "required": false
+
+            },
+            {
+              "modelKey": "refused",
+              "title": "Retained",
+              "fieldType": "radio",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  },
+                  {
+                    "text": "No",
+                    "value": "N"
+                  }
+
+                ]
+              },
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": false,
+              "required": false
+
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Other Details",
+      "modelKey": "otherDetails",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "suspendedWithdrawn",
+              "title": "Suspended Withdrawn",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "physicalDisabledInd",
+              "title": "Physical Disabled or Not",
+              "cssClass": "col_3",
+              "fieldType": "radio",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  },
+                  {
+                    "text": "No",
+                    "value": "N"
+                  }
+
+                ]
+              },
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": false,
+              "required": false
+
+            },
+            {
+              "modelKey": "insured",
+              "title": "Insured",
+              "cssClass": "col_3",
+              "fieldType": "radio",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  },
+                  {
+                    "text": "No",
+                    "value": "N"
+                  }
+
+                ]
+              },
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": false,
+              "required": false
+
+            },
+            {
+              "modelKey": "incomeTaxAssessee",
+              "title": "Income Tax Assessee",
+              "cssClass": "col_3",
+              "fieldType": "radio",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  },
+                  {
+                    "text": "No",
+                    "value": "N"
+                  }
+
+                ]
+              },
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": false,
+              "required": false
+
+            },
+            {
+              "modelKey": "disabilityDetails",
+              "title": "Disability Details",
+              "cssClass": "col_3",
+              "fieldType": "textbox",
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "minRidingWt",
+              "title": "Min. Riding Weight ",
+              "cssClass": "col_3",
+              "fieldType": "textbox",
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "voucherNo",
+              "title": "Voucher No",
+              "cssClass": "col_3",
+              "fieldType": "textbox",
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": false,
+              "required": true
+
+            },{
+              "modelKey": "nationality",
+              "title": "Nationality",
+              "fieldType": "dropdown",
+              "cssClass": "col_2",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Indian",
+                    "value": "I"
+                  },
+                  {
+                    "text": "Foreign",
+                    "value": "F"
+                  }
+                ]
+              },
+              "dependancyEvents": [{
+                "eventName": "change",
+                "handlerName": "setPartyType"
+              }],
+              "disabled": false,
+              "required": true
+            }
+
+          ]
+        }
+      ]
+    }
+  ]
+}

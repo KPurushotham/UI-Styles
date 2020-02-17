@@ -1,0 +1,13 @@
+﻿[
+  
+  {
+    "stateName": "racing.jockeyallowancenorm",
+    "url": "jockeyallowancenorm",
+    "pattern": "LISTING",
+    "viewName": "racingSection",
+    "data": {
+      "title": "Jockey Allowances",
+      "addScreenUrl": "jockeyallowanceform"
+    }
+  }
+]

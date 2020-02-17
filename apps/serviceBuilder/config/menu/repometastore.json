@@ -1,0 +1,87 @@
+{
+  "name": "repometastore",
+  "externalService": "repometastoreService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "serviceBuilder.repometastoreform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "repoMetaStoreId",
+      "headerName": "Repo Meta Store Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "sourceCode",
+      "headerName": "Source Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "apiCode",
+      "headerName": "Api Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "contextCode",
+      "headerName": "Context Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "dataCode",
+      "headerName": "Data Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "queryMetadataJson",
+      "headerName": "Query Metadata Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "paramsJson",
+      "headerName": "Params Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "description",
+      "headerName": "Description",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "multiTenancyApplicable",
+      "headerName": "Multi Tenancy Applicable",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "tenantId",
+      "headerName": "Tenant Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+
+  ],
+  "dataUrl": "vdi/servicebuilder/repometastore/get/all",
+  "editScreenState": "app.serviceBuilder.repometastoreform",
+  "rowKey": {
+    "repoMetaStoreId": "repoMetaStoreId"
+  },
+  "defaultSortColumn": "repoMetaStoreId"
+}

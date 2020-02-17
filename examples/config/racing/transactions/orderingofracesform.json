@@ -1,0 +1,87 @@
+{
+  "name":"orderingofracesform",
+  "saveUrl":"horsecodeallotment/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "arrivalDate",
+              "title": "Race Date",
+              "fieldType": "date",
+              "cssClass": "col_2",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "horseName",
+              "title": "Race Day",
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "horseName",
+              "title": "Race Season",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+            }
+          ] },
+        {
+          "fields": [
+            {
+              "modelKey": "arrivalDate",
+              "title": "Start Time",
+              "fieldType": "dropdown",
+              "cssClass": "col_1",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "horseName",
+              "fieldType": "dropdown",
+              "cssClass": "col_1",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "arrivalDate",
+              "title": "Interval Time",
+              "fieldType": "dropdown",
+              "cssClass": "col_1",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "horseName",
+              "fieldType": "dropdown",
+              "cssClass": "col_1",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+
+
+      ]
+    },
+
+    { "title": "Race Order Details" ,
+      "rowDivisions": [
+        {
+          "fields": [
+          ]
+        }
+
+      ]
+    }
+
+  ]
+}

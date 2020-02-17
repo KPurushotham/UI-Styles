@@ -1,0 +1,226 @@
+.butn-cls {
+    margin-top: 0px;
+    width: auto;
+}
+
+.md-button {
+    font-size: 12px !important;
+    border-radius: 2px !important;
+    text-transform: uppercase;
+    margin: 0px 3px;
+    min-height: 0px;
+    min-width: 0px;
+    line-height: normal;
+}
+
+.md-button-Grid-functionalitity {
+    /*background-color: var(--main-bg-color) !important;*/
+    background-color: #004d62 !important;
+    color: #fff !important;
+    padding: 6px 8px;
+    /*background: linear-gradient(45deg, #4755ab, #7e6ddc);
+    background: linear-gradient(35deg, #4755ab 20%, #2c387a 70%);
+    transition: all .3s ease-in-out .3s !important;*/
+    transition: transform 300ms !important;
+    -moz-transition: transform 300ms !important;
+    -webkit-transition: transform 300ms !important;
+}
+
+    .md-button-Grid-functionalitity:hover {
+        /*background: linear-gradient(35deg, #2c387a 20%, #4755ab 70%);*/
+        transition: transform 300ms !important;
+        -moz-transition: transform 300ms !important;
+        -webkit-transition: transform 300ms !important;
+        transform: scale(1.1);
+    }
+
+.md-button.md-raised:not([disabled]) {
+    margin-top: 0px;
+    box-shadow: 0px 0px !important;
+}
+
+.grid-container-table .buttons_container .green_btn {
+    /*background: #09b5b7;*/
+    background: #89b694;
+    margin: 3px 3px;
+    padding: 4px 6px;
+    color: #fff !important;
+    border-radius: 2px;
+}
+
+.grid-container-table .buttons_container .green_btn .icon-btn {
+    display: none;
+}
+
+.buttons_container .green_btn, .buttons_container .gray_btn, .disable_btn, .APPROVE_btn, .REJECT_btn, .INITIATE_btn, .history_icon {
+    margin: 3px 3px;
+    color: #fff;
+    border-radius: 2px;
+    padding: 4px 6px;
+}
+
+.buttons_container .green_btn {
+    /*background: #09b5b7;*/
+    background: #89b694;
+}
+.buttons_container .gray_btn {
+    background: #28b5e8;
+}
+
+.butn-cls-margntop10 {
+    margin-top: 10px;
+}
+
+.butn-cls-margntop {
+    margin-top: 20px;
+}
+
+.disable_btn {
+    color: #0f9960;
+    /*background: transparent !important;*/
+    background: #d7ece3;
+    border-radius: 1px 5px 5px 1px;
+    position: relative;
+    font-size: 12px;
+    height: 22px;
+    line-height: 20px;
+    padding: 0px 10px;
+}
+
+    .disable_btn:before {
+        width: 0;
+        height: 0;
+        content: '';
+        border-top: 11px solid transparent;
+        border-right: 13px solid #d7ece3;
+        border-bottom: 11px solid transparent;
+        position: absolute;
+        left: -14px;
+        top: -1px;
+    }
+
+    .disable_btn:after {
+        content: '';
+        background: #fff;
+        width: 10px;
+        height: 10px;
+        float: left;
+        position: relative;
+        top: 5px;
+        left: -14px;
+        border-radius: 100%;
+        border: 1px solid rgba(153,153,153,.65);
+    }
+
+    .disable_btn span:before {
+        content: '';
+        width: 19px;
+        height: 16px;
+        background-image: url(../../images/threadicon-small.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: -19px;
+        top: -5px;
+        z-index: 9;
+    }
+
+    .disable_btn span {
+        font-weight: 700 !important;
+        letter-spacing: 1px;
+    }
+
+    .disable_btn:hover, .disable_btn:focus {
+        color: #777 !important;
+        cursor: default;
+    }
+
+    .disable_btn:active {
+        box-shadow: inset 0 0px 0px rgba(0,0,0,0) !important;
+    }
+
+.INITIATE_btn, .APPROVE_btn, .REJECT_btn {
+    position: relative;
+    transition: all 200ms ease-in-out;
+}
+
+.INITIATE_btn {
+    background: #88cae9;
+    color: #1e5975;
+}
+
+.APPROVE_btn {
+    /*background: #007a22;*/
+    background: #51b587;
+    color: #fff;
+}
+
+.REJECT_btn {
+    /*background: #f11f1f;*/
+    /*background: #e51919;*/
+    background: #db5566;
+    margin-right: 15px;
+    color: #fff;
+}
+
+.INITIATE_btn:hover {
+    color: #2e6e8d !important;
+}
+
+.APPROVE_btn:hover {
+    color: #276247 !important;
+}
+
+.REJECT_btn:hover {
+    color: #910b0b !important;
+}
+
+.INITIATE_btn:before, .APPROVE_btn:before, .REJECT_btn:before {
+    font-family: FontAwesome;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    margin-right: 2px;
+}
+
+.INITIATE_btn:before {
+    content: "\f0a9";
+}
+
+.APPROVE_btn:before {
+    content: "\f058";
+}
+
+.REJECT_btn:before {
+    content: "\f05e";
+}
+
+.disable_btn span > span {
+    color: #51b587;
+}
+.history_icon {
+    /*background: #e0f2fb;*/
+    background: #f7fcff; 
+    border: 1px solid #c7e6f6;
+    padding: 3px 8px;
+    transition: all 100ms ease-in-out 100ms;
+}
+.history_icon:before {
+    /*color: #467d87;*/
+    color: #247da7;
+    font-size: 16px;
+    font-weight: 100 !important;
+    opacity:.6;
+    filter:alpha(opacity=60);
+}
+.history_icon:hover {
+    border: 1px solid #b0d1e2;
+}
+.history_icon:before:hover {
+    color: #247da7;
+}
+.history_icon:hover:before {
+    color: #247da7;
+    opacity: 1;
+    filter: alpha(opacity=100);
+} 

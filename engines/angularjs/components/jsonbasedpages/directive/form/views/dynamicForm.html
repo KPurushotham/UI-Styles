@@ -1,0 +1,14 @@
+<div  dynamic-name="form.name" id="{{form.name}}"  style="text-shadow:none;{{form.style}}">
+    <div ng-repeat="section in form.sections">
+        <div data-ng-cloak class=" {{section.cssClass}} section_container full_width ng-cloak">
+            <!-- <div ng-if="section.show && !(section.showTitle==false)"  class="sub_heading full_width no-margin">
+        <h5 class="full_width">{{section.title}}</h5>
+    </div> -->
+            <div ng-if="section.show && !(section.showTitle==false)" class="section-heading full_width no-margin">
+                <h5 class="full_width">{{section.title}}</h5>
+            </div>
+            <section-directive name="{{section.name}}" ng-cloak section="section" parent-form="form" form-data-model="formDataModel">
+            </section-directive>
+        </div>
+    </div>
+</div>

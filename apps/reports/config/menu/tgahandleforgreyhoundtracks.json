@@ -1,0 +1,8 @@
+{
+  "name": "tgahandleforgreyhoundtracks",
+  "noWorkflow": true,
+  "submitted": false,
+  "externalService": "reportService",
+  "ReportConfigUrl": "",
+  "reportCode": "TGA_HANDLE_FRO_GREYHOUND_TRACK"
+}

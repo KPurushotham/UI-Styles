@@ -1,0 +1,139 @@
+<div class="login-main-design">
+
+    <main class="auth-main">
+
+        <form name="loginfrm" class="form-horizontal"
+              ng-submit="loginSubmit(loginfrm)">
+            <div class="main-wapper">
+
+                <div class="login-page">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+                                <!--<div class="logo"><img src="{{$tenantLogPath}}"></div>
+                                <div class="logo-content">
+                                    <h3>CHRIMS</h3>
+                                    <h5>Web Reporting Portal V2.0</h5>
+                                </div>-->
+                            </div>
+
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                                <div class="login-design-main">
+                                    <div class="login-design">
+                                        <div class="ids-loginpg-logo"><img src="images/ids-login-page-logo.png" /></div>
+
+                                        <!--<h3>Login</h3>-->
+                                        <p style="color:red;margin-top:10px;">* Please use web portal login credentials here</p>
+                                        <div class="login-form">
+                                            <!--<md-input-container class="login-UserName">
+                                                <label>Username: </label>
+                                                <input type="text" class="input100 toLowercase"
+                                                       name="login_userid"
+                                                       ng-model="loginModel.username"
+                                                       required
+                                                       alt="Enter valid email address">
+
+                                            </md-input-container>
+
+                                            <br />
+                                            <md-input-container class="login-Password">
+                                                <label>Password: </label>
+                                                <input type="password"
+                                                       class="input100"
+                                                       name="login_password"
+                                                       ng-model="loginModel.password"
+                                                       required>
+
+                                            </md-input-container>-->
+
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                                <input id="user" type="text" ng-model="loginModel.username" class="form-control" name="login_userid" placeholder="Username">
+                                            </div>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                                <input id="password" type="password" ng-model="loginModel.password" class="form-control" name="login_password" placeholder="Password">
+                                            </div>
+
+                                            <div class="container-login-btn">
+                                                <button class="loginform-btn"
+                                                        ng-disabled="loginInProgress"
+                                                        type="submit">
+                                                    {{loginButtonText|| 'Login'}}
+                                                </button>
+                                            </div>
+                                            <!--<div class="">
+                                                <a href="javascript:void(0)"
+                                                   class="forgot-pass">
+                                                    Forgot
+                                                    password?
+                                                </a>
+                                            </div>-->
+
+                                            <p>All personal information is secure and encrypted.</p>
+
+
+                                        </div>
+
+                                        <p>If you are having a problem with the site, please email info@idsystems.in or call our office at +91 40 4850 8567.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-12"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="acknowledgement" style="display:none; flex-direction: column;">
+                    <!--<img src="images/racinglogo.jpg" alt="Racing Image" style="width:100%;">-->
+                    <!--<img src="images/exclamation-icon.png" />-->
+                    <i class="fa fa-exclamation-triangle"></i>
+                    <h4>Disclaimer</h4>
+                    <p>
+                        The information presented in the Infinite Dimensional Systems database is made available to authorized users on an "as is" basis and
+                        without any warranty, express or implied. The data which
+                        is accessed and managed by the Infinite Dimensional Systems is provided
+                        by others. Infinite Dimensional Systems shall not be liable to any person or
+                        entity for any loss or damage alleged to be caused
+                        directly or indirectly by the use or reliance upon the
+                        data presented or by the Infinite Dimensional Systems.
+                    </p>
+                </div>
+            </div>
+        </form>
+        <!--End-->
+
+    </main>
+
+    <div class="footer" style="margin-top:0px;">
+        <div class="footer-copyright">&copy; 2019 Infinite Dimensional Systems. All rights reserved.</div>
+    </div>
+</div>
+
+<!-- Start of message container -->
+<!--<div class="messages_container" ng-init="showMsg=false"
+    ng-class="(showMsg)?'':'hide_block'">
+    <div class="overlay_bg"></div>
+    <div class="overlay_container message_overlay_container">
+        <div class="overlay_heading full_width">
+            <h3 class="left">{{messageStatus}}</h3>
+            <a href="javascript:void(0);" class="close_arrow right">
+                <span class="icon-circle-close"></span>
+            </a>
+        </div>
+        <div class="overlay_content full_width">
+            <div class="overlay_description full_width text-center">
+                <p>{{messageText}}</p>
+            </div>
+            <div class="buttons_container right">
+                <a class="btn green_btn no-margin" href="javascript:void(0);">
+                    <span class="icon-btn icon-check"></span>
+                    <span class="btn-text">OK</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>-->
+<!-- End of message container -->

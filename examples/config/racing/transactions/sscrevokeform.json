@@ -1,0 +1,119 @@
+{
+  "name":"sscrevokeform",
+  "saveUrl":"sscrevoke/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "raceDate",
+              "title": "Race Date",
+              "fieldType": "date",
+              "cssClass": "col_1",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "raceDay",
+              "title": "Race Day",
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "Season",
+              "title": "Race Season",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+            }
+          ]
+    },
+        {
+          "fields": [
+            {
+              "modelKey": "raceNameId",
+              "title": "Race Name",
+              "fieldType": "textbox",
+              "cssClass": "col_6",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "horseName",
+              "title": "Race No",
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "horseName",
+              "title": "Race Running No",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "horseId",
+              "title": "Horse Name",
+              "fieldType": "textbox",
+              "cssClass": "col_6",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "status",
+              "title": "Current SSC Status",
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "lastUpdatedDate",
+              "title": "Incidents Date",
+              "ignoreInServiceModel": true,
+              "fieldType": "date",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+            }
+          ]
+        },
+        {
+          "fields": [
+
+            {
+              "modelKey": "remarks",
+              "title": "Remarks",
+              "fieldType": "textbox",
+              "cssClass": "col_9",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+
+
+
+
+
+
+}

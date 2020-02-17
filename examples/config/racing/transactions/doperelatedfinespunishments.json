@@ -1,0 +1,49 @@
+﻿  {
+    "columns": [
+      
+      {
+        "key": "raceDate",
+        "headerText": "Race Date",
+        "type": "date",
+        "filterMask": "Search"
+      },
+      {
+        "key": "RaceDay",
+        "headerText": "Race Day",
+        "filterMask": "Search",
+        "type": "uppercase"
+      },
+      {
+        "key": "raceName",
+        "headerText": "Race Name",
+        "filterMask": "Search",
+        "type": "uppercase"
+      },
+     
+      {
+        "key": "horseNameId",
+        "headerText": "Horse Name",
+        "filterMask": "Search",
+        "type": "textbox"
+      },
+     
+      {
+        "key": "status",
+        "headerText": "Drug Used",
+        "filterMask": "Search",
+        "type": "uppercase"
+      },
+     {
+        "key": "lastUpdatedDate",
+        "headerText": "Last Updated Date",
+        "type": "date"
+      }
+    ],
+
+  "dataUrl": "vdi/olims/racing/dopefinespunishments/all",
+
+  "rowKey": {    
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

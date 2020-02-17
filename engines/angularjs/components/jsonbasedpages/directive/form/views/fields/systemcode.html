@@ -1,0 +1,11 @@
+<div ng-if="field.show" class="input_field left {{field.cssClass}}" ng-class="((parentForm.save_submit && parentForm.df_form[field.modelKey+ fieldIndex].$error.required)||
+ parentForm.df_form[field.modelKey].$error.undefined)? 'form_error_field' : ''">
+    <label  ng-class="{'hide' :!field.showTitle }" class="full_width">{{field.title}} <span ng-if="field.required" class="mandatory">*</span></label>
+    <div>
+        <input type="text" class="full_width" id="{{field.modelKey+ fieldIndex}}"
+               ng-class="{'uppercase': field.uppercase}" dynamic-name="field.modelKey+ fieldIndex" ng-model="field.modelValue" ng-required="field.required" 
+               ng-disabled="(field.disabled || parentForm.readOnlyForm ||(parentForm.screenMode=='EDIT' && field.disabledInEditMode)) ? true :false" dependancy-events="field.dependancyEvents" validate-undefined/>
+        <!-- <span class="required-error"  ng-show="field.field_required && !field.field_value">* required</span>-->
+    </div>
+    
+</div>

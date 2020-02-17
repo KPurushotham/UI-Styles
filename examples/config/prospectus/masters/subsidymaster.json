@@ -1,0 +1,41 @@
+﻿{
+  "columns": [
+    {
+      "key": "subsidyCode",
+      "headerText": "Code",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "subsidyName",
+      "headerText": "Short Name",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "subsidyDescription",
+      "headerText": "Description",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/prospectus/subsidy/all",
+
+  "rowKey": {
+    "subsidyCode": "subsidyCode",
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}
+	

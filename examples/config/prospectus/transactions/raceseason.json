@@ -1,0 +1,50 @@
+﻿{
+  "columns": [
+   {
+      "key": "financialYear",
+      "headerText": "Finalcial Year",
+      "filterMask": "Search"
+    },
+	 {
+      "key": "season",
+      "headerText": "Season",
+      "filterMask": "Search"
+    },
+   {
+      "key": "raceYear",
+      "headerText": "Race Year",
+      "filterMask": "Search"
+    },
+	 {
+      "key": "startDate",
+      "headerText": "Start Date",
+    "filterMask": "Search",
+     "type": "date"
+    },
+	
+   {
+      "key": "endDate",
+      "headerText": "End Date",
+    "filterMask": "Search",
+     "type": "date"
+    },
+	 
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/prospectus/raceseason/all",
+
+  "rowKey": {
+  "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

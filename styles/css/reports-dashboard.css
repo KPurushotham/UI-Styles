@@ -1,0 +1,73 @@
+.dashboard-report-grid-padding {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.report-db-tble tr:nth-child(even) {
+    background: #fafafa;
+}
+.AUDIT_CHECK-icon {
+    background-image: url(../../images/reporticons/AUDIT_CHECK.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.COMM_EXPORT-icon {
+    background-image: url(../../images/reporticons/COMM_EXPORT.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.COMM_IMPORT-icon {
+    background-image: url(../../images/reporticons/COMM_IMPORT.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.SETTLE_AGENT_EXPORT-icon {
+    background-image: url(../../images/reporticons/SETTLE_AGENT_EXPORT.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.SETTLE_AGENT_IMPORT-icon {
+    background-image: url(../../images/reporticons/SETTLE_AGENT_IMPORT.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.POOLS_BY_RACE_REPORT-icon {
+    background-image: url(../../images/reporticons/POOLS_BY_RACE_REPORT.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.POOLS_REPORT-icon {
+    background-image: url(../../images/reporticons/POOLS_REPORT.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.BC_REPORTING_BY_RACES-icon {
+    background-image: url(../../images/reporticons/BC_REPORTING_BY_RACES.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.reports-db-heading {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color:#247da7;
+}
+.reports-dashboard-grid-table-th {
+    color: #999;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.15px;
+    float:left;
+}
+
+.number{
+    text-align: right !important;
+}

@@ -1,0 +1,30 @@
+{
+    "name":"dogindicator",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.dogindicatorform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/DogIndicator/all",
+    "editScreenState": "app.loaders.codes.dogindicatorform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

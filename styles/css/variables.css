@@ -1,0 +1,27 @@
+:root {
+    --bg-color: 28, 43, 54;
+    --main-bg-color: rgba(var(--bg-color), 1);
+    --main-bg-color-hover: rgba(var(--bg-color), 0.7);
+    --grid-header-bg-color: rgba(var(--bg-color), 1);
+}
+
+/*:root {
+    --bg-color-black: 28, 43, 54;
+    --main-bg-color: rgba(var(--bg-color-black), 1);
+    --main-bg-color-hover: rgba(var(--bg-color-black), 0.7);
+    --grid-header-bg-color: rgba(var(--bg-color-black), 1);
+}
+
+:root {
+    --bg-color-blue: 42, 112, 203;
+    --main-bg-color: rgba(var(--bg-color-blue), 1);
+    --main-bg-color-hover: rgba(var(--bg-color-blue), 0.7);
+    --grid-header-bg-color: rgba(red, 1);
+}
+
+:root {
+    --bg-color-green: 45, 181, 176;
+    --main-bg-color: rgba(var(--bg-color-green), 1);
+    --main-bg-color-hover: rgba(var(--bg-color-green), 0.7);
+    --grid-header-bg-color: rgba(var(--bg-color-green), 1);
+}*/

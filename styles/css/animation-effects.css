@@ -1,0 +1,164 @@
+/* --- border animation start --- */
+.bordr-animation {
+    /*vertical-align: middle;
+    color: #0b7;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    padding: 0 20px;
+    cursor: pointer;
+    position: relative;*/
+    display: inline-block;
+    border: 1px solid #cdcdcd;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+/*.bordr-animation:hover {
+    border: 2px solid rgba(0,160,80,0);
+    color: #FFF;
+}*/
+.bordr-animation::before, .bordr-animation::after {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    -webkit-transform: scale(0);
+    transition: 0.5s;
+}
+.foo::before {
+    /*border-bottom: 2px solid #09b5b7;
+    border-left: 2px solid #09b5b7;*/
+    border-bottom: 2px solid #6db07d;
+    border-left: 2px solid #6db07d;
+    -webkit-transform-origin: 0 100%;
+    border-radius: 5px;
+}
+.foo::after {
+    /*border-top: 2px solid #09b5b7;
+    border-right: 2px solid #09b5b7;*/
+    border-top: 2px solid #6db07d;
+    border-right: 2px solid #6db07d;
+    -webkit-transform-origin: 100% 0%;
+    border-radius: 5px;
+}
+.bordr-animation:hover::after, .bordr-animation:hover::before {
+    -webkit-transform: scale(1);
+}
+/* --- border animation end --- */
+
+/* --- heart animation start --- */
+.heart {
+    animation: pulse 1s ease infinite;
+    -webkit-animation: pulse 1s ease infinite;
+    -moz-animation: pulse 1s ease infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*.heart {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+    animation: fave-heart 1s steps(28);
+}
+
+    .heart:hover {
+        background-position: -2800px 0;
+        transition: background 1s steps(28);
+    }
+
+@keyframes fave-heart {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -2800px 0;
+    }
+}*/
+
+/* --- heart animation end --- */
+
+/* --- button animation start --- */
+.butn-animation1, .butn-animation-downarrow1 {
+    display: inline-block;
+    /*border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    width: 200px;
+    cursor: pointer;*/
+    transition: all 0.5s;
+    /*position: relative;*/
+}
+.butn-animation1 span, .butn-animation-downarrow1 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.butn-animation1 span:before {
+    /*content: '\00bb';*/
+    content: "\f101";
+    position: absolute;
+    opacity: 0;
+    top: 1px;
+    /*right: -20px;*/
+    left: -20px;
+    transition: 0.5s;
+    font-size: 15px;
+    font-family: FontAwesome;
+}
+.butn-animation1:hover span {
+    /*padding-right: 15px;*/
+    padding-left: 15px;
+}
+.butn-animation1:hover span:before {
+    opacity: 1;
+    /*right: 0;*/
+    left: 0;
+}
+.butn-animation-downarrow1 span:before {
+    content: "\f103";
+    position: absolute;
+    opacity: 0;
+    top: 1px;
+    right: -20px;
+    /*left: -20px;*/
+    transition: 0.5s;
+    font-size: 14px;
+    font-family: FontAwesome;
+}
+.butn-animation-downarrow1:hover span {
+    padding-right: 15px;
+}
+.butn-animation-downarrow1:hover span:before {
+    opacity: 1;
+    right: 0;
+}
+
+/* --- button animation end --- */
+
+

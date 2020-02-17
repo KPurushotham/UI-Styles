@@ -1,0 +1,115 @@
+{
+  "name": "makeeligibilitesform",
+  "saveUrl": "makeeligibilitesform/save",
+  "validationUrl": "",
+  "submitted": false,
+  "externalService": {
+    "name": "",
+    "loading": {
+
+    },
+      "save": {
+        "httpMethod": "post",
+        "preHanlder": "",
+        "postHanlder": "",
+        "hanlder": ""
+      },
+      "update": {
+        "httpMethod": "put",
+        "preHanlder": "",
+        "postHanlder": "",
+        "hanlder": ""
+      }
+    },
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "fieldType": "raceday",
+              "modelKeyMap": [ "raceDay", "raceNameId" ],
+              "hideFields": [ "entryType" ],
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "raceHorseEntriesDetails",
+              "title": "List of Eligible status",
+              "fieldType": "grid",
+              "show": false,
+              "externalActions": [
+                {
+                  "actionLabel": "Reorder",
+                  "handlerName": "generateDrawNo"
+                }
+              ],
+              "gridSummaryLabel": "Total Items: ",
+              "gridConfig": {
+                "gridFeatures": [ "edit", "row-edit" ],
+                "multiSelect": false,
+                "dataUrl": "vdi/olims/racing/eligibilitiesdetails/all",
+                "modelKeyMap": [ "horseEntryName", "horseEligibilitiesStatus" ],
+                "columns": [
+                  {
+                    "key": "horseEntryName",
+                    "headerText": "Horse Names",
+                    "filterMask": "Search",
+                    "edittype": "textbox",
+                    "editable": false,
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "horseEligibilitiesStatus",
+                    "headerText": "Status",
+                    "filterMask": "Search",
+                    "ignoreInServiceModel": true,
+                    "type": "uppercase",
+                    "edittype": "dropdown",
+                    "dataConfig": {
+                      "localData": [
+                        {
+                          "value": "NOT_ELIGIBLE",
+                          "text": "Not Eligible"
+                        },
+                        {
+                          "value": "ELIGIBLE",
+                          "text": "Eligible"
+                        }
+                      ],
+                      "displayKey": "text",
+                      "valueKey": "value"
+                    },
+                    "editable": true
+                  }
+                ]
+              },
+              "dependancyConfig": [
+                {
+                  "sourceKey": "raceNameId",
+                  "event": "change",
+                  "loadData": {
+                    "keyParams": { "raceNameId": "entityObjectId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "show": true }
+
+                }
+              ],
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

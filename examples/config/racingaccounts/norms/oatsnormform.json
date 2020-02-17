@@ -1,0 +1,135 @@
+﻿{
+  "name": "oatsnormform",
+  "saveUrl": "oatsnorms/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+               {
+              "modelKey": "fodderId",
+              "title": "CRDR Code ",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racingaccount/fodder/all?fk-status=ACTIVE",
+                "displayKey": "fodderCode-fodderShortName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "effectiveFromDate",
+              "title": "Effective From",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+
+      ]
+    },
+    {
+      "title": "Oats and WheatBran/Barley Details:",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "ratePerBag",
+              "title": "Rate Per Bag ",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "noOfBagsPerHorse",
+              "title": "No.of Bags Per Horse ",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "title": "Total Amount ",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+
+            }
+
+
+          ]
+        },
+
+        {
+          "fields": [
+            {
+              "modelKey": "noOfDays",
+              "title": "No.of Days",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+            },
+
+            {
+              "modelKey": "subsidyAmount",
+              "title": "subsidy Amount",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "taxApplicable",
+              "title": "Tax Applicable",
+              "fieldType": "checkbox",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+
+            }
+
+
+          ]
+        }
+      ]
+    },
+     {
+      "title": "Applicable for  Oats only:",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "crushedAmountPerBag",
+              "title": "Crushed Amount / Bag ",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "uncrushedAmountPerBag",
+              "title": "Uncrushed Amount / Bag",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+
+            }
+          ]
+        }
+      ]
+    }
+
+  ]
+}

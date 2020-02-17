@@ -1,0 +1,48 @@
+﻿  {
+  "columns": [
+    {
+      "key": "financialYear",
+      "headerText": "Financial Year",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "gradeLevel",
+      "headerText": "Grade Level",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "coverageAmount",
+      "headerText": "Coverage Amount",
+      "filterMask": "Search"
+    },
+    {
+      "key": "gpaAmount",
+      "headerText": "GPA Amount",
+      "filterMask": "Search"
+    },
+    {
+      "key": "gjpaAmount",
+      "headerText": "GJPA Amount",
+      "filterMask": "Search"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/personnel/groupjantalevel/all",
+
+    "rowKey": {
+      "entityObjectId": "entityObjectId"
+    },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

@@ -1,0 +1,49 @@
+{
+  "name": "stakesform",
+  "saveUrl": "stakesm/save",
+  "validationUrl": "",
+  "submitted": false,
+  "externalService": "stakesFactory",
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "stakesCode",
+              "title": "Code",
+              "fieldType": "systemcode",
+			  "cssClass": "col-2",
+              "keyGenConfig": {
+                "params": "entityCode=stakesmaster&entityGroupCode=pro&entityTypeCode=pro"
+              }
+            },
+            {
+              "modelKey": "stakesValue",
+              "title": "Value",
+              "fieldType": "textbox",
+			  "cssClass": "col_3",	
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "setStakesShortCode"
+                }
+              ],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "stakesShortName",
+              "title": "Short Name",
+              "fieldType": "textbox",
+			  "cssClass": "col_6",	
+              "disabled": true,
+              "required": true
+
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

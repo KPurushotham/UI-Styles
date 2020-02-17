@@ -1,0 +1,44 @@
+﻿{
+  "columns": [
+    {
+      "key": "licenseType",
+      "headerText": "License Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "withStakes",
+      "headerText": "Stakes",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "indicater",
+      "headerText": "Indicator",
+      "filterMask": "Search"
+    },
+	{
+      "key": "accountId",
+      "headerText": "Account",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/prospectus/trainersbeneloventfund/all",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

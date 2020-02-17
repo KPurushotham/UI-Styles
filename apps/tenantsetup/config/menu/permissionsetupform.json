@@ -1,0 +1,267 @@
+{
+  "name": "permissionsetupform",
+  "saveUrl": "vdi/admin/application/menu/permissions/save",
+  "getOneUrl": "vdi/admin/application/menu/permissions/one",
+  "externalService": "permissionsetupService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "tenantId",
+              "title": "Tenants",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "ignoreInServiceModel": true,
+              "disabledInEditMode": false,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "hasDependants": true,
+                  "handlerName": "tenantDropdownHandler"
+                }
+              ],
+              "dataConfig": {
+                "dataUrl": "vdi/admin/tenant/all",
+                "displayKey": "tenantTitle",
+                "valueKey": "tenantId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "applicationEntityId",
+              "title": "Applications",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "ignoreInServiceModel": true,
+              "disabledInEditMode": false,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "hasDependants": true,
+                  "handlerName": "applicationDropdownHandler"
+                }
+              ],
+              "dependancyConfig": [
+                {
+                  "sourceKey": "tenantId",
+                  "event": "change",
+                  "loadData": {
+                    "keyParams": {
+                      "tenantId": "tenantId"
+                    }
+                  }
+                }
+              ],
+              "dataConfig": {
+                "dataUrl": "vdi/admin/tenant/application",
+                "displayKey": "applicationTitle",
+                "valueKey": "applicationEntityId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "roleId",
+              "title": "Roles",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "disabledInEditMode": false,
+              "ignoreInServiceModel": true,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "roleDropdownHandler"
+                }
+              ],
+              "dependancyConfig": [
+                {
+                  "sourceKey": "tenantId",
+                  "event": "change",
+                  "loadData": {
+                    "keyParams": {
+                      "tenantId": "tenantId"
+                    }
+                  }
+                }
+              ],
+              "dataConfig": {
+                "dataUrl": "vdi/admin/tenant/roles",
+                "displayKey": "roleName",
+                "valueKey": "roleId"
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "menuId",
+              "title": "Menus",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "ismultiple": true,
+              "ignoreInServiceModel": true,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "menuDropdownHandler"
+                }
+              ],
+              "dependancyConfig": [
+                {
+                  "sourceKey": "applicationEntityId",
+                  "event": "change",
+                  "loadData": {
+                    "keyParams": {
+                      "applicationEntityId": "applicationEntityId"
+                    }
+                  }
+                }
+              ],
+              "dataConfig": {
+                "dataUrl": "vdi/admin/menu/application/get/one",
+                "displayKey": "menuKey",
+                "valueKey": "menuId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "title": "Add to Grid",
+              "fieldType": "button",
+              "cssClass": "col-md-2 padding-lftrht0 butn-cls-margntop",
+              "handlerName": "addToGrid",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "permissionsSave",
+              "title": "Permission Grid",
+              "fieldType": "grid",
+              "initLoad": true,
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "total",
+              "gridConfig": {
+                "multiSelect": true,
+                "modelKeyMap": [
+                  "operationType",
+                  "serialId",
+                  "tenantId",
+                  "applicationEntityId",
+                  "roleId",
+                  "menuId",
+                  "beginDate",
+                  "endDate",
+                  "isActive"
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "toolPanelSuppressRowGroups": true
+                },
+                "columns": [
+                  {
+                    "field": "operationType",
+                    "hide": true
+                  },
+                  {
+                    "field": "serialId",
+                    "hide": true
+                  },
+                  {
+                    "field": "tenantId",
+                    "hide": true
+                  },
+                  {
+                    "field": "tenantTitle",
+                    "headerName": "Tenant Title",
+                    "hide": false,
+                    "editable": false
+                  },
+                  {
+                    "field": "applicationEntityId",
+                    "hide": true
+                  },
+                  {
+                    "field": "applicationTitle",
+                    "headerName": "Application Title",
+                    "hide": false,
+                    "editable": false
+                  },
+                  {
+                    "field": "roleId",
+                    "hide": true
+                  },
+                  {
+                    "field": "roleName",
+                    "headerName": "Role Name",
+                    "hide": false,
+                    "editable": false
+                  },
+                  {
+                    "field": "menuId",
+                    "hide": true
+                  },
+                  {
+                    "field": "menuKey",
+                    "headerName": "Menu Key",
+                    "hide": false,
+                    "editable": false
+                  },
+                  {
+                    "field": "beginDate",
+                    "headerName": "Begin Date",
+                    "hide": true,
+                    "formatType": "Date"
+                  },
+                  {
+                    "field": "endDate",
+                    "headerName": "End Date",
+                    "hide": true,
+                    "formatType": "Date"
+                  },
+                  {
+                    "field": "isActive",
+                    "headerName": "Is Active",
+                    "hide": true
+                  },
+                  {
+                    "field": "deleteId",
+                    "headerName": "Delete",
+                    "actionType": "DELETE",
+                    "actionIconClass": "fa fa-trash",
+                    "actionToggleField": "isActive",
+                    "actionModeField": "serialId",
+                    "actionToggle": {
+                      "true": "fa fa-toggle-off",
+                      "false": "fa fa-toggle-on"
+                    },
+                    "handlerName": "deleteFromGrid"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

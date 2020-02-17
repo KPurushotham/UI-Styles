@@ -1,0 +1,257 @@
+{
+  "name": "reportbyform",
+  "saveUrl": "vdi/reports/reportby/tenantdatasourceitems/save",
+  "getOneUrl": "vdi/reports/reportby/options/getone",
+  "externalService": "reportByService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "tenantId",
+              "title": "Tenants",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "dataConfig": {
+                "dataUrl": "vdi/admin/tenant/all",
+                "displayKey": "tenantTitle",
+                "valueKey": "tenantId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "dataSourceId",
+              "title": "DataSource",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "defaultKey":"dataSourceCode",
+              "dataConfig": {
+                "dataUrl": "vdi/reports/reportby/get",
+                "displayKey": "dataSourceCode",
+                "valueKey": "dataSourceId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "dataSourceItemId",
+              "cssClass": "col-md-2",
+              "show":false,
+              "title": "DataSource ItemId",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "dataSourceCode",
+              "cssClass": "col-md-2",
+              "title": "DataSource Code",
+              "show":false,
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "itemValue",
+              "cssClass": "col-md-2",
+              "title": "Item Value",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "itemText",
+              "cssClass": "col-md-2",
+              "title": "Item Text",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            
+            {
+              "modelKey": "fromClause",
+              "cssClass": "col-md-2",
+              "title": "From Clause",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "whereClause",
+              "cssClass": "col-md-2",
+              "title": "Where Clause",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "orderByClause",
+              "cssClass": "col-md-2",
+              "title": "OrderBy Clause",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "groupByClause",
+              "cssClass": "col-md-2",
+              "title": "GroupByClause",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "dataQueryRuleId",
+              "cssClass": "col-md-2",
+              "title": "Data QueryRule Id",
+              "show":false,
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "queryRuleCode",
+              "cssClass": "col-md-2",
+              "title": "Query Rule Code",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "selectClause",
+              "cssClass": "col-md-2 editor-reportby",
+              "title": "Select Clause",
+              "fieldType": "ace",
+              "required": true,
+              "ignoreInServiceModel": true,
+              "disabled": true
+            },
+            {
+              "title": "Add to Grid",
+              "fieldType": "button",
+              "handlerName": "addToGrid",
+              "ignoreInServiceModel": true,
+              "cssClass": "col-md-2 padding-lftrht0 butn-cls-margntop",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "reportDataEntry",
+              "title": "Report Data Entry",
+              "fieldType": "grid",
+              "initLoad": true,
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "total",
+              "gridConfig": {
+                "multiSelect": true,
+                "modelKeyMap": [
+                  "dataSourceItemId",
+                  "operationType",
+                  "dataSourceCode",
+                  "selectClause",
+                  "fromClause",
+                  "whereClause",
+                  "orderByClause",
+                  "groupByClause",
+                  "tenantId",
+                  "dataSourceId",
+                  "itemValue",
+                  "itemText",
+                  "dataQueryRuleId",
+                  "queryRuleCode"
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "toolPanelSuppressRowGroups": true,
+                  "enableSorting": true
+                },
+                "columns": [
+                  {
+                    "field": "dataSourceCode",
+                    "headerName": "Data Source Code",
+                    "hide": false
+                  },
+                  {
+                    "field": "selectClause",
+                    "headerName": "Select Clause",
+                    "hide": false,
+                    "formatType": "JSON"
+                  },
+                  {
+                    "field": "fromClause",
+                    "headerName": "From Clause",
+                    "hide": false
+                  },
+                  {
+                    "field": "whereClause",
+                    "headerName": "where Clause",
+                    "hide": false
+                  },
+                  {
+                    "field": "orderByClause",
+                    "headerName": "Order By Clause",
+                    "hide": false
+                  },
+                  {
+                    "field": "groupByClause",
+                    "headerName": "Group By Clause",
+                    "hide": false
+                  },
+                  {
+                    "field": "tenantId",
+                    "headerName": "Tenant Id",
+                    "hide": false
+                  },
+                  {
+                    "field": "dataSourceId",
+                    "headerName": "Data Source Id",
+                    "hide": false
+                  },
+                  {
+                    "field": "itemValue",
+                    "headerName": "Item Value",
+                    "hide": false
+                  },
+                  {
+                    "field": "itemText",
+                    "headerName": "Item Text",
+                    "hide": false
+                  },
+                  {
+                    "field": "dataQueryRuleId",
+                    "headerName": "Data QueryRule Id",
+                    "hide": true
+                  },
+                  {
+                    "field": "queryRuleCode",
+                    "headerName": "Query Rule Code",
+                    "hide": true
+                  },
+                  {
+                    "field": "deleteId",
+                    "headerName": "Delete",
+                    "actionType": "DELETE",
+                    "actionIconClass": "fa fa-trash",
+                    "actionToggleField": "activeFlag",
+                    "actionModeField": "dataSourceItemId",
+                    "actionToggle": {
+                      "true": "fa fa-toggle-off",
+                      "false": "fa fa-toggle-on"
+                    },
+                    "handlerName": "deleteFromGrid"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

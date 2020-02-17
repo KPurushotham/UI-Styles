@@ -1,0 +1,30 @@
+{
+    "name":"sexrestriction",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.sexrestrictionform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/Sexrestriction/all",
+    "editScreenState": "app.loaders.codes.sexrestrictionform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

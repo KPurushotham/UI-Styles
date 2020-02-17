@@ -1,0 +1,332 @@
+{
+  "name": "contractagentform",
+  "saveUrl": "vdi/hostfees/contractagent/save",
+  "getOneUrl": "vdi/hostfees/contractagent/getone",
+  "validationUrl": "vdi/hostfees/contractagent/getone",
+  "externalService": "adminContractAgentService",
+  "noWorkflow": true,
+  "submitted": false,
+  "entityGroupCode": "hostfees",
+  "entityTypeCode": "hostfees",
+  "sections": [
+    {
+      "showTitle": false,
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "contractAgentName",
+              "fieldType": "hidden"
+            },
+            {
+              "modelKey": "contractAgentEntityId",
+              "title": "Contract Agent",
+              "fieldType": "dropdown",
+              "disabledInEditMode": true,
+              "isEditable": true,
+              "show": false,
+              "dataConfig": {
+                "dataUrl": "vdi/chrimsmasters/corporations/list/all",
+                "displayKey": "corpName",
+                "valueKey": "entityId"
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "modelKeyMapTobeFilled": {
+                    "contractAgentName": "corpName"
+                  }
+                }
+              ],
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "showTitle": false,
+      "modelKey": "addressMap",
+      "modelType": "SINGLE",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "contractAgentEntityId",
+              "fieldType": "hidden",
+              "defaultValueByKey": "PSM.contractAgentEntityId"
+            },
+            {
+              "modelKey": "addressEntityId",
+              "title": "Address",
+              "cssClass": "col_12",
+              "disabledInEditMode": true,
+              "isEditable": true,
+              "show": false,
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/chrimsmasters/address/all",
+                "displayKey": "description-stateCode-zip",
+                "valueKey": "entityId"
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "modelKeyMapTobeFilled": {
+                    "countryCode": "countryCode",
+                    "stateCode": "stateCode",
+                    "addressLine1": "addressLine1",
+                    "addressLine2": "addressLine2",
+                    "email": "email",
+                    "phone": "phone",
+                    "fax": "fax",
+                    "webAddress": "webAddress",
+                    "zip": "zip"
+                  }
+                }
+              ],
+              "disabled": false,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "addressLine1",
+              "title": "Address Line 1",
+              "cssClass": "col-md-12",
+              "style": "margin-top: 38px !important; margin-bottom: 0px !important;",
+              "fieldType": "textbox",
+              "ignoreInServiceModel": true,
+              "disabled": true
+            },
+            {
+              "modelKey": "addressLine2",
+              "title": "Address Line 2",
+              "cssClass": "col-md-12 field-margin-zero",
+              "fieldType": "textbox",
+              "ignoreInServiceModel": true,
+              "disabled": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "cityCode",
+              "title": "City",
+              "fieldType": "textbox",
+              "cssClass": "col-md-3 field-margin-zero",
+              "ignoreInServiceModel": true,
+              "disabled": true
+            },
+            {
+              "modelKey": "stateCode",
+              "title": "State / Province",
+              "fieldType": "textbox",
+              "cssClass": "col-md-3 field-margin-zero",
+              "ignoreInServiceModel": true,
+              "disabled": true
+            },
+            {
+              "modelKey": "countryCode",
+              "title": "Country",
+              "fieldType": "textbox",
+              "cssClass": "col-md-3 field-margin-zero",
+              "ignoreInServiceModel": true,
+              "disabled": true
+            },
+            {
+              "modelKey": "zip",
+              "title": "Zip Code",
+              "fieldType": "textbox",
+              "cssClass": "col-md-3 field-margin-zero",
+              "ignoreInServiceModel": true,
+              "disabled": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "phone",
+              "title": "Phone",
+              "fieldType": "textbox",
+              "cssClass": "col-md-3 field-margin-zero",
+              "ignoreInServiceModel": true,
+              "disabled": true
+            },
+            {
+              "modelKey": "fax",
+              "title": "Fax",
+              "fieldType": "textbox",
+              "cssClass": "col-md-3 field-margin-zero",
+              "ignoreInServiceModel": true,
+              "disabled": true
+            },
+            {
+              "modelKey": "webAddress",
+              "title": "Web Address",
+              "fieldType": "textbox",
+              "cssClass": "col-md-3 field-margin-zero",
+              "ignoreInServiceModel": true,
+              "disabled": true
+            },
+            {
+              "modelKey": "email",
+              "title": "Email",
+              "fieldType": "textbox",
+              "cssClass": "col-md-3 field-margin-zero",
+              "ignoreInServiceModel": true,
+              "disabled": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "showTitle": false,
+      "rowDivisions": [
+        {
+          "hideInViewMode": true,
+          "fields": [
+            {
+              "modelKey": "contactPersonName",
+              "title": "Contact Name",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox",
+              "cssClass": "col-md-2",
+              "required": true
+            },
+            {
+              "modelKey": "email",
+              "title": "Email",
+              "fieldType": "email",
+              "ignoreInServiceModel": true,
+              "cssClass": "col-md-2",
+              "required": false
+            },
+            {
+              "modelKey": "mobile",
+              "title": "Phone",
+              "fieldType": "number",
+              "ignoreInServiceModel": true,
+              "cssClass": "col-md-2",
+              "required": false
+            },
+            {
+              "title": "Add to Grid",
+              "fieldType": "button",
+              "modelKey": "addToGrid",
+              "handlerName": "addToGrid",
+              "required": false,
+              "ignoreInServiceModel": true,
+              "cssClass": "col-md-2 butn-cls-margntop padding-lft0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "showTitle": false,
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "contactPersons",
+              "title": "Contact person Details",
+              "fieldType": "grid",
+              "style": "padding-left: 0px;",
+              "initLoad": true,
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "total",
+              "gridConfig": {
+                "multiSelect": true,
+                "ondbClickHandler":"ondbClickHandler",
+                "modelKeyMap": [
+                  "serialId",
+                  "contactPersonId",
+                  "tenantId",
+                  "contractAgentEntityId",
+                  "contactPersonName",
+                  "mobile",
+                  "contactPersonEmail",
+                  "isPrimary",
+                  "operationType"
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "toolPanelSuppressRowGroups": true,
+                  "enableSorting": true
+                },
+                "columns": [
+                  {
+                    "field": "operationType",
+                    "hide": true
+                  },
+                  {
+                    "field": "serialId",
+                    "hide": true
+                  },
+                  {
+                    "field": "contactPersonId",
+                    "hide": true
+                  },
+                  {
+                    "field": "tenantId",
+                    "hide": true
+                  },
+                  {
+                    "field": "contractAgentEntityId",
+                    "hide": true
+                  },
+                  {
+                    "field": "contactPersonName",
+                    "headerName": "Contact Name",
+                    "hide": false,
+                    "editable": true
+                  },
+                  {
+                    "field": "contactPersonEmail",
+                    "headerName": "Email",
+                    "hide": false,
+                    "editable": true
+                  },
+                  {
+                    "field": "mobile",
+                    "headerName": "Phone",
+                    "hide": false,
+                    "editable": true
+                  },
+                  {
+                    "field": "isPrimary",
+                    "headerName": "Primary Person",
+                    "toggleType": "TOGGLE",
+                    "handlerName": "isPrimaryHandler",
+                    "hide": false,
+                    "actionToggle": {
+                      "true": "fa fa-check-square",
+                      "false": "fa fa-square-o"
+                    }
+                  },
+                  {
+                    "field": "serialId",
+                    "headerName": "Action",
+                    "actionType": "DELETE",
+                    "actionIconClass": "fa fa-trash",
+                    "handlerName": "deleteFromGrid"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

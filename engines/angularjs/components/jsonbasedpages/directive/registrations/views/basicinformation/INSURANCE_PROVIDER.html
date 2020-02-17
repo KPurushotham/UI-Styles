@@ -1,0 +1,28 @@
+<div class="paid_vendor_container full_width">
+    <div class="sub_heading full_width no-margin">
+        <h5 class="full_width">Basic Information</h5>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Registratrion ID</label>
+        <input type="text" class="full_width" name="providerCode" disabled ng-model="selectedData.code">
+    </div>
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.name.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Name <span class="mandatory">*</span></label>
+        <input type="text" class="full_width" name="name" ng-disabled="disableFlag" ng-model="partyModel.basicDetails.name" required>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Organization Type</label>
+        <div class="radio_fields_wrapper full_width">
+            <label class="left control control--radio">
+                <input type="radio" class="left radio-custom" value="Hospital" ng-disabled="disableFlag" ng-model="partyModel.basicDetails.organization" name="organization">
+                <span class="left">Hospital</span>
+                <div class="control__indicator"></div>
+            </label>
+            <label class="left control control--radio">
+                <input type="radio" class="left radio-custom" value="Agency" ng-disabled="disableFlag" ng-model="partyModel.basicDetails.organization" name="organization">
+                <span class="left">Agency</span>
+                <div class="control__indicator"></div>
+            </label>
+        </div>
+    </div>
+</div>

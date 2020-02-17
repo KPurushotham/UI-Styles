@@ -1,0 +1,59 @@
+﻿{
+  "columns": [
+    {
+      "key": "partyGroup",
+      "headerText": "Party Group",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "partyTypeCode",
+      "headerText": "Code",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "shortName",
+      "headerText": "Short Name",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "description",
+      "headerText": "Description",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "partyCategory",
+      "headerText": "Party Category",
+      "filterMask": "Search",
+      "show": false,
+      "type": "uppercase"
+    },
+    {
+      "key": "partySubCategory",
+      "headerText": "Party Sub Category",
+       "show": false,
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/Party/partytype/all",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

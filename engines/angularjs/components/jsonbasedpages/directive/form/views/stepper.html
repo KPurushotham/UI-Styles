@@ -1,0 +1,11 @@
+﻿<div class="ui-stepper input-group">
+    <input type="text" class="form-control input-sm" ng-required="required" ng-model='value' ng-change="onChange()" />
+    <button class="stepper-bt stepper-bt__up dropup" ng-disabled="isOverMax()" ng-click="increment()">
+        <i class="caret"></i>
+        <span class="sr-only">Increment</span>
+    </button>
+    <button class="stepper-bt stepper-bt__down" ng-disabled="isOverMin()" ng-click="decrement()">
+        <span class="caret"></span>
+        <span class="sr-only">Decrement</span>
+    </button>
+</div>

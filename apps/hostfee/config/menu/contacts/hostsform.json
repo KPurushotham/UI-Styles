@@ -1,0 +1,172 @@
+{
+  "name": "hostsform",
+  "saveUrl": "vdi/chrimsmasters/host/persons/save",
+  "getOneUrl": "vdi/chrimsmasters/host/persons/get/one",
+  "validationUrl": "",
+  "externalService": "hostContactPersonsService",
+  "noWorkflow": true,
+  "submitted": false,
+  "sections": [
+    {
+      "showTitle": false,
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "hostEntityId",
+              "title": "Host",
+              "ignoreInServiceModel": true,
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "hostsChangeHandler"
+                }
+              ],
+              "dataConfig": {
+                "dataUrl": "vdi/chrimsmasters/host/all",
+                "displayKey": "hostName",
+                "valueKey": "hostEntityId"
+              },
+              "disabled": true,
+              "required": false,
+              "show": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "showTitle": false,
+      "rowDivisions": [
+        {
+          "hideInViewMode": true,
+          "fields": [
+            {
+              "modelKey": "cpName",
+              "title": "Contact Name",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox",
+              "cssClass": "col-md-2",
+              "required": true
+            },
+            {
+              "modelKey": "email",
+              "title": "Email",
+              "fieldType": "email",
+              "ignoreInServiceModel": true,
+              "cssClass": "col-md-2",
+              "required": false
+            },
+            {
+              "modelKey": "phoneno",
+              "title": "Phone",
+              "fieldType": "number",
+              "ignoreInServiceModel": true,
+              "cssClass": "col-md-2",
+              "required": false
+            },
+            {
+              "title": "Add to Grid",
+              "fieldType": "button",
+              "modelKey": "addToGrid",
+              "handlerName": "addToGrid",
+              "required": false,
+              "ignoreInServiceModel": true,
+              "cssClass": "col-md-2 butn-cls-margntop padding-lft0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "showTitle": false,
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "contactPersons",
+              "title": "Contact person Details",
+              "fieldType": "grid",
+              "style": "padding-left: 0px;",
+              "initLoad": true,
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "total",
+              "gridConfig": {
+                "multiSelect": true,
+                "modelKeyMap": [
+                  "contactPersonEntityId",
+                  "hostEntityId",
+                  "contactPersonName",
+                  "mobile",
+                  "contactPersonEmail",
+                  "isPrimary",
+                  "operationType"
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "toolPanelSuppressRowGroups": true,
+                  "enableSorting": true
+                },
+                "columns": [
+                  {
+                    "field": "contactPersonEntityId",
+                    "hide": true
+                  },
+                  {
+                    "field": "hostEntityId",
+                    "hide": true
+                  },
+                  {
+                    "field": "operationType",
+                    "hide": true
+                  },
+                  {
+                    "field": "contactPersonName",
+                    "headerName": "Contact Name",
+                    "hide": false,
+                    "editable": true
+                  },
+                  {
+                    "field": "contactPersonEmail",
+                    "headerName": "Email",
+                    "hide": false,
+                    "editable": true
+                  },
+                  {
+                    "field": "mobile",
+                    "headerName": "Phone",
+                    "hide": false,
+                    "editable": true
+                  },
+                  {
+                    "field": "isPrimary",
+                    "headerName": "Primary Person",
+                    "toggleType": "TOGGLE",
+                    "handlerName": "isPrimaryHandler",
+                    "hide": true,
+                    "actionToggle": {
+                      "true": "fa fa-check-square",
+                      "false": "fa fa-square-o"
+                    }
+                  },
+                  {
+                    "field": "contactPersonEntityId",
+                    "headerName": "Action",
+                    "actionType": "DELETE",
+                    "actionIconClass": "fa fa-trash",
+                    "handlerName": "deleteFromGrid"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

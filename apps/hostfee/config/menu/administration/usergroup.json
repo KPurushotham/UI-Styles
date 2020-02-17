@@ -1,0 +1,104 @@
+{
+  "name": "usergroup",
+  "externalService": "usergroupService",
+  "actions": [
+    {
+      "title": "Add",
+      "modelKey": "addButton",
+      "navigateTo": "hostfee.administration.usergroupform"
+    }
+  ],
+  "criteria": {
+    "showButton": true,
+    "cssClass": "col-md-12 padding0",
+    "rowDivisions": [
+      {
+        "cssClass": "col-md-12 padding0",
+        "columns": [
+          {
+            "cssClass": "cd-criteria-column",
+            "fields": [
+              {
+                "cssClass": "padding0 right",
+                "title": "Get Results",
+                "fieldType": "button",
+                "modelKey": "getResultsButton",
+                "handlerName": "getResults",
+                "ignoreInServiceModel": true,
+                "required": false
+              },
+              {
+                "modelKey": "externalFlag",
+                "fieldType": "checkbox",
+                "ignoreInServiceModel": false,
+                "title": "External",
+                "defaultValue": true,
+                "cssClass": "default-css right",
+                "required": false,
+                "show": true,
+                "style": "width:16% !important;"
+              },
+              {
+                "modelKey": "internalFlag",
+                "fieldType": "checkbox",
+                "ignoreInServiceModel": false,
+                "defaultValue": true,
+                "title": "Internal",
+                "cssClass": "default-css right",
+                "required": false,
+                "show": true,
+                "style": "width:14% !important;"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "columns": [
+    {
+      "field": "roleId",
+      "headerName": "Role Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "tenantId",
+      "headerName": "Tenant Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "roleCode",
+      "headerName": "Role Code",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "roleName",
+      "headerName": "Role Group",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "userCount",
+      "headerName": "User Count",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "accessContext",
+      "headerName": "Access Context",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "isExternal",
+      "headerName": "Is External",
+      "filter": "agSetColumnFilter"
+    }
+  ],
+  "dataUrl": "vdi/workflow/usergroups/get/all",
+  "editScreenState": "app.hostfee.administration.usergroupform",
+  "rowKey": {
+    "roleId": "roleId"
+  },
+  "defaultSortColumn": "roleId"
+}

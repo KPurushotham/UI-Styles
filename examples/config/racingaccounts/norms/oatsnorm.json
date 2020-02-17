@@ -1,0 +1,59 @@
+﻿{
+  "columns": [
+   {
+      "key": "fodderType",
+      "headerText": "Code",
+      "filterMask": "Search"
+    },
+   {
+      "key": "effectiveFromDate",
+      "headerText": "Effective From",
+    "filterMask": "Search",
+     "type": "date"
+    },
+	
+   {
+      "key": "ratePerBag",
+      "headerText": "Rate Per Bag",
+      "filterMask": "Search"
+    },
+    {
+      "key": "noOfBagsPerHorse",
+      "headerText": "No Of Bags Per House",
+      "filterMask": "Search"
+    },
+	 {
+      "key": "total",
+      "headerText": "Total",
+      "filterMask": "Search"
+    },
+	{
+      "key": "subsidyAmount",
+      "headerText": "Subsidy Amount",
+      "filterMask": "Search"
+    },
+	{
+      "key": "noOfDays",
+      "headerText": "No Of Days",
+      "filterMask": "Search"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/racingaccount/oatsnorms/all",
+
+  "rowKey": {
+  "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate",
+  "editPageUrl": "racingaccount/oatsnormsform"
+}

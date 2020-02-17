@@ -1,0 +1,91 @@
+ {
+  "name": "budgetwisecomponentform",
+  "saveUrl": "budgetwisecomponent/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "department",
+              "title": "Department",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "disabled": true,
+              "required": false
+            },
+               {
+              "modelKey": "section",
+              "title": "Section",
+             "fieldType": "dropdown",
+			 "cssClass": "col_3",	   
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/sections/all?fk-status=ACTIVE",
+                "displayKey": "sectionCode-sectionName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "costCenter",
+              "title": "Cost Center",
+              "fieldType": "dropdown",
+			  "cssClass": "col_3",	
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/costcenter/all?fk-status=ACTIVE",
+                "displayKey": "costCenterCode-costCenterName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "budget",
+              "title": "Budget",
+              "fieldType": "dropdown",
+			  "cssClass": "col_3",	
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/budgetm/all?fk-costCenter=2&fk-status=ACTIVE",
+                "displayKey": "budgetCode-shortName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+			{
+              "modelKey": "componentCategory",
+              "title": "Component Category",
+              "fieldType": "dropdown",
+			  "cssClass": "col_3",	
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/componentcategory/all?fk-status=ACTIVE",
+                "displayKey": "componentCategoryCode-shortName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+             {
+              "modelKey": "component",
+              "title": "Component",
+              "fieldType": "dropdown",
+			  "cssClass": "col_3",	 
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/component/all?fk-status=ACTIVE",
+                "displayKey": "componentCode-shortName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            }  
+          ]
+        }
+      
+
+      ]
+    }
+  ]
+}

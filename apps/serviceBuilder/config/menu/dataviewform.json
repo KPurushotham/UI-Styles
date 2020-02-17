@@ -1,0 +1,97 @@
+{
+  "name": "dataviewform",
+  "saveUrl": "vdi/servicebuilder/dataview/save",
+  "getOneUrl": "vdi/servicebuilder/dataview/get/one",
+  "externalService": "dataviewService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "dataViewCode",
+              "cssClass": "col_1",
+              "title": "Data View Code",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "apiCode",
+              "cssClass": "col_1",
+              "title": "Api Code",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "sourceCode",
+              "cssClass": "col_1",
+              "title": "Source Code",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "tenantId",
+              "cssClass": "col_1",
+              "title": "Tenant Id",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "isActive",
+              "title": "Is Active",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "query",
+              "cssClass": "col_12",
+              "title": "Query",
+              "fieldType": "textarea",
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "queryJson",
+              "cssClass": "col_2",
+              "title": "Query Json",
+              "fieldType": "ace",
+              "required": true
+            },
+            {
+              "modelKey": "key",
+              "cssClass": "col_2",
+              "title": "Key",
+              "fieldType": "ace",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

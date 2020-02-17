@@ -1,0 +1,52 @@
+{
+  "name": "racesfordate",
+  "externalService": "",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "gapp.racesfordateform"
+    }
+  ],
+  "queryStringParams": {
+    "@RaceDate": ""
+  },
+  "columns": [
+    {
+      "field": "trackCode",
+      "headerName": "TrackCode",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "date",
+      "headerName": "Date",
+      "filter": "agSetColumnFilter",
+      "hide": false,
+      "formatType": "Date"
+    },
+    {
+      "field": "timeZone",
+      "headerName": "TimeZone",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "offSet",
+      "headerName": "OffSet",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "raceTime",
+      "headerName": "RaceTime",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+  ],
+  "dataUrl": "vdi/postget/gapp/spGetRacesPerDate/RacesData",
+  "editScreenState": "app.gapp.racesfordateform",
+  "rowKey": {
+    "": ""
+  },
+  "defaultSortColumn": "date"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "masteraccounts",
+  "externalService": "",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "gapp.masteraccountsform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "id",
+      "headerName": "Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "name",
+      "headerName": "Name",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "accountTypeId",
+      "headerName": "Account Type Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "masterAccountId",
+      "headerName": "Master Account Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "rebateAccountId",
+      "headerName": "Rebate Account Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "createDateTime",
+      "headerName": "Create Date Time",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "lastUpdateDateTime",
+      "headerName": "Last Update Date Time",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "userID",
+      "headerName": "User ID",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+  ],
+  "dataUrl": "vdi/postget/gapp/account/master",
+  "editScreenState": "app.gapp.masteraccountsform",
+  "rowKey": {
+    "dataViewId": ""
+  },
+  "defaultSortColumn": ""
+}

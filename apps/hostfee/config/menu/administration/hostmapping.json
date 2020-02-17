@@ -1,0 +1,71 @@
+﻿{
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "hostfee.administration.hostmappingform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "corpEntityId",
+      "headerName": "corpEntityId",
+      "hide": true
+    },
+    {
+      "field": "hostEntityId",
+      "headerName": "hostEntityId",
+      "hide": true
+    },
+    {
+      "field": "corporationName",
+      "headerName": "Corporation",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter",
+      "showRowGroup": "Corporation",
+      "hide": true
+    },
+    {
+      "field": "hostName",
+      "headerName": "Host",
+      "rowGroup": true,
+      "showRowGroup": "Host",
+      "hide": true
+    },
+    {
+      "field": "trackName",
+      "headerName": "Track(/Import)",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "locationName",
+      "headerName": "Location(/Export)",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "beginDate",
+      "headerName": "Begin Date",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter",
+      "formatType": "Date"
+    },
+    {
+      "field": "endDate",
+      "headerName": "End Date",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter",
+      "formatType": "Date"
+    }
+
+  ],
+
+  "dataUrl": "vdi/hostfees/corporationhost/mapping/all",
+  "rowKey": {
+    "hostEntityId": "hostEntityId"
+   
+  },
+  "editScreenState": "app.hostfee.administration.hostmappingform",
+  "defaultSortColumn": "hostEntityId"
+}
+

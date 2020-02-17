@@ -1,0 +1,46 @@
+{
+  "name": "hosts",
+  "actions": [
+  ],
+  "columns": [
+    {
+      "field": "contactPersonEntityId",
+      "hide": true
+    },
+    {
+      "field": "hostEntityId",
+      "hide": true
+    },
+    {
+      "field": "hostName",
+      "headerName": "Host",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter",
+      "hide": true,
+      "rowGroup": true
+    },
+    {
+      "field": "contactPersonName",
+      "headerName": "Contact Name",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "contactPersonEmail",
+      "headerName": "Email",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "mobile",
+      "headerName": "Phone",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter"
+    }
+  ],
+  "dataUrl": "vdi/chrimsmasters/host/persons/get/all",
+  "editScreenState": "app.hostfee.contacts.hostsform",
+  "rowKey": {
+    "hostEntityId": "hostEntityId"
+  },
+  "defaultSortColumn": "hostName"
+}

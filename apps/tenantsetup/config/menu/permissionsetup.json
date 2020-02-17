@@ -1,0 +1,169 @@
+{
+  "name": "permissionsetup",
+  "externalService": "permissionsetupService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "tenantsetup.permissionsetupform"
+    }
+  ],
+  "criteria": {
+    "showButton": true,
+    "cssClass": "col-md-12 padding0",
+    
+    "rowDivisions": [
+      {
+        "columns": [
+          {
+            "fields": [
+              {
+                "modelKey": "tenantId",
+                "title": "Tenants",
+                "fieldType": "dropdown",
+                "cssClass": "col-md-3",
+                "ignoreInServiceModel": true,
+                "dependancyEvents": [
+                  {
+                    "eventName": "change",
+                    "handlerName": "tenantDropdownListingHandler"
+                  }
+                ],
+                "dataConfig": {
+                  "dataUrl": "vdi/admin/tenant/all",
+                  "displayKey": "tenantTitle",
+                  "valueKey": "tenantId"
+                },
+                "disabled": false,
+                "required": true
+              },
+              {
+                "modelKey": "applicationEntityId",
+                "title": "Applications",
+                "fieldType": "dropdown",
+                "cssClass": "col-md-3",
+                "ignoreInServiceModel": true,
+                "dependancyEvents": [
+                  {
+                    "eventName": "change",
+                    "handlerName": "applicationDropdownListingHandler"
+                  }
+                ],
+                "dependancyConfig": [
+                  {
+                    "sourceKey": "tenantId",
+                    "event": "change",
+                    "loadData": {
+                      "keyParams": {
+                        "tenantId": "tenantId"
+                      }
+                    }
+                  }
+                ],
+                "dataConfig": {
+                  "dataUrl": "vdi/admin/tenant/application",
+                  "displayKey": "applicationTitle",
+                  "valueKey": "applicationEntityId"
+                },
+                "disabled": false,
+                "required": true
+              },
+              {
+                "cssClass": "col-md-2 padding-lftrht0 butn-cls-margntop",
+                "title": "GET RESULTS",
+                "fieldType": "button",
+                "handlerName": "getResults",
+                "ignoreInServiceModel": true,
+                "required": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "columns": [
+    {
+      "field": "serialId",
+      "headerName": "Serial Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "applicationEntityId",
+      "headerName": "Application Entity Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "applicationTitle",
+      "headerName": "Application Title",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "roleId",
+      "headerName": "Role Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "roleName",
+      "headerName": "Role Name",
+      "filter": "agSetColumnFilter",
+      "rowGroup": true,
+      "hide": true
+    },
+    {
+      "field": "menuId",
+      "headerName": "Menu Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "menuKey",
+      "headerName": "Menu Key",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "tenantId",
+      "headerName": "Tenant Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "tenantName",
+      "headerName": "Tenant Name",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "beginDate",
+      "headerName": "Begin Date",
+      "filter": "agSetColumnFilter",
+      "formatType": "Json",
+      "hide": true
+    },
+    {
+      "field": "endDate",
+      "headerName": "End Date",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    }
+
+  ],
+  "dataUrl": "vdi/admin/application/menu/permissions/all",
+  "editScreenState": "app.tenantsetup.permissionsetupform",
+  "rowKey": {
+    "tenantId": "tenantId",
+    "applicationEntityId": "applicationEntityId",
+    "roleId": "roleId"
+  },
+  "defaultSortColumn": "serialId"
+}

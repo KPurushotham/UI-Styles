@@ -1,0 +1,102 @@
+{
+  "name": "rolesetup",
+  "externalService": "rolesetupService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "tenantsetup.rolesetupform"
+    }
+  ],
+  "criteria": {
+    "showButton": true,
+    "cssClass": "col-md-12 padding0",
+    "rowDivisions": [
+      {
+        "columns": [
+          {
+            "fields": [
+              {
+                "modelKey": "tenantId",
+                "title": "Tenants",
+                "fieldType": "dropdown",
+                "cssClass": "col-md-3",
+                "dependancyEvents": [
+                  {
+                    "eventName": "change",
+                    "handlerName": "tenantRoleHandler"
+                  }
+                ],
+                "dataConfig": {
+                  "dataUrl": "vdi/admin/tenant/all",
+                  "displayKey": "tenantTitle",
+                  "valueKey": "tenantId"
+                },
+                "disabled": false,
+                "required": true
+              },
+              {
+                "cssClass": "col-md-2 butn-cls-margntop padding-lftrht0",
+                "title": "GET RESULTS",
+                "fieldType": "button",
+                "handlerName": "getResults",
+                "ignoreInServiceModel": true,
+                "required": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "columns": [
+    {
+      "field": "tenantId",
+      "headerName": "Tenant Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "tenantName",
+      "headerName": "Tenant Name",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "roleId",
+      "headerName": "Role Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "roleCode",
+      "headerName": "Role Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "roleName",
+      "headerName": "Role Name",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "description",
+      "headerName": "Description",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    }
+
+  ],
+  "dataUrl": "vdi/admin/tenant/role/get/one",
+  "editScreenState": "app.tenantsetup.rolesetupform",
+  "rowKey": {
+    "tenantId": "tenantId"
+  },
+  "defaultSortColumn": "roleId"
+}

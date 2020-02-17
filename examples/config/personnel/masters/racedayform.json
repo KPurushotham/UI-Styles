@@ -1,0 +1,98 @@
+﻿{
+  "name": "racedayform",
+  "saveUrl": "localracedays/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "employee",
+              "title": "Employee",
+              "fieldType": "radio",
+                "cssClass": "col_9",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "All",
+                    "value": "All"
+                  },
+                  {
+                    "text": "Permanent",
+                    "value": "Permanent"
+                  },
+                   {
+                    "text": "Contract",
+                    "value": "Contract"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+
+            }
+          
+          ]
+        },
+        {
+          "fields": [
+                {
+              "modelKey": "financialYear",
+              "title": "Financial Year",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/financialYear/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "date",
+              "title": "Date",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "month",
+              "title": "Month",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/functional/monthsbox/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+
+            {
+              "modelKey": "raceStatus",
+              "title": "Race Type",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Local Race",
+                    "value": "Local Race"
+                  },
+                  {
+                    "text": "IVB Race",
+                    "value": "IVB Race"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}

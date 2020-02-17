@@ -1,0 +1,391 @@
+*, body {
+    margin: 0px;
+    padding: 0px;
+}
+a:focus, a:hover, a {
+    text-decoration: none !important;
+    outline: 0px !important;
+    -moz-transition: all .25s ease .25s;
+    -webkit-transition: all .25s ease .25s;
+    -o-transition: all .25s ease .25s;
+    transition: all .25s ease .25s;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-thumb {
+    /*background: #d9d9d9;*/
+    background: #999;
+    cursor: pointer;
+    border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #787878;
+    border-radius: 6px;
+}
+
+
+body {
+    font-family: 'Segoe UI', Sans-Serif !important;
+    /*font-family: 'Proxima Nova Regular', Sans-Serif !important;*/
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #ffffff;
+    margin: 0px;
+    padding: 0px;
+    /*font-family: 'Arimo', sans-serif !important;
+    font-family: 'Lato', sans-serif !important;
+    font-family: 'Open Sans' !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Raleway', sans-serif !important;
+    font-family: 'Ubuntu', sans-serif !important;*/
+}
+.full_width {
+    width: 100%;
+    float: left;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.text-center {
+    text-align: center;
+}
+.paddingleft0 {
+    padding-left: 0px !important;
+}
+.padding-lft0 {
+    padding-left: 0px;
+}
+.padding-rht0 {
+    padding-right: 0px;
+}
+.padding-lft {
+    padding-left: 3px;
+}
+.padding-rht {
+    padding-right: 3px;
+}
+.margn-top20 {
+    margin-top:20px;
+}
+.margn-top10 {
+    margin-top: 10px;
+}
+.margn-botm8 {
+    margin-bottom: 8px;
+}
+.margn-botm10 {
+    margin-bottom: 10px;
+}
+.margn-botm20 {
+    margin-bottom: 20px;
+}
+.margn-x0 {
+    margin-left:0px;
+    margin-right:0px;
+}
+.margn-y0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.margn-lft0 {
+    margin-left:0px;
+}
+.margn-rht0 {
+    margin-right: 0px;
+}
+.no-padding {
+    padding: 0;
+}
+.no-margin {
+    margin: 0px !important;
+}
+.padding0 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.padding-lftrht0 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.body-bg {
+    display: none;
+}
+.zindex {
+    z-index: 99999;
+}
+.no-radius {
+    border-radius: 0px;
+}
+.dis_none {
+    display:none;
+}
+/* common styles close */
+
+.bodysection {
+    min-height: 610px !important;
+    padding-bottom: 40px;
+    float: left;
+    background: #f6f6f6;
+    width: 100%;
+}
+.portal-viewlist {
+    float: left;
+    width: 100%;
+    /*margin-top: 30px;*/
+}
+/* breadcrumb styles */
+.breadcrumb-design {
+    border-bottom: 1px solid #ccc;
+    float: left;
+    width: 100%;
+    padding: 5px 0px;
+    background: #fff;
+    box-shadow: 0 3px 5px #ddd;
+}
+.breadcrumbs {
+    margin:3px 0;
+}
+.breadcrumbs a {
+    color: #02747b;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 5px 0px;
+}
+.breadcrumbs .breadcrumb_heading {
+    color: #939598;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
+    margin: 5px 0;
+}
+.breadcrumbs i, .breadcrumbs svg {
+    color: #28b5e8;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    margin: 8px 5px;
+    /*position: relative;
+top: 3px;*/
+    float: left;
+}
+
+.icon-right-arrow:before {
+    content: "\e91e";
+}
+.search-dashboard-div {
+    /*border-bottom: 1px solid #dad5d5 !important;
+    margin-left: 792px;*/
+    padding: 0px !important;
+}
+.search-dashboard-div input {
+    height:30px;
+}
+.search-dashboard-items {
+    /*border: 0px !important;*/
+    /*border-radius: 0px !important;*/
+    border: 1px solid #dad5d5 !important;
+    padding:4px !important;
+}
+.dashboard-ul {
+    float: right;
+    padding-top: 0px;
+    margin-bottom: 0px;
+}
+.dashboard-search-icon {
+    border-radius: 5px;
+    float: left;
+    background: #fff;
+    margin-right: 5px;
+    padding: 5px 6px 3px;
+    color: #2fa0da;
+}
+ul.dashboard-ul li i {
+    /*color: #c69f05;*/
+    /*color: #6db07d;*/
+    color: #89b694;
+}
+
+.inrpage-forms-section {
+    width: 100%;
+    background: #fff;
+    padding: 5px 5px;
+    float: left;
+    margin-top: 1px;
+    min-height: 610px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+}
+.inrpage-back-to-report-section {
+    border-bottom: 1px solid #ccc;
+    float: left;
+    width: 100%;
+    padding: 0px 0px;
+    background: #fff;
+    box-shadow: 0 3px 5px #ddd;
+}
+.inrpage-back-to-report-section h3 {
+    /*color: #1692cc;*/
+    color: #02747b;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 2px 0px;
+}
+.report-dashboard-link {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.report-dashboard-link a {
+    /*color: #2fa0da;*/
+    color:#c69f05;
+    font-size: 13px;
+    font-weight: 600;
+}
+.report-dashboard-link a i {
+    color: #c69f05;
+    font-size: 12px !important;
+    font-weight: 400;
+}
+.report-dashboard-link a:hover, .report-dashboard-link a:focus {
+    /*color: #f4c00b;*/
+    color: #cea812;
+}
+.bodysection {
+    padding-top: 30px;
+}
+.report-grid {
+    display: none;
+}
+.hide_block {
+    display: none !important;
+}
+.show_block {
+    display: block !important;
+}
+.show_inline {
+    display: inline !important;
+}
+.field-hide {
+    display: none;
+}
+
+.field-show {
+    display: block;
+}
+.tabHeight {
+    height: 450px;
+}
+.buttons_container a i.fa-edit {
+    font-size: 25px;
+    color: #02747b;
+}
+.col-md-3 {
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+}
+
+
+/**
+ * angular-ui-notification - Angular.js service providing simple notifications using Bootstrap 3 styles with css transitions for animating
+ * @author Alex_Crack
+ * @version v0.2.0
+ * @link https://github.com/alexcrack/angular-ui-notification
+ * @license MIT
+ */
+/*.ui-notification{width: 100%!important;top:0px!important;left: 0px!important;}*/
+.ui-notification {
+    position: fixed;
+    z-index: 9999;
+    width: 200px;
+    -webkit-transition: all ease .5s;
+    -o-transition: all ease .5s;
+    transition: all ease .5s;
+    color: #fff;
+    border-radius: 0;
+    background: #337ab7;
+}
+
+    .ui-notification.clickable {
+        cursor: pointer;
+    }
+
+        .ui-notification.clickable:hover {
+            opacity: .7;
+        }
+
+    .ui-notification.killed {
+        -webkit-transition: opacity ease 1s;
+        -o-transition: opacity ease 1s;
+        transition: opacity ease 1s;
+        opacity: 0;
+    }
+
+    .ui-notification > h3 {
+        font-size: 14px;
+        font-weight: 700;
+        display: block;
+        margin: 10px 10px 0;
+        padding: 0 0 5px;
+        text-align: left;
+        border-bottom: 1px solid rgba(255,255,255,.3);
+    }
+
+.ui-notification a {
+    color: #fff;
+}
+
+.ui-notification a:hover {
+    text-decoration: underline;
+}
+
+    .ui-notification > .message {
+        margin: 10px;
+    }
+
+    .ui-notification.warning {
+        color: #fff;
+        background: #f0ad4e;
+    }
+
+    .ui-notification.error {
+        color: #fff;
+        background: #d9534f;
+    }
+
+    .ui-notification.success {
+        color: #fff;
+        background: #5cb85c;
+    }
+
+    .ui-notification.info {
+        color: #fff;
+        background: #5bc0de;
+    }
+/* --- top right notification end --- */
+.submitButtonDisabled {
+    /*padding-top: 12px;*/
+    padding-top: 0px;
+}
+.submitButtonDisabled button {
+    background-color: #ada9a9 !important;
+    color: #666 !important;
+}
+
+ul, li, a, a:hover, a:focus {
+    outline: 0px !important;
+}

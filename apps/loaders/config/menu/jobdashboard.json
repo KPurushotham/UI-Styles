@@ -1,0 +1,89 @@
+{
+    "name": "jobdashboard",
+    "noWorkflow": true,
+    "submitted": false,
+    "externalService": "jobdashboardService",
+    "actions": [
+    ],
+    "sections": [
+      {
+        "rowDivisions": [
+          {
+            "fields": [
+              {
+                "modelKey": "jobGridDetails",
+                "title": "Data History",
+                "fieldType": "grid",
+                "initLoad": true,
+                "style": "display: none;",
+                "localData": true,
+                "show": false,
+                "gridSummaryLabel": "total",
+                "gridConfig": {
+                  "modelKeyMap": [
+                  ],
+                  "features": {
+                    "enableGridMenu": false,
+                    "floatingFilter": false,
+                    "enableFilter": true,
+                    "enableSorting": true,
+                    "toolPanelSuppressRowGroups": true,
+                    "suppressSizeToFit": true,
+                    "groupDefaultExpanded": true
+                  },
+                  "columns": [
+                    {
+                      "field": "jobName",
+                      "headerName": "Job Name",
+                      "rowGroup":true,
+                      "tooltipField": "jobName",
+                      "hide": true
+                    },
+                    {
+                      "field": "jobProcessInstanceId",
+                      "headerName": "Job Process Instance Id",
+                      "tooltipField": "jobProcessInstanceId",
+                      "hide": true
+                    },
+                    {
+                      "field": "raceDate",
+                      "headerName": "Race Date",
+                      "tooltipField": "raceDate",
+                      "hide": false
+                    },
+                    {
+                      "field": "startTimeDate",
+                      "tooltipField": "startTimeDate",
+                      "headerName": "Start Time",
+                      "hide": false
+                    },
+                    {
+                      "field": "endTimeDate",
+                      "headerName": "End Time",
+                      "tooltipField": "endTimeDate",
+                      "hide": false,
+                      "formatType": "DateTime"
+                    },
+                    {
+                      "field": "status",
+                      "headerName": "Status",
+                      "tooltipField": "status",
+                      "hide": false
+                    },
+                    {
+                      "field": "exitMessage",
+                      "headerName": "Exit Message",
+                      "tooltipField": "exitMessage",
+                      "hide": false
+                    }
+                  ]
+                },
+                "disabled": false,
+                "required": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

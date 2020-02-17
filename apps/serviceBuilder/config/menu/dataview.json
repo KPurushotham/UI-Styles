@@ -1,0 +1,75 @@
+{
+  "name": "dataview",
+  "externalService": "dataviewService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "serviceBuilder.dataviewform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "dataViewId",
+      "headerName": "Data View Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "dataViewCode",
+      "headerName": "Data View Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "apiCode",
+      "headerName": "Api Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "sourceCode",
+      "headerName": "Source Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "query",
+      "headerName": "Query",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "queryJson",
+      "headerName": "Query Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "key",
+      "headerName": "Key",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "tenantId",
+      "headerName": "Tenant Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+
+  ],
+  "dataUrl": "vdi/servicebuilder/dataview/get/all",
+  "editScreenState": "app.serviceBuilder.dataviewform",
+  "rowKey": {
+    "dataViewId": "dataViewId"
+  },
+  "defaultSortColumn": "dataViewId"
+}

@@ -1,0 +1,9 @@
+<div class="row_container composite-repeter-files composite_repeater_container full_width" ng-repeat="compositeField in repeateCompositFieldList">
+    <field-directive ng-repeat="subfield in compositeField.compositefields" field="subfield" field-division-count="compositeFieldCount" parent-form="parentForm" parent-section="parentSection" 
+                form-data-model="formDataModel"  section-data-model="compositeSectionDataModel[$parent.$index]" field-index="$parent.$index">
+    </field-directive>
+    <div class="left tax_fields_composite">
+    	<a href="" class="actions_icon left" ng-if="!$last && !parentForm.readOnlyForm" ng-click="removeHandler($index);"><span class="icon-trash"></span></a>
+        <a href="" class="actions_icon left" ng-if="$last && !parentForm.readOnlyForm" ng-click="addHandler($index);"><span class="icon-plus"></span></a>
+    </div>
+</div>

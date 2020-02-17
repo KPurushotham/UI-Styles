@@ -1,0 +1,146 @@
+﻿{
+
+	"name": "banentryform",
+	"saveUrl": "banentry/save",
+	"validationUrl": "",
+	"submitted": false,
+	"sections": [
+		{
+			"rowDivisions": [
+				{
+					"fields": [
+
+						{
+							"modelKey": "ownerId",
+							"title": " Owner",
+							"cssClass": "col_7",
+							"fieldType": "dropdown",
+							"dataConfig": {
+								"dataUrl": "vdi/olims/racing/ownerregistration/all?fk-status=ACTIVE",
+								"displayKey": "ownerName",
+								"valueKey": "entityObjectId"
+							},
+							"disabled": false,
+							"required": true
+						},
+
+						{
+							"modelKey": "effectiveFrom",
+							"title": "Effiective From",
+							"fieldType": "date",
+							"cssClass": "col_1",
+							"disabled": false,
+							"required": true
+
+						},
+						{
+							"modelKey": "effectiveTo",
+							"title": "Effective To",
+							"fieldType": "date",
+							"cssClass": "col_1",
+							"disabled": false,
+							"required": true
+
+						}
+					]
+				},
+
+				{
+					"fields": [
+
+						{
+							"modelKey": "banTypeCode",
+							"title": " Ban Type",
+							"fieldType": "dropdown",
+							"cssClass": "col_7",
+							"dataConfig": {
+								"localData": [
+									{
+										"text": "UPF Ban",
+										"value": "UPF"
+									},
+									{
+										"text": " BMC Ban ",
+										"value": "BMC"
+									},
+									{
+										"text": "VET Ban  ",
+										"value": "VET"
+									}
+								]
+							},
+							"disabled": false,
+							"required": true
+						},
+
+						{
+							"modelKey": "banAmount",
+							"title": "Ban Amount",
+							"fieldType": "currency",
+							"disabled": false,
+							"required": true
+
+						},
+						{
+							"modelKey": "clubId",
+							"title": " Club ",
+							"fieldType": "dropdown",
+							"cssClass": "col_7",
+							"dataConfig": {
+								"localData": [
+									{
+										"text": "Bangalore Turf Club ",
+										"value": "BTF"
+									},
+									{
+										"text": " Royal Calcutta Turf Club ",
+										"value": "RCTC"
+									},
+									{
+										"text": "Royal Westorm India Turf Clud  ",
+										"value": "RWITC"
+									},
+									{
+										"text": "Delhi Race Club ",
+										"value": "DRC"
+									},
+									{
+										"text": " Mysore Race Club ",
+										"value": "MRC"
+									},
+									{
+										"text": "Madras Race Clud  ",
+										"value": "MRC"
+									}
+								]
+							},
+							"disabled": false,
+							"required": true
+						}
+					]
+				},
+
+				{
+					"fields": [
+						{
+							"modelKey": "remarks",
+							"title": "Remarks",
+							"fieldType": "textarea",
+							"cssClass": "col_9",
+							"disabled": false,
+							"required": true
+						}
+					]
+
+
+				}
+
+
+
+			]
+		}
+	]
+
+}
+	
+

@@ -1,0 +1,68 @@
+{
+  "name": "source",
+  "externalService": "sourceService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "serviceBuilder.sourceform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "serialId",
+      "headerName": "Serial Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "sourceCode",
+      "headerName": "Source Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "sourceType",
+      "headerName": "Source Type",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "sourceName",
+      "headerName": "Source Name",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "description",
+      "headerName": "Description",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "connectionJson",
+      "headerName": "Connection Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "tenantId",
+      "headerName": "Tenant Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+
+  ],
+  "dataUrl": "vdi/servicebuilder/source/get/all",
+  "editScreenState": "app.serviceBuilder.sourceform",
+  "rowKey": {
+    "serialId": "serialId"
+  },
+  "defaultSortColumn": "serialId"
+}

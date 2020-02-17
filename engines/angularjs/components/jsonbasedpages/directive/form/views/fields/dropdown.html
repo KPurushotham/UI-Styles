@@ -1,0 +1,299 @@
+<div ng-show="field.mode=='Edit' || field.mode == undefined ">
+
+    <div ng-if="field.ismultiple==false">
+
+        <md-input-container ng-if="field.show" class="select_field left
+            {{field.cssClass}}" style="{{field.style}}"
+                            ng-class="(parentForm.save_submit && parentForm.df_form[field.modelKey+
+            fieldIndex].$error.required)? 'form_error_field' : ''">
+            <!-- <label style="opacity:0;top:-20px;height: 40px; left: -1px; font-weight:600;"> -->
+            <label class="dropDownViewModeTitle">
+                <!-- style="opacity:1;top:-22px;height: 2px;"> -->
+                <div class="row">
+                    <div class="col-md-6" style="opacity:1;">
+                        {{field.title}} <span ng-if="!field.required" class="mandatory"> </span>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="pull-right" style="padding-right: 5px;">
+                            <div ng-show="!field.isLoaded">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </label>
+            <!--<md-tooltip md-direction="top" class="tooltip-multiline">{{field.tooltip}}</md-tooltip>-->
+            <md-select class="optionsuppercase" data-none-selected-text="Please Select" title="Please Select"
+                       md-search-text="{{field.modelKey+ fieldIndex }}" md-select-on-match="{{field.modelKey+ fieldIndex }}"
+                       data-live-search="true" data-container="body" dynamic-name="field.modelKey+ fieldIndex" id="{{field.modelKey+ fieldIndex }}"
+                       ng-required="field.required" ng-disabled="(field.disabled || parentForm.readOnlyForm
+                ||(parentForm.screenMode=='EDIT' && field.disabledInEditMode)) ?
+                true :false"
+                       dependancy-events="field.dependancyEvents" ng-model="field.modelValue" data-md-container-class="selectdemoSelectHeader"
+                       multiple="false" ng-change="field.selectChanged()">
+
+                <div ng-show="!field.isLoaded">
+                    <i class="fa fa-spinner fa-spin"></i>
+                </div>
+                <md-progress-circular ng-show="!field.isLoaded" class="md-accent dropdownLoader" md-diameter="20">
+                    <Loading class="">Loading...</Loading>
+                </md-progress-circular>
+                <md-select-header class="demo-select-header">
+                    <input ng-model="searchTerm" ng-keydown="$event.stopPropagation()" type="search" placeholder="Search.."
+                           class="demo-header-searchbox
+                        md-text">
+                </md-select-header>
+                <div ng-show="field.isLoaded && field.options.length==0">{{ field.noDataFoundMsg || "No Data Found" }}</div>
+
+                <div class="col-md-12" ng-show="field.options.length>0">
+
+                    <md-button class="select-all-btn" value="all" ng-if="filterData.selectedPageStatus.length == PageStatusList.length" ng-click="deSelectAllEvent()"><span class="glyphicon glyphicon-remove"></span> Clear Selected</md-button>
+                </div>
+                <md-option ng-value="opt.value" ng-repeat="opt in field.options |
+                    filter:searchTerm">
+                    {{
+                    opt.text
+                    }}
+                </md-option>
+            </md-select>
+        </md-input-container>
+
+    </div>
+
+    <div ng-if="field.ismultiple==true && (field.isgrouping==false || field.isgrouping==undefined) && field.isVirtualScrollRequired==true" class="multiple-dropdown">
+        <md-input-container ng-if="field.show" class="select_field left
+            {{field.cssClass}}" style="{{field.style}}"
+                            ng-class="(parentForm.save_submit && parentForm.df_form[field.modelKey+
+            fieldIndex].$error.required)? 'form_error_field' : ''">
+            <label style="opacity:1;top:-22px;height: 140px;">
+                <div class="row">
+                    <div class="col-md-6" style="opacity:1;">
+                        {{field.title}} <span ng-if="!field.required" class="mandatory"> </span>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="pull-right" style="padding-right: 5px;">
+                            <div ng-show="!field.isLoaded">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </label>
+            <md-select class="optionsuppercase" data-none-selected-text="Please Select" title="{{field.tooltip}}"
+                       ng-attr-title="{{field.tooltip}}" md-search-text="{{field.modelKey+ fieldIndex }}" md-select-on-match="{{field.modelKey+ fieldIndex }}"
+                       data-live-search="true" data-container="body" dynamic-name="field.modelKey+ fieldIndex" id="{{field.modelKey+ fieldIndex }}"
+                       ng-required="field.required" ng-disabled="(field.disabled || parentForm.readOnlyForm
+                ||(parentForm.screenMode=='EDIT' && field.disabledInEditMode)) ?
+                true :false"
+                       dependancy-events="field.dependancyEvents" ng-model="field.modelValue" data-md-container-class="selectdemoSelectHeaderForMultiVirtual"
+                       multiple="true" ng-change="field.selectChanged()" md-selected-text="getSelectedText">
+
+                <md-select-header class="demo-select-header" ng-show="field.options.length>0">
+                    <div class="multi-selct-headr">
+
+                        <div class="col-md-12">
+                            <input ng-model="searchTerm" ng-keydown="$event.stopPropagation()" type="search"
+                                   placeholder="Search.." class="demo-header-searchbox
+                                md-text">
+                        </div>
+
+                    </div>
+                </md-select-header>
+
+                <div ng-show="field.isLoaded && field.options.length==0">{{ field.noDataFoundMsg || "No Data Found" }}</div>
+                <div class="multi-select-al">
+                    <div class="col-md-12" ng-show="field.options.length > 0">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <md-button class="select-all-btn" value="all" ng-if="filterData.selectedPageStatus.length ==
+                            PageStatusList.length"
+                                           ng-click="selectAllEvent()"><span class="glyphicon glyphicon-ok"></span> SELECT ALL</md-button>
+                            </div>
+                            <div class="col-md-6">
+                                <md-button class="select-all-btn" value="all" ng-if="filterData.selectedPageStatus.length ==
+                            PageStatusList.length"
+                                           ng-click="deSelectAllEvent()"><span class="glyphicon glyphicon-remove"></span> DESELECT ALL</md-button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <md-virtual-repeat-container id="vertical-container">
+                    <md-option ng-value="opt" md-virtual-repeat="opt in field.options | filter:searchTerm" md-item-size="20" flex="" ng-selected="field.modelValue.indexOf(opt) > -1">
+                        {{
+                            opt.text
+                        }}
+                    </md-option>
+                </md-virtual-repeat-container>
+            </md-select>
+        </md-input-container>
+    </div>
+
+    <div ng-if="field.ismultiple==true && (field.isgrouping==false || field.isgrouping==undefined) && (field.isVirtualScrollRequired==false || field.isVirtualScrollRequired==undefined)" class="multiple-dropdown">
+        <md-input-container ng-if="field.show &&  field.options.length > 0" class="select_field left
+            {{field.cssClass}}" style="{{field.style}}"
+                            ng-class="(parentForm.save_submit && parentForm.df_form[field.modelKey+
+            fieldIndex].$error.required)? 'form_error_field' : ''">
+            <label style="opacity:1;top:-22px;height: 140px;">
+                <div class="col-md-12 paddingleft0">
+                    <div class="col-md-6 paddingleft0" style="opacity:1;">
+                        {{field.title}} <span ng-if="!field.required" class="mandatory"> </span>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="pull-right" style="padding-right: 5px;">
+                            <div ng-show="!field.isLoaded">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </label>
+
+            <md-select class="optionsuppercase" data-none-selected-text="Please Select" title="{{field.tooltip}}"
+                       ng-attr-title="{{field.tooltip}}" md-search-text="{{field.modelKey+ fieldIndex }}" md-select-on-match="{{field.modelKey+ fieldIndex }}"
+                       data-live-search="true" data-container="body" dynamic-name="field.modelKey+ fieldIndex" id="{{field.modelKey+ fieldIndex }}"
+                       ng-required="field.required" ng-disabled="(field.disabled || parentForm.readOnlyForm
+                ||(parentForm.screenMode=='EDIT' && field.disabledInEditMode)) ?
+                true :false"
+                       dependancy-events="field.dependancyEvents" ng-model="field.modelValue" data-md-container-class="selectdemoSelectHeaderForMulti"
+                       multiple="true" ng-change="field.selectChanged()" md-selected-text="getSelectedText">
+
+                <md-select-header class="demo-select-header" ng-show="field.options.length>0">
+                    <div class="multi-selct-headr">
+                        <div class="col-md-12">
+                            <input ng-model="searchTerm" ng-keydown="$event.stopPropagation()" type="search"
+                                   placeholder="Search.." class="demo-header-searchbox
+                                md-text">
+                        </div>
+                    </div>
+                </md-select-header>
+
+                <div ng-show="field.isLoaded && field.options.length==0">{{ field.noDataFoundMsg || "No Data Found" }}</div>
+                <div class="multi-select-al">
+                    <div class="col-md-12" ng-show="field.options.length > 0">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <md-button class="select-all-btn" value="all" ng-if="filterData.selectedPageStatus.length ==
+                            PageStatusList.length"
+                                           ng-click="selectAllEvent()"><span class="glyphicon glyphicon-ok"></span> SELECT ALL</md-button>
+                            </div>
+                            <div class="col-md-6">
+                                <md-button class="select-all-btn" value="all" ng-if="filterData.selectedPageStatus.length ==
+                            PageStatusList.length"
+                                           ng-click="deSelectAllEvent()"><span class="glyphicon glyphicon-remove"></span> DESELECT ALL</md-button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <md-option ng-value="opt" ng-repeat="opt in field.options | filter:searchTerm">
+                    {{
+                        opt.text
+                    }}
+                </md-option>
+            </md-select>
+        </md-input-container>
+        <md-input-container ng-if="field.show && (field.options == undefined || field.options.length==0)" class="select_field left
+        {{field.cssClass}}" style="{{field.style}}"
+                            ng-class="(parentForm.save_submit && parentForm.df_form[field.modelKey+
+        fieldIndex].$error.required)? 'form_error_field' : ''">
+            <label style="opacity:1;top:-22px;height: 40px;">
+                <div class="col-md-12 paddingleft0">
+                    <div class="col-md-6 paddingleft0" style="opacity:1;">
+                        {{field.title}} <span ng-if="!field.required" class="mandatory"> </span>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="pull-right" style="padding-right: 5px;">
+                            <div ng-show="!field.isLoaded">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </label>
+            <md-select class="optionsuppercase" data-none-selected-text="Please Select" title="{{field.tooltip}}"
+                       ng-attr-title="{{field.tooltip}}" md-search-text="{{field.modelKey+ fieldIndex }}" md-select-on-match="{{field.modelKey+ fieldIndex }}"
+                       data-live-search="true" data-container="body" dynamic-name="field.modelKey+ fieldIndex" id="{{field.modelKey+ fieldIndex }}"
+                       ng-required="field.required" ng-disabled="(field.disabled || parentForm.readOnlyForm
+            ||(parentForm.screenMode=='EDIT' && field.disabledInEditMode)) ?
+            true :false"
+                       dependancy-events="field.dependancyEvents" ng-model="field.modelValue" data-md-container-class="selectdemoSelectHeaderForMulti_Zero"
+                       multiple="true" ng-change="field.selectChanged()" md-selected-text="getSelectedText">
+                <div ng-show="field.isLoaded && field.options.length==0">{{ field.noDataFoundMsg || "No Data Found" }}</div>
+
+            </md-select>
+        </md-input-container>
+    </div>
+
+    <div ng-if="field.ismultiple==true && field.isgrouping==true">
+        <md-input-container ng-if="field.show" class="select_field left
+            {{field.cssClass}}" ng-class="(parentForm.save_submit && parentForm.df_form[field.modelKey+
+            fieldIndex].$error.required)? 'form_error_field' : ''">
+            <label style="opacity:1;top:-22px;height: 40px;">
+                <div class="col-md-12">
+                    <div class="col-md-6" style="opacity:1;">
+                        {{field.title}}
+                    </div>
+                    <div class="col-md-6">
+                        <span class="pull-right" style="padding-right: 5px;">
+                            <md-progress-circular ng-show="!field.isLoaded" class="md-accent
+                                dropdownLoader"
+                                                  md-diameter="20">
+                                <Loading class="">Loading...</Loading>
+                            </md-progress-circular>
+                        </span>
+                    </div>
+                </div>
+            </label>
+            <md-tooltip md-direction="top" class="tooltip-multiline">{{field.tooltip}}</md-tooltip>
+            <md-select class="optionsuppercase" data-none-selected-text="Please Select" title="Please Select"
+                       ng-attr-title="field.tooltip" md-search-text="{{field.modelKey+ fieldIndex }}" md-select-on-match="{{field.modelKey+ fieldIndex }}"
+                       data-live-search="true" data-container="body" dynamic-name="field.modelKey+ fieldIndex" id="{{field.modelKey+ fieldIndex }}"
+                       ng-required="field.required" ng-disabled="(field.disabled || parentForm.readOnlyForm
+                ||(parentForm.screenMode=='EDIT' && field.disabledInEditMode)) ?
+                true :false"
+                       dependancy-events="field.dependancyEvents" ng-model="field.modelValue" data-md-container-class="selectdemoSelectHeaderForMulti"
+                       multiple="true" ng-change="field.selectChanged()" md-selected-text="getSelectedText">
+
+                <md-progress-circular ng-show="!field.isLoaded" class="md-accent dropdownLoader" md-diameter="20">
+                    <Loading class="">Loading...</Loading>
+                </md-progress-circular>
+                <div ng-show="field.isLoaded && field.options.length==0">{{ field.noDataFoundMsg || "No Data Found" }}</div>
+                <div class="col-md-12" ng-show="field.options.length>0">
+                    <!-- <div class="col-md-6">
+                        <span class="glyphicon glyphicon-ok"></span>
+                        <md-button class="select-all-btn" value="all"
+                            ng-if="filterData.selectedPageStatus.length ==
+                            PageStatusList.length"
+                            ng-click="selectAllEvent()"> SELECT ALL</md-button>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="glyphicon glyphicon-remove"></span>
+                        <md-button class="select-all-btn" value="all"
+                            ng-if="filterData.selectedPageStatus.length ==
+                            PageStatusList.length"
+                            ng-click="deSelectAllEvent()">DESELECT ALL</md-button>
+                    </div> -->
+
+                </div>
+                <md-optgroup label="{{gopt.text}}" ng-repeat="gopt in field.options">
+                    <md-option ng-value="opt" ng-repeat="opt in (gopt.item.options || [gopt])">
+                        {{opt.text }}
+                    </md-option>
+                </md-optgroup>
+            </md-select>
+        </md-input-container>
+    </div>
+
+</div>
+
+<div ng-show="field.mode=='View'">
+    <div class="col-md-12">
+        <label class="dropDownViewModeTitle">{{field.title}} </label>
+        <label class="dropDownViewModeValue"> : {{field.SelectedText}}</label>
+        <!--       <div  class="col-md-6">{{field.title}}</div>
+            <div  class="col-md-6"> {{field.modelValue}}</div> -->
+    </div>
+
+</div>
+
+

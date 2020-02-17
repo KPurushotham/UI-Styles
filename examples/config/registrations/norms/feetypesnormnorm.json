@@ -1,0 +1,46 @@
+﻿{
+  "columns": [
+    {
+      "key": "partyFeeType",
+      "headerText": "Party Fee Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "feeAmount",
+      "headerText": "Fee",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "processFee",
+      "headerText": "Processing Fee",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "effectiveFromDate",
+      "headerText": "Effective From",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/Party/feetypesnorm/all",
+
+  "rowKey": {
+    "feeTypeCode": "feeTypeId",
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

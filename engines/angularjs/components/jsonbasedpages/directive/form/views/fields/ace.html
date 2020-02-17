@@ -1,0 +1,32 @@
+<div ng-if="field.show" class="{{field.cssClass}}" 
+     ng-class="(parentForm.save_submit && parentForm.df_form[field.modelKey+ fieldIndex].$error.required)? 'form_error_field' : ''"
+     ng-disabled="(field.disabled || parentForm.readOnlyForm ||(parentForm.screenMode=='EDIT' && field.disabledInEditMode)) ? true :false" dependancy-events="field.dependancyEvents" validate-undefined>
+    <div>
+        <label ng-class="{'hide' :!field.showTitle }" class="full_width">{{field.title}} <span ng-if="field.required" class="mandatory">*</span></label>
+    </div>
+    <div class="editor" id="{{field.modelKey}}" ng-required="field.required" style="{{field.style}}"
+         ng-model="field.modelValue"          
+         ui-ace="{
+    workerPath: 'https://cdn.rawgit.com/ajaxorg/ace-builds/master/src-min-noconflict/',
+    useWrapMode : true,
+    showGutter: false,
+    theme:'ace/theme/eclipse',
+    mode: 'json',
+    firstLineNumber: 5,
+    onLoad: aceLoaded,
+    onChange: aceChanged
+    }">
+        {{field.modelValue}}
+    </div>
+    <script>
+        $(document).ready(function () {
+            var divs = $(".editor");
+            $.each(divs, function (item) {
+                ace.edit($(this).attr("id")).setOptions({ mode: "ace/mode/json", theme: "ace/theme/eclipse" });
+            });
+        });
+    </script>
+
+
+
+</div>

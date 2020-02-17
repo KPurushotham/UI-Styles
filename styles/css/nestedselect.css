@@ -1,0 +1,82 @@
+nested-select-menu {
+    width: 100%;
+    margin: 0px;
+    float: left;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*display: block;*/
+}
+nested-select-menu {
+    display: none;
+    position: absolute;
+    transform: translateY(-16px);
+    z-index: 100;
+}
+nested-select-menu:focus {
+    outline: none;
+}
+nested-select[fixed-menu] nested-select-menu {
+    display: block;
+    position: static;
+    z-index: inherit;
+}
+nested-select-menu.visible {
+    display: block;
+}
+nested-select:not([multiple]) nested-select-menu.visible {
+    transform: translate(2px,-48px);
+}
+nested-select-header {
+    background-color: rgb(250, 250, 250);
+    border-bottom: 1px solid #ddd;
+    padding-left: 10px;
+    /*height: 48px;*/
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+nested-select-header input[type=search] {
+    background-color: #fff;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 4px;
+    font-size: 14px;
+}
+nested-select md-content {
+    overflow-x: hidden;
+    /*padding: 16px 0 0 10px;*/
+}
+md-input-container label:not(.md-container-ignore).md-required::after {
+    content: '';
+}
+
+md-input-container.batch-dropdown {
+    width: auto;
+}
+md-input-container md-select label {
+    font-size: 12px !important;
+}
+nested-select md-input-container {
+    width: 100%;
+}
+
+nested-select-selection.md-select-value {
+    border-bottom-color: rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+}
+
+    nested-select-selection.md-select-value:focus,
+    nested-select-selection.md-select-value.focused {
+        border-bottom-color: #3F51B5;
+        border-bottom-width: 2px;
+        outline: none;
+        padding-bottom: 0;
+        background-color: #ffffff;
+    }
+
+
+

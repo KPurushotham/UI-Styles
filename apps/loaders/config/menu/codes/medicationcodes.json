@@ -1,0 +1,30 @@
+{
+    "name":"medicationcodes",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.medicationcodesform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/MedicationCodes/all",
+    "editScreenState": "app.loaders.codes.medicationcodesform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

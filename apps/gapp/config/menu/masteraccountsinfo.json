@@ -1,0 +1,23 @@
+{
+  "name": "masteraccountsinfo",
+  "externalService": "",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "gapp.masteraccountsinfoform"
+    }
+  ],
+  "queryStringParams": {
+    "@UserId": "",
+    "@MasterAccountId": "1",
+    "@AccountTypeId": "1"
+  },
+  "columns": [
+  ],
+  "dataUrl": "vdi/postget/gapp/infoSpFinancials/all",
+  "editScreenState": "app.gapp.masteraccountsinfoform",
+  "rowKey": {
+    "iD": "iD"
+  },
+  "defaultSortColumn": "iD"
+}

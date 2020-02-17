@@ -1,0 +1,30 @@
+{
+  "name": "ogmscreen",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "ogmscreen.ogmscreenform"
+    }
+  ],
+
+  "columns": [
+    {
+      "field": "dataSourceId",
+      "headerName": "Data Source Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "dataSourceCode",
+      "headerName": "Data Source Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+  ],
+  "dataUrl": "vdi/reportConfig/datasource/all",
+  "editScreenState": "app.ogmscreen.ogmscreenform",
+  "rowKey": {
+    "dataSourceId": "dataSourceId"
+  },
+  "defaultSortColumn": "dataSourceId"
+}

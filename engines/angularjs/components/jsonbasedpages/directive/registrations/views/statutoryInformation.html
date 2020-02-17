@@ -1,0 +1,47 @@
+<div class="paid_vendor_container full_width">
+    <div class="sub_heading full_width no-margin">
+        <h5 class="full_width">Statutory Information</h5>
+    </div>
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.partyCategory.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Party Category <span class="mandatory">*</span></label>
+        <div>
+            <select class="optionsuppercase nya-selectpicker" ng-disabled="selectedData.disable || disableFlag" data-none-selected-text="Please Select" title="Please Select" data-live-search="true" data-container="body" name="partyCategory" ng-change="partyCategoryChangeHandler()" placeholder='Select' ng-options='c as c.shortName for c in dropDownData.partyCategoryDD track by c.partyCategoryCode' ng-model="selectedData.partyCategory" required></select>
+        </div>
+    </div>
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.partySubCategory.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Party Sub Category <span class="mandatory">*</span></label>
+        <div>
+            <select class="optionsuppercase nya-selectpicker" ng-disabled="selectedData.disable || disableFlag" data-none-selected-text="Please Select" title="Please Select" data-live-search="true" data-container="body" name="partySubCategory" ng-change="partySubCategoryChangeHandler()" placeholder='Select' ng-options='c as c.description for c in dropDownData.partySubCategoryDD track by c.partySubcategoryCode' ng-model="selectedData.partySubCategory" required></select>
+        </div>
+    </div>
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.pan.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">PAN <span class="mandatory">*</span></label>
+        <div>
+            <input type="text" class="full_width uppercase" name="pan" maxlength="10" ng-disabled="disableFlag" ng-model="partyModel.statutory.pan" required>
+        </div>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">TIN</label>
+        <div>
+            <input type="text" class="full_width" name="tin" numbers-only ng-disabled="disableFlag" ng-model="partyModel.statutory.tin" numbers-only>
+        </div>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">TAN</label>
+        <div>
+            <input type="text" class="full_width" name="tan" ng-disabled="disableFlag" ng-model="partyModel.statutory.tan">
+        </div>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">CST Number</label>
+        <input type="text" class="full_width" name="cst" numbers-only ng-disabled="disableFlag" ng-model="partyModel.statutory.cst" numbers-only>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">GST Number</label>
+        <input type="text" class="full_width" name="gst" numbers-only ng-disabled="disableFlag" ng-model="partyModel.statutory.gst" numbers-only>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Service Tax Number</label>
+        <input type="text" class="full_width" name="serviceTax" ng-disabled="disableFlag" ng-model="partyModel.statutory.serviceTax">
+    </div>
+</div>

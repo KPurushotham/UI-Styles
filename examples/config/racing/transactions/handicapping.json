@@ -1,0 +1,62 @@
+﻿{
+  "columns": [
+    {
+    "key": "season",
+    "headerText": "Race Season",
+    "filterMask": "Search",
+    "type": "uppercase"
+  },
+    {
+    "key": "raceDate",
+    "headerText": "Race Date",
+    "filterMask": "Search",
+    "type": "date"
+  },
+  
+  {
+    "key": "raceDay",
+    "headerText": "Race Day",
+    "filterMask": "Search"
+  },
+
+   {
+    "key": "raceName",
+    "headerText": "Race Name ",
+    "filterMask": "Search"
+  },
+   {
+    "key": "raceClassification",
+    "headerText": "Race Classification",
+    "filterMask": "Search",
+    "type": "uppercase"
+  },
+  
+   {
+    "key": "horse",
+    "headerText": "Horse",
+    "filterMask": "Search",
+    "type": "uppercase"
+  },
+  
+ 
+   
+ {
+    "key": "lastUpdatedDate",
+    "headerText": "LastUpdatedDate",
+    "filterMask": "Search",
+    "type": "uppercase"
+  },
+   {
+    "key": "status",
+    "headerText": "Status",
+    "filterMask": "Search"
+   }
+],
+
+  "dataUrl": "vdi/olims/racing/handicapping/all",
+
+  "rowKey": {    
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

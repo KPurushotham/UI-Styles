@@ -1,0 +1,18 @@
+<div class="row_container {{rowDivision.cssClass}}"  style="{{rowDivision.style}}" ng-repeat="field in rowDivision.fields" ng-show="(rowDivision.fields && !rowDivision.hideInViewMode && parentForm.readOnlyForm) || !parentForm.readOnlyForm">
+
+    <field-directive field="field" field-division-count="fieldDivisionCount" parent-form="parentForm" parent-section="parentSection"
+        form-data-model="formDataModel" section-data-model="sectionDataModel">
+    </field-directive>
+
+</div>
+<div class="row_container {{rowDivision.cssClass}}"  style="{{rowDivision.style}}" ng-show="rowDivision.columns">
+    <div class="column_container Column {{column.cssClass}}" ng-repeat="column in rowDivision.columns" ng-show="(!rowDivision.hideInViewMode && parentForm.readOnlyForm) || !parentForm.readOnlyForm">
+        <div class="subCol">
+            <div class="column_container Column1" ng-repeat="field in column.fields" ng-show="(!column.hideInViewMode && parentForm.readOnlyForm) || !parentForm.readOnlyForm">
+                <field-directive field="field" field-division-count="fieldDivisionCount" parent-form="parentForm" parent-section="parentSection"
+                    form-data-model="formDataModel" section-data-model="sectionDataModel">
+                </field-directive>
+            </div>
+        </div>
+    </div>
+</div>

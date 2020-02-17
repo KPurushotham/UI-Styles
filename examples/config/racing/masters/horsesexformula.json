@@ -1,0 +1,50 @@
+﻿{
+  "columns": [
+    {
+      "key": "horseSexCode",
+      "headerText": "Code",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "minAge",
+      "headerText": "Short Name",
+      "filterMask": "Search"
+    },
+     {
+      "key": "maxAge",
+      "headerText": "Short Name",
+      "filterMask": "Search"
+    },
+    {
+      "key": "shortSexCode",
+      "headerText": "Short Name",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "sexDescription",
+      "headerText": "Description",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+
+  "dataUrl": "vdi/olims/racing/horsesexformula/all",
+
+  "rowKey": {
+    "horseSexFormulaCode": "horseSexFormulaCode",
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

@@ -1,0 +1,95 @@
+﻿{
+  "columns": [
+    {
+      "key": "budget",
+      "headerText": "Budget",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "approvedBudget",
+      "headerText": "Additional/Special Sanctioned",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "requestedBudget",
+      "headerText": "Expenses",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "approvedBudget",
+      "headerText": "Budget Balance",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "childColumns" :
+  [
+    {
+      "key": "budget",
+      "headerText": "Budget Code-Description",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "approvedBudget",
+      "headerText": "Sanctioned Budget",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "requestedBudget",
+      "headerText": "Additional Sanctioned",
+      "filterMask": "Search",
+      "type": "uppercase",
+      "editable": true
+    },
+    {
+      "key": "approvedBudget",
+      "headerText": "Special Sanctioned",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "requestedBudget",
+      "headerText": "Expenses Spent",
+      "filterMask": "Search",
+      "type": "uppercase",
+      "editable": true
+    },
+    {
+      "key": "approvedBudget",
+      "headerText": "Pending For Spending",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "approvedBudget",
+      "headerText": "Budget Balance",
+      "filterMask": "Search",
+      "type": "uppercase"
+    }
+  ],
+  "dataUrl": "vdi/olims/budget/annualbudgetapproval/all",
+  "childDataUrl":"vdi/olims/budget/annualbudgetapproval/getone?entityObjectId=",
+
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate",
+  "childDefaultSortColumn": "lastUpdatedDate"
+}

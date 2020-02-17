@@ -1,0 +1,404 @@
+﻿<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns="urn:schemas-microsoft-com:office:spreadsheet">
+<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+<Version>12.00</Version>
+</DocumentProperties>
+<ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+<WindowHeight>8130</WindowHeight>
+<WindowWidth>15135</WindowWidth>
+<WindowHeight>8130</WindowHeight>
+<WindowTopX>120</WindowTopX>
+<WindowTopY>45</WindowTopY>
+<ProtectStructure>False</ProtectStructure>
+<ProtectWindow>False</ProtectWindow>
+</ExcelWorkbook>
+<Styles>
+</Styles>
+<Worksheet ss:Name="ag-grid">
+<Table>
+<Column ss:Width="110"/>
+<Column ss:Width="106"/>
+<Column ss:Width="106"/>
+<Column ss:Width="106"/>
+<Column ss:Width="106"/>
+<Column ss:Width="106"/>
+<Column ss:Width="106"/>
+<Column ss:Width="106"/>
+<Column ss:Width="106"/>
+<Column ss:Width="106"/>
+<Column ss:Width="106"/>
+<Column ss:Width="106"/>
+<Column ss:Width="106"/>
+<Row>
+<Cell>
+<Data ss:Type="String">Player</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Gwg Master</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Prg Code</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Program</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Pool Type</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Community </Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Betting Group</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">LWO</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Turn Over</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Payout</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Rebate</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Gross PLy</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Player NetPl</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">GWG-B-01</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">2651335</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">LF        </Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Lingfield</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">PLACE</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">GBR</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.2836</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">-2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">-1.7164</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">GWG-B-01</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">2651335</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">LF        </Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Lingfield</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">WIN</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">GBR</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">22</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">2.9836</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">-22</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">-19.0164</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">GWG-B-01</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">2651335</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">LF        </Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Event Total</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">GBR</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">3.2672</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">-24</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">-20.7328</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">GWG-B-01</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">2651335</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">WVD       </Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Wolverhampton</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">EXACTA</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">GBR</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.3736</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">-2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">-1.6264</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">GWG-B-01</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">2651335</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">WVD       </Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Wolverhampton</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">SWINGER</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">GBR</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.4636</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">-2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">-1.5364</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">GWG-B-01</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">2651335</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">WVD       </Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Wolverhampton</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">TRIFECTA</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">GBR</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.3736</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">-2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">-1.6264</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">GWG-B-01</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">2651335</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">WVD       </Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Event Total</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">GBR</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.2108</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">-6</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">-4.7892</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">GWG-B-01</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Source Total</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">ZZZzzz    </Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">GBR</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">30</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4.478</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">-30</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">-25.522</Data>
+</Cell>
+</Row>
+</Table>
+</Worksheet>
+</Workbook>

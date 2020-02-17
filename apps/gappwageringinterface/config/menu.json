@@ -1,0 +1,24 @@
+﻿[
+  {
+    "key": "gappwageringinterface.racecarddetails",
+    "urlRoute": "masteraccounts",
+    "pattern": "LISTING",
+    "title": "Master accounts",
+    "viewName": "mainPagesection"
+
+  },
+  {
+    "key": "gappwageringinterface.racecarddetailsform",
+    "urlRoute": "masteraccountsform",
+    "showInMenu": false,
+    "editKeys": [ "" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": ""
+
+  }
+]
+
+
+

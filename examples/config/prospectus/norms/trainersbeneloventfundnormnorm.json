@@ -1,0 +1,61 @@
+﻿{
+  "columns": [
+   {
+      "key": "licenseType",
+      "headerText": "License Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+	 {
+      "key": "amount",
+      "headerText": "amount",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+   {
+      "key": "amountTypes",
+      "headerText": "amount Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+	 {
+      "key": "club",
+      "headerText": "Club",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+	
+   {
+      "key": "frequencyName",
+      "headerText": "Frequency",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+	 
+	
+	{
+      "key": "effectiveFromDate",
+    "headerText": "Effective From",
+     "type": "date",
+      "filterMask": "Search"
+    },
+   
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/prospectus/trainersbeneloventfundnorm/all",
+
+  "rowKey": {
+  "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

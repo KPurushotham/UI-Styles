@@ -1,0 +1,35 @@
+{
+    "name":"horsebreedcolor",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.horsebreedcolorform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "breed",
+        "headerName": "breed",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/HorseBreedColor/all",
+    "editScreenState": "app.loaders.codes.horsebreedcolorform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

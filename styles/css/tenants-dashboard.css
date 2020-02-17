@@ -1,0 +1,460 @@
+.dashboard-grid {
+    padding-top: 10px !important;
+    float: left;
+    width: 100%;
+}
+.main-dashbord {
+    float: left;
+    width: 100%;
+}
+ul.main-dashbord li {
+    width: 24.7%;
+    margin: 2px 0.15%;
+    float: left;
+    list-style-type: none;
+}
+.dashboard-li {
+    display: table-caption !important;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+    padding: 5px;
+    background: #fff !important;
+    margin: 0px;
+    width: 100%;
+    float: left;
+    height: auto;
+    min-height: 90px !important;
+}
+.dashboard-grid-padding {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.like-icon i.fa, .like-icon svg {
+    font-size: 14px !important;
+    /*color: #ecd88a;*/
+    color: #9dd9ac; 
+    float: left;
+}
+.dashboard-img-cls, .toolbar-img-cls, .toolbar-dropdown-img-cls, .dashboard-list-img-cls {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    width: 200px;
+    height: 200px;
+}
+.dashboard-tenant-img-cls {
+    zoom: 100%;
+    /*-mz-zoom: 100%;
+    -ms-zoom: 0.5;*/
+    -webkit-zoom: 0.5;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+}
+.dashboard-list-img-cls, .dashboard-tenantlist-img-cls {
+    zoom: 100%;
+    /*-mz-zoom: 100%;
+    -ms-zoom: 0.5;*/
+    -webkit-zoom: 0.5;
+    width: 45px;
+    height: 45px;
+    margin: 0 auto;
+}
+.toolbar-tenant-img-cls {
+    zoom: 100%;
+    /*-moz-zoom: 100%;
+    -ms-zoom: 0.14;*/
+    -webkit-zoom: 0.14;
+    width: 28px;
+    height: 28px;
+    float: left;
+}
+.toolbar-tenant-dropdown-img-cls {
+    zoom: 100%;
+    /*-mz-zoom: 100%;
+    -ms-zoom: 0.23;*/
+    -webkit-zoom: 0.23;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+.toolbar-app-img-cls {
+    zoom: 100%;
+    /*-moz-zoom: 100%;
+    -ms-zoom: 0.14;*/
+    -webkit-zoom: 0.14;
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+    margin-top: 2px;
+    float: left;
+    margin-bottom:2px;
+}
+.toolbar-app-dropdown-img-cls {
+    zoom: 100%;
+    /*-mz-zoom: 100%;
+    -ms-zoom: 0.23;*/
+    -webkit-zoom: 0.23;
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+}
+.dashboard-report-img-cls {
+    zoom: 100%;
+    /*-mz-zoom: 100%;
+    -ms-zoom: 0.5;*/
+    -webkit-zoom: 0.5;
+    width: 50px;
+    height: 50px;
+    margin: 14px auto;
+}
+.dashboard-reportlist-img-cls {
+    zoom: 100%;
+    -mz-zoom: 100%;
+    -ms-zoom: 0.5;
+    -webkit-zoom: 0.5;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.bcm-icon {
+    background-image: url(../../images/tenanticons/bcm-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.c49-icon {
+    background-image: url(../../images/tenanticons/c49-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.chrims-icon {
+    background-image: url(../../images/tenanticons/chrims-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.elg-icon {
+    background-image: url(../../images/tenanticons/elg-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.emd-icon {
+    background-image: url(../../images/tenanticons/emd-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.gpk-icon {
+    background-image: url(../../images/tenanticons/gpk-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hrn-icon {
+    background-image: url(../../images/tenanticons/hrn-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.kdg-icon {
+    background-image: url(../../images/tenanticons/kdg-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.kee-icon {
+    background-image: url(../../images/tenanticons/kee-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.lad-icon {
+    background-image: url(../../images/tenanticons/lad-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.lat-icon {
+    background-image: url(../../images/tenanticons/lat-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.lsp-icon {
+    background-image: url(../../images/tenanticons/lsp-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.med-icon {
+    background-image: url(../../images/tenanticons/med-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.mjc-icon {
+    background-image: url(../../images/tenanticons/mjc-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.mon-icon {
+    background-image: url(../../images/tenanticons/mon-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.mth-icon {
+    background-image: url(../../images/tenanticons/mth-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.nyb-icon {
+    background-image: url(../../images/tenanticons/nyb-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.nyra-icon {
+    background-image: url(../../images/tenanticons/nyra-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.rep-icon {
+    background-image: url(../../images/tenanticons/rep-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ruk-icon {
+    background-image: url(../../images/tenanticons/ruk-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.scf-icon {
+    background-image: url(../../images/tenanticons/scf-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.tam-icon {
+    background-image: url(../../images/tenanticons/tam-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.waw-icon {
+    background-image: url(../../images/tenanticons/waw-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.xmd-icon {
+    background-image: url(../../images/tenanticons/xmd-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.calgh-icon {
+    background-image: url(../../images/tenanticons/calgh-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.can-icon {
+    background-image: url(../../images/tenanticons/can-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bcup-icon {
+    background-image: url(../../images/tenanticons/bcup-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ebt-icon {
+    background-image: url(../../images/tenanticons/ebt-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.gwg-icon {
+    background-image: url(../../images/tenanticons/gwg-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hou-icon {
+    background-image: url(../../images/tenanticons/hou-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.pmu-icon {
+    background-image: url(../../images/tenanticons/pmu-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.pnyra-icon {
+    background-image: url(../../images/tenanticons/pnyra-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.pom-icon {
+    background-image: url(../../images/tenanticons/pom-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.tbd-icon {
+    background-image: url(../../images/tenanticons/tbd-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.tsg-icon {
+    background-image: url(../../images/tenanticons/tsg-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.repnew-icon {
+    background-image: url(../../images/tenanticons/repnew-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.lspnew-icon {
+    background-image: url(../../images/tenanticons/lspnew-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.calnew-icon {
+    background-image: url(../../images/tenanticons/chrims-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ews-icon {
+    background-image: url(../../images/tenanticons/ews-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.gap-icon {
+    background-image: url(../../images/tenanticons/gap-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.WOTB-icon {
+    background-image: url(../../images/tenanticons/WOTB-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ids-icon {
+    background-image: url(../../images/tenanticons/ids-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tenant-db-tble, .app-db-tble, .report-db-tble {
+    border-top: 0px;
+}
+.tenant-db-tble thead, .app-db-tble thead, .report-db-tble thead {
+    /*background: -moz-linear-gradient(45deg, #247da7, #1a6b92);
+    background: -webkit-linear-gradient(45deg, #247da7, #1a6b92);
+    background: linear-gradient(45deg, #247da7, #1a6b92);*/
+    background: #1ea8d1;
+}
+.tenant-db-heading {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /*color: #247da7;*/
+    color: #28b5e8;
+}
+.dashboard-listview-th {
+    padding: 8px 4px !important;
+    font-weight: 400 !important;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 0px !important;
+    border-right: 1px solid #2091b2 !important;
+    /*border-right: 1px solid #ccc !important;
+    background: #aaa;
+    color: #454545;*/
+    color: #fff;
+}
+.dashboard-listview-td {
+    vertical-align: middle !important;
+    padding: 6px 4px !important;
+    font-size: 13px;
+    text-align: left;
+    border-right: 1px solid #ddd !important;
+    border-bottom: 0px !important;
+    border-top: 0px !important;
+    color:#939598 !important;
+}
+.dashboard-listview-td h6 a strong {
+    /*color: #28b5e8;*/
+    color:#02747b;
+}
+.tenant-db-tble tr:nth-child(even) {
+    /*background: #fafafa;*/
+    background: #f5f8fa;
+}
+.tenant-db-tble tr td:nth-child(3), .tenant-db-tble tr td:nth-child(4), .tenant-db-tble tr td:nth-child(5), .tenant-db-tble tr td:nth-child(6) {
+    text-align: center;
+}
+.app-db-tble tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.app-db-tble tr td:nth-child(3), .app-db-tble tr td:nth-child(4), .app-db-tble tr td:nth-child(5), .app-db-tble tr td:nth-child(6) {
+    text-align: center;
+}
+.dashboard-grid-table {
+    /*width: 210px;*/
+    width: 100%;
+}
+table.dashboard-grid-table tbody tr {
+    margin-bottom: 5px !important;
+    float: left;
+}
+table.dashboard-grid-table tbody tr th {
+    width: 85px;
+    color: #939598;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.15px;
+}
+.dashboard-grid-table-td {
+    font-weight: 400;
+    font-size: 12px;
+    /*color:#56b1a8;*/
+    color: #02747b;
+    letter-spacing: -0.25px;
+}
+.span-style {
+    background: #e1e1e1;
+    border-radius: 5px;
+    padding: 1px 4px;
+    margin-left: 5px;
+    color: #333;
+}

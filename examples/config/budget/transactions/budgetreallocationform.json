@@ -1,0 +1,258 @@
+{
+  "name": "budgetreallocationform",
+  "saveUrl": "budgetreallocation/save",
+  "validationUrl": "",
+  "submitted": false,
+  "externalService": "budgetReallocationFactory",
+   "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "allocationType",
+              "title": "Allocation Type",
+              "fieldType": "radio",
+              "cssClass": "col_40",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "With In Cost Center",
+                    "value": "local"
+                  },
+                  {
+                    "text": "Cost Center To Cost Center",
+                    "value": "global"
+                  }
+                ]
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "setWithInCostCenterRules"
+                }
+              ],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "financialYear",
+              "title": "Financial Year",
+              "fieldType": "textbox",
+              "cssClass": "col_26",
+              "defaultValueByKey": "LS.financial_year",
+              "disabled": true
+            },
+            {
+              "modelKey": "department",
+              "title": "Department",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "defaultValueByKey": "LS.departmentCode-LS.department",
+              "disabled": true
+            }
+          ]
+        },
+        {
+          "fields": [
+
+            {
+              "modelKey": "costCenterFrom",
+              "title": "From Cost Center",
+              "fieldType": "dropdown",
+              "cssClass": "col_40",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/deptcostcenters/all",
+                "displayKey": "costCenterCode-costCenterName",
+                "valueKey": "entityObjectId"
+              },
+              "initLoad": true,
+              "dependancyConfig": [
+                {
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "modelKeyMapTobeFilled": { "costCenterFromId": "entityObjectId" }
+                }
+              ],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "budgetFrom",
+              "title": "From Budget",
+              "fieldType": "dropdown",
+              "cssClass": "col_40",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/costcenterbudgets/all",
+                "displayKey": "budgetCode-shortName",
+                "valueKey": "entityObjectId"
+              },
+              "dependancyConfig": [
+                {
+                  "sourceKey": "costCenterFrom",
+                  "event": "change",
+                  "loadData": {
+                    "keyParams": { "costCenterId": "costCenterFrom" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "disabled": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "costCenterTo",
+              "title": "To Cost Center",
+              "fieldType": "dropdown",
+              "cssClass": "col_40",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/deptcostcenters/all",
+                "displayKey": "costCenterCode-costCenterName",
+                "valueKey": "entityObjectId"
+              },
+              "initLoad": true,
+              "dependancyConfig": [
+                {
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  },
+                  "defaultValue": "",
+
+                  "validations": { "disabled": false }
+                },
+                {
+                  "sourceKeyMap": [
+                    {
+                      "sourceKey": "allocationType",
+                      "event": "change"
+                    },
+                    {
+                      "sourceKey": "costCenterFrom",
+                      "event": "change"
+                    }
+
+                  ],
+                  "if": [
+                    {
+                      "conditions": [
+                        {
+                          "modelKey": "allocationType",
+                          "in": [ "local" ]
+                        }
+                      ],
+                      "then": {
+                        "defaultValueByKey": "SM.costCenterFrom",
+                        "rules": {
+                          "disabled": true
+                        }
+                      },
+                      "else": {
+                        "defaultValue": "",
+                        "rules": {
+                          "disabled": false
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "required": true
+            },
+            {
+              "modelKey": "budgetTo",
+              "title": "To Budget",
+              "fieldType": "dropdown",
+              "cssClass": "col_40",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/costcenterbudgets/all",
+                "displayKey": "budgetCode-shortName",
+                "valueKey": "entityObjectId"
+              },
+              "dependancyConfig": [
+                {
+                  "sourceKey": "costCenterTo",
+                  "event": "change",
+                  "loadData": {
+                    "keyParams": { "costCenterId": "costCenterTo" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "disabled": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "reason",
+              "title": "Reason",
+              "fieldType": "dropdown",
+              "cssClass": "col_40",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/racereason/all",
+                "displayKey": "reasonCode-reasonDescription",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "bdgAvailableAmt",
+              "title": "Available Budget Amount",
+              "fieldType": "textbox",
+              "cssClass": "col_40",
+              "defaultValue": "0.00",
+              "disabled": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "bdgAmtTransfer",
+              "title": "Transfer Budget Amount",
+              "fieldType": "textbox",
+              "cssClass": "col_20",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "remarks",
+              "title": "Remarks",
+              "fieldType": "textbox",
+              "cssClass": "col_80",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

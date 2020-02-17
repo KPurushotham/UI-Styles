@@ -1,0 +1,53 @@
+﻿{
+  "columns": [
+   {
+      "key": "hmcCode",
+      "headerText": "Category Type",
+      "filterMask": "Search"
+    },
+    {
+      "key": "amountType",
+      "headerText": "Amount Type",
+      "filterMask": "Search"
+    },
+	 {
+      "key": "frequencyName",
+      "headerText": "Frequency Name",
+      "filterMask": "Search"
+    },
+	{
+      "key": "amount",
+      "headerText": "Amount",
+      "filterMask": "Search"
+    },
+    {
+      "key": "effectiveFromDate",
+      "headerText": "Effective From",
+      "filterMask": "Search",
+       "type": "date"
+    },
+	{
+      "key": "taxApplicable",
+      "headerText": "Tax Applicable",
+      "filterMask": "Search"
+    },
+   
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/racingaccount/horsemaintanancecostnorms/all",
+
+  "rowKey": {
+  "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

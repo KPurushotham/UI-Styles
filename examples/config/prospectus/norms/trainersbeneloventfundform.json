@@ -1,0 +1,164 @@
+{
+  "name": "trainersbeneloventfundform",
+  "saveUrl": "trainersbeneloventfundnorm/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "licenseTypeId",
+              "title": "License Type",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racingaccount/licensetype/all",
+                "displayKey": "licenseTypeShortName-licenseTypeDescription",
+                "valueKey": "licenseTypeShortName"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "indicator",
+              "title": "Indicator",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": true
+            },
+
+            {
+              "modelKey": "withStakes",
+              "title": "With Stakes",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "account",
+              "title": "Account",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": true
+            }
+
+          ]
+        }
+      ]
+    },
+    {  "title": "Trainer Benevolent Fund Details" ,
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "club",
+              "title": "HRC",
+              "fieldType": "checkbox",
+			  "cssClass": "no_tp_mr bt_sp_20",	
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "HRC"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "club",
+              "title": "Club ",
+                "cssClass": "col_20",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "MRC",
+                    "value": "MRC"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "amountTypeId",
+              "title": "Value/Percentage",
+                "cssClass": "col_20",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/functional/amounttypebox/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "value",
+              "title": "Value",
+                "cssClass": "col_20",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "frequencyId",
+              "title": "Frequency",
+              "cssClass": "col_20",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racingaccount/frequencybox/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+               {
+              "modelKey": "effectiveFromDate",
+      "title": "Effective From",
+        "cssClass": "col_20",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        },
+         {
+          "fields": [
+    
+            {
+              "modelKey": "taxApplicable",
+              "title": "Tax Applicable",
+              "fieldType": "checkbox",
+                "cssClass": "col_20 no-margin",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

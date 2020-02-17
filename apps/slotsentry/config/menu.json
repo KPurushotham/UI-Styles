@@ -1,0 +1,10 @@
+[
+  {
+    "key": "slotsentry.slotentryform",
+    "pattern": "FORM",
+    "title": "Slots Entry",
+    "viewName": "mainPagesection",
+    "urlRoute": "slotentryform"
+  }
+]
+

@@ -1,0 +1,30 @@
+{
+    "name":"scratchindicator",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.scratchindicatorform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/ScratchIndicator/all",
+    "editScreenState": "app.loaders.codes.scratchindicatorform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

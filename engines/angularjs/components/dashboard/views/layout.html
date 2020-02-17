@@ -1,0 +1,18 @@
+<div class="body-bg"></div>
+<main ng-if="$pageFinishedLoading" ng-class="{ 'menu-collapsed': $idsSidebarService.isMenuCollapsed() }">
+    <page-top></page-top>
+    <!--<app-toolbar></app-toolbar>-->
+    <div >
+        <div class="al-content">
+            <div ui-view="bodysection" class="bodysection" autoscroll="true" autoscroll-body-top></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-copyright">&copy; 2019 Infinite Dimensional Systems. All rights reserved.</div>
+    </footer>
+   
+</main>
+
+
+

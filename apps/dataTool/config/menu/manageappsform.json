@@ -1,0 +1,85 @@
+{
+	"name": "budgetform",
+	"saveUrl": "contractList",
+	"getOneUrl": "contractList",
+	"validationUrl": "",
+	"noWorkflow": true,
+	"submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+
+            {
+              "modelKey": "id",
+              "fieldType": "hidden",
+              "defaultValueByKey": "QS.id"
+            },
+            {
+              "modelKey": "contract_name",
+              "title": "Contract Name",
+              "fieldType": "textbox",
+              "required": true
+
+            },
+            {
+              "modelKey": "contract_application",
+              "title": "Contract Application",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "contract_application",
+              "title": "Contract Application",
+              "fieldType": "textbox",
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "corporations",
+              "title": "Corporation Name",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Monarch",
+                    "value": "Monarch"
+                  },
+                  {
+                    "text": "MJC",
+                    "value": "MJC"
+                  }
+                ]
+              },
+              "required": true
+            },
+            {
+              "modelKey": "finalized",
+              "title": "Contract Finalized",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "1"
+                  },
+                  {
+                    "text": "No",
+                    "value": "0"
+                  }
+                ]
+              },
+              "required": true
+
+            }
+          ]
+        }
+      ]
+    }
+
+  ]
+}

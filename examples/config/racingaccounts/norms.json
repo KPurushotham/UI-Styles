@@ -1,0 +1,194 @@
+﻿[
+  
+  {
+    "stateName": "racingaccounts.animaltaxnorm",
+    "url": "animaltaxnorm",
+    "pattern": "LISTING",
+    "viewName": "racingAccountsSection",
+    "data": {
+      "title": "Animal Tax",
+      "addScreenStateName" :"racingaccounts.animaltaxform"
+    }
+  },
+  {
+    "stateName": "racingaccounts.animaltaxform",
+    "url": "animaltaxform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "ANIMAL_TAX",
+    "viewName": "racingAccountsSection",
+    "data": {
+      "title": "New"
+    }
+  },
+
+  {
+    "stateName": "racingaccounts.horsemaintanancecostnorm",
+    "url": "horsemaintanancecostnorm",
+    "pattern": "LISTING",
+    "viewName": "racingAccountsSection",
+    "data": {
+      "title": "Basic Maintainance Cost",
+       "addScreenStateName" :"racingaccounts.horsemaintanancecostnormform"
+    }
+  },
+   {
+     "stateName": "racingaccounts.horsemaintanancecostnormform",
+    "url": "horsemaintanancecostnormform",
+   "showInLeftManu": false,
+     "editKeys": ["entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "BMC_NORM",
+    "viewName": "racingAccountsSection",
+    "data": {
+      "title": "New"
+    }
+  },
+
+  {
+    "stateName": "racingaccounts.trainerbmcbillnorm",
+    "url": "trainerbmcbillnorm",
+    "pattern": "LISTING",
+    "viewName": "racingAccountsSection",
+    "data": {
+      "title": "Trainer BMC Bill",
+       "addScreenStateName" :"racingaccounts.trainerbmcbillnormform"
+    }
+  },
+  {
+    "stateName": "racingaccounts.trainerbmcbillnormform",
+    "url": "trainerbmcbillnormform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "TRAINER_BMC_BILL",
+    "viewName": "racingAccountsSection",
+    "data": {
+      "title": "New"
+    }
+  },
+
+  {
+    "stateName": "racingaccounts.oatsnorm",
+    "url": "oatsnorm",
+    "pattern": "LISTING",
+    "viewName": "racingAccountsSection",
+    "data": {
+      "title": "Oats and WheatBran/Barley",
+        "addScreenStateName" :"racingaccounts.oatsnormform"
+    }
+  },
+ {
+    "stateName": "racingaccounts.oatsnormform",
+    "url": "oatsnormform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "OATS_WHEATBRANS_BARLEY",
+    "viewName": "racingAccountsSection",
+    "data": {
+      "title": "New"
+    }
+  },
+
+ 
+   {
+    "stateName": "racingaccounts.creditdebitnormsnorm",
+    "url": "creditdebitnormsnorm",
+    "pattern": "LISTING",
+    "viewName": "racingAccountsSection",
+    "data": {
+      "title": "Present Credit/Debit ",
+       "addScreenStateName" :"racingaccounts.creditdebitnormsform"
+    }
+  },
+ {
+    "stateName": "racingaccounts.creditdebitnormsform",
+    "url": "creditdebitnormsform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "CREDIT_DEBIT",
+    "viewName": "racingAccountsSection",
+    "data": {
+      "title": "New"
+    }
+  },
+
+
+  {
+    "stateName": "racingaccounts.offseasondepositnormnorm",
+    "url": "offseasondepositnormnorm",
+    "pattern": "LISTING",
+    "viewName": "racingAccountsSection",
+    "data": {
+      "title": "Off Season Deposit",
+      "addScreenStateName" :"racingaccounts.offseasondepositnormform"
+    }
+  },
+  {
+    "stateName": "racingaccounts.offseasondepositnormform",
+    "url": "offseasondepositnormform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "OFF_SEASON_DEPOSIT",
+    "viewName": "racingAccountsSection",
+    "data": {
+      "title": "New"
+    }
+  },
+   {
+    "stateName": "racingaccounts.subsidytypeaccountlinknorm",
+    "url": "subsidytypeaccountlinknorm",
+    "pattern": "LISTING",
+    "viewName": "racingAccountsSection",
+    "data": {
+      "title": "Subsidy Type Account Link",
+      "addScreenStateName" :"racingaccounts.subsidytypeaccountlinkform"
+
+    }
+  },
+  {
+    "stateName": "racingaccounts.subsidytypeaccountlinkform",
+    "url": "subsidytypeaccountlinkform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId"],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "SUBSIDY_TYPE_AC",
+    "viewName": "racingAccountsSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "racingaccounts.feetypeaccountlinknorm",
+    "url": "feetypeaccountlinknorm",
+    "pattern": "LISTING",
+    "viewName": "racingAccountsSection",
+    "data": {
+      "title": "Fee Type Account Link",
+      "addScreenStateName" :"racingaccounts.feetypeaccountlinkform"
+
+    }
+  },
+  {
+    "stateName": "racingaccounts.feetypeaccountlinkform",
+    "url": "feetypeaccountlinkform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId"],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "FEE_TYPE_AC",
+    "codeKeyParam": "entityCode=feetype&entityGroupCode=racac&entityTypeCode=racac",
+    "viewName": "racingAccountsSection",
+    "data": { "title": "New" }
+  }
+
+]

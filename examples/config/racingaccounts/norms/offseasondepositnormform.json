@@ -1,0 +1,94 @@
+﻿{
+  "name": "offseasondepositnormform",
+  "saveUrl": "offseasondepositnorms/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "creditDebitId",
+              "title": "Code ",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "",
+                "displayKey": "",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+
+            {
+              "modelKey": "amountTypeId",
+              "title": "Value/Percentage",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/functional/amounttypebox/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "amount",
+              "title": "Value",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "frequencyId",
+              "title": "Frequency",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racingaccount/frequencybox/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            }
+
+          ]
+        },
+         {
+            "fields": [
+             
+              {
+                "modelKey": "effectiveFromDate",
+                "title": "Effective From",
+                "fieldType": "date",
+                "disabled": false,
+                "required": true
+              },
+               {
+              "modelKey": "taxApplicable",
+              "title": "Tax Applicable",
+              "fieldType": "checkbox",
+
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+
+            }
+            ]
+          }
+      ]
+    }
+  ]
+}
+  

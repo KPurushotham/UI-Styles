@@ -1,0 +1,86 @@
+{
+  "name": "manageaccountcommunity",
+  "externalService": "",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "gapp.manageaccountcommunityform"
+    }
+  ],
+  "queryStringParams":  {"@AccountId":1, "@Active":1},
+  "columns": [
+  
+    {
+      "field": "communityId",
+      "headerName": "Community Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "communityCode",
+      "headerName": "Community Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "communityDescription",
+      "headerName": "Community Description",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "activeRebatePercentage",
+      "headerName": "Active Rebate Percentage",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "activeRetentionPercentage",
+      "headerName": "Active Retention Percentage",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "startDate",
+      "headerName": "Start Date",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "endDate",
+      "headerName": "End Date",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "createDate",
+      "headerName": "Create Date",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "lastUpdate",
+      "headerName": "Last Update",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "active",
+      "headerName": "Active",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "communityCountryXrefId",
+      "headerName": "Community Country XrefId",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+  ],
+  "dataUrl": "vdi/postget/gapp/account/master/community",
+  "editScreenState": "app.gapp.manageaccountcommunityform",
+  "rowKey": {
+    "communityId": "communityId"
+  },
+  "defaultSortColumn": "communityId"
+}

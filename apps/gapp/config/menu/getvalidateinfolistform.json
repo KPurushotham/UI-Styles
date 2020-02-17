@@ -1,0 +1,124 @@
+{
+  "name": "getvalidateinfolistform",
+  "externalService": "validateinfolistService",
+  "sections": [
+    {
+      "cssClass": "sectionHeight60",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "beginDate",
+              "title": "Search By Date",
+              "fieldType": "date",
+              "cssClass": "col_1",
+              "ignoreInServiceModel": true,
+              "required": false
+            },
+            {
+              "modelKey": "btnRaces",
+              "title": "Search",
+              "fieldType": "button",
+              "handlerName": "populteRaceData"
+            }
+
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Race Date Details",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "gridData",
+              "title": "Mail Details",
+              "fieldType": "grid",
+              "initLoad": true,
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "",
+              "gridConfig": {
+
+                "modelKeyMap": [
+                  "TSN",
+                  "BetId",
+                  "Metadata",
+                  "InternalBetId",
+                  "InternalRaceId",
+                  "InternalRacePoolId",
+                  "InternalMeetPoolId",
+                  "InternalMeetId"
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "floatingFilter": false,
+                  "enableFilter": true,
+                  "enableSorting": true,
+                  "toolPanelSuppressRowGroups": true,
+                  "suppressSizeToFit": true
+
+                },
+                "columns": [
+                  {
+                    "field": "TSN",
+                    "headerName": "TSN",
+                    "filter": "agSetColumnFilter",
+                    "hide": false
+                  },
+                  {
+                    "field": "BetId",
+                    "headerName": "Bet Id",
+                    "filter": "agSetColumnFilter",
+                    "hide": false,
+                    "formatType": "Date"
+                  },
+                  {
+                    "field": "Metadata",
+                    "headerName": "Meta data",
+                    "filter": "agSetColumnFilter",
+                    "hide": false
+                  },
+                  {
+                    "field": "InternalBetId",
+                    "headerName": "Internal Bet Id",
+                    "filter": "agSetColumnFilter",
+                    "hide": false
+                  },
+                  {
+                    "field": "InternalRaceId",
+                    "headerName": "Internal Race Id",
+                    "filter": "agSetColumnFilter",
+                    "hide": false
+                  },
+                  {
+                    "field": "InternalRacePoolId",
+                    "headerName": "Internal Race Pool Id",
+                    "filter": "agSetColumnFilter",
+                    "hide": false
+                  },
+                  {
+                    "field": "InternalMeetPoolId",
+                    "headerName": "Internal Meet Pool Id",
+                    "filter": "agSetColumnFilter",
+                    "hide": false
+                  },
+                  {
+                    "field": "InternalMeetId",
+                    "headerName": "Internal Meet Id",
+                    "filter": "agSetColumnFilter",
+                    "hide": false
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+ 

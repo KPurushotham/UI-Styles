@@ -1,0 +1,18 @@
+<div ng-if="field.show" class="inline_checkbox default_checkbox left {{field.cssClass}}"
+ ng-class="(parentForm.save_submit && parentForm.df_form[field.modelKey+ fieldIndex].$error.required)? 'form_error_field' : '' ">
+    
+ <md-checkbox 
+            ng-model="field.modelValue"
+            aria-label="Checkbox 1"
+            id="{{field.modelKey+ fieldIndex}}" 
+            index="{{fieldIndex}}"
+            dynamic-name="field.modelKey+ fieldIndex"
+            class="ng-pristine ng-untouched ng-valid ng-empty" 
+            ng-required="field.required" 
+            value="{{option.value}}"
+            ng-disabled="(field.disabled || parentForm.readOnlyForm ||(parentForm.screenMode=='EDIT' && field.disabledInEditMode)) ? true :false" 
+            event-dependents="field.dependants"
+            ng-click="eventHandler()">
+    {{field.title}} 
+  </md-checkbox>
+</div>

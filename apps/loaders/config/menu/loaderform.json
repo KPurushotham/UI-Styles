@@ -1,0 +1,367 @@
+{
+  "name": "loaderform",
+  "noWorkflow": true,
+  "submitted": false,
+  "externalService": "loaderService",
+  "actions": [],
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "jobCode",
+              "title": "Source",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "dafaultValue": "All",
+              "selectedIndex": 0,
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "All",
+                    "value": "equibase|trackmaster"
+                  },
+                  {
+                    "text": "Equibase",
+                    "value": "equibase"
+                  },
+                  {
+                    "text": "Track Master",
+                    "value": "trackmaster"
+                  }
+                ]
+              },
+              "required": true
+            },
+            {
+              "modelKey": "raceDate",
+              "title": "Race Date",
+              "fieldType": "daterange",
+              "cssClass": "col-md-2",
+              "style": "padding-left: 10px !important",
+              "required": true
+            },
+            {
+              "modelKey": "runJob",
+              "title": "Run Job",
+              "fieldType": "button",
+              "cssClass": "col-md-2 butn-cls-margntop padding-lftrht0",
+              "ignoreInServiceModel": true,
+              "handlerName": "runJobHandler",
+              "required": false
+            },
+            {
+              "modelKey": "getTracks",
+              "title": "Get Tracks",
+              "fieldType": "button",
+              "cssClass": "col-md-2",
+              "ignoreInServiceModel": true,
+              "handlerName": "getTracksHandler",
+              "required": false
+            },
+            {
+              "modelKey": "refreshGrid",
+              "title": "Refresh Grid",
+              "cssClass": "col-md-1 padding-lftrht0 margn-top20",
+              "style": "margin-top:23px",
+              "fieldType": "refresh",
+              "handlerName": "refreshHandler",
+              "ignoreInServiceModel": true,
+              "useFieldLevelModelKey": false,
+              "disabled": false,
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tabs": [
+        {
+          "title": "Status",
+          "rowDivisions": [
+            {
+              "fields": [
+                {
+                  "modelKey": "jobGrid",
+                  "title": "Job Details",
+                  "fieldType": "grid",
+                  "initLoad": true,
+                  "style": "display: none;",
+                  "localData": true,
+                  "show": false,
+                  "gridSummaryLabel": "total",
+                  "gridConfig": {
+                    "modelKeyMap": [],
+                    "features": {
+                      "enableGridMenu": false,
+                      "floatingFilter": false,
+                      "enableFilter": true,
+                      "enableSorting": true,
+                      "toolPanelSuppressRowGroups": true,
+                      "suppressSizeToFit": true,
+                      "groupDefaultExpanded": true
+                    },
+                    "columns": [
+                      {
+                        "field": "jobName",
+                        "headerName": "Job Name",
+                        "tooltipField": "jobName",
+                        "rowGroup": true,
+                        "showRowGroup": "jobName",
+                        "hide": true
+                      },
+                      {
+                        "field": "stepName",
+                        "headerName": "Step Name",
+                        "tooltipField": "stepName",
+                        "hide": false
+                      },
+                      {
+                        "field": "stepStatus",
+                        "headerName": "Step Status",
+                        "tooltipField": "stepStatus",
+                        "hide": false
+                      },
+                      {
+                        "field": "jobInstanceId",
+                        "tooltipField": "jobInstanceId",
+                        "headerName": "Job Instance Id",
+                        "hide": false
+                      },
+                      {
+                        "field": "stepMessage",
+                        "headerName": "Step Message",
+                        "tooltipField": "stepMessage",
+                        "hide": true
+                      },
+                      {
+                        "field": "stepStartTime",
+                        "headerName": "Step Start Time",
+                        "tooltipField": "stepStartTime",
+                        "hide": false,
+                        "cellEditor": "datePicker",
+                        "formatType": "DateTime"
+                      },
+                      {
+                        "field": "stepEndTime",
+                        "headerName": "Step End Time",
+                        "tooltipField": "stepEndTime",
+                        "hide": false,
+                        "cellEditor": "datePicker",
+                        "formatType": "DateTime"
+                      },
+                      {
+                        "field": "jobStatus",
+                        "headerName": "Job Status",
+                        "tooltipField": "jobStatus",
+                        "hide": false
+                      },
+                      {
+                        "field": "jobMessage",
+                        "headerName": "Job Message",
+                        "tooltipField": "jobMessage",
+                        "hide": false
+                      },
+                      {
+                        "field": "jobStartTime",
+                        "headerName": "Job Start Time",
+                        "tooltipField": "jobStartTime",
+                        "hide": false,
+                        "cellEditor": "datePicker",
+                        "formatType": "DateTime"
+                      },
+                      {
+                        "field": "jobEndTime",
+                        "headerName": "Job End Time",
+                        "tooltipField": "jobEndTime",
+                        "hide": false,
+                        "cellEditor": "datePicker",
+                        "formatType": "DateTime"
+                      }
+                    ]
+                  },
+                  "disabled": false,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Tracks",
+          "rowDivisions": [
+            {
+              "fields": [
+                {
+                  "modelKey": "tracksGrid",
+                  "title": "Tracks Grid",
+                  "fieldType": "grid",
+                  "initLoad": true,
+                  "style": "display: none;",
+                  "localData": true,
+                  "show": false,
+                  "gridSummaryLabel": "total",
+                  "gridConfig": {
+                    "modelKeyMap": [],
+                    "features": {
+                      "enableGridMenu": false,
+                      "floatingFilter": false,
+                      "enableFilter": true,
+                      "enableSorting": true,
+                      "toolPanelSuppressRowGroups": true,
+                      "suppressSizeToFit": true
+                    },
+                    "columns": [
+                      
+                      {
+                        "field": "groupName",
+                        "headerName": "RaceDate - SourceType - FileType ",
+                        "rowGroup": true,
+                        "tooltipField": "groupName",
+                        "hide": true
+                      },
+                      {
+                        "field": "trackName",
+                        "headerName": "Track Name",
+                        "tooltipField": "trackName",
+                        "hide": false
+                      },
+                      {
+                        "field": "trackCode",
+                        "tooltipField": "trackCode",
+                        "headerName": "Track Code",
+                        "hide": false
+                      },
+                      {
+                        "field": "raceHeaderId",
+                        "headerName": "Race Header Id",
+                        "tooltipField": "raceHeaderId",
+                        "hide": true
+                      },
+                      {
+                        "field": "trackId",
+                        "headerName": "Track Id",
+                        "tooltipField": "trackId",
+                        "hide": true
+                      },
+                      {
+                        "field": "raceDate",
+                        "headerName": "Race Date",
+                        "tooltipField": "raceDate",
+                        "hide": false
+                      },
+                      {
+                        "field": "numberOfRaces",
+                        "headerName": "Number Of Races",
+                        "tooltipField": "numberOfRaces",
+                        "hide": false
+                      },
+                      {
+                        "field": "numberOfRaces2",
+                        "headerName": "Number Of Races2",
+                        "tooltipField": "numberOfRaces2",
+                        "hide": true
+                      },
+                      {
+                        "field": "sourceCode",
+                        "headerName": "Source Code",
+                        "tooltipField": "sourceCode",
+                        "hide": false
+                      },
+                      {
+                        "field": "fileTypeCode",
+                        "headerName": "File Type Code",
+                        "tooltipField": "fileTypeCode",
+                        "hide": false
+                      }
+                    ]
+                  },
+                  "disabled": false,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Logs",
+          "rowDivisions": [
+            {
+              "fields": [
+                {
+                  "modelKey": "logsGrid",
+                  "title": "Logs Grid",
+                  "fieldType": "grid",
+                  "initLoad": true,
+                  "style": "display: none;",
+                  "localData": true,
+                  "show": false,
+                  "gridSummaryLabel": "total",
+                  "gridConfig": {
+                    "modelKeyMap": [],
+                    "features": {
+                      "enableGridMenu": false,
+                      "floatingFilter": false,
+                      "enableFilter": true,
+                      "enableSorting": true,
+                      "toolPanelSuppressRowGroups": true,
+                      "suppressSizeToFit": true
+                    },
+                    "columns": [
+                      {
+                        "field": "jobInstanceId",
+                        "headerName": "Job Instance Id",
+                        "tooltipField": "jobInstanceId",
+                        "hide": false
+                      },
+                      {
+                        "field": "groupCode",
+                        "tooltipField": "groupCode",
+                        "headerName": "Group Code",
+                        "hide": false
+                      },
+                      {
+                        "field": "taskKey",
+                        "headerName": "Task Key",
+                        "tooltipField": "taskKey",
+                        "hide": false
+                      },
+                      {
+                        "field": "logText",
+                        "headerName": "Log Text",
+                        "tooltipField": "logText",
+                        "hide": false
+                      },
+                      {
+                        "field": "timeTaken",
+                        "headerName": "Time Taken",
+                        "tooltipField": "timeTaken",
+                        "hide": false
+                      },
+                      {
+                        "field": "sourceCode",
+                        "headerName": "Source",
+                        "tooltipField": "sourceCode",
+                        "hide": false
+                      },
+                      {
+                        "field": "fileTypeCode",
+                        "headerName": "File Type Code",
+                        "tooltipField": "fileTypeCode",
+                        "hide": true
+                      }
+                    ]
+                  },
+                  "disabled": false,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

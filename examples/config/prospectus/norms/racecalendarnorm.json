@@ -1,0 +1,44 @@
+﻿{
+  "columns": [
+    {
+      "key": "entity_object_id",
+      "headerText": "Race Season",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "status",
+      "headerText": "Race Day",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "race_date",
+      "headerText": " Race Date",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "entity_object_id",
+      "headerText": "Race Year",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "race_name",
+      "headerText": "Race Name",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Category",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/prospectus/prospectusracedates/all",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

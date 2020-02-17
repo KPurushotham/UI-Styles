@@ -1,0 +1,28 @@
+{
+    "name":"division",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.divisionform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/Division/all",
+    "editScreenState": "app.loaders.codes.divisionform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }

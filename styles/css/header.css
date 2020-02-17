@@ -1,0 +1,480 @@
+.page-top {
+    background-color: #004d62;
+    position: fixed;
+    z-index: 904;
+    box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.5);
+    height: 30px;
+    width: 100%;
+    /*background: -moz-linear-gradient(45deg, #061831, #026873 80%);
+    background: -webkit-linear-gradient(45deg, #061831, #026873 80%);
+    background: linear-gradient(45deg, #061831, #026873 80%);*/
+    /*background: -moz-linear-gradient(45deg, #02747b, #004d62 80%);
+    background: -webkit-linear-gradient(45deg, #02747b, #004d62 80%);
+    background: linear-gradient(45deg, #02747b, #004d62 80%);*/
+}
+
+    .page-top.scrolled {
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+
+.logo-header {
+    padding: 2px 0px;
+}
+
+    .logo-header a {
+        width: 100%;
+    }
+
+        .logo-header a img {
+            /*width: 134px;*/
+            height:26px;
+            padding: 0px;
+            margin: 0px;
+        }
+
+/*.nav-padding-right {
+    padding-left: 55px;
+}*/
+
+.app-toolbar {
+    height: 30px !important;
+    box-shadow: inherit !important;
+    margin-top: 0px !important;
+    position: absolute !important;
+    z-index: 0;
+    /*background-color: #1c2b36 !important;*/
+    width: 100%;
+}
+
+.header-user-profile {
+    float: right !important;
+}
+
+    .header-user-profile .al-user-profile {
+        /*width: calc(100% - 0px) !important;*/
+        width: auto !important;
+        float: right;
+        margin-left: 10px;
+    }
+
+    .header-user-profile img {
+        float: right;
+    }
+
+    .header-user-profile p {
+        float: right;
+        margin: 6px 10px 6px 0px;
+        font-family: "Segoe UI";
+        font-size: 13px;
+        font-weight: 400;
+        padding: 0px;
+        /*color: #86d4dc;*/
+        color: #a7dcb4;
+        text-transform: capitalize;
+    }
+
+.profile-toggle-link {
+    cursor: pointer;
+}
+
+.user-profile {
+    float: right;
+    /*min-width: 230px;*/
+    width: auto;
+    margin-top: 0px;
+}
+
+.al-user-profile {
+    float: right;
+    /*margin-right: 12px;*/
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    padding: 0;
+    width: 36px;
+    height: 30px;
+    border: 0;
+    opacity: 1;
+    position: relative;
+}
+
+    .al-user-profile a {
+        display: block;
+    }
+
+    .al-user-profile img {
+        width: 21px;
+        height: 21px;
+        border-radius: 100%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: 2px solid #537086;
+    }
+
+.header-user-profile .top-dropdown-menu.profile-dropdown {
+    right: -13px !important;
+    top: 32px !important;
+    min-width: 150px;
+}
+
+ul.top-dropdown-menu.profile-dropdown.dropdown-menu li div ul li {
+    list-style-type: none;
+}
+
+.top-dropdown-menu.profile-dropdown {
+    width: 145px;
+    top: 25px;
+    right: -36px;
+}
+
+.top-dropdown-menu {
+    width: 316px;
+    left: auto;
+    right: -47px;
+    top: 26px;
+}
+
+.dropdown-menu {
+    border-radius: 5px;
+    top: 100%;
+}
+
+.top-dropdown-menu.profile-dropdown i.dropdown-arr {
+    right: 10px;
+}
+
+.top-dropdown-menu i.dropdown-arr {
+    position: absolute;
+    top: -22px;
+    right: 42px;
+    display: block;
+    width: 0;
+    height: 0;
+    border: 11px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.15);
+}
+
+    .top-dropdown-menu i.dropdown-arr:after {
+        top: -9px;
+        left: 0px;
+        margin-left: -10px;
+        content: " ";
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-bottom-color: #ffffff;
+    }
+
+.top-dropdown-menu.app-dropdown a {
+    text-align: left;
+    border: none;
+    text-decoration: none;
+    color: #7d7d7d;
+    padding: 4px 16px 4px 20px;
+}
+
+.top-dropdown-menu.profile-dropdown a {
+    text-align: left;
+    border: none;
+    text-decoration: none;
+    color: #7d7d7d;
+    padding: 4px 10px 4px 10px;
+}
+
+    .top-dropdown-menu.profile-dropdown a i, .top-dropdown-menu.profile-dropdown a svg {
+        margin-right: 5px;
+    }
+
+.top-dropdown-menu i.dropdown-arr:after {
+    top: -9px;
+    left: 0px;
+    margin-left: -10px;
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #ffffff;
+}
+
+.tenant-app-list {
+    background: #28b8c1;
+    /*background: #1eadb2;*/
+    /*background: #e6ab0e;*/
+    min-width: 180px;
+    height: 30px !important;
+    margin-top: 0px;
+    float: left;
+    font-size: 12px;
+    /*background: -moz-linear-gradient(-90deg, #28b5e8, #02747b);
+    background: -webkit-linear-gradient(-90deg, #28b5e8, #02747b);
+    background: linear-gradient(-90deg, #28b5e8, #02747b);*/
+}
+
+.al-tenant-app {
+    float: left;
+    margin-right: 0px;
+    margin-left: 0px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    padding-left: 5px !important;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border: 0;
+    opacity: 1;
+    position: relative;
+    color: #262626;
+    cursor: pointer;
+}
+
+.tenat-app-logo {
+    float: left;
+    margin-top: 0px;
+}
+
+.tenats-apps-dropmenu {
+    float: left;
+}
+
+.tenat-app-logo span strong {
+    font-weight: 700;
+    margin-top: 5px;
+    float: left;
+    color: #fff;
+}
+
+.al-tenant-app a {
+    display: block;
+    color: #fff;
+    line-height: 26px;
+}
+
+.tenats-apps-dropmenu a i, .al-tenant-app a b {
+    font-size: 14px !important;
+    color: #005567;
+    margin-right: 7px;
+    margin-top: 7px;
+    margin-left: 7px;
+}
+
+.tenats-apps-dropmenu .dropdown-menu {
+    box-shadow: none !important;
+    border-radius: 0px !important;
+    overflow-y: scroll;
+    height: 300px;
+    width: 400px !important;
+    padding-top: 0px;
+    overflow-x: auto;
+    margin-top: 0px;
+    background: #fff;
+}
+
+.tenats-apps-dropmenu .dropdown-menu h4 {
+    background: #939598;
+    color: #005567;
+    font-weight: bold;
+    padding: 10px 10px;
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /*background: -moz-linear-gradient(90deg, #ffc600, #ffa800 70%, #ffc600);
+background: -webkit-linear-gradient(90deg, #ffc600, #ffa800 70%, #ffc600);
+background: linear-gradient(90deg, #ffc600, #ffa800 70%, #ffc600);*/
+    background: -moz-linear-gradient(-90deg, #bbb, #ccc 70%, #bbb);
+    background: -webkit-linear-gradient(-90deg, #bbb, #ccc 70%, #bbb);
+    background: linear-gradient(-90deg, #bbb, #ccc 70%, #bbb);
+}
+
+.app-toolbar-pos2 {
+    width: 100%;
+    border-bottom: 1px dashed #eaeaea;
+}
+
+.app-toolbar-pos {
+    padding-bottom: 4px;
+    float: left;
+    min-height: 100px;
+    margin: 3px 0 3px 0;
+}
+
+.tenats-apps-dropmenu .dropdown-menu .app-pos a {
+    padding: 0px !important;
+    text-align: center;
+}
+    /*.app-toolbar .dropdown-menu li a {   
+    border: none;   
+    color: #7d7d7d;
+}*/
+    .tenats-apps-dropmenu .dropdown-menu .app-pos a span {
+        float: left;
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+/* --- Menu Dropdown New Style start --- */
+.navbar-nav {
+    font-size: 12px;
+}
+
+    .navbar-nav > li > a {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: #fff;
+    }
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 5px 6px;
+}
+
+    .nav > li > a:hover, .nav > li > a:focus {
+        text-decoration: none;
+        background-color: rgba(255,255,255,0.1);
+    }
+
+.dropdown-menu > li > a {
+    padding: 3px 10px;
+    font-size: 12px;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.dropdown-menu > li.kopie > a {
+    padding-left: 5px;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+    .dropdown-submenu > .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -6px;
+        margin-left: -1px;
+        -webkit-border-radius: 0 6px 6px 6px;
+        -moz-border-radius: 0 6px 6px 6px;
+        border-radius: 0 6px 6px 6px;
+    }
+
+    .dropdown-submenu > a:after {
+        border-color: transparent transparent transparent #333;
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        content: " ";
+        display: block;
+        float: right;
+        height: 0;
+        margin-right: -10px;
+        margin-top: 5px;
+        width: 0;
+    }
+
+    .dropdown-submenu:hover > a:after {
+        border-left-color: #555;
+    }
+
+.dropdown-menu > li > a:hover, .dropdown-menu > .active > a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav {
+        display: inline;
+    }
+
+    .navbar-default .navbar-brand {
+        display: inline;
+    }
+
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+
+    .navbar-default .navbar-nav .dropdown-menu > li > a {
+        color: red;
+        background-color: #ccc;
+        border-radius: 4px;
+        margin-top: 2px;
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #333;
+    }
+
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+            background-color: #ccc;
+        }
+
+    .navbar-nav .open .dropdown-menu {
+        border-bottom: 1px solid white;
+        border-radius: 0;
+    }
+
+    .dropdown-menu {
+        padding-left: 10px;
+    }
+
+        .dropdown-menu .dropdown-menu {
+            padding-left: 20px;
+        }
+
+            .dropdown-menu .dropdown-menu .dropdown-menu {
+                padding-left: 30px;
+            }
+
+    li.dropdown.open {
+        border: 0px solid red;
+    }
+}
+
+@media (min-width: 768px) {
+    ul.nav li:hover > ul.dropdown-menu {
+        display: block;
+    }
+
+    #navbar {
+        text-align: center;
+    }
+}
+
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+    /*color: #fff;
+    text-decoration: none;
+    background-color: #09b5b7;*/
+}
+
+/* --- Menu Dropdown New Style end --- */
+.pointing-cls {
+    width: auto !important;
+    float: left;
+}
+
+.pointing-cls label {
+    padding: 3px 8px;
+    margin: 5px 0;
+    border-radius: 3px;
+    background: #d0eff3;
+    color: #2e4b4c;
+    font-size: 10px;
+    font-weight: 100 !important;
+    border: 1px solid #6f9da2;
+    animation-name: blink;
+    animation-duration: .5s;
+    animation-timing-function: step-end;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    50% {
+        border-color: #ff0;
+    }
+}

@@ -1,0 +1,33 @@
+﻿{
+  "columns": [
+    {
+      "key": "section",
+      "headerText": "Section",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "effectiveFromDate",
+      "headerText": "Effective From",
+      "type": "date"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+    
+  ],
+  "dataUrl": "vdi/olims/budget/secwiseccallocation/all",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

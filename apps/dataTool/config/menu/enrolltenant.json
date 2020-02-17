@@ -1,0 +1,54 @@
+{
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "dataTool.enrolltenantform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "tenantId",
+      "headerName": "Tenant Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "entityTypeCode",
+      "headerName": "Entity Type Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "tenantCode",
+      "headerName": "Tenant Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "title",
+      "headerName": "Title",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "logo",
+      "headerName": "Logo",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "additionalConfig",
+      "headerName": "Additional Config",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+
+  ],
+  "dataUrl": "vdi/platform/tenants/get/all"
+}

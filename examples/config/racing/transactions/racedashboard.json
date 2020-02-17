@@ -1,0 +1,67 @@
+﻿{
+  "criteria": {
+    "showTitle": false,
+    "showButton": true,
+    "rowDivisions": [
+      {
+        "fields": [
+          {
+            "fieldType": "raceday",
+            "modelKeyMap": [ "entryType", "raceYear", "season", "raceDate" ],
+            "showFields": [ "entryType", "raceYear", "season", "raceDate" ],
+            "requiredFields": [ ],
+            "disabled": false,
+            "required": true
+          }
+        ]
+      }
+    ]
+  },
+ 
+ "initLoad": false,
+  "columns": [
+    {
+      "key": "raceNo",
+      "headerText": "Race No",
+      "filterMask": "Search"
+     },
+    {
+      "key": "raceName",
+      "headerText": "Race Name",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "raceType",
+      "headerText": "Race Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "raceClassification",
+      "headerText": "Race Classification",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "category",
+      "headerText": "Category",
+      "filterMask": "Search"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/prospectus/racesbydate",
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

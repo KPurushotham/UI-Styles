@@ -1,0 +1,14 @@
+<div ng-if="field.show" class="radio_field {{field.cssClass}}" ng-class="(parentForm.save_submit && parentForm.df_form[field.modelKey+ fieldIndex].$error.required)? 'form_error_field' : ''">
+    <label ng-class="{'hide' :!field.showTitle }" class="full_width radio_field_heading">{{field.title}}<span ng-if="field.required" class="mandatory">*</span></label>
+    <div class="radio_fields_wrapper dynamic_radio_fields full_width">
+        <label class="left control control--radio" ng-repeat="option in field.options">
+            <input ng-required="field.required"  ng-click="eventHandler()"
+                   ng-disabled="(field.disabled || parentForm.readOnlyForm ||(parentForm.screenMode=='EDIT' && field.disabledInEditMode)) ? true :false"
+                   type="radio" class="left radio-custom" id="{{option.value+ fieldIndex}}"
+                   value="{{option.value}}" ng-model="field.modelValue" dynamic-name="field.modelKey+ fieldIndex" dependancy-events="field.dependancyEvents">
+            <span class="left">{{option.text}}</span>
+            <div class="control__indicator"></div>
+        </label>
+    </div>
+</div>
+

@@ -1,0 +1,30 @@
+{
+    "name":"attendance",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.attendanceform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/Attendance/all",
+    "editScreenState": "app.loaders.codes.attendanceform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

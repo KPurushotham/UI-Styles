@@ -1,0 +1,73 @@
+﻿{
+  "name": "contractagentmapping",
+  "actions": [
+    {
+      "title": "Add",
+      "modelKey": "addButton",
+      "navigateTo": "hostfee.contractagentmappingform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "corpEntityId",
+      "headerName": "corpEntityId",
+      "hide": true
+    },
+    {
+      "field": "contractAgentEntityId",
+      "headerName": "contractAgentEntityId",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "corporationName",
+      "headerName": "Corporation",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter",
+      "showRowGroup": "Corporation",
+      "hide": true
+    },
+    {
+      "field": "contractAgentName",
+      "headerName": "Contract Agent",
+      "filter": "agSetColumnFilter",
+      "rowGroup": true,
+      "showRowGroup": "Contract Agent",
+      "hide": true
+    },
+    {
+      "field": "trackName",
+      "headerName": "Track(/Import)",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "locName",
+      "headerName": "Location(/Export)",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "beginDate",
+      "headerName": "Begin Date",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter",
+      "formatType": "Date"
+    },
+    {
+      "field": "endDate",
+      "headerName": "End Date",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter",
+      "formatType": "Date"
+    }
+
+  ],
+  "dataUrl": "vdi/hostfees/contractagent/mapping/all",
+  "rowKey": {
+    "contractAgentEntityId": "contractAgentEntityId",
+    "corporationEntityId": "corporationEntityId"
+  },
+  "editScreenState": "app.hostfee.contractagentmappingform",
+  "defaultSortColumn": "entity_id"
+}

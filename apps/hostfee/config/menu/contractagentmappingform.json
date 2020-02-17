@@ -1,0 +1,327 @@
+{
+  "name": "contractagentmappingform",
+  "saveUrl": "vdi/hostfees/contractagent/mapping/save",
+  "getOneUrl": "vdi/hostfees/contractagent/mapping/getone",
+  "validationUrl": "vdi/hostfees/contractagent/mapping/getone",
+  "externalService": "contractAgentService",
+  "noWorkflow": true,
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "corporationEntityId",
+              "title": "Corporation",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "disabledInEditMode": true,
+              "ignoreInServiceModel": true,
+              "defaultSelectedIndex": true,
+              "selectedIndex": 0,
+              "mode": "Edit",
+              "dataConfig": {
+                "dataUrl": "vdi/chrimsmasters/tenant/corporation/all",
+                "displayKey": "corpName",
+                "valueKey": "corpEntityId"
+              },
+              "showInEditMode": true,
+              "required": true,
+              "disabled": true
+            },
+            {
+              "modelKey": "contractAgentEntityId",
+              "title": "Contract Agent",
+              "cssClass": "col-md-2",
+              "disabledInEditMode": true,
+              "ignoreInServiceModel": true,
+              "mode": "Edit",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/hostfees/contractagent/all",
+                "displayKey": "contractAgentName",
+                "valueKey": "contractAgentEntityId"
+              },
+              "showInEditMode": true,
+              "required": true,
+              "disabled": false
+            },
+
+            {
+              "modelKey": "contractAgentMappingLink",
+              "ignoreInServiceModel": true,
+              "title": "Active Contract Agents",
+              "href": "http://www.google.com",
+              "fieldType": "hyperlink",
+              "required": false,
+              "show": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tabs": [
+        {
+          "title": "Track (Import)",
+          "rowDivisions": [
+            {
+              "hideInViewMode": true,
+              "fields": [
+                {
+                  "modelKey": "trackEntity",
+                  "title": "Track",
+                  "cssClass": "col-md-3",
+                  "fieldType": "dropdown",
+                  "ismultiple": true,
+                  "isVirtualScrollRequired": true,
+                  "ignoreInServiceModel": true,
+                  "dataConfig": {
+                    "dataUrl": "vdi/chrimsmasters/track/all",
+                    "displayKey": "trackName",
+                    "valueKey": "trackEntityId"
+                  },
+                  "disabled": false,
+                  "required": false
+                },
+                {
+                  "modelKey": "trackBeginDate",
+                  "title": "Begin Date",
+                  "cssClass": "col-md-3",
+                  "fieldType": "date",
+                  "ignoreInServiceModel": true,
+                  "required": false
+                },
+                {
+                  "modelKey": "trackEndDate",
+                  "title": "End Date",
+                  "cssClass": "col-md-3",
+                  "fieldType": "date",
+                  "ignoreInServiceModel": true,
+                  "required": false
+                },
+                {
+                  "modelKey": "btnTracks",
+                  "cssClass": "butn-cls-margntop",
+                  "title": "Add to Grid",
+                  "fieldType": "button",
+                  "handlerName": "addTracks",
+                  "ignoreInServiceModel": true,
+                  "required": false
+                }
+              ]
+            },
+            {
+              "fields": [
+                {
+                  "modelKey": "tracks",
+                  "title": "Import",
+                  "fieldType": "grid",
+                  "initLoad": true,
+                  "localData": true,
+                  "show": false,
+                  "gridSummaryLabel": "",
+                  "gridConfig": {
+                    "multiSelect": true,
+                    "modelKeyMap": [
+                      "corporationEntityId",
+                      "contractAgentEntityId",
+                      "trackEntityId",
+                      "beginDate",
+                      "endDate",
+                      "operationType"
+                    ],
+                    "features": {
+                      "enableGridMenu": false,
+                      "toolPanelSuppressRowGroups": true,
+                      "enableSorting": true
+                    },
+                    "columns": [
+                      {
+                        "field": "corporationEntityId",
+                        "hide": true
+                      },
+                      {
+                        "field": "contractAgentEntityId",
+                        "hide": true
+                      },
+                      {
+                        "field": "trackEntityId",
+                        "hide": true
+                      },
+                      {
+                        "field": "operationType",
+                        "hide": true
+                      },
+                      {
+                        "field": "trackName",
+                        "headerName": "Track",
+                        "sort": "asc",
+                        "hide": false,
+                        "editable": false
+                      },
+                      {
+                        "field": "beginDate",
+                        "headerName": "Begin Date",
+                        "hide": false,
+                        "editable": true,
+                        "cellEditor": "datePicker",
+                        "formatType": "Date"
+                      },
+                      {
+                        "field": "endDate",
+                        "headerName": "End Date",
+                        "editable": true,
+                        "cellEditor": "datePicker",
+                        "formatType": "Date"
+                      },
+                      {
+                        "field": "id",
+                        "headerName": "Delete",
+                        "actionType": "DELETE",
+                        "actionIconClass": "fa fa-trash",
+                        "handlerName": "deleteTracksFromGrid"
+                      }
+                    ]
+                  },
+                  "disabled": false,
+                  "required": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Location (Export)",
+          "rowDivisions": [
+            {
+              "hideInViewMode": true,
+              "fields": [
+                {
+                  "modelKey": "locationEntity",
+                  "title": "Location",
+                  "fieldType": "dropdown",
+                  "ismultiple": true,
+                  "cssClass": "col-md-3",
+                  "isVirtualScrollRequired": true,
+                  "ignoreInServiceModel": true,
+                  "dataConfig": {
+                    "dataUrl": "vdi/chrimsmasters/location/all",
+                    "displayKey": "locName",
+                    "valueKey": "locationEntityId"
+                  },
+                  "disabled": false,
+                  "required": false
+                },
+                {
+                  "modelKey": "locBeginDate",
+                  "title": "Begin Date",
+                  "cssClass": "col-md-3",
+                  "ignoreInServiceModel": true,
+                  "fieldType": "date",
+                  "required": false
+                },
+                {
+                  "modelKey": "locEndDate",
+                  "cssClass": "col-md-3",
+                  "title": "End Date",
+                  "fieldType": "date",
+                  "ignoreInServiceModel": true,
+                  "required": false
+                },
+                {
+                  "modelKey": "btnLocations",
+                  "cssClass": "butn-cls-margntop",
+                  "title": "Add to Grid",
+                  "fieldType": "button",
+                  "ignoreInServiceModel": true,
+                  "handlerName": "addLocations",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "fields": [
+                {
+                  "modelKey": "locations",
+                  "title": "Location",
+                  "fieldType": "grid",
+                  "initLoad": true,
+                  "localData": true,
+                  "show": false,
+                  "gridSummaryLabel": "",
+                  "gridConfig": {
+                    "multiSelect": true,
+                    "modelKeyMap": [
+                      "corporationEntityId",
+                      "contractAgentEntityId",
+                      "locationEntityId",
+                      "beginDate",
+                      "endDate",
+                      "operationType"
+                    ],
+                    "features": {
+                      "enableGridMenu": false,
+                      "toolPanelSuppressRowGroups": true,
+                      "enableSorting": true
+                    },
+                    "columns": [
+                      {
+                        "field": "corporationEntityId",
+                        "hide": true
+                      },
+                      {
+                        "field": "contractAgentEntityId",
+                        "hide": true
+                      },
+                      {
+                        "field": "locationEntityId",
+                        "hide": true
+                      },
+                      {
+                        "field": "operationType",
+                        "hide": true
+                      },
+                      {
+                        "field": "locName",
+                        "headerName": "Location",
+                        "sort": "asc",
+                        "hide": false,
+                        "editable": false
+                      },
+                      {
+                        "field": "beginDate",
+                        "headerName": "Begin Date",
+                        "hide": false,
+                        "editable": true,
+                        "cellEditor": "datePicker",
+                        "formatType": "Date"
+                      },
+                      {
+                        "field": "endDate",
+                        "headerName": "End Date",
+                        "editable": true,
+                        "cellEditor": "datePicker",
+                        "formatType": "Date"
+                      },
+                      {
+                        "field": "id",
+                        "headerName": "Delete",
+                        "actionType": "DELETE",
+                        "actionIconClass": "fa fa-trash",
+                        "handlerName": "deleteLocationsFromGrid"
+                      }
+                    ]
+                  },
+                  "disabled": false,
+                  "required": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

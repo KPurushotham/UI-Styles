@@ -1,0 +1,22 @@
+[
+  {
+    "key": "larcentryscreen.larcentries",
+    "urlRoute": "larcentries",
+    "pattern": "LISTING",
+    "title": "LARC Screen",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "larcentryscreen.larcentriesform",
+    "urlRoute": "larcentriesform",
+    "showInMenu": false,
+    "editKeys": [ "remapEventId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "hostno"
+  }
+]
+
+
+

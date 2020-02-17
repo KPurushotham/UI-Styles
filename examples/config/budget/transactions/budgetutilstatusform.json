@@ -1,0 +1,144 @@
+ {
+  "name": "budgetutilstatusform",
+  "saveUrl": "budgetutilstatus/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "financialYear",
+              "title": "Financial Year",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "defaultValueByKey": "LS.financial_year",
+              "disabled": true
+            },
+            {
+              "modelKey": "department",
+              "title": "Department",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "defaultValueByKey": "LS.departmentCode-LS.department",
+              "disabled": true
+            },
+            {
+              "modelKey": "entityObjectId",
+              "title": "Tender/Enquiry Reference Number",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/budgetm/all",
+                "displayKey": "entityObjectId",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "accountCode",
+              "title": "Approval Number",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/acccodeallotment/all",
+                "displayKey": "accountCode",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "costCenterId",
+              "fieldType": "hidden"
+            },
+            {
+              "modelKey": "costCenter",
+              "title": "Cost Center",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/deptcostcenters/all",
+                "displayKey": "costCenterCode-costCenterName",
+                "valueKey": "entityObjectId"
+              },
+              "initLoad": true,
+              "dependancyConfig": [
+                {
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "dependancyEvents": [ "change" ],
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Budget Status Summary",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "fieldType": "grid",
+              "show": true,
+              "gridConfig": {
+                "gridFeatures": [ "selection", "row-edit", "edit" ],
+                "multiSelect": true,
+                "dataUrl": "vdi/olims/budget/annualbudgetapproval/all",
+                "modelKeyMap": [ "" ],
+                "columns": [
+                  {
+                    "key": "budgets",
+                    "headerText": "Budget",
+                    "filterMask": "Search",
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "entityObjectId",
+                    "headerText": "Pending Amount For Utilization",
+                    "filterMask": "Search",
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "approvedBudget",
+                    "headerText": "Expenses",
+                    "filterMask": "Search",
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "requestedBudget",
+                    "headerText": "Balance",
+                    "filterMask": "Search",
+                    "type": "uppercase"
+                  }
+                ]
+              },
+              "dependancyConfig": [
+                {
+                  "sourceKey": "costCenter",
+                  "event": "change",
+                  "loadData": {
+                    "keyParams": { "costCenterId": "costCenterId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "show": true }
+                }
+              ],
+              "disabled": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "columns": [
+
+    {
+      "key": "trainerName",
+      "headerText": "Season",
+      "type": "uppercase"
+    },
+    {
+      "key": "arrivalDate",
+      "headerText": "Race Date",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "horseName",
+      "headerText": "Race Day",
+      "type": "uppercase"
+    },
+
+    {
+      "key": "arrivalDate",
+      "headerText": "New Race Date",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "New Race Name",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Remarks",
+      "type": "uppercase"
+    }
+
+
+
+  ],
+
+  "dataUrl": "vdi/olims/veterinary/horsecodeallotment/all",
+
+  "rowKey": {
+    "horseColourMCode": "horseColourMCode",
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

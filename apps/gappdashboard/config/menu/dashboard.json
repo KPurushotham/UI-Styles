@@ -1,0 +1,422 @@
+{
+  "name": "dashboard",
+  "noWorkflow": true,
+  "submitted": false,
+  "isManidatoryRequired": false,
+  "externalService": "dashboardService",
+  "actions": [
+    {
+      "title": "Settings",
+      "actionType": "POPUP",
+      "cssClass": "green_btn",
+      "handlerName": "openModelPopUp",
+      "modalform": {
+        "saveButtonTilte": "Save",
+        "handlerName": "saveModelForm",
+        "sections": [
+          {
+            "rowDivisions": [
+              {
+                "hideInViewMode": true,
+                "fields": [
+                  {
+                    "modelKey": "ReloadTimeInterval",
+                    "title": "Reload Time Interval",
+                    "fieldType": "textbox",
+                    "cssClass": "col_2",
+                    "ignoreInServiceModel": true,
+                    "required": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "modalforms": {
+    "gridViewPopUp": {
+      "title": "Rejected Bets",
+      "saveButtonTilte": "Save",
+      "handlerName": "saveModelForm",
+      "sections": [
+        {
+          "rowDivisions": [
+            {
+              "hideInViewMode": true,
+              "fields": [
+                {
+                  "modelKey": "logInfo",
+                  "title": "Log Info",
+                  "fieldType": "grid",
+                  "initLoad": true,
+                  "localData": true,
+                  "show": false,
+                  "gridSummaryLabel": "total",
+                  "gridConfig": {
+                    "multiSelect": true,
+                    "modelKeyMap": [
+                      "id",
+                      "logInfo",
+                      "logDate"
+                    ],
+                    "features": {
+                      "enableGridMenu": false,
+                      "toolPanelSuppressRowGroups": true,
+                      "enableSorting": true
+                    },
+                    "columns": [
+                      {
+                        "field": "logInfo",
+                        "headerName": "Log Message",
+                        "sort": "asc",
+                        "hide": false,
+                        "editable": false
+                      },
+                      {
+                        "field": "logDate",
+                        "headerName": "Log Date",
+                        "hide": false,
+                        "editable": true,
+                        "formatType": "Date"
+                      }
+                    ]
+                  },
+                  "disabled": false,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "fieldType": "label",
+              "modelKey": "note",
+              "innerHtml": "<span style=\"font-weight:bold; font-size:13px; color:#a8a8a8\">Bet Summary Details </span>",
+              "ignoreInServiceModel": true,
+              "cssClass": "col-md-12",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "TOTALBETS",
+              "fieldType": "gauge",
+              "dependancyEvents": [
+                {
+                  "eventName": "click",
+                  "handlerName": "selectedChangeGaugeHandler"
+                }
+              ],
+              "size": "100",
+              "type": "full",
+              "thick": "12",
+              "totalItems": "max",
+              "setValue": "value",
+              "cap": "round",
+              "label": "Total Invoices",
+              "append": "%",
+              "cssClass": "col-md-2",
+              "fcolor": "#8EDCE7",
+              "bgcolor": "lightgray",
+              "titlecssClass": "pendingClass"
+            },
+            {
+              "title": "Rejected Bets",
+              "modelKey": "REJECTED",
+              "fieldType": "gauge",
+              "dependancyEvents": [
+                {
+                  "eventName": "click",
+                  "handlerName": "RejectedBetsChangeGaugeHandler"
+                }
+              ],
+              "size": "100",
+              "type": "full",
+              "thick": "12",
+              "totalItems": "max",
+              "setValue": "value",
+              "cap": "round",
+              "label": "Rejected Bets",
+              "append": "%",
+              "cssClass": "col-md-2",
+              "fcolor": "#ff0000",
+              "bgcolor": "lightgray",
+              "titlecssClass": "pendingClass"
+            },
+            {
+              "title": "UnProccessed Bets",
+              "modelKey": "UNPROCCESSED",
+              "fieldType": "gauge",
+              "dependancyEvents": [
+                {
+                  "eventName": "click",
+                  "handlerName": "UnProcessedBetsChangeGaugeHandler"
+                }
+              ],
+              "size": "100",
+              "type": "full",
+              "thick": "12",
+              "totalItems": "max",
+              "setValue": "value",
+              "cap": "round",
+              "label": "UnProccessed Bets",
+              "append": "%",
+              "cssClass": "col-md-2",
+              "fcolor": "#F07173",
+              "bgcolor": "lightgray",
+              "titlecssClass": "pendingClass"
+            },
+            {
+              "title": "Success Bets",
+              "modelKey": "SUCCESSBETS",
+              "fieldType": "gauge",
+              "size": "100",
+              "type": "full",
+              "thick": "12",
+              "totalItems": "max",
+              "setValue": "value",
+              "cap": "round",
+              "label": "Success Bets111",
+              "append": "%",
+              "cssClass": "col-md-2",
+              "fcolor": "#8ADFB9",
+              "bgcolor": "lightgray",
+              "titlecssClass": "pendingClass"
+            },
+            {
+              "title": "Rejected Bets Emails",
+              "modelKey": "REJECTEDBETSEMAILS",
+              "fieldType": "gauge",
+              "size": "100",
+              "type": "full",
+              "thick": "12",
+              "totalItems": "max",
+              "setValue": "value",
+              "cap": "round",
+              "label": "Rejected Bets Emails",
+              "append": "%",
+              "cssClass": "col-md-2",
+              "fcolor": "#8ADFB9",
+              "bgcolor": "lightgray",
+              "titlecssClass": "pendingClass"
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "fieldType": "label",
+              "modelKey": "note",
+              "innerHtml": "<br><span style=\"font-weight:bold; font-size:13px; color:#a8a8a8\"> <br> </span>",
+              "ignoreInServiceModel": true,
+              "cssClass": "col-md-12",
+              "disabled": true,
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Rejected Bets Data",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "gridData",
+              "title": "GApp",
+              "fieldType": "grid",
+              "initLoad": true,
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "",
+              "gridConfig": {
+                "modelKeyMap": [
+                  "activityDate",
+                  "trackEntityId",
+                  "beginDate",
+                  "endDate",
+                  "operationType"
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "toolPanelSuppressRowGroups": true,
+                  "enableSorting": true
+                },
+                "columns": [
+                  {
+                    "field": "trackEntityId",
+                    "headerName": "Actions",
+                    "multiActions": [
+                      {
+                        "title": "View Rejected Bet Info",
+                        "actionType": "VIEW",
+                        "actionIconClass": "fa fa-eye actionStyle viewRejectedBets",
+                        "handlerName": "viewRejectedBetInfo",
+                        "hide": false,
+                        "skipInGroupColumn": true
+                      }
+                    ]
+                  },
+                  {
+                    "field": "activityDate",
+                    "headerName": "activityDate",
+                    "sort": "asc",
+                    "hide": false,
+                    "editable": false
+                  },
+                  {
+                    "field": "toteProvider",
+                    "headerName": "Tote Provider",
+                    "headerCssClass": "resizable-header",
+                    "hide": false,
+                    "editable": false,
+                    "tooltipField": "toteProvider",
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "clientAccountId",
+                    "headerCssClass": "resizable-header",
+                    "headerName": "Account Id",
+                    "hide": false,
+                    "editable": false,
+                    "tooltipField": "clientAccountId",
+                    "suppressMovable": false
+                  },
+                  {
+                    "headerName": "Bet FileId",
+                    "field": "importBetFileControlId",
+                    "headerCssClass": "resizable-header",
+                    "hide": false,
+                    "editable": false,
+                    "tooltipField": "importBetFileControlId",
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "clientBetId",
+                    "headerName": "Client BetId",
+                    "filter": "agDateColumnFilter",
+                    "hide": false,
+                    "editable": false,
+                    "tooltipField": "clientBetId",
+                    "suppressMovable": false
+                  },
+                  {
+                    "headerName": "Request Id",
+                    "field": "requestId",
+                    "filter": "agSetColumnFilter",
+                    "hide": false,
+                    "editable": false,
+                    "tooltipField": "requestId",
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "providerRefId",
+                    "headerName": "Provider RefId ",
+                    "filter": "agSetColumnFilter",
+                    "hide": false,
+                    "editable": false,
+                    "tooltipField": "providerRefId",
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "internalRefId",
+                    "headerName": "Internal RefId",
+                    "filter": "agSetColumnFilter",
+                    "hide": false,
+                    "editable": false,
+                    "tooltipField": "internalRefId",
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "betReceivedAt",
+                    "headerName": "Bet Placed Time",
+                    "filter": "agSetColumnFilter",
+                    "hide": false,
+                    "editable": false,
+                    "tooltipField": "betReceivedAt",
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "betProcessedAt",
+                    "headerName": "Bet Response Time",
+                    "tooltipField": "betProcessedAt",
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "raceKey",
+                    "headerName": "Race Key",
+                    "tooltipField": "raceKey",
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "pool",
+                    "headerName": "Action Done By",
+                    "filter": "Pool Type",
+                    "hide": false,
+                    "editable": false,
+                    "tooltipField": "pool",
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "runners",
+                    "headerName": "Runners",
+                    "tooltipField": "runners",
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "grossTurnover",
+                    "headerName": "Gross Turnover",
+                    "filter": "agSetColumnFilter",
+                    "hide": true,
+                    "editable": false,
+                    "tooltipField": "grossTurnover",
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "providerError",
+                    "headerName": "Provider Error",
+                    "filter": "agSetColumnFilter",
+                    "suppressSizeToFit": true,
+                    "editable": false,
+                    "tooltipField": "providerError",
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "gappError",
+                    "headerName": "GApp Error",
+                    "filter": "agSetColumnFilter",
+                    "suppressSizeToFit": true,
+                    "editable": false,
+                    "tooltipField": "gappError",
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "errorMapped",
+                    "headerName": "Error Mapped",
+                    "filter": "agSetColumnFilter",
+                    "suppressSizeToFit": true,
+                    "editable": false,
+                    "tooltipField": "errorMapped",
+                    "suppressMovable": false
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

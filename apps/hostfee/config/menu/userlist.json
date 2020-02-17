@@ -1,0 +1,41 @@
+﻿{
+	"columns": [
+		{
+			"key": "id",
+			"headerText": "Contract Id",
+			"filterMask": "Search",
+			"type": "uppercase"
+		},
+		{
+			"key": "contract_name",
+			"headerText": "Contract Name",
+			"filterMask": "Search",
+			"type": "uppercase"
+		},
+
+		{
+			"key": "corporations",
+			"headerText": "Corporation Name",
+			"filterMask": "Search",
+			"type": "uppercase"
+		},
+					{
+						"key": "finalized",
+						"headerText": "Contract Finalized",
+						"filterMask": "Search",
+						"type": "uppercase",
+						"show": "false"
+					},
+		{
+			"key": "contract_application",
+			"headerText": "Contract Application",
+			"filterMask": "Search",
+			"type": "date"
+		}
+	],
+	"dataUrl": "contractList",
+	"rowKey": {
+		"id": "contractId"
+	},
+	"defaultSortColumn": "contract_name"
+}

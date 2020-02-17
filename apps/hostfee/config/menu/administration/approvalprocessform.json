@@ -1,0 +1,295 @@
+{
+  "name": "approvalprocessform",
+  "saveUrl": "vdi/workflow/approvalprocess/save",
+  "getOneUrl": "vdi/workflow/approvalprocess/get/one",
+  "externalService": "approvalProcessService",
+  "noWorkflow": true,
+  "submitted": false,
+  "sections": [
+    {
+      "showTitle": false,
+      "style": "",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "workflowDefinitionId",
+              "fieldType": "hidden",
+              "required": false
+            },
+            {
+              "modelKey": "workflowName",
+              "title": "Workflow Name",
+              "disabledInEditMode": true,
+              "fieldType": "textbox",
+              "cssClass": "col-md-2",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "showTitle": false,
+      "rowDivisions": [
+        {
+          "hideInViewMode": true,
+          "fields": [
+            {
+              "modelKey": "workflowStateDefinitionId",
+              "fieldType": "hidden",
+              "ignoreInServiceModel": true,
+              "required": false
+            },
+            {
+              "modelKey": "workflowStateCode",
+              "title": "Step",
+              "cssClass": "col-md-2",
+              "fieldType": "dropdown",
+              "ignoreInServiceModel": true,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "workflowStepHandler"
+                }
+              ],
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Draft",
+                    "value": "DRAFT"
+                  },
+                  {
+                    "text": "Review",
+                    "value": "REVIEW"
+                  },
+                  {
+                    "text": "Final",
+                    "value": "FINAL"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "rejectStatusCode",
+              "title": "Reject",
+              "cssClass": "col-md-2",
+              "fieldType": "dropdown",
+              "ignoreInServiceModel": true,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "rejectStatusCodeHandler"
+                }
+              ],
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Enable Contract Editing",
+                    "value": "ENABLE_EDITING"
+                  },
+                  {
+                    "text": "Draft",
+                    "value": "DRAFT"
+                  },
+                  {
+                    "text": "Review",
+                    "value": "REVIEW"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "approveStatusCode",
+              "title": "Approve",
+              "cssClass": "col-md-2",
+              "fieldType": "dropdown",
+              "ignoreInServiceModel": true,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "acceptStatusCodeHandler"
+                }
+              ],
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Review",
+                    "value": "REVIEW"
+                  },
+                  {
+                    "text": "Final",
+                    "value": "FINAL"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true,
+              "show": true
+            }
+          ]
+        },
+        {
+          "hideInViewMode": true,
+          "fields": [
+            {
+              "modelKey": "workflowStateTypeId",
+              "cssClass": "col-md-2 radiobutn-margntop-cls",
+              "fieldType": "radio",
+              "defaultValue": "1",
+              "ignoreInServiceModel": true,
+              "disabledInEditMode": false,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "approvalTypeChangeHandler"
+                }
+              ],
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Sequential",
+                    "value": "1"
+                  },
+                  {
+                    "text": "Parallel",
+                    "value": "2"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "roleEntityId",
+              "title": "Assign Groups",
+              "ignoreInServiceModel": true,
+              "fieldType": "dropdown",
+              "ismultiple": true,
+              "cssClass": "col-md-2",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "multiRoleGroupsChangeHandler"
+                }
+              ],
+              "dataConfig": {
+                "dataUrl": "vdi/workflow/roleusergroups/get/all",
+                "displayKey": "roleName",
+                "valueKey": "roleId"
+              },
+              "disabled": false,
+              "required": false,
+              "show": true
+            },
+            {
+              "modelKey": "roleGroupSequenceBox",
+              "fieldType": "listbox",
+              "cssClass": "col-md-2 list-box-field",
+              "style": "margin-left: 0px; margin-right: 0px;",
+              "required": true,
+              "ignoreInServiceModel": true,
+              "disabled": false,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "multiRoleGroupsChangeHandler"
+                }
+              ],
+              "show": true
+            },
+            {
+              "modelKey": "minGroups",
+              "title": "Minimum Groups to Approve",
+              "cssClass": "col-md-2",
+              "fieldType": "dropdown",
+              "ignoreInServiceModel": true,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "minGroupApproveHandler"
+                }
+              ],
+              "dataConfig": {
+                "localData": []
+              },
+              "disabled": false,
+              "required": true,
+              "show": false
+            },
+            {
+              "modelKey": "isStartState",
+              "fieldType": "checkbox",
+              "ignoreInServiceModel": true,
+              "style": "margin-left: 3px;",
+              "title": "Start State",
+              "cssClass": "margn-top20",
+              "defaultValue": false,
+              "required": false,
+              "show": true,
+              "handlerName": "startStateHandler"
+            },
+            {
+              "modelKey": "isEndState",
+              "fieldType": "checkbox",
+              "ignoreInServiceModel": true,
+              "title": "End State",
+              "cssClass": "margn-top20",
+              "defaultValue": false,
+              "required": false,
+              "show": true,
+              "handlerName": "endStateHandler"
+            },
+            {
+              "modelKey": "addToWorkflow",
+              "title": "Add to Workflow",
+              "fieldType": "button",
+              "handlerName": "addToWorkflowHandler",
+              "ignoreInServiceModel": true,
+              "cssClass": "col-md-2 butn-cls-margntop padding-lftrht0 right",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "showTitle": false,
+      "style": "border-top: 1px dashed #c3dcdc;",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "workFlowKanban",
+              "fieldType": "kanban",
+              "steps": [],
+              "ignoreInServiceModel": true,
+              "required": false,
+              "show": true,
+              "style": "width:100%;",
+              "actions": [
+                {
+                  "name": "Edit",
+                  "tooltip": "Edit Step",
+                  "cssClass": "fa fa-pencil-square-o",
+                  "actionCallBackFunction": "editWorkflowStepDetailsHandler"
+                },
+                {
+                  "name": "Delete",
+                  "tooltip": "Delet Step",
+                  "cssClass": "fa fa-trash-o",
+                  "actionCallBackFunction": "deleteWorkflowStepDetailsHandler"
+                }
+              ],
+              "containers": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

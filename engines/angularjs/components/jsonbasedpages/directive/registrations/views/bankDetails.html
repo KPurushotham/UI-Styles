@@ -1,0 +1,55 @@
+<div class="non_paid_vendor_container full_width">
+    <div class="sub_heading full_width no-margin">
+        <h5 class="full_width">Bank Details</h5>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Account Number</label>
+        <input type="text" class="full_width" name="accountNumber" numbers-only ng-disabled="disableFlag" ng-model="partyModel.bank.accountNumber">
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Bank Name</label>
+        <input type="text" class="full_width uppercase" name="bankName" ng-disabled="disableFlag" ng-model="partyModel.bank.bankName">
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Branch Name</label>
+        <input type="text" class="full_width uppercase" name="branchName" ng-disabled="disableFlag" ng-model="partyModel.bank.branchName">
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">IFSCode</label>
+        <input type="text" class="full_width uppercase" name="ifscCode" ng-disabled="disableFlag" ng-model="partyModel.bank.ifscCode">
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Address 1</label>
+        <input name="address1" type="text" class="full_width" ng-disabled="disableFlag" ng-model="partyModel.bank.addressLine1">
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Address 2</label>
+        <input name="address2" type="text" class="full_width" ng-disabled="disableFlag" ng-model="partyModel.bank.addressLine2">
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Address 3</label>
+        <input name="address3" type="text" class="full_width" ng-disabled="disableFlag" ng-model="partyModel.bank.addressLine3">
+    </div>
+
+    <div class="select_field col_3 left">
+        <label class="full_width">Country</label>
+        <select class="optionsuppercase nya-selectpicker" ng-disabled="disableFlag" data-none-selected-text="Please Select" title="Please Select" data-live-search="true" data-container="body" name="bankCountry" ng-change="changeCountry(selectedData.country.bank, 'BANK')" placeholder='Select' ng-options='c as c.text for c in dropDownData.countryDD track by c.value'  ng-model="selectedData.country.bank"></select>
+    </div>
+
+    <div class="input_field col_3 left">
+        <label class="full_width">State</label>
+        <div>
+            <select class="optionsuppercase nya-selectpicker" ng-disabled="disableFlag" data-none-selected-text="Please Select" title="Please Select" data-live-search="true" data-container="body" name="bankState" ng-change="changeState(selectedData.state.bank, selectedData.country.bank, 'BANK')" placeholder='Select' ng-options='c as c.text for c in dropDownData.stateBankDD track by c.value' ng-model="selectedData.state.bank"></select>
+        </div>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">City</label>
+        <div>
+            <select class="optionsuppercase nya-selectpicker" ng-disabled="disableFlag" data-none-selected-text="Please Select" title="Please Select" data-live-search="true" data-container="body" name="bankCity" ng-change="changeCity()" placeholder='Select' ng-options='c as c.text for c in dropDownData.cityBankDD track by c.value'  ng-model="selectedData.city.bank"></select>
+        </div>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">PIN Code</label>
+        <input type="text" class="full_width" name="pinCode" ng-disabled="disableFlag" ng-model="partyModel.bank.pin" numbers-only>
+    </div>
+</div>

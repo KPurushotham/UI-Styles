@@ -1,0 +1,140 @@
+{
+  "name": "reportcriteria",
+  "externalService": "reportcriteriaconfigService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "reportsdesigner.reports.reportcriteriaform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "reportCriteriaId",
+      "headerName": "Report Criteria Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "tenantId",
+      "headerName": "Tenant Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "reportId",
+      "headerName": "Report Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "fieldId",
+      "headerName": "Field Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "title",
+      "headerName": "Title",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "defaultValue",
+      "headerName": "Default Value",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "defaultValueByKey",
+      "headerName": "Default Value By Key",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "sectionNo",
+      "headerName": "Section No",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "rowNo",
+      "headerName": "Row No",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "colNo",
+      "headerName": "Col No",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "effectsResultFormat",
+      "headerName": "Effects Result Format",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "dataKeyJson",
+      "headerName": "Data Key Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "dataFormatJson",
+      "headerName": "Data Format Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "dependancyEventsJson",
+      "headerName": "Dependancy Events Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "dependancyConfigJson",
+      "headerName": "Dependancy Config Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "styleConfigJson",
+      "headerName": "Style Config Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "ruleConfigJson",
+      "headerName": "Rule Config Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "configJson",
+      "headerName": "Config Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+
+  ],
+  "dataUrl": "vdi/reportsdesigner/reportcriteria/get/all",
+  "editScreenState": "app.reportsdesigner.reports.reportcriteriaform",
+  "rowKey": {
+    "reportCriteriaId": "reportCriteriaId"
+  },
+  "defaultSortColumn": "reportCriteriaId"
+}

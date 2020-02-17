@@ -1,0 +1,75 @@
+﻿{
+  "name":"distribution",
+  "externalService": "distributionService",
+  "actions": [
+    {
+      "title": "Add",
+      "modelKey": "addButton",
+      "navigateTo": "hostfee.administration.distributionform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "entityId",
+      "headerName": "Distribution Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "entityCode",
+      "headerName": "Entity Type Code",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "distributionCode",
+      "headerName": "Distribution Code",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "distributionName",
+      "headerName": "Distribution",
+      "filter": "agSetColumnFilter",
+      "showRowGroup": "Distribution",
+      "rowGroup": true,
+      "hide": true
+    },
+    {
+      "field": "corpEntityId",
+      "headerName": "Corp Entity Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "corpName",
+      "headerName": "Corporation",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "beginDate",
+      "headerName": "Begin Date",
+      "filter": "agSetColumnFilter",
+      "formatType": "Date"
+    },
+    {
+      "field": "endDate",
+      "headerName": "End Date",
+      "filter": "agSetColumnFilter",
+      "formatType": "Date"
+    },
+    {
+      "field": "status",
+      "headerName": "Status",
+      "filter": "agSetColumnFilter"
+    }
+
+  ],
+  "dataUrl": "vdi/hostfees/distributions/all",
+  "editScreenState": "app.hostfee.administration.distributionform",
+  "rowKey": {
+    "entityId": "entityId"
+  },
+  "defaultSortColumn": "entityId"
+}

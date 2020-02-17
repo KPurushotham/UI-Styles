@@ -1,0 +1,47 @@
+{
+    "name": "raceconditionform",
+    "saveUrl": "vdi/racemaster/RaceCondition/save",
+    "getOneUrl": "vdi/racemaster/RaceCondition/one",
+    "externalService": "",
+    "validationUrl": "",
+    "noWorkflow": true,
+    "submitted": false,
+    "sections": [
+        {
+            "rowDivisions": [
+                {
+                    "fields": [
+                        {
+                            "modelKey": "type",
+                            "title": "Type",
+                            "disabledInEditMode": true,
+                            "fieldType": "textbox",
+                            "required": true
+                        },
+                        {
+                            "modelKey": "name",
+                            "title": "Name",
+                            "disabledInEditMode": true,
+                            "fieldType": "textbox",
+                            "required": true
+                        },
+                        {
+                            "modelKey": "code",
+                            "title": "Code",
+                            "disabledInEditMode": true,
+                            "fieldType": "textbox",
+                            "required": true
+                        },
+                        {
+                            "modelKey": "description",
+                            "title": "Description",
+                            "disabledInEditMode": true,
+                            "fieldType": "textbox",
+                            "required": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

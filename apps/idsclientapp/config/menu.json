@@ -1,0 +1,20 @@
+[
+  {
+    "key": "idsclientapp.client",
+    "urlRoute": "client",
+    "pattern": "LISTING",
+    "title": "Client Info",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "idsclientapp.clientform",
+    "urlRoute": "clientform",
+    "showInMenu": false,
+    "editKeys": [ "clientId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "clientName"
+  }
+]
+

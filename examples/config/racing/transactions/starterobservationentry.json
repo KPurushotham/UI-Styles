@@ -1,0 +1,52 @@
+﻿  {
+    "columns": [
+
+      {
+        "key": "raceDate",
+        "headerText": "Race Date",
+        "filterMask": "Search",
+        "type": "date"
+      },
+       {
+        "key": "raceDay",
+        "headerText": "Race Day",
+        "filterMask": "Search"
+      },
+      {
+        "key": "season",
+        "headerText": "Race Season",
+        "filterMask": "Search",
+         "type": "uppercase"
+      },
+        
+      {
+        "key": "raceName",
+        "headerText": "Race Name",
+        "filterMask": "Search",
+           "type": "uppercase"
+      },
+      {
+        "key": "horseId",
+        "headerText": "Horse Name",
+        "filterMask": "Search"
+      },
+   
+      {
+        "key": "status",
+        "headerText": "Status",
+        "filterMask": "Search"
+      },
+      {
+        "key": "lastUpdatedDate",
+        "headerText": "Last Updated Date",
+        "type": "date"
+      }
+    ],
+
+  "dataUrl": "vdi/olims/racing/starterobservationentry/all",
+
+  "rowKey": {    
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

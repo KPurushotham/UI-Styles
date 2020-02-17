@@ -1,0 +1,14 @@
+
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">{{datas.title}}</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+         <form name="df_form" novalidate=''>
+            <dynamic-form-directive form="datas.modalform" form-data-model="formDataModel">
+            </dynamic-form-directive>
+         </form>
+    </div>
+    <div class="modal-footer">
+        <button ng-show="!hideSaveButton" class="md-raised md-primary md-button-Grid-functionalitity md-button md-ink-ripple" type="button" ng-click="ok()">{{datas.modalform["saveButtonTilte"] || Save}}</button>
+        <button class="md-raised   md-button-cancel md-button md-ink-ripple" type="button" ng-click="cancel()">Cancel</button>
+    </div>

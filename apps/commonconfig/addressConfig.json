@@ -1,0 +1,165 @@
+{
+  "globalDataServices": [
+
+  ],
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "address1",
+              "title": "Address 1",
+              "ignoreInServiceModel": true,
+              "cssClass": "col_3",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            }
+
+          ]
+        }
+      ]
+    },
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "address2",
+              "title": "Address 2",
+              "ignoreInServiceModel": true,
+              "cssClass": "col_3",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            }
+
+          ]
+        }
+      ]
+    },
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "city",
+              "title": "City",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Hyderbad",
+                    "value": "Hyderbad"
+                  },
+                  {
+                    "text": "Boston",
+                    "value": "Boston"
+                  },
+                  {
+                    "text": "Miami",
+                    "value": "Miami"
+                  },
+                  {
+                    "text": "New York",
+                    "value": "NewYork"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            },
+
+            {
+              "modelKey": "state",
+              "title": "State",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "/vdi/chrimsmasters/State/all",
+                "displayKey": "statename",
+                "valueKey": "statecode"
+              },
+              "disabled": false,
+              "required": true
+            },
+
+            {
+              "modelKey": "country",
+              "title": "Country",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "/vdi/chrimsmasters/Country/all",
+                "displayKey": "countryname",
+                "valueKey": "countrycode"
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "zipCode",
+              "title": "Zip Code",
+              "cssClass": "col_1",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            },
+
+            {
+              "modelKey": "phone",
+              "title": "Phone",
+              "cssClass": "col_1",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            },
+
+            {
+              "modelKey": "fax",
+              "title": "Fax",
+              "cssClass": "col_1",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            }
+
+          ]
+        },
+        {
+          "fields": [
+
+            {
+              "modelKey": "webaddress",
+              "title": "Web Address",
+              "cssClass": "col_1",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            },
+
+            {
+              "modelKey": "email",
+              "title": "Email",
+              "cssClass": "col_1",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

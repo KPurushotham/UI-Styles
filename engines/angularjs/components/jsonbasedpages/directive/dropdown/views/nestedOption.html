@@ -1,0 +1,33 @@
+<nested-select-option class="nestd-chck-box" ng-repeat="option in $ctrl.options">
+    <nested-select-text ng-if="!option.suppressed">
+        <nested-select-guide ng-if="$ctrl.showCollapseSpacer(option)" >
+            <ng-md-icon class="nested-select-icon" icon="icon-nested-select-space" size="40" style="fill: rgba(0,0,0,0.12)"></ng-md-icon>
+        </nested-select-guide>
+        <nested-select-guide ng-repeat="guide in $ctrl.countPrefixGuides(option) track by $index">
+            <ng-md-icon class="nested-select-icon" icon="{{$ctrl.getPrefixGuideIcon(option, $index)}}" size="40" style="fill: rgba(0,0,0,0.12)"></ng-md-icon>
+        </nested-select-guide>
+        <nested-select-guide ng-if="$ctrl.showGuide(option)" >
+            <ng-md-icon class="nested-select-icon" icon="{{$ctrl.getGuideIcon(option)}}" size="40" style="fill: rgba(0,0,0,0.12)"></ng-md-icon>
+        </nested-select-guide>
+        <md-button class="md-icon-button nested-select-collapse" ng-if="$ctrl.showCollapse(option)"
+            aria-label="collapse/expand" ng-click="$ctrl.onCollapseClick(option)" ng-class="{collapsed: option.collapsed}">
+            <ng-md-icon icon="keyboard_arrow_down" style="fill: currentColor"></ng-md-icon>
+        </md-button>
+        <md-checkbox ng-if="!option.suppressed" ng-model="option.selected" ng-disabled="option.muted" ng-change="$ctrl.onCheckboxChange(option)" aria-label="{{option.text}}">
+            
+            <span ng-bind ="option.text" ng-attr-data="{{option.value}}" ng-attr-title="{{option.text}}"></span>
+        </md-checkbox>
+    </nested-select-text>
+      <nested-select-options ng-if="option.children && option.children.length" 
+            options="option.children" 
+            collapsible="$ctrl.collapsible" 
+            parentmultiple ="$ctrl.parentmultiple"
+            multiple="$ctrl.multiple" 
+            depth="$ctrl.depth + 1" 
+            last-sibling="$ctrl.lastSibling + (+$last)"
+            ng-class="{collapsed: option.collapsed}" 
+            on-change="$ctrl.onChildChange($event)">
+      </nested-select-options>
+</nested-select-option>
+
+

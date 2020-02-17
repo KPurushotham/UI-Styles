@@ -1,0 +1,146 @@
+{
+  "name": "datasourceform",
+  "saveUrl": "vdi/reportsdesigner/datasource/get/save",
+  "getOneUrl": "vdi/reportsdesigner/datasource/get/one",
+  "externalService": "datasourceconfigService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "dataSourceCode",
+              "cssClass": "col_1",
+              "title": "Data Source Code",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "overrideTypeCode",
+              "cssClass": "col_1",
+              "title": "Override Type Code",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "dataQueryRuleId",
+              "cssClass": "col_1",
+              "title": "Data Query Rule Id",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "enableCache",
+              "title": "Enable Cache",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            },
+            {
+              "modelKey": "childDataOnDemand",
+              "title": "Child Data On Demand",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            },
+            {
+              "modelKey": "multiTenancyApplicable",
+              "title": "Multi Tenancy Applicable",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            },
+            {
+              "modelKey": "isActive",
+              "title": "Is Active",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "serviceIdParam",
+              "cssClass": "col_2",
+              "title": "Service Id Param",
+              "fieldType": "ace",
+              "required": true
+            },
+            {
+              "modelKey": "dataFormatJson",
+              "cssClass": "col_2",
+              "title": "Data Format Json",
+              "fieldType": "ace",
+              "required": true
+            },
+            {
+              "modelKey": "configJson",
+              "cssClass": "col_2",
+              "title": "Config Json",
+              "fieldType": "ace",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

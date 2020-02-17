@@ -1,0 +1,68 @@
+﻿{
+  "name": "raceseasonform",
+  "saveUrl": "raceseason/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "financialYear",
+              "title": "Financial Year",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/financialYear/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "season",
+              "title": "Season",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/seasonbox/all",
+                "displayKey": "shortName-seasonDescription",
+                "valueKey": "shortName"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "raceYear",
+              "title": "Year",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        },
+         {
+          "fields": [
+            {
+              "modelKey": "startDate",
+              "title": "Start Date",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "endDate",
+              "title": "End Date",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}

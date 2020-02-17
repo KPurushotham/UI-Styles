@@ -1,0 +1,99 @@
+/* ============ theming  default========== */
+.na-theme-default #login-wrapper{background:#4c637b;}
+.na-theme-default .loginButton{background:#38b1eb;}
+.na-theme-default .login-container .error{background:#ffe2b9; color: #cd3939;}
+.na-theme-default .footer{ background: none repeat scroll 0 0 #f2f6fa; border-top: 1px solid #e3eaf1;}
+.na-theme-default .footer-copyright {color: #777777;}
+.na-theme-default .forget_password{ color: #c4ebff;}
+
+/******footer*********/
+.na-theme-default .footer-inner{background: none repeat scroll 0 0 #e8e8e8; border-top:1px solid #d7d7d7;
+    bottom: 0;
+    color: #444444;
+    display: table;
+    font-family: "Roboto",sans-serif;
+    font-size: 13px;
+    height: 44px;
+    line-height: 44px;
+    float: left;
+    width: 100%;   margin-top: 25px;}
+.na-theme-default .footer-copyright{ text-align:center; font-family: "Roboto",sans-serif; font-size: 13px; line-height:48px; font-weight:400;
+color:#444444;}
+
+/********Layout*********/
+.na-theme-default .page-container-header{ background: none repeat scroll 0 0 #cbe4ec;}
+
+.na-theme-default .user-right a{ color: #444444;}
+.na-theme-default  .menu-navigation { background: none repeat scroll 0 0 #444444;}
+.na-theme-default #main-menu li a:hover, #main-menu li a.active, #main-menu li a.selected {
+  background: #cbe4ec;
+  color: #444444;
+}
+.na-theme-default #main-menu li ul {
+     left:15px;
+  display: none;
+  position: absolute;
+  top: 26px;
+  /*padding-right:30px;*/
+  /* width: 225px;*/
+  background: #cbe4ec;
+  z-index: -1;
+  padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom:2px solid #52727c;
+ /* -webkit-box-shadow: 0 2px 7px rgba(0,0,0,0.45);
+  -moz-box-shadow: 0 2px 7px rgba(0,0,0,0.45);
+  box-shadow: 0 2px 7px rgba(0,0,0,0.45);*/
+}
+.na-theme-default #main-menu li:last-child ul { left:-58px;}
+.na-theme-default #main-menu li ul li a {
+   color: #444444;
+    display: block;
+    float: none;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0 30px 0 33px;
+    white-space: nowrap;
+    background:url("../images/menu-arrow.png") no-repeat scroll 17px 8px;
+}
+.na-theme-default #main-menu li ul li a:hover {
+    background: #b0d5e1 url("../images/menu-arrow.png") no-repeat scroll 17px 8px;
+    color: #444444;
+}
+.na-theme-default .menu-left .fa {
+    color: #fff;
+    font-size: 25px;
+    left: -29px;
+    margin-right: 5px;
+    position: absolute;
+    top: 10px;
+}
+.na-theme-default .page-title ul li{font-size:18px; line-height:18px !important; color:#444444; list-style:none; float:left; font-weight:700;}
+
+/****pagetitle*****/
+.na-theme-default .page-title ul li{font-size:18px; line-height:18px !important; color:#444444; list-style:none; float:left; font-weight:700;}
+.na-theme-default .page-title{ color:#49637e; border-bottom:2px solid #eaeaea; font:400 24px /24px "Roboto",sans-serif}
+
+/*****page grid css****/
+.na-theme-default .grayLine{ border-bottom:2px solid #eaeaea}
+.na-theme-default .formField label{font:700 12px/13px "Roboto",sans-serif; color:#777777; margin:0 0 8px 0; display:block; clear:both; width:100%}
+.na-theme-default .check span{ color:#777777; margin-right: 15px; float:left;}
+.na-theme-default .buttons input[type="reset"]{ height:28px; width:auto; padding:0 15px; margin:0 10px 0 0; background:#444444; border:0px none; font:700 14px/28px "Roboto",sans-serif; color:#fff; text-indent:0; text-transform:capitalize }
+.na-theme-default .buttons input[type="submit"]{ height:28px; width:auto; padding:0 15px; margin:0 0px 0 0; background:#9fc3cf; border:0px none; font:700 14px/28px "Roboto",sans-serif; color:#fff; text-indent:0; text-transform:capitalize }
+.na-theme-default .grid-top-header h2{ font-size:17px; font-weight:500;  font-family: "Roboto",sans-serif; color:#444444; margin: 0;
+    padding: 12px 0px; float:left;}
+.na-theme-default .grid-top-header ul li a i{ color:#888888; font-size:18px;}
+
+/*****Datagrid*******/
+.datagrid-header{background:#888 !important;}
+.datagrid-header .datagrid-cell span{color: #FFF !important;}
+
+/*=============Back arrow ==============*/
+.na-theme-default .back .fa-arrow-circle-o-left {
+    color: #888888;
+    margin-right: 5px;
+}
+
+
+/*=============Back arrow emd ==============*/

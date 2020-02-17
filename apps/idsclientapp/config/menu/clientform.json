@@ -1,0 +1,51 @@
+{
+  "name": "rolesetupform",
+  "saveUrl": "vdi/ids/client/details/save",
+  "getOneUrl": "vdi/ids/client/details/one",
+  "externalService": "",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "clientId",
+              "fieldType": "hidden"
+            },
+            {
+              "modelKey": "clientName",
+              "title": "Client Name",
+              "fieldType": "textbox",
+              "cssClass": "col-md-2"
+            },
+            {
+              "modelKey": "clientCountry",
+              "title": "Country",
+              "fieldType": "textbox",
+              "cssClass": "col-md-2"
+            },
+            {
+              "modelKey": "clientMobile",
+              "title": "Mobile",
+              "fieldType": "textbox",
+              "cssClass": "col-md-3"
+            },
+            {
+              "modelKey": "clientProject",
+              "title": "Project",
+              "fieldType": "textbox",
+              "cssClass": "col-md-3"
+            },
+            {
+              "modelKey": "isActive",
+              "fieldType": "hidden"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

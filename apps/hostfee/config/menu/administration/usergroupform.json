@@ -1,0 +1,492 @@
+{
+  "name": "usergroupform",
+  "saveUrl": "vdi/workflow/usergroups/save",
+  "getOneUrl": "vdi/workflow/usergroups/get/one",
+  "externalService": "usergroupService",
+  "noWorkflow": true,
+  "submitted": false,
+  "modalforms": {
+    "addExternalUser": {
+      "title": "Create External User",
+      "saveButtonTilte": "Save",
+      "handlerName": "saveExternalUserModalHandler",
+      "externalService": "usergroupService",
+      "sections": [
+        {
+          "showTitle": false,
+          "rowDivisions": [
+            {
+              "fields": [
+                {
+                  "modelKey": "email",
+                  "cssClass": "col-md-6",
+                  "title": "Email",
+                  "fieldType": "email",
+                  "required": true
+                },
+                {
+                  "modelKey": "phone",
+                  "cssClass": "col-md-6",
+                  "title": "Phone No",
+                  "fieldType": "textbox",
+                  "required": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "mapCAUsers": {
+      "title": "Map CA Users",
+      "saveButtonTilte": "Save",
+      "handlerName": "saveCAUsersModalHandler",
+      "externalService": "contractDefinitionService",
+      "sections": [
+        {
+          "rowDivisions": [
+            {
+              "fields": [
+                {
+                  "modelKey": "primaryPersons",
+                  "fieldType": "checkbox",
+                  "ignoreInServiceModel": true,
+                  "defaultValue": false,
+                  "title": "Select Primary Persons",
+                  "cssClass": "default-css right",
+                  "required": false,
+                  "show": true,
+                  "style": "width:17% !important;",
+                  "handlerName": "selectAllPrimaryPersonsHandler"
+                },
+                {
+                  "modelKey": "caPersonsGrid",
+                  "title": "CA Persons Grid",
+                  "fieldType": "grid",
+                  "initLoad": true,
+                  "localData": true,
+                  "show": false,
+                  "gridSummaryLabel": "total",
+                  "gridConfig": {
+                    "multiSelect": true,
+                    "modelKeyMap": [
+                    ],
+                    "features": {
+                      "enableGridMenu": false,
+                      "toolPanelSuppressRowGroups": true,
+                      "groupSelectsChildren": true,
+                      "rowSelection": "multiple",
+                      "suppressRowClickSelection": true,
+                      "domLayout": "autoHeight"
+                    },
+                    "columns": [
+                      {
+                        "field": "serialId",
+                        "hide": true
+                      },
+                      {
+                        "field": "tenantId",
+                        "hide": true
+                      },
+                      {
+                        "field": "contractAgentEntityId",
+                        "hide": true
+                      },
+                      {
+                        "field": "contractAgentName",
+                        "headerName": "Contract Agent",
+                        "rowGroup": true,
+                        "hide": true
+                      },
+                      {
+                        "field": "PersonName",
+                        "headerName": "Person Name"
+                      },
+                      {
+                        "field": "mobile",
+                        "headerName": "Mobile"
+                      },
+                      {
+                        "field": "email",
+                        "headerName": "Email"
+                      },
+                      {
+                        "field": "isPrimary",
+                        "headerName": "Primary Person"
+                      },
+                      {
+                        "field": "selectAll",
+                        "headerName": "Select",
+                        "hide": false,
+                        "checkboxSelection": true,
+                        "headerCheckboxSelection": true,
+                        "headerCheckboxSelectionFilteredOnly": true
+                      }
+                    ]
+                  },
+                  "disabled": false,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "mapHostUsers": {
+      "title": "Map Host Users",
+      "saveButtonTilte": "Save",
+      "handlerName": "saveHostUsersModalHandler",
+      "externalService": "contractDefinitionService",
+      "sections": [
+        {
+          "rowDivisions": [
+            {
+              "fields": [
+                {
+                  "modelKey": "hostPersonsGrid",
+                  "title": "Host Persons Grid",
+                  "fieldType": "grid",
+                  "initLoad": true,
+                  "localData": true,
+                  "show": false,
+                  "gridSummaryLabel": "total",
+                  "gridConfig": {
+                    "multiSelect": true,
+                    "modelKeyMap": [
+                    ],
+                    "features": {
+                      "enableGridMenu": false,
+                      "toolPanelSuppressRowGroups": true,
+                      "groupSelectsChildren": true,
+                      "rowSelection": "multiple",
+                      "suppressRowClickSelection": true,
+                      "domLayout": "autoHeight"
+                    },
+                    "columns": [
+                      {
+                        "field": "contactPersonEntityId",
+                        "hide": true
+                      },
+                      {
+                        "field": "tenantId",
+                        "hide": true
+                      },
+                      {
+                        "field": "hostEntityId",
+                        "hide": true
+                      },
+                      {
+                        "field": "hostName",
+                        "headerName": "Host",
+                        "rowGroup": true,
+                        "hide": true
+                      },
+                      {
+                        "field": "contactPersonName",
+                        "headerName": "Person Name"
+                      },
+                      {
+                        "field": "mobile",
+                        "headerName": "Mobile"
+                      },
+                      {
+                        "field": "contactPersonEmail",
+                        "headerName": "Email"
+                      },
+                      {
+                        "field": "selectAll",
+                        "headerName": "Select",
+                        "hide": false,
+                        "checkboxSelection": true,
+                        "headerCheckboxSelection": true,
+                        "headerCheckboxSelectionFilteredOnly": true
+                      }
+                    ]
+                  },
+                  "disabled": false,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "sections": [
+    {
+      "showTitle": false,
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "roleId",
+              "fieldType": "hidden",
+              "required": false
+            },
+            {
+              "title": "Role Group",
+              "modelKey": "roleName",
+              "fieldType": "textbox",
+              "disabledInEditMode": true,
+              "cssClass": "col-md-2"
+            },
+            {
+              "modelKey": "isExternal",
+              "cssClass": "col-md-3 radiobutn-margntop-cls",
+              "fieldType": "radio",
+              "defaultValue": "f",
+              "disabledInEditMode": true,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "onUserGroupTypeChangeHandler"
+                }
+              ],
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Internal",
+                    "value": "f"
+                  },
+                  {
+                    "text": "External",
+                    "value": "t"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "showTitle": false,
+      "modelKey": "roleAccessContext",
+      "modelType": "SINGLE",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "roleAccessContextId",
+              "fieldType": "hidden",
+              "required": false
+            },
+            {
+              "modelKey": "roleId",
+              "fieldType": "hidden",
+              "required": false
+            },
+            {
+              "modelKey": "dataObjectTypeCode",
+              "title": "Access Context",
+              "cssClass": "col-md-2",
+              "fieldType": "dropdown",
+              "defaultValue": "CONTRACT",
+              "disabledInEditMode": true,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "accessContextChangeHandler"
+                }
+              ],
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "All Contracts",
+                    "value": "CONTRACT"
+                  },
+                  {
+                    "text": "CA Users",
+                    "value": "CONTRACT_AGENT"
+                  },
+                  {
+                    "text": "Host Users",
+                    "value": "HOST"
+                  }
+                ]
+              },
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "btnMapCAUser",
+              "title": "Map CA Users",
+              "fieldType": "button",
+              "handlerName": "saveCAUsersButtonHandler",
+              "ignoreInServiceModel": true,
+              "cssClass": "col-md-2 butn-cls-margntop padding-lftrht0",
+              "required": false,
+              "show": false
+            },
+            {
+              "modelKey": "btnMapHostUser",
+              "title": "Map Host Users",
+              "fieldType": "button",
+              "handlerName": "saveHostUsersButtonHandler",
+              "ignoreInServiceModel": true,
+              "cssClass": "col-md-2 butn-cls-margntop padding-lftrht0",
+              "required": false,
+              "show": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "showTitle": false,
+      "rowDivisions": [
+        {
+          "hideInViewMode": true,
+          "fields": [
+            {
+              "modelKey": "tenantUsers",
+              "title": "Users",
+              "ignoreInServiceModel": true,
+              "fieldType": "dropdown",
+              "ismultiple": true,
+              "cssClass": "col-md-2",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "multiUsersChangeHandler"
+                }
+              ],
+              "dataConfig": {
+                "dataUrl": "vdi/workflow/tenant/user/getone",
+                "displayKey": "userName",
+                "valueKey": "userEntityId",
+                "keyParams": {
+                  "isExternal": "DEF.f"
+                }
+              },
+              "disabled": false,
+              "required": false,
+              "show": true
+            },
+            {
+              "modelKey": "btnAddToGrid",
+              "title": "Add to Grid",
+              "cssClass": "butn-cls-margntop",
+              "fieldType": "button",
+              "handlerName": "addToGridHandler",
+              "ignoreInServiceModel": true,
+              "required": false,
+              "show": true
+            },
+            {
+              "modelKey": "btnAddExtUser",
+              "title": "Create New User",
+              "fieldType": "button",
+              "handlerName": "saveExternalUserButtonHandler",
+              "ignoreInServiceModel": true,
+              "cssClass": "col-md-2 butn-cls-margntop padding-lftrht0",
+              "required": false,
+              "show": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "showTitle": false,
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "tenantUserRole",
+              "title": "Access Users",
+              "cssClass": "field-show",
+              "fieldType": "grid",
+              "initLoad": true,
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "",
+              "gridConfig": {
+                "multiSelect": true,
+                "modelKeyMap": [
+                  "operationType",
+                  "tenantUserRoleId",
+                  "tenantId",
+                  "roleId",
+                  "userEntityId",
+                  "isActive"
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "toolPanelSuppressRowGroups": true,
+                  "enableSorting": true
+                },
+                "columns": [
+                  {
+                    "field": "operationType",
+                    "hide": true
+                  },
+                  {
+                    "field": "tenantUserRoleId",
+                    "hide": true
+                  },
+                  {
+                    "field": "tenantId",
+                    "hide": true
+                  },
+                  {
+                    "field": "roleId",
+                    "hide": true
+                  },
+                  {
+                    "field": "userEntityId",
+                    "hide": true
+                  },
+                  {
+                    "field": "contractAgentName",
+                    "headerName": "Contract Agent",
+                    "hide": true
+                  },
+                  {
+                    "field": "hostName",
+                    "headerName": "Host",
+                    "hide": true
+                  },
+                  {
+                    "field": "userName",
+                    "headerName": "User Name",
+                    "hide": false
+                  },
+                  {
+                    "field": "email",
+                    "headerName": "Email",
+                    "hide": false
+                  },
+                  {
+                    "field": "isActive",
+                    "headerName": "Is Active",
+                    "hide": true
+                  },
+                  {
+                    "field": "id",
+                    "headerName": "Action",
+                    "actionType": "DELETE",
+                    "actionIconClass": "fa fa-trash",
+                    "handlerName": "deleteUsersFromGrid",
+                    "actionToggleField": "isActive",
+                    "actionModeField": "tenantUserRoleId",
+                    "actionToggle": {
+                      "true": "fa fa-toggle-off",
+                      "false": "fa fa-toggle-on"
+                    }
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

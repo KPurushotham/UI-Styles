@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html PUBLIC" -//W3C//DTD XHTML 1.0 Transitional//EN""https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CHRIMS APPS - Contract Approval</title>
+    <link type="text/css" rel="stylesheet" href="styles/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://invoices.chrims.com/ui/css/invoice.css" />
+    <script type="text/javascript" src="https://invoices.chrims.com/ui/plugins/jquery.min.js"></script>
+    <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css">
+    <script type="text/javascript" src="config.js"></script>
+    <link type="text/css" rel="stylesheet" href="styles/css/directpage.css" />
+</head>
+    <body class="ma_bgRed">
+        <div class="wrapper full_width login_bg">
+            <div class="message" style="display: none;">
+                <div class="success-accept invalid_token">
+                    <img src="https://invoices.chrims.com/ui/images/rejected.png"/>
+                    <h4>Invaid Access Token!</h4>
+                </div>
+            </div>
+
+            <div class="dirpage-main">
+                <div class="dirpage-main-inr">
+                    <div class="dirpage-bg">
+                        <div>
+                            <h2 class="contract-details-header">Contract Details</h2>
+                            <div class="contract-sub-heading">
+                                <div class="contract-sub-heading-inr">
+                                    <label><b>Contract Agent Name: </b><span id="contractagantName"></span></label>
+                                    <label><b> Contract Type Code: </b><span id="contractTypeCode"></span></label>
+                                </div>
+                                <div class="contract-sub-heading-inr">
+                                    <label style="text-align:right;" class="badge_btn"><b> Workflow State: </b><span id="workflowState"></span></label>
+                                </div>
+                            </div>
+
+                                    <div class="statebar-snippet">
+                                        <div class="col-lg-2 col-md-2"></div>
+
+                                        <div class="col-lg-8 col-md-8">
+
+                                            <div class="row bs-wizard" style="border-bottom:0;">
+
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 bs-wizard-step complete">
+                                                    <!--<div class="text-center bs-wizard-stepnum">Step 1</div>-->
+                                                    <div class="progress"><div class="progress-bar"></div></div>
+                                                    <a href="#" class="bs-wizard-dot"></a>
+                                                    <!--<div class="bs-wizard-info text-center"></div>-->
+                                                    <div class="text-center bs-wizard-stepnum">Edit</div>
+                                                </div>
+
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 bs-wizard-step complete">
+                                                    <!-- complete -->
+
+                                                    <div class="progress"><div class="progress-bar"></div></div>
+                                                    <a href="#" class="bs-wizard-dot"></a>
+                                                    <div class="text-center bs-wizard-stepnum">Draft</div>
+                                                    <!--<div class="bs-wizard-info text-center"></div>-->
+                                                </div>
+
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 bs-wizard-step active">
+                                                    <!-- complete -->
+
+                                                    <div class="progress"><div class="progress-bar"></div></div>
+                                                    <a href="#" class="bs-wizard-dot"></a>
+                                                    <div class="text-center bs-wizard-stepnum">Review</div>
+                                                    <!--<div class="bs-wizard-info text-center"></div>-->
+                                                </div>
+
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 bs-wizard-step disabled">
+                                                    <!-- active -->
+
+                                                    <div class="progress"><div class="progress-bar"></div></div>
+                                                    <a href="#" class="bs-wizard-dot"></a>
+                                                    <div class="text-center bs-wizard-stepnum">Final</div>
+                                                    <!--<div class="bs-wizard-info text-center"></div>-->
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-lg-2 col-md-2"></div>
+                                    </div>
+
+                            <div>
+                                <div id="myGrid" style="height: 300px;width:100%;float:left;" class="ag-theme-balham"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="col-md-12">
+                                <div class="hide_block" id="comments-area">
+                                    <label class="comments-heading">Comments</label>
+                                    <div class="col-md-12" style="align-content:center!important; margin:0px 0px;width:100%;float:left;">
+                                        <textarea class="comments-txtarea" id="txtComments" rows="4" cols="80"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="butns-main-cls hide_block" id="initiate-action">
+                                    <button id="accept" class="loginform-btn_wrkflw_submt" onclick="updateStatus('INITIATE')">Submit To Workflow</button>
+                                </div>
+
+                                <div class="butns-main-cls hide_block" id="action-buts">
+                                    <button id="accept" class="loginform-btn_actp" onclick="updateStatus('APPROVE')">Approve</button>
+                                    <button id="reject" class="loginform-btn_rej" onclick="updateStatus('REJECT')">Reject</button>
+                                </div>
+
+                                <div class="butns-main-cls hide_block" id="action-msg">
+                                    <h5 id="msg" style="text-align: center !important;"></h5>
+                                </div>
+                            </div>
+
+                            <div class="content-main-cls hide_block" id="action-content">
+                                <table style="width:100%" ; border="0" class="comments-tbl">
+                                    <tr id="status">
+                                        <th>Status</th>
+                                        <td>:-</td>
+                                        <td>Status</td>
+                                    </tr>
+                                    <tr id="comments">
+                                        <th>Comments </th>
+                                        <td>:-</td>
+                                        <td>Comments</td>
+                                    </tr>
+                                    <tr id="actionTimeDate">
+                                        <th>Action Time </th>
+                                        <td>:-</td>
+                                        <td>Action Done Time</td>
+                                    </tr>
+                                    <tr id="actionTimeDate">
+                                        <th>Action Done By</th>
+                                        <td>:-</td>
+                                        <td>ActionDoneBy</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var applicationId;
+            var contractEntityId;
+            var entityType;
+            var loginTenantCode;
+            var tenantId;
+            var token;
+            var userName;
+
+            var columnDefs = [
+                    {headerName: "Host", field: "hostName", pinned: 'left'},
+                    {headerName: "Track", field: "trackName", pinned: 'left'},
+                    {headerName: "Location", field: "locName", pinned: 'left',cellRenderer :function(params){
+                        var val = params.value || "ALL"
+                        return val;
+                    }},
+
+                    {headerName: "HostFee Calc Type", field: "calcType"},
+                    {headerName: "Host Fee Condition", field: "condition"},
+                    {headerName: "HostFee Conv Amount", field: "convAmount"},
+                    {headerName: "HostFee Ex Amount", field: "exAmount"},
+
+                    {headerName: "TV Calc Type", field: "tvcalcType"},
+                    {headerName: "TV Conv Amount", field: "tvconvAmount"},
+                    {headerName: "TV Ex Amount", field: "amount"},
+
+                    {headerName: "Begin Date", field: "beginDate"},
+                    {headerName: "End Date", field: "endDate"},
+                    {headerName: "Terms", field: "terms"}
+            ];
+    
+            $(document).ready(function () {
+                applicationId = parseInt(getUrlVars()["appId"].replace(",", ""));
+                contractEntityId = parseInt(getUrlVars()["entityId"].replace(",", ""));
+                entityType = getUrlVars()["entityType"];
+                loginTenantCode = getUrlVars()["ltcd"];
+                tenantId = parseInt(getUrlVars()["tid"].replace(",", ""));
+                token = getUrlVars()["token"];
+                userName = getUrlVars()["userName"];
+
+                GetContractDetails();
+                GetContractWorkflowStatus();
+            });
+
+        function getUrlVars() {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+
+        function GetContractDetails() {
+            var url = config.api_url.url + "public/api/hostfees/contract/definition/4zwEGHpB80C913cgiwpCdQ/" + tenantId +"/" + contractEntityId;
+
+            $.ajax({
+                type: "GET",
+                beforeSend: function (request) {
+                    request.setRequestHeader("X-TenantId", tenantId);
+                    request.setRequestHeader("X-LoginTenantCode", loginTenantCode);
+                },
+                url: url,
+                processData: false,
+                success: function (msg) {
+                    console.log("contractData=", msg);
+                    var data = msg["contractdefinition_getone"].dataset[0];
+
+                    $("#contractagantName").html(data.contractAgentName);
+                    $("#contractTypeCode").html(data.contractTypeCode == "E" ? "Export" : "Import");
+
+                    var gridOptions = {
+                        columnDefs: columnDefs,
+                        rowData: data.contractDetails
+                    };
+
+                    var eGridDiv = document.querySelector('#myGrid');
+                    new agGrid.Grid(eGridDiv, gridOptions);
+                }
+            });
+        }
+
+        function GetContractWorkflowStatus() {
+            var url = config.api_url.url + "public/workflow/state/current/actions/" + applicationId + "/" + entityType + "/" + contractEntityId +
+                "/" + token + "/" + userName + "?ltcd=" + loginTenantCode + "&tid=" + tenantId;
+
+            $.ajax({
+                type: "GET",
+                beforeSend: function (request) {
+                    request.setRequestHeader("X-TenantId", tenantId);
+                    request.setRequestHeader("X-LoginTenantCode", loginTenantCode);
+                },
+                url: url,
+                processData: false,
+                success: function (data) {
+                    console.log("resultset=", data);
+                    buildActionsButtons(data);
+                }
+            });
+        }
+
+        function updateStatus(status) {
+            var comments = document.getElementById("txtComments").value;
+            var url = config.api_url.url + "public/workflow/state/process/" + applicationId + "/" + entityType + "/" + contractEntityId +
+                "/" + token + "/" + userName + "?ltcd=" + loginTenantCode + "&tid=" + tenantId;
+
+            var payload = {
+                "actionCode": status,
+                "comments": comments
+            }
+
+            $.ajax({
+                type: "POST",
+                beforeSend: function (request) {
+                    request.setRequestHeader("X-TenantId", tenantId);
+                    request.setRequestHeader("X-LoginTenantCode", loginTenantCode);
+                    request.setRequestHeader("Content-Type", "application/json");
+                },
+                url: url,
+                data: JSON.stringify(payload),
+                processData: false,
+                success: function (msg) {
+                    console.log("result msg=", msg);
+                    buildActionsButtons(msg);
+                }
+            });
+        };
+
+        
+        function buildActionsButtons(data) {
+            document.getElementById("txtComments").value = "";
+            $("#workflowState").html(data.entityCurrentStatus);
+
+            if (data.message === null && data.currentStateActions !== null) {
+
+                if (data.currentStateActions[0].actionCode === "INITIATE") {
+                    $("#initiate-action").removeClass("hide_block");
+                    $("#initiate-action").addClass("show_block");
+                }
+                else {
+                    $("#initiate-action").removeClass("show_block");
+                    $("#initiate-action").addClass("hide_block");
+                    $("#action-buts").removeClass("hide_block");
+                    $("#action-buts").addClass("show_block");
+                }
+                $("#comments-area").removeClass("hide_block");
+                $("#comments-area").addClass("show_block");
+            }
+            else {
+                $("#comments-area").addClass("hide_block");
+                $("#initiate-action").addClass("hide_block");
+                $("#action-buts").addClass("hide_block");
+                $("#action-msg").removeClass("hide_block");
+                $("#action-msg").addClass("show_block");
+                $("#msg").html(data.message);
+            }
+        }
+
+    </script>
+    </body>
+</html>
+<style>
+    body {
+        font-family: 'Segoe UI', Sans-Serif !important;
+    }
+</style>
+<style>
+    .statebar-snippet {
+        width: 100%;
+        margin: 0px 0 20px;
+        padding: 10px 0 15px;
+        float: left;
+        text-align: center;
+        /*border-bottom: 1px dashed #c3dcdc;
+        background: #faf9f9;*/
+        /*border: 1px solid #e9f1f1;
+        background: #f2f9f9;*/
+        background: linear-gradient(-15deg, #125e5f, #09b5b7);
+        border-radius: 5px;
+    }
+
+    .bs-wizard {
+        margin-top: 0px;
+    }
+    /*Form Wizard*/
+    .bs-wizard {
+        border-bottom: solid 1px #e0e0e0;
+        padding: 0;
+    }
+
+        .bs-wizard > .bs-wizard-step {
+            padding: 0;
+            position: relative;
+        }
+
+            .bs-wizard > .bs-wizard-step + .bs-wizard-step {
+            }
+
+            .bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
+                /*color: #595959;*/
+                /*color: #508c8c;*/
+                color: #fff;
+                font-size: 13px;
+                margin-bottom: 0px;
+                position: relative;
+                left: -7px;
+                top: 5px;
+                text-transform: uppercase;
+                background-image: linear-gradient(#66cf90, #55c180);
+                width: 80px;
+                border-radius: 8px;
+                font-weight:600;
+                padding: 3px 6px;
+                margin:0 auto;
+                display: flex;
+                justify-content: center;
+                box-shadow: 0 8px 8px -8px rgba(0,0,0,1);
+            }
+
+            .bs-wizard > .bs-wizard-step .bs-wizard-info {
+                color: #999;
+                font-size: 14px;
+            }
+
+            .bs-wizard > .bs-wizard-step > .bs-wizard-dot {
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                display: block;
+                /*background: #fbe8aa;*/
+                background: #d7ece3;
+                top: 18px;
+                left: 50%;
+                margin-top: -15px;
+                margin-left: -15px;
+                border-radius: 50%;
+            }
+
+                .bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {
+                    content: ' ';
+                    width: 8px;
+                    height: 8px;
+                    /*background: #fbbd19;*/
+                    /*background: #0f9960;*/
+                    background:#06a262;
+                    border-radius: 50px;
+                    position: absolute;
+                    top: 4px;
+                    left: 4px;
+                }
+
+            .bs-wizard > .bs-wizard-step > .progress {
+                position: relative;
+                border-radius: 0px;
+                height: 3px;
+                /*box-shadow: none;*/
+                box-shadow: 0 2px 2px rgba(0,0,0,.4);
+                margin: 10px 0;
+                /*background-color: #cdcdcd;*/
+                background-color: #f0f0f0;
+            }
+
+                .bs-wizard > .bs-wizard-step > .progress > .progress-bar {
+                    width: 0px;
+                    box-shadow: none;
+                    /*background: #fbe8aa;*/
+                    background: #a8e2c7;
+                }
+
+            .bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {
+                width: 100%;
+            }
+
+            .bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {
+                width: 50%;
+            }
+
+            .bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
+                width: 0%;
+            }
+
+            .bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {
+                width: 100%;
+            }
+
+            .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
+                /*background-color: #f5f5f5;*/
+                /*background-color: #dedede;*/
+                background-color: #fafafa;
+            }
+
+                .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {
+                    opacity: 0;
+                }
+
+            .bs-wizard > .bs-wizard-step:first-child > .progress {
+                left: 50%;
+                width: 50%;
+            }
+
+            .bs-wizard > .bs-wizard-step:last-child > .progress {
+                width: 50%;
+            }
+
+            .bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot {
+                pointer-events: none;
+            }
+
+            .bs-wizard > .bs-wizard-step .bs-wizard-stepnum:before {
+                width:0;
+                height:0;
+                content:'';
+                border-bottom:6px solid #66cf90;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                position:absolute;
+                top:-6px;
+            }
+    /*END Form Wizard*/
+</style>
+

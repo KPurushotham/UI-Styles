@@ -1,0 +1,105 @@
+<div class="simpleDemo row" style="{{field.style}}">
+    <div class="row">
+        <div class="col-md-10"></div>
+        <div class="col-md-2">
+            <!--<a class="kanban-add-newstep" href="javascript:void(0)"
+                ng-click="field.evenHandler(field)">
+                <i class="fa fa-plus-square addIconColor"
+                    title="{{container['action']['name']}}"></i>
+                Add New Step
+            </a>-->
+        </div>
+    </div>
+     <!-- For drag drop container need to be add below attributes
+           dnd-draggable="container"
+            dnd-type="'container'"
+            dnd-effect-allowed="move"
+            dnd-moved="containers.splice($index, 1)"
+            dnd-callback="container.items.length"
+        -->
+    <ul dnd-list="field.containers">
+        <li ng-repeat="container in field.containers"
+          
+            class="mainList">
+            <div class="container-element box box-blue">
+                <div class="row containerHeaderRow">
+                    <div class="col-md-9">
+                        <span class="kanbanStepTitle">STEP: {{container.status}}</span>
+                    </div>
+                    <div class="col-md-3">
+                        <div ng-show="field['actions']!= undefined">
+                            <i class="{{fieldaction.cssClass}} addIconColor
+                                kanban-action-icon"
+                               title="{{fieldaction['name']}}"
+                               ng-click="field.evenHandler(fieldaction,container)"
+                               ng-repeat="fieldaction in field.actions"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-details">
+                    <div ng-bind-html="trustAsHtml(container.stepdetails)"></div>
+                </div>
+                <ul dnd-list="container.items"
+                    dnd-allowed-types="['item']"
+                    dnd-horizontal-list="true"
+                    dnd-external-sources="true"
+                    dnd-effect-allowed="move"
+                    class="itemlist">
+                    <li ng-repeat="item in container.items"
+                        dnd-draggable="item"
+                        dnd-type="'item'"
+                        dnd-effect-allowed="move"
+                        class="childList childItems"
+                        dnd-moved="container.items.splice($index, 1)"
+                        ng-click="field.expand(item)">
+
+                        <div class="StepItemsHeading" role="tab"
+                             id="headingOne">
+                            <span class="paneltitle">
+                                <a role="button" data-toggle="collapse"
+                                   data-parent="#accordion"
+                                   href="#collapseOne{{item.label}}"
+                                   aria-expanded="true"
+                                   aria-controls="collapseOne">
+                                    {{item.label}} ({{item.items.length || 0 }})
+                                </a>
+                            </span>
+                        </div>
+                        <div id="collapseOne{{item.label.replace(' ','')}}"
+                             class="groupItems{{item.label.replace(' ','')}}Body"
+                             ng-show="field.toggleClass[item.label.replace(' ','')]"
+                             aria-labelledby="headingOne">
+                            <div class="panel-body1">
+                                <ul>
+                                    <li ng-repeat="citem in item.items"
+                                        class="childList childItems inr-child-list">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        {{citem.name}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+    </ul>
+
+</div>
+
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">{{datas.title}}</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+         <form name="df_form" novalidate=''>
+            <dynamic-form-directive form="datas.modalform" form-data-model="formDataModel">
+            </dynamic-form-directive>
+         </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</script>

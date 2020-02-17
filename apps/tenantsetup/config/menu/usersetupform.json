@@ -1,0 +1,634 @@
+{
+  "name": "usersetupform",
+  "saveUrl": "vdi/admin/user/save",
+  "getOneUrl": "vdi/admin/application/user/setup/one",
+  "externalService": "usersetupService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+
+  "sections": [
+    {
+      "show": true,
+      "cssClass": "new-user-section",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "userEntityId",
+              "fieldType": "hidden",
+              "required": false
+            },
+            {
+              "modelKey": "entityTypeCode",
+              "title": "Entity Type Code",
+              "fieldType": "hidden",
+              "defaultValue": "USER"
+            },
+            {
+              "modelKey": "firstName",
+              "cssClass": "col-md-2",
+              "title": "First Name",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "lastName",
+              "cssClass": "col-md-2",
+              "title": "Last Name",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "userName",
+              "cssClass": "col-md-2",
+              "title": "User Name",
+              "fieldType": "textbox",
+              "disabledInEditMode": true,
+              "required": true
+            },
+            {
+              "modelKey": "password",
+              "cssClass": "col-md-2",
+              "title": "Password",
+              "fieldType": "password",
+              "required": true
+            },
+            {
+              "modelKey": "confirmPassword",
+              "cssClass": "col-md-2",
+              "title": "Confirm Password",
+              "ignoreInServiceModel": true,
+              "fieldType": "password",
+              "required": true,
+              "show": false
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "email",
+              "cssClass": "col-md-2",
+              "title": "Email",
+              "fieldType": "email",
+              "required": true
+            },
+            {
+              "modelKey": "phone",
+              "cssClass": "col-md-2",
+              "title": "Phone No",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "company",
+              "cssClass": "col-md-2",
+              "title": "Company",
+              "fieldType": "textbox",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "show": true,
+      "cssClass": "copy-user-section",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "copyUserId",
+              "title": "Copy Users",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "ignoreInServiceModel": true,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "copyUserHandler"
+                }
+              ],
+              "dataConfig": {
+                "dataUrl": "vdi/admin/user/all",
+                "displayKey": "userName",
+                "valueKey": "userEntityId"
+              },
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "userTenantId",
+              "title": "Tenants",
+              "ignoreInServiceModel": true,
+              "cssClass": "col-md-2",
+              "fieldType": "dropdown",
+              "ismultiple": true,
+              "disabledInEditMode": false,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "hasDependants": true,
+                  "handlerName": "tenantUserDropdownHandler"
+                }
+              ],
+              "dataConfig": {
+                "dataUrl": "vdi/admin/tenant/all",
+                "displayKey": "tenantTitle",
+                "valueKey": "tenantId"
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "show": true,
+      "cssClass": "tabs-section",
+      "tabs": [
+        {
+          "title": "Tenants",
+          "rowDivisions": [
+            {
+              "fields": [
+                {
+                  "modelKey": "tuTenantId",
+                  "title": "Tenants",
+                  "cssClass": "col-md-2",
+                  "ignoreInServiceModel": true,
+                  "fieldType": "dropdown",
+                  "disabledInEditMode": false,
+                  "dataConfig": {
+                    "dataUrl": "vdi/admin/tenant/all",
+                    "displayKey": "tenantTitle",
+                    "valueKey": "tenantId"
+                  },
+                  "disabled": false,
+                  "required": true
+                },
+                {
+                  "modelKey": "tuIsPrimary",
+                  "title": "Primary Tenant",
+                  "defaultValue": false,
+                  "fieldType": "checkbox",
+                  "cssClass": "selectall col-md-2 margn-top20",
+                  "ignoreInServiceModel": true,
+                  "disabled": false,
+                  "required": true,
+                  "show": true
+                },
+                {
+                  "title": "Add To Grid",
+                  "fieldType": "button",
+                  "cssClass": "col-md-2 padding-lftrht0 butn-cls-margntop",
+                  "handlerName": "tuAddToGrid",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "fields": [
+                {
+                  "modelKey": "tenantUser",
+                  "title": "Tenant User",
+                  "fieldType": "grid",
+                  "initLoad": true,
+                  "localData": true,
+                  "show": false,
+                  "gridSummaryLabel": "total",
+                  "gridConfig": {
+                    "multiSelect": true,
+                    "modelKeyMap": [
+                      "operationType",
+                      "tenantUserId",
+                      "tenantId",
+                      "userEntityId",
+                      "isPrimary",
+                      "isActive"
+                    ],
+                    "features": {
+                      "enableGridMenu": false,
+                      "toolPanelSuppressRowGroups": true
+                    },
+                    "columns": [
+                      {
+                        "field": "operationType",
+                        "hide": true
+                      },
+                      {
+                        "field": "tenantUserId",
+                        "hide": true
+                      },
+                      {
+                        "field": "tenantId",
+                        "hide": true
+                      },
+                      {
+                        "field": "tenantName",
+                        "headerName": "Tenant Name",
+                        "hide": false,
+                        "editable": false
+                      },
+                      {
+                        "field": "userEntityId",
+                        "hide": true
+                      },
+                      {
+                        "field": "isPrimary",
+                        "headerName": "Primary Tenant",
+                        "hide": false,
+                        "editable": true
+                      },
+                      {
+                        "field": "isActive",
+                        "headerName": "Is Active",
+                        "hide": true,
+                        "editable": false
+                      },
+                      {
+                        "field": "deleteId",
+                        "headerName": "Delete",
+                        "actionType": "DELETE",
+                        "actionIconClass": "fa fa-trash",
+                        "actionToggleField": "isActive",
+                        "actionModeField": "tenantUserId",
+                        "actionToggle": {
+                          "true": "fa fa-toggle-off",
+                          "false": "fa fa-toggle-on"
+                        },
+                        "handlerName": "tuDeleteFromGrid"
+                      }
+                    ]
+                  },
+                  "disabled": false,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Applications",
+          "rowDivisions": [
+            {
+              "fields": [
+                {
+                  "modelKey": "tauTenantId",
+                  "title": "Tenants",
+                  "ignoreInServiceModel": true,
+                  "fieldType": "dropdown",
+                  "cssClass": "col-md-2",
+                  "disabledInEditMode": false,
+                  "dependancyEvents": [
+                    {
+                      "eventName": "change",
+                      "hasDependants": true,
+                      "handlerName": "tenantAppDropdownHandler"
+                    }
+                  ],
+                  "dataConfig": {
+                    "dataUrl": "vdi/admin/tenant/all",
+                    "displayKey": "tenantTitle",
+                    "valueKey": "tenantId"
+                  },
+                  "disabled": false,
+                  "required": true
+                },
+                {
+                  "modelKey": "tauApplicationEntityId",
+                  "title": "Applications",
+                  "fieldType": "dropdown",
+                  "cssClass": "col-md-2",
+                  "ismultiple": true,
+                  "ignoreInServiceModel": true,
+                  "dependancyConfig": [
+                    {
+                      "sourceKey": "tauTenantId",
+                      "event": "change",
+                      "loadData": {
+                        "keyParams": {
+                          "tenantId": "tauTenantId"
+                        }
+                      }
+                    }
+                  ],
+                  "dataConfig": {
+                    "dataUrl": "vdi/admin/tenant/application",
+                    "displayKey": "applicationTitle",
+                    "valueKey": "applicationEntityId"
+                  },
+                  "disabled": false,
+                  "required": true
+                },
+                {
+                  "modelKey": "tauBeginDate",
+                  "title": "Begin Date",
+                  "fieldType": "date",
+                  "cssClass": "col-md-2 padding-rht0",
+                  "ignoreInServiceModel": true,
+                  "required": false
+                },
+                {
+                  "modelKey": "tauEndDate",
+                  "title": "End Date",
+                  "fieldType": "date",
+                  "cssClass": "col-md-2 padding-lftrht0",
+                  "ignoreInServiceModel": true,
+                  "required": false
+                },
+                {
+                  "title": "Add To Grid",
+                  "fieldType": "button",
+                  "cssClass": "col-md-2 padding-lftrht0 butn-cls-margntop",
+                  "handlerName": "tauAddToGrid",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "fields": [
+                {
+                  "modelKey": "tenantApplicationUser",
+                  "title": "Tenant Application User",
+                  "fieldType": "grid",
+                  "initLoad": true,
+                  "localData": true,
+                  "show": false,
+                  "gridSummaryLabel": "total",
+                  "gridConfig": {
+                    "multiSelect": true,
+                    "modelKeyMap": [
+                      "operationType",
+                      "tenantApplicationUserId",
+                      "tenantId",
+                      "applicationEntityId",
+                      "userEntityId",
+                      "beginDate",
+                      "endDate",
+                      "isActive"
+                    ],
+                    "features": {
+                      "enableGridMenu": false,
+                      "toolPanelSuppressRowGroups": true
+                    },
+                    "columns": [
+                      {
+                        "field": "operationType",
+                        "hide": true
+                      },
+                      {
+                        "field": "tenantApplicationUserId",
+                        "hide": true
+                      },
+                      {
+                        "field": "tenantId",
+                        "hide": true
+                      },
+                      {
+                        "field": "tenantName",
+                        "headerName": "Tenant Name",
+                        "hide": false,
+                        "editable": false
+                      },
+                      {
+                        "field": "applicationEntityId",
+                        "hide": true
+                      },
+                      {
+                        "field": "applicationTitle",
+                        "headerName": "Application Title",
+                        "hide": false,
+                        "editable": false
+                      },
+                      {
+                        "field": "userEntityId",
+                        "hide": true
+                      },
+                      {
+                        "field": "beginDate",
+                        "headerName": "Begin Date",
+                        "editable": true,
+                        "cellEditor": "datePicker",
+                        "formatType": "Date"
+                      },
+                      {
+                        "field": "endDate",
+                        "headerName": "End Date",
+                        "editable": true,
+                        "cellEditor": "datePicker",
+                        "formatType": "Date"
+                      },
+                      {
+                        "field": "isActive",
+                        "headerName": "Is Active",
+                        "hide": true,
+                        "editable": false
+                      },
+                      {
+                        "field": "deleteId",
+                        "headerName": "Delete",
+                        "actionType": "DELETE",
+                        "actionIconClass": "fa fa-trash",
+                        "actionToggleField": "isActive",
+                        "actionModeField": "tenantApplicationUserId",
+                        "actionToggle": {
+                          "true": "fa fa-toggle-off",
+                          "false": "fa fa-toggle-on"
+                        },
+                        "handlerName": "tauDeleteFromGrid"
+                      }
+                    ]
+                  },
+                  "disabled": false,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Roles",
+          "rowDivisions": [
+            {
+              "fields": [
+                {
+                  "modelKey": "turTenantId",
+                  "title": "Tenants",
+                  "fieldType": "dropdown",
+                  "cssClass": "col-md-2",
+                  "ignoreInServiceModel": true,
+                  "disabledInEditMode": false,
+                  "dependancyEvents": [
+                    {
+                      "eventName": "change",
+                      "hasDependants": true,
+                      "handlerName": "tenantRoleDropdownHandler"
+                    }
+                  ],
+                  "dataConfig": {
+                    "dataUrl": "vdi/admin/tenant/all",
+                    "displayKey": "tenantTitle",
+                    "valueKey": "tenantId"
+                  },
+                  "disabled": false,
+                  "required": true
+                },
+                {
+                  "modelKey": "turRoleId",
+                  "title": "Roles",
+                  "fieldType": "dropdown",
+                  "cssClass": "col-md-2",
+                  "ismultiple": true,
+                  "ignoreInServiceModel": true,
+                  "dependancyConfig": [
+                    {
+                      "sourceKey": "turTenantId",
+                      "event": "change",
+                      "loadData": {
+                        "keyParams": {
+                          "tenantId": "turTenantId"
+                        }
+                      }
+                    }
+                  ],
+                  "dataConfig": {
+                    "dataUrl": "vdi/admin/tenant/roles",
+                    "displayKey": "roleName",
+                    "valueKey": "roleId"
+                  },
+                  "disabled": false,
+                  "required": true
+                },
+                {
+                  "modelKey": "turBeginDate",
+                  "title": "Begin Date",
+                  "fieldType": "date",
+                  "cssClass": "col-md-2 padding-rht0",
+                  "ignoreInServiceModel": true,
+                  "required": false
+                },
+                {
+                  "modelKey": "turEndDate",
+                  "title": "End Date",
+                  "fieldType": "date",
+                  "cssClass": "col-md-2 padding-lftrht0",
+                  "ignoreInServiceModel": true,
+                  "required": false
+                },
+                {
+                  "title": "Add To Grid",
+                  "fieldType": "button",
+                  "cssClass": "col-md-2 padding-lftrht0 butn-cls-margntop",
+                  "handlerName": "turAddToGrid",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "fields": [
+                {
+                  "modelKey": "tenantUserRole",
+                  "title": "Tenant User Role",
+                  "fieldType": "grid",
+                  "initLoad": true,
+                  "localData": true,
+                  "show": false,
+                  "gridSummaryLabel": "total",
+                  "gridConfig": {
+                    "multiSelect": true,
+                    "modelKeyMap": [
+                      "operationType",
+                      "tenantUserRoleId",
+                      "tenantId",
+                      "userEntityId",
+                      "roleId",
+                      "beginDate",
+                      "endDate",
+                      "isActive"
+                    ],
+                    "features": {
+                      "enableGridMenu": false,
+                      "toolPanelSuppressRowGroups": true
+                    },
+                    "columns": [
+                      {
+                        "field": "operationType",
+                        "hide": true
+                      },
+                      {
+                        "field": "tenantUserRoleId",
+                        "hide": true
+                      },
+                      {
+                        "field": "tenantId",
+                        "hide": true
+                      },
+                      {
+                        "field": "tenantName",
+                        "headerName": "Tenant Name",
+                        "hide": false,
+                        "editable": false
+                      },
+                      {
+                        "field": "userEntityId",
+                        "hide": true
+                      },
+                      {
+                        "field": "roleId",
+                        "hide": true
+                      },
+                      {
+                        "field": "roleName",
+                        "headerName": "Role Name",
+                        "hide": false,
+                        "editable": false
+                      },
+                      {
+                        "field": "beginDate",
+                        "headerName": "Begin Date",
+                        "editable": true,
+                        "cellEditor": "datePicker",
+                        "formatType": "Date"
+                      },
+                      {
+                        "field": "endDate",
+                        "headerName": "End Date",
+                        "editable": true,
+                        "cellEditor": "datePicker",
+                        "formatType": "Date"
+                      },
+                      {
+                        "field": "isActive",
+                        "headerName": "Is Active",
+                        "hide": true,
+                        "editable": false
+                      },
+                      {
+                        "field": "deleteId",
+                        "headerName": "Delete",
+                        "actionType": "DELETE",
+                        "actionIconClass": "fa fa-trash",
+                        "actionToggleField": "isActive",
+                        "actionModeField": "tenantUserRoleId",
+                        "actionToggle": {
+                          "true": "fa fa-toggle-off",
+                          "false": "fa fa-toggle-on"
+                        },
+                        "handlerName": "turDeleteFromGrid"
+                      }
+                    ]
+                  },
+                  "disabled": false,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

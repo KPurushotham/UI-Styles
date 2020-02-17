@@ -1,0 +1,49 @@
+﻿{
+  "columns": [
+   {
+      "key": "licenseType",
+      "headerText": "License Type",
+      "filterMask": "Search"
+    },
+    {
+      "key": "amountType",
+      "headerText": "Amount Type",
+      "filterMask": "Search"
+    },
+	 {
+      "key": "frequencyName",
+      "headerText": "Frequency Name",
+      "filterMask": "Search"
+    },
+	{
+      "key": "taxAmount",
+      "headerText": "Tax Amount",
+      "filterMask": "Search"
+    },
+    {
+      "key": "effectiveFromDate",
+      "headerText": "Effective From",
+      "filterMask": "Search",
+       "type": "date"
+    },
+   
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/racingaccount/animaltax/all",
+
+  "rowKey": {
+  "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate",
+  "editPageUrl": "racingaccount/animaltaxform"
+}

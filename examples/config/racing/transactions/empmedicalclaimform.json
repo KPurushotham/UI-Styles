@@ -1,0 +1,310 @@
+{
+  "name": "empmedicalclaimform",
+  "saveUrl": "empmedclaim/save",
+  "validationUrl": "",
+  "submitted": false,
+  "alwaysEditMode":"true",
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "medclaimAccidentInd",
+              "cssClass": "col_3",
+              "fieldType": "radio",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Mediclaim",
+                    "value": "mediclaim"
+                  },
+                  {
+                    "text": "Accident",
+                    "value": "accident"
+                  }
+                ]
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "click"
+                }
+              ],
+              "disabled": false,
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "partyTypeId",
+              "title": "Party Type",
+              "fieldType": "dropdown",
+              "cssClass": "col_2",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Jockey",
+                    "value": "JOCKEY"
+                  },
+                  {
+                    "text": "Riding Boy",
+                    "value": "RIDING_BOY"
+                  },
+                  {
+                    "text":"Jamadar",
+                    "value":"JAMADAR"
+                  },
+                  {
+                    "text":"Farrier ",
+                    "value":"FARRIER"
+                  }
+                ]
+              },
+              "initLoad": true,
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "partyId",
+              "title": "Party",
+              "fieldType": "dropdown",
+              "cssClass": "col_6",
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "dependancyConfig": [
+                {
+                  "sourceKey": "partyTypeId",
+                  "event": "change",
+                  "dataConfigs": {
+
+                    "JOCKEY": {
+                      "dataUrl": "vdi/olims/racing/jockeyregistration/all?fk-status=ACTIVE",
+                      "displayKey": "jockeyName",
+                      "valueKey": "entityObjectId"
+                    },
+                    "RIDING_BOY": {
+                      "dataUrl": "vdi/olims/racing/ridingboyregistration/all?fk-status=ACTIVE",
+                      "displayKey": "ridingBoyName",
+                      "valueKey": "entityObjectId"
+                    },
+                    "JAMADAR": {
+                      "dataUrl": "vdi/olims/racing/jamedarregistration/all?fk-status=ACTIVE",
+                      "displayKey": "jamadarName",
+                      "valueKey": "entityObjectId"
+                    },
+                    "FARRIER": {
+                      "dataUrl": "vdi/olims/racing/farrierregistration/all?fk-status=ACTIVE",
+                      "displayKey": "farrierName",
+                      "valueKey": "entityObjectId"
+                    }
+                  },
+
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "disabled": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "agencyId",
+              "title": "Agency",
+              "codeKey": "value",
+              "fieldType": "dropdown",
+              "cssClass": "col_2",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "United India Insurance",
+                    "value": "United India Insurance"
+                  }
+
+                ]
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "hospitalId",
+              "title": "Hospital",
+              "codeKey": "value",
+              "fieldType": "dropdown",
+              "cssClass": "col_6",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Sai Sanjeevani Hospitals",
+                    "value": "SaiSanjeevani"
+                  },
+                  {
+                    "text": "Yashoda Multispeciality Hospitals",
+                    "value": "Yashoda"
+                  },
+                  {
+                    "text": "Agarwal Eye Hospital",
+                    "value": "Agarwal"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "ipId",
+              "title": "IP ID",
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "admittedDate",
+              "title": "Admitted Date",
+              "fieldType": "date",
+              "cssClass": "col_1",
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "dischargeDate",
+              "title": "Discharge Date",
+              "fieldType": "date",
+              "cssClass": "col_1",
+              "disabled": false,
+              "required": false
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "billNumber",
+              "title": "Bill Number",
+              "fieldType": "textbox",
+              "cssClass": "col_2",
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "billDate",
+              "title": "Bill Date",
+              "fieldType": "date",
+              "cssClass": "col_1",
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "chequeFavourTo",
+              "title": "Cheque Favouring to",
+              "codeKey": "value",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "localData": [
+
+                  {
+                    "text": "Agency",
+                    "value": "Agency"
+                  },
+                  {
+                    "text": "Party",
+                    "value": "Party"
+                  },
+                  {
+                    "text": "Hospital",
+                    "value": "Hospital"
+                  }
+                ]
+              },
+
+              "disabled": false,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "amount",
+              "title": "Amount",
+              "fieldType": "currency",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "amountSanctioned",
+              "title": "Amount Sanctioned",
+              "fieldType": "currency",
+              "disabled": false,
+              "required": false
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "treatmentReason",
+              "title": "Treatment Reason",
+              "cssClass": "col_100",
+              "fieldType": "textarea",
+              "disabled": false,
+              "required": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,98 @@
+﻿{
+  "name": "racevoidform",
+  "saveUrl": "racevoid/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "raceCategoryTypeId",
+              "title": "Race Classification",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/racecategorytypebox/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "stageId",
+              "title": "Stage",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/racestagebox/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "noOfAcceptors",
+              "title": "No.of Acceptors ",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "1",
+                    "value": "1"
+                  },
+                  {
+                    "text": "2",
+                    "value": "2"
+                  },
+                  {
+                    "text": "3",
+                    "value": "3"
+                  },
+                  {
+                    "text": "4",
+                    "value": "4"
+                  },
+                  {
+                    "text": "5",
+                    "value": "5"
+                  },
+                  {
+                    "text": "6",
+                    "value": "6"
+                  },
+                  {
+                    "text": "7",
+                    "value": "7"
+                  },
+                  {
+                    "text": "8",
+                    "value": "8"
+                  },
+                  {
+                    "text": "9",
+                    "value": "9"
+                  },
+                  {
+                    "text": "10",
+                    "value": "10"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "effectiveFromDate",
+              "title": "Effective From",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

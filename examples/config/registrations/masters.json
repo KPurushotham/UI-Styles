@@ -1,0 +1,172 @@
+[
+  {
+    "stateName": "registrations.partycategorymaster",
+    "url": "partycategorymaster",
+    "pattern": "LISTING",
+    "viewName": "registrationSection",
+    "data": {
+      "title": "Party Categories",
+      "addScreenStateName": "registrations.partycategoryform"
+    }
+  },
+   {
+    "stateName": "registrations.partycategoryform",
+    "url": "partycategoryform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "PARTY_CATEGORY",
+    "fieldMap": {
+     "entityCode": "partyCategoryCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=partycategory&entityGroupCode=party&entityTypeCode=party",
+    "viewName": "registrationSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "registrations.partysubcategorymaster",
+    "url": "partysubcategorymaster",
+    "pattern": "LISTING",
+    "viewName": "registrationSection",
+    "data": {
+      "title": "Party Sub Categories",
+      "addScreenStateName": "registrations.partysubcategoryform"
+    }
+  },
+  {
+    "stateName": "registrations.partysubcategoryform",
+    "url": "partysubcategoryform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "PARTY_SUB_CATEGORY",
+    "fieldMap": {
+      "categoryCode": {
+        "jsonKey": "partyCategoryId",
+        "title": "Party Category",
+        "codeKey": "partyCategoryCode",
+        "dataUrl": "vdi/olims/party/category/all?fk-status=ACTIVE",
+        "displayKey": "partyCategoryCode-shortName",
+        "valueKey": "entityObjectId"
+      },
+      "entityCode": "partySubcategoryCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=partysubcategory&entityGroupCode=party&entityTypeCode=party",
+    "viewName": "registrationSection",
+    "data": { "title": "New" }
+  },
+
+   {
+    "stateName": "registrations.partygroupmaster",
+    "url": "partygroupmaster",
+    "pattern": "LISTING",
+    "viewName": "registrationSection",
+    "data": {
+      "title": "Party Type Groups",
+      "addScreenStateName": "registrations.partygroupform"
+    }
+  },
+  {
+    "stateName": "registrations.partygroupform",
+    "url": "partygroupform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "PARTY_GROUP",
+    "fieldMap": {
+      "entityCode": "partyGroupCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=partygroup&entityGroupCode=party&entityTypeCode=party",
+    "viewName": "registrationSection",
+    "data": { "title": "New" }
+  },
+
+  {
+    "stateName": "registrations.partytypemaster",
+    "url": "partytypemaster",
+    "pattern": "LISTING",
+    "viewName": "registrationSection",
+    "data": {
+      "title": "Party Types",
+      "addScreenStateName": "registrations.partytypeform"
+    }
+  },
+  {
+    "stateName": "registrations.partytypeform",
+    "url": "partytypeform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "PARTY_TYPE",
+    "viewName": "registrationSection",
+    "data": { "title": "New" }
+  },
+
+ 
+  {
+    "stateName": "registrations.feetypemaster",
+    "url": "feetypemaster",
+    "pattern": "LISTING",
+    "viewName": "registrationSection",
+    "data": {
+      "title": "Fee Types",
+      "addScreenStateName": "registrations.feetypeform"
+    }
+  },
+  {
+    "stateName": "registrations.feetypeform",
+    "url": "feetypeform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "FEE_TYPE",
+    "fieldMap": {
+      "entityCode": "feeTypeCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=feetype&entityGroupCode=party&entityTypeCode=party",
+    "viewName": "registrationSection",
+    "data": { "title": "New" }
+  },
+
+   {
+    "stateName": "registrations.partytypedesignationmaster",
+    "url": "partytypedesignationmaster",
+    "pattern": "LISTING",
+    "viewName": "registrationSection",
+    "data": {
+      "title": "Party Type Designations",
+      "addScreenStateName": "registrations.partytypedesignationform"
+    }
+  },
+   {
+    "stateName": "registrations.partytypedesignationform",
+    "url": "partytypedesignationform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "PARTY_TYPE_DESIGNATION",
+    "fieldMap": {
+     "entityCode": "designationCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=partytypedesignation&entityGroupCode=party&entityTypeCode=party",
+    "viewName": "registrationSection",
+    "data": { "title": "New" }
+  }
+
+]

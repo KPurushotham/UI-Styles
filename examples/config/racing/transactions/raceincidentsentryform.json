@@ -1,0 +1,92 @@
+ {
+  "name": "raceincidentsentryform",
+  "saveUrl": "raceincidentsentry/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [{
+    "rowDivisions": [{
+        "fields": [{
+          "modelKey": "raceDate",
+          "title": "Race Date",
+          "cssClass": "col_1",
+           "dataConfig": {
+                "dataUrl": "vdi/olims/prospectus/racecalendar/all?fk-status=ACTIVE",
+                "displayKey": "raceDates",
+                "valueKey": "raceDates"
+              },
+                "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "modelKeyMapTobeFilled": {
+                    "raceDay": "raceDay",
+                    "season": "season"
+                  }
+                }
+              ],
+          "fieldType": "date",
+          "disabled": false,
+          "required": true
+        }, {
+          "modelKey": "raceDay",
+          "title": "Race Day",
+           "ignoreInServiceModel": true,
+          "cssClass": "col_1",
+          "fieldType": "date",
+          "disabled": true,
+          "required": false
+        }, {
+          "modelKey": "season",
+          "title": "Race Season",
+           "ignoreInServiceModel": true,
+          "cssClass": "col_1",
+          "fieldType": "textbox",
+          "disabled": true,
+          "required": false
+        }]
+      }, {
+          "fields":[
+            {
+              "modelKey":"raceNameId",
+              "title":"Race Name",
+               "cssClass":"col_6",
+              "fieldType":"dropdown",
+               "dataConfig": {
+                "dataUrl": "vdi/olims/prospectus/racenames/all?fk-status=ACTIVE",
+                "displayKey": "description",
+                "valueKey": "entityObjectId"
+              },
+                 "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "modelKeyMapTobeFilled": {
+                    "raceNo": "raceNo",
+                    "runningRaceNo": "runningRaceNo"
+                  }
+                }
+                ],
+              "disabled":false,
+              "required":true
+            }, {
+          "modelKey": "raceNo",
+          "title": "Race No",
+          "cssClass": "col_1",
+              "fieldType": "textbox",
+               "ignoreInServiceModel": true,
+          "disabled": true,
+          "required": false
+        }, {
+          "modelKey": "runningRaceNo",
+          "title": "Running Race No",
+           "ignoreInServiceModel": true,
+          "cssClass": "col_1",
+          "fieldType": "textbox",
+          "disabled": true,
+          "required": false
+        }]
+      
+
+ }
+]
+}
+]
+}

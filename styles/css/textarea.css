@@ -1,0 +1,19 @@
+.textarea_field textarea {
+    height: 148px;
+    border: 1px solid #bebebe;
+    padding: 10px;
+    color: #3b4046;
+    font-size: 13px;
+    resize: none;
+    transition: .3s all;
+    line-height: 18px;
+}
+
+.textarea_field .textarea {
+    height: 70px;
+}
+
+.textarea_field_medium textarea {
+    height: 85px;
+}
+

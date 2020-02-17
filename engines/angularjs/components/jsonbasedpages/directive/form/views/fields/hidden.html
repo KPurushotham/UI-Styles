@@ -1,0 +1,2 @@
+<input type="hidden" id="{{field.modelKey+ fieldIndex}}" ng-model="field.modelValue" value="{{field.modelValue}}"  ng-disabled="(field.disabled || parentForm.readOnlyForm ||(parentForm.screenMode=='EDIT' && field.disabledInEditMode)) ? true :false"
+        event-dependents="field.dependants">

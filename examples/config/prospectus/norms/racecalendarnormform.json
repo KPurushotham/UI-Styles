@@ -1,0 +1,121 @@
+﻿{
+  "name": "racecalendarnormform",
+  "saveUrl": "racecalendar/save",
+  "validationUrl": "",
+  "externalService": "raceCalendarFactory",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "financialYear",
+              "title": "Financial Year",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/financialYear/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "season",
+              "title": "Season",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/seasonmaster/all?fk-status=ACTIVE",
+                "displayKey": "shortName-seasonDescription",
+                "valueKey": "shortName"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+
+               {
+              "modelKey": "startDate",
+              "title": "Start Date",
+              "fieldType": "dropdown",
+               "dataConfig": {
+                 "dataUrl": "vdi/olims/prospectus/raceseason/all?fk-status=ACTIVE",
+                 "displayKey": "startDate",
+                 "valueKey": "startDate"
+               },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "endDate",
+              "title": "End Date",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/prospectus/raceseason/all?fk-status=ACTIVE",
+                "displayKey": "endDate",
+                "valueKey": "endDate"
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+
+      ]
+    },{
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "datecalender1",
+              "title": "End Date",
+              "fieldType": "multidatepicker",
+              "cssClass": "col_6",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "setraceSeasonDate"
+                }
+              ],
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "datecalender2",
+              "title": "End Date",
+              "fieldType": "multidatepicker",
+              "cssClass": "col_6",
+              "disabled": true,
+              "required": true
+            }
+
+          ]
+
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "datecalender3",
+              "title": "End Date",
+              "fieldType": "multidatepicker",
+              "cssClass": "col_6",
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "datecalender3",
+              "title": "End Date",
+              "fieldType": "multidatepicker",
+              "cssClass": "col_6",
+              "disabled": true,
+              "required": true
+            }
+
+          ]
+
+        }]
+    }
+  ]
+}

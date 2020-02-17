@@ -1,0 +1,236 @@
+/* =========== Group Master ===========*/
+
+.group-master .tree_menu_content ul li {
+    float: left;
+    width: 100%;
+}
+
+.group-master .tree_menu_content .ivh-treeview-checkbox-wrapper {
+    float: left;
+    height: 23px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.group-master .ivh-treeview-checkbox input {
+}
+
+.group-master input.control--checkbox {
+    left: 0;
+    position: absolute;
+}
+
+.group-master .ivh-treeview-checkbox-wrapper .control.control--checkbox {
+    padding-left: 14px !important;
+}
+
+.group-master .tree_menu_content ul li input {
+}
+
+.group-master ul.ivh-treeview {
+    float: left;
+    width: 100%;
+}
+
+.group-master .ivh-treeview .ivh-treeview-node {
+    float: left;
+    width: 100%;
+}
+
+.group-master .ivh-treeview ul li.ivh-treeview-node.ivh-treeview-node-leaf {
+    margin-left: 27px;
+}
+
+.group-master .ivh-treeview-node-content .ivh-treeview-node-label {
+    float: left;
+    margin-top: 5px;
+}
+
+.group-master .control input:checked ~ .control__indicator {
+    background: #509f50 !important;
+}
+
+.group-master .control--checkbox input:disabled ~ .control__indicator:after {
+    border-color: #fff;
+}
+
+.group-master .ivh-treeview-checkbox-wrapper .control.control--checkbox .control__indicator {
+    border: 1px solid #b2b2b2;
+    background: #fff;
+}
+
+
+.radio_fields_wrapper .control input:checked ~ .control__indicator {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #76787b;
+}
+
+.radio_fields_wrapper .control--radio .control__indicator::after {
+    background: #76787b none repeat scroll 0 0;
+    left: 5px;
+    top: 5px;
+}
+
+.radio_fields_wrapper .control__indicator {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #76787b;
+}
+
+.test-typecheckbox {
+    margin-top: 22px;
+}
+
+    .test-typecheckbox .control--checkbox {
+        line-height: 22px;
+    }
+
+.pathological-date .date_field .icon-calendar {
+    top: 6px;
+}
+
+.pathological-date .pathological .icon-calendar {
+    right: 10px;
+}
+
+.medicine-charges .radio_fields_wrapper label {
+    margin-right: 20px !important;
+    margin-bottom: 0px;
+}
+
+.fast-work-filed input.full_width {
+    width: 100%;
+}
+
+.fast-work-filed {
+    width: 100%;
+}
+
+    .fast-work-filed .icon-calendar {
+        right: 10px;
+    }
+
+.pathological-date .input_field {
+    padding-bottom: 0px;
+}
+
+.tax_details.diagnosiss-link-form {
+    width: 98%;
+}
+
+    .tax_details.diagnosiss-link-form .tax_details_fields {
+        width: 95%;
+    }
+
+.tax_details .select_field.diagnosiss-link {
+    width: 40%;
+}
+
+.diagnosiss-link-form .tax_details_fields .field_heading {
+    width: 40%;
+}
+
+.diagnosiss-link-form .tax_details_fields .field_heading_medium {
+    width: 28%;
+}
+
+.diagnosiss-link-form .tax_details_fields .field_heading_small {
+    width: 20%;
+}
+
+.diagnosiss-link-form .diagnosiss-units {
+    width: 20%;
+}
+
+.diagnosiss-link-form .diagnosiss-service {
+    width: 20%;
+}
+
+.diagnosiss-link-form .tax_fields .actions_buttons {
+    right: -50px;
+}
+
+.hors-arrivel-boder {
+    border-bottom: 2px solid #d7d8d9;
+    width: 98%;
+}
+
+    .hors-arrivel-boder .control, .hors-type .control {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+.basic-horse {
+    margin-top: 25px;
+}
+
+.passport-details h6 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.passport-input.input_field {
+    padding-bottom: 0px !important;
+}
+
+.sub_heading-passport {
+    margin-top: 0px !important;
+}
+
+.sub_heading-top {
+    margin-top: 15px;
+    padding-right: 20px;
+}
+
+    .sub_heading-top label {
+        border-top: 1px solid #d7d8d9;
+        padding-top: 10px;
+    }
+
+    .sub_heading-top h5 {
+        border-top: 1px solid #d7d8d9;
+        color: #20202c;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 36px;
+        margin: 0;
+    }
+
+.small-head-lable {
+    border-bottom: 1px solid #d7d8d9;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.passport-details-limbs {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    float: left;
+    margin-right: 20px;
+    border-bottom: 1px solid #d7d8d9;
+    width: 98%;
+}
+
+.input_field.passport-right {
+    padding-right: 0px;
+}
+
+.coggins-conduct {
+    float: left;
+    color: #444444;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    margin-right: 15px;
+    line-height: 22px;
+}
+
+.bottom_line-coggins {
+    border-bottom: 2px solid #d7d8d9;
+    margin: 5px 0 20px 0px;
+    width: 98%;
+}
+
+/* =========== Group Master end===========*/

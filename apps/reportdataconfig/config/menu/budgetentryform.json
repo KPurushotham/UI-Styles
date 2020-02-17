@@ -1,0 +1,538 @@
+{
+  "name": "budgetentryform",
+  "saveUrl": "vdi/budget/entry/save",
+  "getOneUrl": "vdi/budget/entry/id_get_one",
+  "externalService": "budgetEntryService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "Id",
+              "fieldType": "hidden"
+            },
+            {
+              "modelKey": "corpId",
+              "title": "Corporation",
+              "fieldType": "dropdown",
+              "ignoreInServiceModel": true,
+              "disabledInEditMode": true,
+              "cssClass": "col-md-2",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "corporationDropdownHandler"
+                }
+              ],
+              "dataConfig": {
+                "dataUrl": "vdi/webportal/corporations/get/all",
+                "displayKey": "corpName",
+                "valueKey": "corpId"
+              },
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "hostNo",
+              "title": "Host name",
+              "fieldType": "dropdown",
+              "ignoreInServiceModel": true,
+              "disabledInEditMode": true,
+              "cssClass": "col-md-2",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "hostDropdownHandler"
+                }
+              ],
+              "dataConfig": {
+                "dataUrl": "vdi/webportal/hosts/get/all",
+                "displayKey": "hostName",
+                "valueKey": "hostNo"
+              },
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "reportType",
+              "title": "Report Type",
+              "cssClass": "col-md-2",
+              "fieldType": "dropdown",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "reportTypeDropdownHandler"
+                }
+              ],
+              "disabledInEditMode": true,
+              "ignoreInServiceModel": true,
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Budget",
+                    "value": "Budget"
+                  },
+                  {
+                    "text": "JournalEntries",
+                    "value": "JournalEntries"
+                  }
+                ]
+              },
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "reportName",
+              "title": "Report Name",
+              "cssClass": "col-md-2",
+              "fieldType": "dropdown",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "reportNameDropdownHandler"
+                }
+              ],
+              "disabledInEditMode": true,
+              "ignoreInServiceModel": true,
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "BudgetSimulcast",
+                    "value": "BudgetSimulcast"
+                  },
+                  {
+                    "text": "BudgetExport",
+                    "value": "BudgetExport"
+                  },
+                  {
+                    "text": "BudgetLive",
+                    "value": "BudgetLive"
+                  }
+                ]
+              },
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "columnHeader",
+              "cssClass": "col-md-2",
+              "title": "Column Header",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "tableColumm",
+              "cssClass": "col-md-2",
+              "title": "Table Columm",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "customerGLcode",
+              "cssClass": "col-md-2",
+              "title": "Customer GLcode",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "breedType",
+              "cssClass": "col-md-2",
+              "title": "Criteria Type",
+              "disabledInEditMode": true,
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox",
+              "disabled": true
+            },
+            {
+              "modelKey": "breedTypeCondition",
+              "cssClass": "col-md-2",
+              "title": "Condition",
+              "ignoreInServiceModel": true,
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "IN",
+                    "value": "in"
+                  },
+                  {
+                    "text": "NOT IN",
+                    "value": "not in"
+                  },
+                  {
+                    "text": "<>",
+                    "value": "<>"
+                  },
+                  {
+                    "text": "=",
+                    "value": "="
+                  }
+                ]
+              }
+            },
+            {
+              "modelKey": "breedTypeId",
+              "cssClass": "col-md-2",
+              "title": "Value",
+              "fieldType": "textbox",
+              "ignoreInServiceModel": true,
+              "disabled": false
+            },
+            {
+              "modelKey": "locType",
+              "cssClass": "col-md-2",
+              "title": "Criteria Type",
+              "disabledInEditMode": true,
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox",
+              "disabled": true
+            },
+            {
+              "modelKey": "locTypeCondition",
+              "cssClass": "col-md-2",
+              "title": "Condition",
+              "ignoreInServiceModel": true,
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "IN",
+                    "value": "in"
+                  },
+                  {
+                    "text": "NOT IN",
+                    "value": "not in"
+                  },
+                  {
+                    "text": "<>",
+                    "value": "<>"
+                  },
+                  {
+                    "text": "=",
+                    "value": "="
+                  }
+                ]
+              }
+            },
+            {
+              "modelKey": "locTypeId",
+              "cssClass": "col-md-2",
+              "title": "Value",
+              "fieldType": "textbox",
+              "ignoreInServiceModel": true,
+              "disabled": false
+            },
+            {
+              "modelKey": "meetType",
+              "cssClass": "col-md-2",
+              "title": "Criteria Type",
+              "disabledInEditMode": true,
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox",
+              "disabled": true
+            },
+            {
+              "modelKey": "meetTypeCondition",
+              "cssClass": "col-md-2",
+              "title": "Condition",
+              "ignoreInServiceModel": true,
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "IN",
+                    "value": "in"
+                  },
+                  {
+                    "text": "NOT IN",
+                    "value": "not in"
+                  },
+                  {
+                    "text": "<>",
+                    "value": "<>"
+                  },
+                  {
+                    "text": "=",
+                    "value": "="
+                  }
+                ]
+              }
+            },
+            {
+              "modelKey": "meetTypeId",
+              "cssClass": "col-md-2",
+              "title": "Value",
+              "fieldType": "textbox",
+              "ignoreInServiceModel": true,
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "locNoType",
+              "cssClass": "col-md-2",
+              "title": "Criteria Type",
+              "disabledInEditMode": true,
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox",
+              "disabled": true
+            },
+            {
+              "modelKey": "locNoTypeCondition",
+              "cssClass": "col-md-2",
+              "title": "Condition",
+              "ignoreInServiceModel": true,
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "IN",
+                    "value": "in"
+                  },
+                  {
+                    "text": "NOT IN",
+                    "value": "not in"
+                  },
+                  {
+                    "text": "<>",
+                    "value": "<>"
+                  },
+                  {
+                    "text": "=",
+                    "value": "="
+                  }
+                ]
+              }
+            },
+            {
+              "modelKey": "locNo",
+              "cssClass": "col-md-2",
+              "title": "Value",
+              "fieldType": "textbox",
+              "ignoreInServiceModel": true,
+              "disabled": false
+            },
+            {
+              "modelKey": "criteria",
+              "cssClass": "col-md-2",
+              "title": "Criteria",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "isActive",
+              "title": "In Use",
+              "defaultValue": false,
+              "ignoreInServiceModel": true,
+              "fieldType": "checkbox",
+              "cssClass": "selectall butn-cls-margntop",
+              "required": true,
+              "show": true
+            },
+            {
+              "title": "Add to Grid",
+              "fieldType": "button",
+              "handlerName": "addToGrid",
+              "ignoreInServiceModel": true,
+              "cssClass": "col-md-1 padding-lftrht0 butn-cls-margntop",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "reportConfig",
+              "title": "Corp Budget",
+              "fieldType": "grid",
+              "initLoad": true,
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "total",
+              "gridConfig": {
+                "multiSelect": true,
+                "modelKeyMap": [
+                  "Id",
+                  "operationType",
+                  "corpId",
+                  "hostNo",
+                  "reportName",
+                  "columnHeader",
+                  "tableColumm",
+                  "criteria",
+                  "breedType",
+                  "breedTypeCondition",
+                  "breedTypeId",
+                  "locNoType",
+                  "locNoTypeCondition",
+                  "locNo",
+                  "locType",
+                  "locTypeCondition",
+                  "locTypeId",
+                  "meetType",
+                  "meetTypeCondition",
+                  "meetTypeId",
+                  "isActive"
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "toolPanelSuppressRowGroups": true,
+                  "enableSorting": true
+                },
+                "columns": [
+                  {
+                    "field": "Id",
+                    "hide": true
+                  },
+                  {
+                    "field": "operationType",
+                    "hide": true
+                  },
+                  {
+                    "field": "corpId",
+                    "hide": true
+                  },
+                  {
+                    "field": "corporationName",
+                    "headerName": "Corporation Name",
+                    "hide": false
+                  },
+                  {
+                    "field": "hostNo",
+                    "hide": true
+                  },
+                  {
+                    "field": "hostName",
+                    "headerName": "Host Name",
+                    "hide": false
+                  },
+                  {
+                    "field": "reportName",
+                    "headerName": "Report Name",
+                    "hide": false
+                  },
+                  {
+                    "field": "reportType",
+                    "headerName": "Report Type",
+                    "hide": false
+                  },
+                  {
+                    "field": "columnHeader",
+                    "headerName": "Column Header",
+                    "hide": false
+                  },
+                  {
+                    "field": "tableColumm",
+                    "headerName": "Table Column",
+                    "hide": false
+                  },
+                  {
+                    "field": "criteria",
+                    "headerName": "Criteria",
+                    "tooltip": "criteria",
+                    "hide": false
+                  },
+                  {
+                    "field": "breedTypeId",
+                    "headerName": "Breed Type Value",
+                    "hide": true
+                  },
+                  {
+                    "field": "breedType",
+                    "headerName": "Breed Type",
+                    "hide": true
+                  },
+                  {
+                    "field": "breedTypeCondition",
+                    "headerName": "Breed Type Condition",
+                    "hide": true
+                  },
+                  {
+                    "field": "locType",
+                    "headerName": "Loc Type",
+                    "hide": true
+                  },
+                  {
+                    "field": "locTypeCondition",
+                    "headerName": "Loc Type Condition",
+                    "hide": true
+                  },
+                  {
+                    "field": "meetType",
+                    "headerName": "Meet Type",
+                    "hide": true
+                  },
+                  {
+                    "field": "meetTypeCondition",
+                    "headerName": "Meet Type Condition",
+                    "hide": true
+                  },
+                  {
+                    "field": "locNoType",
+                    "headerName": "Loc No Type",
+                    "hide": true
+                  },
+                  {
+                    "field": "locNoTypeCondition",
+                    "headerName": "Loc No TypeCondition",
+                    "hide": true
+                  },
+                  {
+                    "field": "locNo",
+                    "headerName": "Loc No Value",
+                    "hide": true
+                  },
+                  {
+                    "field": "locTypeId",
+                    "headerName": "Loc Type Value",
+                    "hide": true
+                  },
+                  {
+                    "field": "meetTypeId",
+                    "headerName": "Meet Type Value",
+                    "hide": true
+                  },
+                  {
+                    "field": "isActive",
+                    "headerName": "Is Active",
+                    "hide": true
+                  },
+                  {
+                    "field": "deleteId",
+                    "headerName": "Delete",
+                    "actionType": "DELETE",
+                    "actionIconClass": "fa fa-trash",
+                    "actionToggleField": "isActive",
+                    "actionModeField": "Id",
+                    "actionToggle": {
+                      "true": "fa fa-toggle-off",
+                      "false": "fa fa-toggle-on"
+                    },
+                    "handlerName": "deleteFromGrid"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

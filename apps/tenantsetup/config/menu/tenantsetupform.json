@@ -1,0 +1,246 @@
+{
+  "name": "tenantsetupform",
+  "saveUrl": "vdi/admin/tenant/save",
+  "getOneUrl": "vdi/admin/application/tenant/setup/one",
+  "externalService": "tenantsetupService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+  "ignoreParamsInServiceUrl": [ "tenantCode" ],
+
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "tenantId",
+              "fieldType": "hidden",
+              "required": false
+            },
+            {
+              "modelKey": "entityTypeCode",
+              "title": "Entity Type Code",
+              "fieldType": "hidden",
+              "defaultValue": "TENANT"
+            },
+            {
+              "modelKey": "tenantCode",
+              "cssClass": "col-md-2",
+              "title": "Tenant Code",
+              "fieldType": "textbox",
+              "disabledInEditMode": true,
+              "required": true
+            },
+            {
+              "modelKey": "tenantTitle",
+              "cssClass": "col-md-2",
+              "title": "Title",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "logo",
+              "cssClass": "col-md-2 padding-lft padding-rht",
+              "title": "Logo",
+              "fieldType": "file",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelKey": "tenantRelation",
+      "modelType": "SINGLE",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "tenantRelationId",
+              "fieldType": "hidden",
+              "required": false
+            },
+            {
+              "modelKey": "tenantId",
+              "fieldType": "hidden",
+              "required": false
+            },
+            {
+              "modelKey": "parentTenantId",
+              "title": "Parent Tenants",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "disabledInEditMode": true,
+              "dataConfig": {
+                "dataUrl": "vdi/admin/application/tenant",
+                "displayKey": "tenantTitle",
+                "valueKey": "tenantId"
+              },
+              "disabled": false
+            },
+            {
+              "modelKey": "relationshipTypeCode",
+              "title": "Relationship Type Code",
+              "fieldType": "hidden",
+              "defaultValue": "ST"
+            },
+            {
+              "modelKey": "beginDate",
+              "title": "Begin Date",
+              "fieldType": "hidden",
+              "defaultValue": "2018/01/01"
+            },
+            {
+              "modelKey": "endDate",
+              "title": "End Date",
+              "fieldType": "hidden",
+              "defaultValue": "2099/01/01"
+            }
+          ]
+        },
+        {
+          "hideInViewMode": true,
+          "fields": [
+            {
+              "modelKey": "tatenantApplicationId",
+              "fieldType": "hidden",
+              "ignoreInServiceModel": true,
+              "required": false
+            },
+            {
+              "modelKey": "taapplicationEntityId",
+              "title": "Applications",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "ismultiple": true,
+              "dataConfig": {
+                "dataUrl": "vdi/admin/application/config/getall",
+                "displayKey": "applicationTitle",
+                "valueKey": "applicationEntityId"
+              },
+              "ignoreInServiceModel": true,
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "tabeginDate",
+              "title": "Begin Date",
+              "fieldType": "date",
+              "cssClass": "col-md-2 padding-lft padding-rht0",
+              "ignoreInServiceModel": true,
+              "required": false
+            },
+            {
+              "modelKey": "taendDate",
+              "title": "End Date",
+              "fieldType": "date",
+              "cssClass": "col-md-2 padding-rht padding-lft0",
+              "ignoreInServiceModel": true,
+              "required": false
+            },
+            {
+              "title": "Add to Grid",
+              "fieldType": "button",
+              "handlerName": "addToGrid",
+              "cssClass": "col-md-2 butn-cls-margntop padding-lftrht0",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "tenantApplication",
+              "title": "Tenant Application",
+              "fieldType": "grid",
+              "initLoad": true,
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "total",
+              "gridConfig": {
+                "multiSelect": true,
+                "modelKeyMap": [
+                  "operationType",
+                  "tenantApplicationId",
+                  "tenantId",
+                  "applicationEntityId",
+                  "beginDate",
+                  "endDate",
+                  "isActive"
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "toolPanelSuppressRowGroups": true
+                },
+                "columns": [
+                  {
+                    "field": "operationType",
+                    "hide": true
+                  },
+                  {
+                    "field": "tenantApplicationId",
+                    "hide": true
+                  },
+                  {
+                    "field": "tenantId",
+                    "hide": true
+                  },
+                  {
+                    "field": "applicationEntityId",
+                    "hide": true
+                  },
+                  {
+                    "field": "applicationTitle",
+                    "headerName": "Application Title",
+                    "hide": false,
+                    "editable": false
+                  },
+                  {
+                    "field": "beginDate",
+                    "headerName": "Begin Date",
+                    "editable": true,
+                    "cellEditor": "datePicker",
+                    "formatType": "Date"
+                  },
+                  {
+                    "field": "endDate",
+                    "headerName": "End Date",
+                    "editable": true,
+                    "cellEditor": "datePicker",
+                    "formatType": "Date"
+                  },
+                  {
+                    "field": "isActive",
+                    "headerName": "Is Active",
+                    "hide": true
+                  },
+                  {
+                    "field": "deleteId",
+                    "headerName": "Delete",
+                    "actionType": "DELETE",
+                    "actionIconClass": "fa fa-trash",
+                    "actionToggleField": "isActive",
+                    "actionModeField": "tenantApplicationId",
+                    "actionToggle": {
+                      "true": "fa fa-toggle-off",
+                      "false": "fa fa-toggle-on"
+                    },
+                    "handlerName": "deleteFromGrid"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

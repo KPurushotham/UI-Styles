@@ -1,0 +1,50 @@
+<div class="paid_vendor_container full_width">
+    <div class="sub_heading full_width no-margin">
+        <h5 class="full_width">Basic Information</h5>
+    </div>
+     <div class="input_field col_3 left">
+        <label class="full_width">Registratrion ID</label>
+        <input type="text" class="full_width" name="bookMakerCode" disabled ng-model="selectedData.code">
+    </div>
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.bookMakerName.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Name <span class="mandatory">*</span></label>
+        <input type="text" class="full_width" name="bookMakerName" ng-disabled="disableFlag" ng-model="partyModel.basicDetails.bookMakerName" required>
+    </div>
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.initialDeposit.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Initial Deposit <span class="mandatory">*</span></label>
+        <input type="text" class="full_width" name="initialDeposit" ng-disabled="disableFlag" ng-model="partyModel.basicDetails.initialDeposit" required numbers-only>
+    </div>
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.securityDeposit.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Security Deposit <span class="mandatory">*</span></label>
+        <select class="optionsuppercase nya-selectpicker" ng-disabled="disableFlag" data-none-selected-text="Please Select" title="Please Select" data-live-search="true" data-container="body"  name="securityDeposit" ng-change="changeBankGuaranteeDetails()" placeholder='Select' ng-options='c as c.text for c in dropDownData.bankGuaranteeDD track by c.value' ng-model="selectedData.bankGuaranteeDetails" required></select>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Liability </label>
+        <input type="text" class="full_width" name="liability" ng-disabled="disableFlag" ng-model="partyModel.basicDetails.liability" numbers-only>
+    </div>
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.dob.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Date Of Birth <span class="mandatory">*</span></label>
+        <div class="datepicker_field full_width">
+            <input type="text" name="dob" class="input_text full_width" date-input-chars simple-date-pick ng-disabled="disableFlag" ng-model="partyModel.basicDetails.dob" required>
+        </div>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Age</label>
+        <input disabled type="text" name="age" class="full_width" ng-model="partyModel.basicDetails.age">
+    </div>
+    <div class="select_field col_3 left">
+        <label class="full_width">Nationality</label>
+        <div class="radio_fields_wrapper full_width">
+            <label class="left control control--radio">
+                <input type="radio" class="left radio-custom" ng-disabled="disableFlag" value="Indian" ng-model="selectedData.Nationality" name="licencetype">
+                <span class="left">Indian</span>
+                <div class="control__indicator"></div>
+            </label>
+            <label class="left control control--radio">
+                <input type="radio" class="left radio-custom" ng-disabled="disableFlag" value="Foreigner" ng-model="selectedData.Nationality" name="licencetype">
+                <span class="left">Foreigner</span>
+                <div class="control__indicator"></div>
+            </label>
+        </div>
+    </div>
+</div>

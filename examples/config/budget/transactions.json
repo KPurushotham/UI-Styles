@@ -1,0 +1,201 @@
+﻿[
+  {
+    "stateName": "budget.budgetrequisition",
+    "url": "budgetrequisition",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "data": {
+      "title": "Additional/Special Budget Requisition",
+      "addScreenStateName": "budget.budgetrequisitionform"
+    }
+  },
+  {
+    "stateName": "budget.budgetrequisitionform",
+    "url": "budgetrequisitionform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "BUDGET_REQUISITION",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  },
+   {
+    "stateName": "budget.annualbudget",
+    "url": "annualbudget",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "data": {
+      "title": "Annual Budget Requisition",
+      "addScreenStateName": "budget.annualbudgetform"
+    }
+  },
+  {
+    "stateName": "budget.annualbudgetform",
+    "url": "annualbudgetform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "ANNUAL_BUDGET",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  },
+   {
+    "stateName": "budget.budgetreallocation",
+    "url": "budgetreallocation",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "data": {
+      "title": "Budget Reallocation",
+      "addScreenStateName": "budget.budgetreallocationform"
+    }
+  },
+  {
+    "stateName": "budget.budgetreallocationform",
+    "url": "budgetreallocationform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "BUDGET_REALLOCATION",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  },
+   {
+    "stateName": "budget.budgetutilizationrequisition",
+    "url": "budgetutilizationrequisition",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "data": {
+      "title": "Budget Utilization Requisition",
+      "addScreenStateName": "budget.budgetutilizationrequisitionform"
+    }
+  },
+  {
+    "stateName": "budget.budgetutilizationrequisitionform",
+    "url": "budgetutilizationrequisitionform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "BUDGET_UTILIZATION_REQUISITON",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  },
+   {
+    "stateName": "budget.budgetutilstatus",
+    "url": "budgetutilstatus",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "data": {
+      "title": "Budget Utilization Status",
+      "addScreenStateName": "budget.budgetutilstatusform"
+    }
+  },
+  {
+    "stateName": "budget.budgetutilstatusform",
+    "url": "budgetutilstatusform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "BUDGET_UTIL_STATUS",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  },
+   {
+    "stateName": "budget.interimbudget",
+    "url": "interimbudget",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "data": {
+      "title": "Interim Budget",
+      "addScreenStateName": "budget.interimbudgetform"
+    }
+  },
+  {
+    "stateName": "budget.interimbudgetform",
+    "url": "interimbudgetform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "INTERIM_BUDGET",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  },
+   {
+    "stateName": "budget.annualbudgetapproval",
+    "url": "annualbudgetapproval",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "data": {
+      "title": "Approval of Annual Budget",
+      "addScreenStateName": "budget.annualbudgetapprovalform"
+    }
+  },
+  {
+    "stateName": "budget.annualbudgetapprovalform",
+    "url": "annualbudgetapprovalform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "ANNUAL_BUDGET_APPROVAL",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  },
+   {
+    "stateName": "budget.budgetrequisitionstatus",
+    "url": "budgetrequisitionstatus",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "data": {
+      "title": "Budget Requisition Status Report",
+      "addScreenStateName": "budget.budgetrequisitionstatusform"
+    }
+  },
+   {
+    "stateName": "budget.budgetstatus",
+    "url": "budgetstatus",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "data": {
+      "title": "Budget Status",
+      "addScreenStateName": "budget.budgetstatusform"
+    }
+  },
+  {
+    "stateName": "budget.budgetstatusform",
+    "url": "budgetstatusform",
+    "editKeys": [ "entityObjectId" ],
+    "showInLeftManu": false,
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "ANNUAL_BUDGET_APPROVAL",
+    "viewName": "budgetSection",
+    "data": { "title": "Budget Status" }
+  },
+  {
+    "stateName": "budget.departmentbudgetstatus",
+    "url": "departmentbudgetstatus",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "data": {
+      "title": "Department Budget Status",
+      "addScreenStateName": "budget.departmentbudgetstatusform"
+    }
+  },
+  {
+    "stateName": "budget.departmentbudgetstatusform",
+    "url": "departmentbudgetstatusform",
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "showInLeftManu": false,
+    "pattern": "CF",
+    "entityType": "ANNUAL_BUDGET_APPROVAL",
+    "viewName": "budgetSection",
+    "data": { "title": "Department Budget Status" }
+  }
+]

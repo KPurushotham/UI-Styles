@@ -1,0 +1,8 @@
+{
+    "name": "exportform",
+    "noWorkflow": true,
+    "submitted": false,
+    "externalService": "reportService",
+    "ReportConfigUrl":"",
+    "reportCode":"COMM_EXPORT"
+  }

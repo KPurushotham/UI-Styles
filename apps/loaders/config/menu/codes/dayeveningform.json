@@ -1,0 +1,33 @@
+{
+    "name": "dayeveningform",
+    "saveUrl": "vdi/racemaster/DayEvening/save",
+    "getOneUrl": "vdi/racemaster/DayEvening/one",
+    "externalService": "",
+    "validationUrl": "",
+    "noWorkflow": true,
+    "submitted": false,
+    "sections": [
+        {
+            "rowDivisions": [
+                {
+                    "fields": [
+                        {
+                            "modelKey": "code",
+                            "title": "Code",
+                            "disabledInEditMode": true,
+                            "fieldType": "textbox",
+                            "required": true
+                        },
+                        {
+                            "modelKey": "description",
+                            "title": "Description",
+                            "disabledInEditMode": true,
+                            "fieldType": "textbox",
+                            "required": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

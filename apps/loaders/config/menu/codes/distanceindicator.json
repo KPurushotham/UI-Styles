@@ -1,0 +1,30 @@
+{
+    "name":"distanceindicator",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.distanceindicatorform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/distanceindicator/all",
+    "editScreenState": "app.loaders.codes.distanceindicatorform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

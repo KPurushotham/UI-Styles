@@ -1,0 +1,71 @@
+﻿[
+  {
+    "key": "dataTool.enrolltenant",
+    "urlRoute": "enrolltenant",
+    "pattern": "LISTING",
+    "title": "Enroll Tenant",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "dataTool.enrolltenantform",
+    "urlRoute": "enrolltenantform",
+    "showInMenu": false,
+    "editKeys": [ "EntityId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "ID"
+  },
+  {
+    "key": "dataTool.manageapps",
+    "urlRoute": "manageapps",
+    "pattern": "LISTING",
+    "title": "Manage Apps",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "dataTool.manageappsform",
+    "urlRoute": "manageappsform",
+    "showInMenu": false,
+    "editKeys": [ "EntityId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "ID"
+  },
+  {
+    "key": "dataTool.appsubscription",
+    "urlRoute": "appsubscription",
+    "pattern": "LISTING",
+    "title": "App Subscription",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "dataTool.appsubscriptionform",
+    "urlRoute": "appsubscriptionform",
+    "showInMenu": false,
+    "editKeys": [ "EntityId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "ID"
+
+  },
+  {
+    "key": "dataTool.manageusers",
+    "urlRoute": "manageusers",
+    "pattern": "LISTING",
+    "title": "Manage Users",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "dataTool.manageusersform",
+    "urlRoute": "manageusersform",
+    "showInMenu": false,
+    "editKeys": [ "EntityId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "ID"
+  }
+]

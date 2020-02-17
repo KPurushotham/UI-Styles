@@ -1,0 +1,76 @@
+{
+    "name": "accountsform",
+    "noWorkflow": true,
+    "submitted": false,
+    "externalService": "accountService",
+    "actions": [],
+    "isManidatoryRequired": false,
+    "sections": [
+      {
+        "rowDivisions": [
+            {
+                "fields": [
+                    {
+                        "modelKey": "accountgrid",
+                        "title": "Account",
+                        "fieldType": "grid",
+                        "initLoad": true,
+                        "style": "display: none;",
+                        "localData": true,
+                        "show": false,
+                        "gridSummaryLabel": "total",
+                        "gridConfig": {
+                            "modelKeyMap": [],
+                            "features": {
+                                "enableGridMenu": false,
+                                "floatingFilter": false,
+                                "enableFilter": true,
+                                "enableSorting": true,
+                                "toolPanelSuppressRowGroups": true,
+                                "suppressSizeToFit": true,
+                                "groupDefaultExpanded": true
+                            },
+                            "columns": [
+                                {
+                                    "field": "id",
+                                    "headerName": "Account Id",
+                                    "tooltipField": "id",
+                                    "hide": false
+                                },
+                                {
+                                    "field": "name",
+                                    "headerName": "Name",
+                                    "tooltipField": "name",
+                                    "hide": false
+                                },
+                                {
+                                    "field": "currencyCode",
+                                    "tooltipField": "Currency Code",
+                                    "headerName": "currencyCode",
+                                    "hide": false
+                                },
+                                {
+                                    "field": "currencyDescription",
+                                    "headerName": "Currency Description",
+                                    "tooltipField": "currencyDescription",
+                                    "hide": false
+                                },
+                                {
+                                    "field": "currentBalance",
+                                    "headerName": "Current Balance",
+                                    "tooltipField": "currentBalance",
+                                    "hide": false
+                                }
+                            ]
+                        },
+                        "disabled": false,
+                        "required": true
+                    }
+                ]
+            }
+       
+        ]
+      }
+
+    ]
+  }

@@ -1,0 +1,89 @@
+﻿{
+  "name": "feetypeaccountlinkform",
+  "saveUrl": "feetypeac/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+
+            {
+              "modelKey": "feeTypeId",
+              "title": "Fee Type",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/party/feetypesbox/all?fk-status=ACTIVE",
+                "displayKey": "feeTypeCode-shortName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+               {
+              "modelKey": "creditAccountId",
+              "title": "Account",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/generalaccount/accounts/all?fk-status=ACTIVE",
+                "displayKey": "acCode-shortname",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+          {
+              "modelKey": "credit",
+              "title": "Indicator",
+               "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+
+            }
+
+          ]
+        },
+        {
+          "fields": [
+                 {
+              "modelKey": "partyType",
+              "title": "Party Type",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/Party/partytype/all?departmentId=4&fk-status=ACTIVE",
+        "displayKey": "partyTypeCode-shortName",
+        "valueKey": "shortName"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "debitAccountId",
+              "title": "Account",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/generalaccount/accounts/all?fk-status=ACTIVE",
+                "displayKey": "acCode-shortname",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+             {
+              "modelKey": "debit",
+              "title": "Indicator",
+               "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}

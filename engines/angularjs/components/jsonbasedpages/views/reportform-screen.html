@@ -1,0 +1,42 @@
+<div class="grid-container-design">
+    <div class="grid-container-table">
+    <h3 class="left">{{title}}</h3>
+    <div class="right report-dashboard-link">
+        <i class="fa fa-arrow-left" style="font-size: 11px !important; color:#209e91;" aria-hidden="true"></i>
+        <a class="report-screen-atag" href="app/{{tenantCode}}/{{appKey}}/dashboard">Back To Report Dashboard</a>
+    </div>
+    <div class="department_field financial_year_field left" ng-if="showFilter">
+        <label class="left">{{filter.title}}</label>
+        <div class="select_field left no-padding">
+            <select class="optionsuppercase nya-selectpicker" title="Please Select" data-live-search="true" data-container="body" id="dataFilter" ng-change="onChangeLoadGrid(this)" placeholder='Select' name="dataFilter"
+                    ng-options="c.value as c.text for c in screenConfig" ng-model="filterKeyValue"
+                    required></select>
+        </div>
+    </div>
+
+    <actions-directive actions="actions"></actions-directive>
+        
+    <form name="df_form" novalidate=''>
+
+        <div class="criteria_container" ng-if="criteria.show" ng-init="setForm(df_form)">
+            <div>
+                <dynamic-form-directive form="form" form-data-model="criteriaDataModel"></dynamic-form-directive>
+
+            </div>
+            <button class="btn green_btn" ng-if="criteria.showButton" ng-click="getResults()" ng-disabled = "disableSubmit">
+                <span class="icon-btn icon-check"></span>
+                <span class="btn-text" type="submit">{{criteria.buttonTitle || 'Get Results'}}</span>
+            </button>
+
+        </div>
+
+        <!--ui-grid-selection ui-grid-exporter -->
+
+        <dynamic-form-directive form="form" form-data-model="formDataModel"></dynamic-form-directive>
+     
+
+    </form>
+
+    </div>
+</div>
+   

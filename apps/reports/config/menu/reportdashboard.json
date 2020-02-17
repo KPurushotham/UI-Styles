@@ -1,0 +1,42 @@
+{
+  "name": "reportdashboard",
+  "externalService": "",
+  "columns": [
+    {
+      "field": "applicationId",
+      "headerName": "Application Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "reportCode",
+      "headerName": "Report Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "reportName",
+      "headerName": "Report Name",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "description",
+      "headerName": "Description",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "version",
+      "headerName": "Version",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+  ],
+  "dataUrl": "vdi/reports/metadata/report/get/one?applicationId=1002",
+  "editScreenState": "",
+  "rowKey": {
+    "dataViewId": "reportCode"
+  },
+  "defaultSortColumn": "reportCode"
+}

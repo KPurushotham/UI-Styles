@@ -1,0 +1,57 @@
+﻿     {
+
+     	"columns": [{
+     			"key": "raceDate",
+     			"headerText": "Race Date",
+     			"filterMask": "Search"
+     		}, {
+     			"key": "raceDay",
+     			"headerText": "Race Day",
+     			"filterMask": "Search"
+     		}, {
+     			"key": "season",
+     			"headerText": "Race Season",
+     			"filterMask": "Search"
+     		},
+
+
+     		{
+     			"key": "raceName",
+     			"headerText": "Race Name",
+     			"filterMask": "Search",
+     			"type": "date"
+     		},
+        {
+          "key": "horseName",
+          "headerText": "Horse Name",
+          "filterMask": "Search"
+        },
+        {
+        "key": "status",
+        "headerText": "Status",
+        "filterMask": "Search"
+      },
+      {
+        "key": "lastUpdatedDate",
+        "headerText": "Last Updated Date",
+        "type": "date"
+      }
+
+     	],
+     	"dataUrl": "vdi/olims/racing/pressrelease/all",
+
+     	"rowKey": {
+     		"entityObjectId": "entityObjectId"
+     	},
+
+
+     	"defaultSortColumn": "lastUpdatedDate"
+
+
+
+
+
+
+
+
+     }

@@ -1,0 +1,8 @@
+{
+    "name": "importform",
+    "noWorkflow": true,
+    "submitted": false,
+    "externalService": "reportService",
+    "ReportConfigUrl":"",
+    "reportCode":"SETTLE_AGENT_IMPORT"
+  }

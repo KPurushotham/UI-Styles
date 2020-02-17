@@ -1,0 +1,30 @@
+{
+    "name":"winddirection",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.winddirectionform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/WindDirection/all",
+    "editScreenState": "app.loaders.codes.winddirectionform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

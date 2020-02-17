@@ -1,0 +1,131 @@
+{
+  "name": "subsidynormform",
+  "saveUrl": "subsidy/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "financialYear",
+              "title": "Financial Year",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/financialYear/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "season",
+              "title": "Season",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/seasonbox/all",
+                "displayKey": "shortName-seasonDescription",
+                "valueKey": "shortName"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "subsidyMode",
+              "title": "Subsidy Mode",
+              "fieldType": "radio",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Season",
+                    "value": "Season"
+                  },
+                  {
+                    "text": "Default",
+                    "value": "Default"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+
+            }
+
+          ]
+        },
+
+        {
+          "fields": [
+            {
+              "modelKey": "subsidyId",
+              "title": "Subsidy Type",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/prospectus/subsidy/all?fk-status=ACTIVE",
+                "displayKey": "subsidyCode-subsidyName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "amountTypeId",
+              "title": "Value/Percentage",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/functional/amounttypebox/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+
+            {
+              "modelKey": "amount",
+              "title": "Amount",
+              "fieldType": "currency",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        },
+         {
+          "fields": [
+
+            {
+              "modelKey": "frequency",
+              "title": "Frequency",
+              "fieldType": "dropdown",
+			  "cssClass": "col_3",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racingaccount/frequencybox/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+                {
+              "modelKey": "effectiveFromDate",
+              "title": "Effective From",
+              "fieldType": "date",
+			  "cssClass": "col_3",		
+              "disabled": false,
+              "required": true
+            }
+
+          ]
+        }
+
+      ]
+    }
+  ]
+}

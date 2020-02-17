@@ -1,0 +1,340 @@
+{
+  "name": "communityform",
+  "noWorkflow": true,
+  "submitted": false,
+  "externalService": "communityService",
+  "actions": [],
+  "isManidatoryRequired": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "accountType",
+              "title": "Account Type:",
+              "cssClass": "col_2",
+              "fieldType": "radio",
+              "defaultValue": "1",
+              "handlerName": "accountTypeHandler",
+              "disabledInEditMode": true,
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Master Account",
+                    "value": "1"
+                  },
+                  {
+                    "text": "Clients",
+                    "value": "2"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "clientsDropdown",
+              "title": "Clients",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "style": "display: none;",
+              "dataConfig": {
+                "dataUrl": "vdi/postget/gapp/GetClients/Clients",
+                "displayKey": "userName-clientAccountId",
+                "valueKey": "clientAccountId"
+              },
+              "parentmultiple": false,
+              "childmultiple": false,
+              "ignoreInServiceModel": false,
+              "disabled": false,
+              "required": false
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "community",
+              "title": "Community",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "style": "display: block;",
+              "dataConfig": {
+                "dataUrl": "vdi/gapp/communities/details?@AccountId=43&@Active=1",
+                "displayKey": "communityCodeId-communityId",
+                "valueKey": "communityId"
+              },
+              "parentmultiple": false,
+              "childmultiple": false,
+              "ignoreInServiceModel": false,
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "view",
+              "title": "View",
+              "fieldType": "button",
+              "cssClass": "col-md-2",
+              "ignoreInServiceModel": true,
+              "handlerName": "viewHandler",
+              "required": false
+            },
+            {
+              "modelKey": "add",
+              "title": "Add",
+              "fieldType": "button",
+              "style": "display: none;",
+              "cssClass": "col-md-2",
+              "ignoreInServiceModel": true,
+              "handlerName": "addHandler",
+              "required": false,
+              "modalform": {
+                "title": "Create New Rates",
+                "saveButtonTilte": "Save",
+                "handlerName": "saveModelForm",
+                "sections": [
+                  {
+                    "rowDivisions": [
+                      {
+                        "fields": [
+                          {
+                            "modelKey": "community",
+                            "title": "Community",
+                            "fieldType": "dropdown",
+                            "cssClass": "col_2",
+                            "dataConfig": {
+                              "dataUrl": "vdi/gapp/communities/details?@AccountId=43&@Active=1",
+                              "displayKey": "communityCodeId-communityId",
+                              "valueKey": "communityId"
+                            },
+                            "parentmultiple": false,
+                            "childmultiple": false,
+                            "ignoreInServiceModel": false,
+                            "disabled": false,
+                            "required": false
+                          },
+                          {
+                            "modelKey": "name",
+                            "title": "Name",
+                            "fieldType": "textbox",
+                            "cssClass": "col_2",
+                            "ignoreInServiceModel": false,
+                            "required": false
+                          },
+                          {
+                            "modelKey": "description",
+                            "title": "Description",
+                            "fieldType": "textbox",
+                            "cssClass": "col_2",
+                            "ignoreInServiceModel": false,
+                            "required": false
+                          },
+                          {
+                            "modelKey": "reducedTakeOut",
+                            "title": "Reduced TakeOut",
+                            "fieldType": "textbox",
+                            "cssClass": "col_2",
+                            "ignoreInServiceModel": false,
+                            "required": false
+                          }
+                        ]
+                      },
+                      {
+                        "fields": [
+                          {
+                            "modelKey": "retention",
+                            "title": "Retention",
+                            "fieldType": "textbox",
+                            "cssClass": "col_2",
+                            "ignoreInServiceModel": false,
+                            "required": false
+                          },
+                          {
+                            "modelKey": "startDate",
+                            "title": "Start Date",
+                            "fieldType": "date",
+                            "cssClass": "col_2",
+                            "ignoreInServiceModel": false,
+                            "required": false
+                          },
+                          {
+                            "modelKey": "endDate",
+                            "title": "End Date",
+                            "fieldType": "date",
+                            "cssClass": "col_2",
+                            "ignoreInServiceModel": false,
+                            "required": false
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelkey": "sectionOne",
+      "show": false,
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "communityDropDown",
+              "title": "Community",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "dataConfig": {
+                "dataUrl": "vdi/gapp/communities/details?@AccountId=43&@Active=1",
+                "displayKey": "communityCodeId",
+                "valueKey": "communityId"
+              },
+              "parentmultiple": false,
+              "childmultiple": false,
+              "ignoreInServiceModel": false,
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "name",
+              "title": "Name",
+              "fieldType": "textbox",
+              "ignoreInServiceModel": false,
+              "required": false
+            },
+            {
+              "modelKey": "description",
+              "title": "Description",
+              "fieldType": "textbox",
+              "ignoreInServiceModel": false,
+              "required": false
+            },
+            {
+              "modelKey": "reducedTakeOut",
+              "title": "Reduced TakeOut",
+              "fieldType": "textbox",
+              "ignoreInServiceModel": false,
+              "required": false
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "retention",
+              "title": "Retention",
+              "fieldType": "textbox",
+              "ignoreInServiceModel": false,
+              "required": false
+            },
+            {
+              "modelKey": "startDate",
+              "title": "Start Date",
+              "fieldType": "date",
+              "cssClass": "col-md-2",
+              "ignoreInServiceModel": false,
+              "required": false
+            },
+            {
+              "modelKey": "endDate",
+              "title": "End Date",
+              "fieldType": "date",
+              "cssClass": "col-md-2",
+              "ignoreInServiceModel": false,
+              "required": false
+            },
+            {
+              "modelKey": "save",
+              "title": "Save",
+              "fieldType": "button",
+              "cssClass": "col-md-2",
+              "ignoreInServiceModel": true,
+              "handlerName": "saveDataHandler",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "communitygrid",
+              "title": "Community Details",
+              "fieldType": "grid",
+              "initLoad": true,
+              "style": "display: none;",
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "total",
+              "gridConfig": {
+                "modelKeyMap": [],
+                "features": {
+                  "enableGridMenu": false,
+                  "floatingFilter": false,
+                  "enableFilter": true,
+                  "enableSorting": true,
+                  "toolPanelSuppressRowGroups": true,
+                  "suppressSizeToFit": true,
+                  "groupDefaultExpanded": true
+                },
+                "columns": [
+                  {
+                    "field": "communityId",
+                    "headerName": "community Id",
+                    "tooltipField": "communityId",
+                    "hide": true
+                  },
+                  {
+                    "field": "name",
+                    "headerName": "Name",
+                    "tooltipField": "name",
+                    "hide": false
+                  },
+                  {
+                    "field": "description",
+                    "headerName": "Description",
+                    "tooltipField": "description",
+                    "hide": false
+                  },
+                  {
+                    "field": "rebatePercentage",
+                    "headerName": "Reduced TakeOut",
+                    "tooltipField": "rebatePercentage",
+                    "hide": false
+                  },
+                  {
+                    "field": "retentionPercentage",
+                    "headerName": "Retention",
+                    "tooltipField": "retentionPercentage",
+                    "hide": false
+                  },
+                  {
+                    "field": "StartDate",
+                    "headerName": "Start Date",
+                    "tooltipField": "StartDate",
+                    "hide": false
+                  },
+                  {
+                    "field": "EndDate",
+                    "headerName": "End Date",
+                    "tooltipField": "EndDate",
+                    "hide": false
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

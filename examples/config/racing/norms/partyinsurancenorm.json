@@ -1,0 +1,39 @@
+﻿{
+  "columns": [
+   {
+      "key": "partyType",
+      "headerText": "Party Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "insuranceType",
+      "headerText": "Insurance Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "insuranceAmount",
+      "headerText": "Amount",
+      "filterMask": "Search"
+    },
+   
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/racing/insurance/all",
+
+  "rowKey": {
+  "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

@@ -1,0 +1,88 @@
+{
+  "name": "field",
+  "externalService": "fieldconfigService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "reportsdesigner.fields.fieldform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "tenantId",
+      "headerName": "Tenant Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "fieldId",
+      "headerName": "Field Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "fieldKey",
+      "headerName": "Field Key",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "title",
+      "headerName": "Title",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "fieldTypeCode",
+      "headerName": "Field Type Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "dataSourceId",
+      "headerName": "Data Source Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "dataKeyJson",
+      "headerName": "Data Key Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "dataFormatJson",
+      "headerName": "Data Format Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "configJson",
+      "headerName": "Config Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "initLoadData",
+      "headerName": "Init Load Data",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+
+  ],
+  "dataUrl": "vdi/reportsdesigner/field/get/all",
+  "editScreenState": "app.reportsdesigner.fields.fieldform",
+  "rowKey": {
+    "fieldId": "fieldId"
+  },
+  "defaultSortColumn": "fieldId"
+}

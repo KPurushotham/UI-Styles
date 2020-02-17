@@ -1,0 +1,153 @@
+{
+  "name": "budgetitemwiseworkform",
+  "saveUrl": "budgetitemwicework/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+             {
+              "modelKey": "id",
+              "title": "Key",
+              "fieldType": "numeric",
+              "min": 0,
+              "max": 100,
+              "step": 10,
+
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "departmentId",
+              "fieldType": "hidden"
+            },
+            {
+              "modelKey": "departmentCode",
+              "title": "Department",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/departmentlist/all?fk-status=ACTIVE",
+                "displayKey": "departmentCode-name",
+                "valueKey": "entityObjectId"
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "modelKeyMapTobeFilled": { "departmentId": "entityObjectId" }
+                }
+              ],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "section",
+              "title": "Section",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/sections/all?fk-status=ACTIVE",
+                "displayKey": "sectionCode-sectionName",
+                "valueKey": "entityObjectId"
+              },
+              "initLoad": true,
+              "dependancyConfig": [
+                {
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  }
+                }
+              ],
+              "disabled": false,
+              "required": true
+            }
+
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cost Centers:",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "costCenters",
+              "title": "Cost Center",
+              "fieldType": "grid",
+              "show": false,
+              "externalActions": [ { "actionLabel": "Reorder" } ],
+              "gridSummaryLabel": "Total Items: ",
+              "gridConfig": {
+                "gridFeatures": ["selection", "edit", "row-edit" ],
+                "multiSelect": true,
+                "dataUrl": "vdi/olims/budget/deptcostcenters/all",
+                "modelKeyMap": [ "costCenterCode", "costCenterName", "status" ],
+                "columns": [
+                  {
+                    "key": "costCenterCode",
+
+                    "headerText": "Cost Center Code",
+                    "filterMask": "Search",
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "costCenterName",
+                    "headerText": "Cost Center Name",
+                    "filterMask": "Search",
+                    "type": "uppercase",
+                    "editable": true
+                  },
+                  {
+                    "key": "status",
+                    "headerText": "Status",
+                    "filterMask": "Search",
+                    "type": "uppercase",
+                    "edittype": "dropdown",
+                    "dataConfig2": {
+                      "dataUrl": "vdi/olims/core/sections/all?fk-status=ACTIVE",
+                      "displayKey": "sectionCode-sectionName",
+                      "valueKey": "entityObjectId"
+                    },
+                    "dataConfig": {
+                      "localData": [
+                        {
+                          "value": "INACTIVE",
+                          "text": "Inactive"
+                        },
+                        {
+                          "value": "ACTIVE",
+                          "text": "Active"
+                        }
+                      ],
+                      "displayKey": "text",
+                      "valueKey": "value"
+                    },
+                    "editable": true
+                  }
+                ]
+              },
+              "dependancyConfig": [
+                {
+                  "sourceKey": "departmentCode",
+                  "event": "change",
+                  "loadData": {
+                    "keyParams": { "departmentId": "departmentId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "show": true }
+
+                }
+              ],
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+    "name":"apprenticetype",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.apprenticetypeform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/ApprenticeType/all",
+    "editScreenState": "app.loaders.codes.apprenticetypeform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

@@ -1,0 +1,58 @@
+﻿{
+  "columns": [
+    {
+      "key": "department",
+      "headerText": "Department",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+     {
+      "key": "section",
+      "headerText": "Section",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "costCenter",
+      "headerText": "Cost Center",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+     {
+      "key": "budget",
+      "headerText": "Budget",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "componentCategory",
+      "headerText": "Component Category",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "component",
+      "headerText": "Component",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+   
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/budget/budgetwisecomponent/all",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

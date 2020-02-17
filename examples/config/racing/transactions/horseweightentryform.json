@@ -1,0 +1,96 @@
+  {
+  "name": "horseweightentryform",
+  "saveUrl": "horseweightentry/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+
+      "rowDivisions": [
+        {
+
+          "fields": [
+
+            {
+              "modelKey": "raceDate",
+              "title": "Race Date",
+                "cssClass": "col_1",
+              "fieldType": "date",
+              "dataConfig": {
+            "dataUrl": "vdi/olims/prospectus/racecalendar/all?fk-status=ACTIVE",
+            "displayKey": "raceDates",
+            "valueKey": "raceDates"
+          },
+          "dependancyEvents": [{
+            "eventName": "change",
+            "modelKeyMapTobeFilled": {
+              "raceDay": "raceDay",
+              "season": "season"
+            }
+          }],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "raceDay",
+              "title": "Race Day",
+               "fieldType": "textbox",
+                "cssClass": "col_1",
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "Season",
+              "title": "Race Season",
+              "fieldType": "textbox",
+                "cssClass": "col_1",
+              "disabled": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "raceNameId",
+              "title": "Race Name",
+              "cssClass": "col_6",
+              "fieldType": "dropdown",
+                  "dataConfig": {
+          "dataUrl": "vdi/olims/prospectus/racenames/all?fk-status=ACTIVE",
+          "displayKey": "description",
+          "valueKey": "entityObjectId"
+        },
+        "dependancyEvents": [{
+          "eventName": "change",
+          "modelKeyMapTobeFilled": {
+            "raceNo": "raceNo",
+            "runningRaceNo": "runningRaceNo"
+          }
+        }],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "raceNo",
+              "title": "Race No",
+              "cssClass": "col_20",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "runningRaceNo",
+              "title": "Running Race No",
+              "cssClass": "col_20",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            }
+          ]
+        }
+      ]
+
+    }
+  ]
+}

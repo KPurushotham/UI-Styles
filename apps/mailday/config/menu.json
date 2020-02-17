@@ -1,0 +1,11 @@
+﻿
+[
+  {
+    "key": "mailday.maildayform",
+    "urlRoute": "maildayform",
+    "showInMenu": true,
+    "pattern": "DASHBOARD",
+    "viewName": "mainPagesection",
+    "title": "Bulletin Board"
+  } 
+]

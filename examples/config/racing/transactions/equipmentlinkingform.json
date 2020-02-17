@@ -1,0 +1,134 @@
+{
+  "name": "equipmentlinkingform",
+  "saveUrl": "vdi/olims/racing/horseequipmentlinkservice/save",
+  "getOneUrl": "vdi/olims/racing/horseequipmentlink/getone",
+  "queryStringParams": { "horseId": "horseId" },
+  "noWorkflow": true,
+  "workflowUrl": "",
+  "validationUrl": "",
+  "submitted": false,
+  "alwaysUpdateMode": true,
+  "mainModelName": "horseEquipmentLinkData",
+  "titleByKey": "UP.horseId",
+  "entityTypeKey": "entityType",
+  "defaultStatus": "Active",
+  "getOneMultipleItems": true,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "horseIdMain",
+              "ignoreInServiceModel": true,
+              "title": "Horse",
+              "codeKey": "id",
+              "fieldType": "dropdown",
+              "cssClass": "col_6",
+              "defaultValueByKey": "UP.horseId",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/veterinary/horsebox/all",
+                "displayKey": "value",
+                "valueKey": "id"
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+
+              ],
+
+              "disabled": true,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Add/Remove Equipment:",
+      "rowDivisions": [
+        {
+          "fields": [
+
+            {
+              "useGetOneModelAsFieldDataModel": true,
+              "fieldType": "composite-repeater-field",
+              "existingItemConfig": {
+                "removable": false,
+                "updatable": true
+              },
+              "modelKeyMap": [ "equipmentId", "horseId", "equipmentOnPeriod", "remarks", "entityObjectId", "status" ],
+              "compositefields": [
+                {
+                  "modelKey": "horseId",
+                  "fieldType": "hidden",
+                  "defaultValueByKey": "UP.horseId"
+                 
+                },
+                {
+                  "modelKey": "entityObjectId",
+                  "fieldType": "hidden",
+                  "ignoreInModelIfNull": true
+                },
+                {
+                  "modelKey": "status",
+                  "fieldType": "hidden",
+                  "defaultValue": "Active"
+                },
+                {
+                  "modelKey": "equipmentId",
+                  "title": "Equipment Name",
+                  "cssClass": "col_30",
+                  "fieldType": "dropdown",
+                  "dataConfig": {
+                    "dataUrl": "vdi/olims/racing/horseequipment/all",
+                    "displayKey": "equipmentCode-equipmentDescription",
+                    "valueKey": "entityObjectId"
+                  },
+                  "disabled": false,
+                  "required": true
+
+                },
+                {
+                  "modelKey": "equipmentOnPeriod",
+                  "title": "Equipment On Period",
+                  "cssClass": "col_30",
+                  "fieldType": "daterange",
+                  "useFieldLevelModelKey": false,
+                  "dateRangeConfig": {
+                    "startDateModelKey": "equipmentOnDate",
+                    "endDateModelKey": "equipmentOffDate",
+                    "range": "1Y",
+                    "minDate": {
+                      "fromModelKey": "expiryDate||currentDate",
+                      "addtion": "1D"
+                    },
+                    "maxDate": {
+                      "fromModelKey": "currentFinancialYearEndDate"
+                    },
+                    "stateDate": {
+                      "value": "",
+                      "fromModelKey": "expiryDate||currentDate",
+                      "addtion": "1D"
+                    }
+                  },
+                  "disabled": false,
+                  "required": true
+                },
+                {
+                  "modelKey": "remarks",
+                  "title": "Remarks",
+                  "cssClass": "col_30",
+                  "fieldType": "textbox",
+                  "disabled": false,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

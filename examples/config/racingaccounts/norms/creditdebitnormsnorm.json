@@ -1,0 +1,54 @@
+﻿{
+  "columns": [
+   {
+      "key": "creditDebitId",
+      "headerText": "Code",
+      "filterMask": "Search"
+    },
+	 {
+      "key": "partyType",
+      "headerText": "Party Type",
+      "filterMask": "Search"
+    },
+	 {
+      "key": "amountType",
+      "headerText": "Amount Type ",
+      "filterMask": "Search"
+    },
+   {
+      "key": "amount",
+      "headerText": "CRDR Value ",
+      "filterMask": "Search"
+    },
+	 {
+      "key": "frequencyName",
+      "headerText": "Frequency",
+      "filterMask": "Search"
+    },
+	{
+      "key": "effectiveFromDate",
+      "headerText": "Effective From",
+    "filterMask": "Search",
+     "type": "date"
+    },
+   
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/racingaccount/creditdebitnorms/all",
+
+  "rowKey": {
+  "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate",
+  "editPageUrl": "prospectus/subsidynorms/form"
+}

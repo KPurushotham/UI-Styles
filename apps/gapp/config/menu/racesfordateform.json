@@ -1,0 +1,119 @@
+{
+  "name": "racesfordateform",
+  "noWorkflow": true,
+  "submitted": false,
+  "externalService": "racesfordateService",
+  "sections": [
+    {
+      "cssClass": "sectionHeight60",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "beginDate",
+              "title": "Search By Date",
+              "fieldType": "date",
+              "cssClass": "col_1",
+              "ignoreInServiceModel": true,
+              "required": false
+            },
+            {
+              "modelKey": "btnRaces",
+              "title": "Search",
+              "fieldType": "button",
+              "handlerName": "populteRaceData"
+            }
+
+          ]
+        }
+      ]
+    },
+
+    {
+      "title": "Race Date Details",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "gridData",
+              "title": "Mail Details",
+              "fieldType": "grid",
+              "initLoad": true,
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "",
+              "gridConfig": {
+
+                "modelKeyMap": [
+                  "trackCode",
+                  "Date",
+                  "timezone",
+                  "OFFSET",
+                  "racetime"
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "floatingFilter": false,
+                  "enableFilter": true,
+                  "enableSorting": true,
+                  "toolPanelSuppressRowGroups": true,
+                  "suppressSizeToFit": true
+
+                },
+                "columns": [
+                  {
+                    "field": "trackCode",
+                    "headerName": "Track Code",
+                    "headerCssClass": "resizable-header",
+                    "filter": "agSetColumnFilter",
+                    "editable": false,
+                    "hide": false,
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "date",
+                    "headerName": "Date",
+                    "headerCssClass": "resizable-header",
+                    "filter": "agSetColumnFilter",
+                    "editable": false,
+                    "hide": false,
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "timeZone",
+                    "headerName": "Time Zone",
+                    "headerCssClass": "resizable-header",
+                    "filter": "agSetColumnFilter",
+                    "editable": false,
+                    "hide": false,
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "offSet",
+                    "headerName": "OffSet",
+                    "headerCssClass": "resizable-header",
+                    "filter": "agSetColumnFilter",
+                    "editable": false,
+                    "hide": false,
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "raceTime",
+                    "headerName": "Race Time",
+                    "headerCssClass": "resizable-header",
+                    "filter": "agSetColumnFilter",
+                    "editable": false,
+                    "hide": false,
+                    "suppressMovable": false
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

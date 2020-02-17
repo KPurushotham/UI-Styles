@@ -1,0 +1,46 @@
+﻿  {
+    "columns": [
+      {
+        "key": "raceDate",
+        "headerText": "Race Date",
+        "filterMask": "Search",
+        "type": "date"
+      },
+      {
+        "key": "raceDay",
+        "headerText": "Race Day",
+        "filterMask": "Search"
+      },
+      {
+
+        "key": "season",
+        "headerText": "Race Season",
+        "filterMask": "Search",
+        "type": "uppercase"
+      },
+      {
+        "key": "raceNameId",
+        "headerText": "Race Name",
+        "filterMask": "Search",
+        "type": "uppercase"
+      },
+      {
+        "key": "status",
+        "headerText": "Status",
+        "filterMask": "Search"
+      },
+      {
+        "key": "lastUpdatedDate",
+        "headerText": "Last Updated Date",
+        "filterMask": "Search",
+        "type": "date"
+      }
+    ],
+
+  "dataUrl": "vdi/olims/racing/raceincidentsentry/all",
+
+  "rowKey": {    
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

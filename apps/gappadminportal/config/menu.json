@@ -1,0 +1,59 @@
+﻿[
+  {
+    "key": "gappadminportal.clientsform",
+    "urlRoute": "clientsform",
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Clients"
+  },
+  {
+    "key": "gappadminportal.rates",
+    "urlRoute": "rates",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Rates"
+  },
+  {
+    "key":"gappadminportal.rates.communityform",
+    "urlRoute": "communityform",
+    "showInMenu": true,
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Community Rates"
+  },
+  {
+    "key":"gappadminportal.rates.countriesform",
+    "urlRoute": "countriesform",
+    "showInMenu": true,
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Countries Rates"
+  },
+  {
+    "key":"gappadminportal.rates.poolsform",
+    "urlRoute": "poolsform",
+    "showInMenu": true,
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Pools Rates"
+  },
+  {
+    "key":"gappadminportal.accountsform",
+    "urlRoute": "accountsform",
+    "showInMenu": true,
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Accounts"
+  },
+  {
+    "key":"gappadminportal.transcationsform",
+    "urlRoute": "transcationsform",
+    "showInMenu": true,
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Transactions"
+  }
+]
+
+
+

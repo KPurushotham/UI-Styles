@@ -1,0 +1,30 @@
+{
+    "name":"dayevening",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.dayeveningform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/DayEvening/all",
+    "editScreenState": "app.loaders.codes.dayeveningform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

@@ -1,0 +1,125 @@
+{
+  "name": "repometastoreform",
+  "saveUrl": "vdi/servicebuilder/repometastore/save",
+  "getOneUrl": "vdi/servicebuilder/repometastore/get/one",
+  "externalService": "repometastoreService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "sourceCode",
+              "cssClass": "col_4",
+              "title": "Source Code",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "apiCode",
+              "cssClass": "col_4",
+              "title": "Api Code",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "contextCode",
+              "cssClass": "col_4",
+              "title": "Context Code",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "dataCode",
+              "cssClass": "col_4",
+              "title": "Data Code",
+              "fieldType": "textbox",
+              "required": true
+            }                  
+ 
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "tenantId",
+              "cssClass": "col_1",
+              "title": "Tenant Id",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "description",
+              "cssClass": "col_6",
+              "title": "Description",
+              "fieldType": "textbox",
+              "required": false
+            },
+            {
+              "modelKey": "isActive",
+              "title": "Is Active",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            },
+            {
+              "modelKey": "mutiTenancyApplicable",
+              "title": "Muti Tenancy Applicable",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "queryMetadataJson",
+              "cssClass": "col_2",
+              "title": "Query Metadata Json",
+              "fieldType": "ace",
+              "required": true
+            },
+            {
+              "modelKey": "paramsJson",
+              "cssClass": "col_2",
+              "title": "Params Json",
+              "fieldType": "ace",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

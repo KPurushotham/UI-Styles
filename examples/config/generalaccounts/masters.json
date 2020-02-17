@@ -1,0 +1,23 @@
+﻿[
+  {
+    "stateName": "generalaccount.accountsmaster",
+    "url": "accountsmaster",
+    "pattern": "LISTING",
+    "viewName": "generalaccountSection",
+    "data": {
+      "title": "Accounts",
+      "addScreenStateName": "generalaccount.accountsform"
+    }
+  },
+   {
+    "stateName": "generalaccount.accountsform",
+    "url": "accountsform",
+    "showInLeftManu": false,
+    "editKeys": [ "acCode", "entityObjectId"],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "ACCOUNTS",
+    "viewName": "generalaccountSection",
+    "data": { "title": "New" }
+  }
+  ]

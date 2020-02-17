@@ -1,0 +1,51 @@
+﻿  {
+  "columns": [
+    {
+      "key": "employee",
+      "headerText": "Employee",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "financialYear",
+      "headerText": "Financial Year",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "date",
+      "headerText": "Date",
+      "filterMask": "Search",
+      "type": "date"
+    },
+    {
+      "key": "month",
+      "headerText": "Month",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "raceStatus",
+      "headerText": "Race Status",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/personnel/localracedays/all",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

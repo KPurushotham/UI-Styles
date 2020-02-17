@@ -1,0 +1,35 @@
+{
+    "name": "surfacecodesform",
+    "saveUrl": "vdi/racemaster/SurfaceCodes/one",
+    "getOneUrl": "vdi/racemaster/SurfaceCodes/save",
+    "externalService": "",
+    "validationUrl": "",
+    "noWorkflow": true,
+    "submitted": false,
+  
+    "sections": [
+      {
+        "rowDivisions": [
+          {
+            "fields": [
+              {
+                "modelKey": "code",
+                "title": "Code",
+                "disabledInEditMode": true,
+                "fieldType": "textbox",
+                "required": true
+              },
+              {
+                "modelKey": "description",
+                "title": "Description",
+                "disabledInEditMode": true,
+                "fieldType": "textbox",
+                "required": true
+              }
+            ]
+          }
+  
+        ]
+      }
+    ]
+  }

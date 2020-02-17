@@ -1,0 +1,113 @@
+[
+  {
+    "key": "tenantsetup.appsetup",
+    "urlRoute": "appsetup",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Application Setup"
+
+  },
+  {
+    "key": "tenantsetup.appsetup.configsetup",
+    "urlRoute": "configsetup",
+    "pattern": "LISTING",
+    "title": "Config Setup",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "tenantsetup.appsetup.configsetupform",
+    "urlRoute": "configsetupform",
+    "showInMenu": false,
+    "editKeys": [ "applicationEntityId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "applicationTitle"
+  },
+  {
+    "key": "tenantsetup.appsetup.menusetup",
+    "urlRoute": "menusetup",
+    "pattern": "LISTING",
+    "title": "Menu Setup",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "tenantsetup.appsetup.menusetupform",
+    "urlRoute": "menusetupform",
+    "showInMenu": false,
+    "editKeys": [ "menuId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "applicationTitle"
+  },
+  {
+    "key": "tenantsetup.tenantsetup",
+    "urlRoute": "tenantsetup",
+    "pattern": "LISTING",
+    "title": "Tenant Setup",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "tenantsetup.tenantsetupform",
+    "urlRoute": "tenantsetupform",
+    "showInMenu": false,
+    "editKeys": [ "tenantId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "tenantTitle"
+  },
+  {
+    "key": "tenantsetup.rolesetup",
+    "urlRoute": "rolesetup",
+    "pattern": "LISTING",
+    "title": "Role Setup",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "tenantsetup.rolesetupform",
+    "urlRoute": "rolesetupform",
+    "showInMenu": false,
+    "editKeys": [ "tenantId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "tenantName"
+  },
+  {
+    "key": "tenantsetup.usersetup",
+    "urlRoute": "usersetup",
+    "pattern": "LISTING",
+    "title": "User Setup",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "tenantsetup.usersetupform",
+    "urlRoute": "usersetupform",
+    "showInMenu": false,
+    "editKeys": [ "userEntityId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "userName"
+  },
+  {
+    "key": "tenantsetup.permissionsetup",
+    "urlRoute": "permissionsetup",
+    "pattern": "LISTING",
+    "title": "Permission Setup",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "tenantsetup.permissionsetupform",
+    "urlRoute": "permissionsetupform",
+    "showInMenu": false,
+    "editKeys": [ "tenantId", "applicationEntityId", "roleId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "tenantTitle"
+  }
+]
+

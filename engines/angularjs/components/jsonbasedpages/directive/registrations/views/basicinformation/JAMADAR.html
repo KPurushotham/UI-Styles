@@ -1,0 +1,65 @@
+<div class="paid_vendor_container full_width">
+    <div class="sub_heading full_width no-margin">
+        <h5 class="full_width">Basic Information</h5>
+    </div>
+     <div class="input_field col_3 left">
+        <label class="full_width">Registratrion ID</label>
+        <input type="text" class="full_width uppercase" name="jamadarCode" disabled ng-model="selectedData.code">
+    </div>
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.jamadarName.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Name <span class="mandatory">*</span></label>
+        <input type="text" class="full_width uppercase" name="jamadarName" ng-disabled="disableFlag" ng-model="partyModel.basicDetails.jamadarName" required>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Employeed by</label>
+        <select class="optionsuppercase nya-selectpicker" ng-disabled="disableFlag" data-none-selected-text="Please Select" title="Please Select" data-live-search="true" data-container="body" name="employedBy" placeholder='Select' ng-options='c as c.value for c in dropDownData.trainersDD track by c.id'  ng-model="selectedData.employedBy"></select>
+    </div>
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.dob.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Date Of Birth <span class="mandatory">*</span></label>
+        <div class="datepicker_field full_width">
+            <input type="text" name="dob" class="input_text full_width" date-input-chars simple-date-pick ng-disabled="disableFlag" ng-model="partyModel.basicDetails.dob" required>
+        </div>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Age</label>
+        <input disabled type="text" name="age" class="full_width" ng-model="partyModel.basicDetails.age">
+    </div>
+    <div class="select_field col_3 left" ng-class="(saveSubmit && partyForm.qualification.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Qualification <span class="mandatory">*</span></label>
+        <select class="optionsuppercase nya-selectpicker" ng-disabled="disableFlag" data-none-selected-text="Please Select" title="Please Select" data-live-search="true" data-container="body" name="qualification" placeholder='Select' ng-options='c as c.value for c in dropDownData.qualificationDD track by c.value'  ng-model="selectedData.qualification" required></select>
+    </div>
+    <div class="select_field col_3 left">
+        <label class="full_width">Nationality</label>
+        <div class="radio_fields_wrapper full_width">
+            <label class="left control control--radio">
+                <input type="radio" class="left radio-custom" ng-disabled="disableFlag" value="Indian" ng-model="selectedData.Nationality" name="licencetype">
+                <span class="left">Indian</span>
+                <div class="control__indicator"></div>
+            </label>
+            <label class="left control control--radio">
+                <input type="radio" class="left radio-custom" ng-disabled="disableFlag" value="Foreigner" ng-model="selectedData.Nationality" name="licencetype">
+                <span class="left">Foreigner</span>
+                <div class="control__indicator"></div>
+            </label>
+        </div>
+    </div>
+    <div class="select_field col_3 left">
+        <label class="full_width">Owner Locality</label>
+        <div class="inline_checkbox default_checkbox full_width no_tp_mr">
+			<label class="control control--checkbox">
+				<input type="checkbox" ng-model="partyModel.basicDetails.nonLocal" ng-disabled="disableFlag" ng-change="outStationChangeHandler();">
+				<div class="control__indicator"></div>
+				<span class="left">Out Station</span>
+			</label>
+		</div>
+    </div>
+    <div class="select_field col_3 left">
+        <label class="full_width">Club</label>
+        <select class="optionsuppercase nya-selectpicker" ng-disabled="selectedData.clubDisable || disableFlag" data-none-selected-text="Please Select" title="Please Select" data-live-search="true" data-container="body" name="club" ng-change="changeClub()" placeholder='Select' ng-options='c as c.text for c in dropDownData.clubDD track by c.value' ng-model="selectedData.club"></select>
+    </div>
+</div>
+
+
+
+
+

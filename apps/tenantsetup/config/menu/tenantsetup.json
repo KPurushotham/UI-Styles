@@ -1,0 +1,61 @@
+{
+  "name": "tenantsetup",
+  "externalService": "tenantsetupService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "tenantsetup.tenantsetupform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "tenantId",
+      "headerName": "Tenant Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "entityTypeCode",
+      "headerName": "Entity Type Code",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "tenantTitle",
+      "headerName": "Tenant Name",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "tenantCode",
+      "headerName": "Tenant Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "logo",
+      "headerName": "Tenant Logo",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "additionalConfig",
+      "headerName": "Additional Config",
+      "filter": "agSetColumnFilter",
+      "formatType": "Json",
+      "hide": true
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    }
+  ],
+  "dataUrl": "vdi/admin/tenant/all",
+  "editScreenState": "app.tenantsetup.tenantsetupform",
+  "rowKey": {
+    "tenantId": "tenantId"
+  },
+  "defaultSortColumn": "tenantId"
+}

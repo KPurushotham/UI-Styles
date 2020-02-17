@@ -1,0 +1,546 @@
+{
+  "name": "performanceentryform",
+  "saveUrl": "horseperfomance/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "locality",
+              "cssClass": "col_3",
+              "fieldType": "radio",
+              "defaultValue": "OUTSTATION",
+
+              "initLoad": true,
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "HRC Horses",
+                    "value": "HRC"
+                  },
+                  {
+                    "text": "Outstation Horses",
+                    "value": "OUTSTATION"
+                  }
+                ]
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "horseClubId",
+              "title": "Horse Club",
+              "codeKey": "id",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "initLoad": true,
+              "dataConfig": {
+                "dataUrl": "vdi/olims/party/outstationclub/all",
+                "displayKey": "description",
+                "valueKey": "shortName"
+              },
+              "dependancyConfig": [
+                {
+                  "sourceKey": "locality",
+                  "event": "change",
+                  "validations": {
+                    "ifSourceValue": {
+                      "in": [
+                        "HRC"
+                      ],
+                      "rules":{
+                        "show":false
+                      }
+                    }
+                  }
+                }
+              ],
+              "disabled": false,
+              "required": true
+            }
+
+          ]
+        }
+      ]
+    },
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "venueId",
+              "title": "Venue",
+              "codeKey": "id",
+              "fieldType": "dropdown",
+              "type":"LOWERCASE",
+              "cssClass": "col_1",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/tote/outstationvenue/all?fk-status=ACTIVE",
+                "displayKey": "description",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "raceDate",
+              "title": "Race Date",
+              "cssClass": "col_1",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "raceDay",
+              "title": "Race Day",
+              "cssClass": "col_1",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "raceNum",
+              "title": "Race No.",
+              "cssClass": "col_1",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "raceRungNum",
+              "title": "Race Running No.",
+              "cssClass": "col_1",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "raceSeasonId",
+              "title": "Race season",
+              "codeKey": "entityObjectId",
+              "fieldType": "dropdown",
+              "cssClass": "col_1",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/seasonmaster/all?fk-status=ACTIVE",
+                "displayKey": "seasonDescription",
+                "valueKey": "shortName"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "raceName",
+              "title": "Race Name",
+              "cssClass": "col_6",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+            }
+
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "raceTypeId",
+              "title": "Race Type",
+              "codeKey": "entityObjectId",
+              "fieldType": "dropdown",
+              "cssClass": "col_2",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/outstationracetype/all?fk-status=ACTIVE",
+                "displayKey": "description-raceSubType",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "raceClassificationId",
+              "title": "Race Classification",
+              "codeKey": "entityObjectId",
+              "fieldType": "dropdown",
+              "cssClass": "col_2",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Handicap",
+                    "value": "Handicap"
+                  },
+                  {
+                    "text": "Terms",
+                    "value": "Terms"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "distance",
+              "title": "Distance",
+              "codeKey": "value",
+              "fieldType": "dropdown",
+              "cssClass": "col_1",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/prospectus/distance/all?fk-status=ACTIVE",
+                "displayKey": "distanceMasterCode-shortName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "trophyValue",
+              "title": "Trophy Value",
+              "cssClass": "col_1",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "trophyPresentedBy",
+              "title": "Trophy Presenter",
+              "cssClass": "col_2",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/prospectus/trophies/all?fk-status=ACTIVE",
+                "displayKey": "trophieShortName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "trainerId",
+              "title": "Trainer",
+              "codeKey": "trainerCode",
+              "fieldType": "dropdown",
+              "cssClass": "col_2",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/party/trainerbox/all?fk-status=ACTIVE",
+                "displayKey": "value",
+                "valueKey": "id"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "horseId",
+              "title": "Horse",
+              "codeKey": "id",
+              "fieldType": "dropdown",
+              "cssClass": "col_2",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/veterinary/horsebox/all?fk-status=ACTIVE",
+                "displayKey": "value",
+                "valueKey": "id"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "jockeyId",
+              "title": "Jockey",
+              "codeKey": "entityObjectId",
+              "fieldType": "dropdown",
+              "cssClass": "col_2",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/jockeybox/all?fk-status=ACTIVE",
+                "displayKey": "jockeyName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "weight",
+              "title": "Weight",
+              "cssClass": "col_1",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "rating",
+              "title": "Rating",
+              "cssClass": "col_1",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "drawNum",
+              "title": "Draw No.",
+              "codeKey": "value",
+              "fieldType": "dropdown",
+              "cssClass": "col_1",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "1",
+                    "value": "1"
+                  },
+                  {
+                    "text": "2",
+                    "value": "2"
+                  },
+                  {
+                    "text": "3",
+                    "value": "4"
+                  },
+                  {
+                    "text": "4",
+                    "value": "4"
+                  },
+                  {
+                    "text": "5",
+                    "value": "5"
+                  },
+                  {
+                    "text": "6",
+                    "value": "6"
+                  },
+                  {
+                    "text": "7",
+                    "value": "7"
+                  },
+                  {
+                    "text": "8",
+                    "value": "8"
+                  },
+                  {
+                    "text": "9",
+                    "value": "9"
+                  },
+                  {
+                    "text": "10",
+                    "value": "10"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "time",
+              "title": "Time",
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "wonByLengths",
+              "title": "Won By Lengths",
+              "fieldType": "dropdown",
+              "cssClass": "col_1",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Nose",
+                    "value": "Nose"
+                  },
+                  {
+                    "text": "Short Head",
+                    "value": "Short Head"
+                  },
+                  {
+                    "text": "Head",
+                    "value": "Head"
+                  },
+                  {
+                    "text": "Neck",
+                    "value": "Neck"
+                  },
+                  {
+                    "text": "1",
+                    "value": "1"
+                  },
+                  {
+                    "text": "2",
+                    "value": "2"
+                  },
+                  {
+                    "text": "3",
+                    "value": "4"
+                  },
+                  {
+                    "text": "4",
+                    "value": "4"
+                  },
+                  {
+                    "text": "5",
+                    "value": "5"
+                  },
+                  {
+                    "text": "6",
+                    "value": "6"
+                  },
+                  {
+                    "text": "7",
+                    "value": "7"
+                  },
+                  {
+                    "text": "8",
+                    "value": "8"
+                  },
+                  {
+                    "text": "9",
+                    "value": "9"
+                  },
+                  {
+                    "text": "10",
+                    "value": "10"
+                  },
+                  {
+                    "text": "Distance",
+                    "value": "Distance"
+                  }
+                ]
+              },
+
+              "disabled": false,
+              "required": true
+            },{
+              "modelKey": "wonByLengthsFraction",
+              "fieldType": "dropdown",
+              "cssClass": "col_1 mar_20",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "1/4",
+                    "value": "1/4"
+                  },
+                  {
+                    "text": "1/2",
+                    "value": "1/2"
+                  },
+                  {
+                    "text": "3/4",
+                    "value": "3/4"
+                  }
+                ]
+              },
+
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "stakesWon",
+              "title": "Stakes Won",
+              "cssClass": "col_1",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+
+      ]
+    },
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "place",
+              "title": "Place",
+              "codeKey": "value",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Winner",
+                    "value": "Winner"
+                  },
+                  {
+                    "text": "SHP",
+                    "value": "SHP"
+                  },
+                  {
+                    "text": "3rd",
+                    "value": "3rd"
+                  },
+                  {
+                    "text": "4th",
+                    "value": "4th"
+                  },
+                  {
+                    "text": "5th",
+                    "value": "5th"
+                  },
+                  {
+                    "text": "Unplaced",
+                    "value": "Unplaced"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "deadHeat",
+              "title": "Dead Heat",
+              "fieldType": "checkbox",
+              "cssClass": "col_1",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Dead Heat",
+                    "value": "1"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+
+            },
+            {
+              "modelKey": "disqualified",
+              "title": "Disqualified",
+              "fieldType": "checkbox",
+              "cssClass": "col_1",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Disqualified",
+                    "value": "1"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

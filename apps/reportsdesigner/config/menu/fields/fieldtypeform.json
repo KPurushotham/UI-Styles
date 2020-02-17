@@ -1,0 +1,61 @@
+{
+  "name": "fieldtypeform",
+  "saveUrl": "vdi/reportsdesigner/fieldtype/get/save",
+  "getOneUrl": "vdi/reportsdesigner/fieldtype/get/one",
+  "externalService": "fieldtypeconfigService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "fieldTypeCode",
+              "cssClass": "col_1",
+              "title": "Field Type Code",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "fieldTypeName",
+              "cssClass": "col_1",
+              "title": "Field Type Name",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "fieldTypeDescription",
+              "cssClass": "col_1",
+              "title": "Field Type Description",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "isActive",
+              "title": "Is Active",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "key": "ogmscreen.ogmscreen",
+    "urlRoute": "ogmscreen",
+    "pattern": "LISTING",
+    "title": "Data Source",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "ogmscreen.ogmscreenform",
+    "urlRoute": "ogmscreenform",
+    "showInMenu": false,
+    "editKeys": [ "dataSourceId" ],
+    "pattern": "FORM",
+    "title": "Add",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "ogmscreen.datasourceitem",
+    "urlRoute": "datasourceitem",
+    "pattern": "LISTING",
+    "title": "Data Source Item",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "ogmscreen.datasourceitemform",
+    "urlRoute": "datasourceitemform",
+    "showInMenu": false,
+    "editKeys": [ "dataQueryRuleId","dataSourceId","tenantDataSourceItemId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add"
+  }
+]
+
+
+

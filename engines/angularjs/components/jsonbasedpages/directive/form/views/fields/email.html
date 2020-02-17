@@ -1,0 +1,16 @@
+<!--<div ng-if="field.show" class="input_field left {{field.cssClass}}" ng-class="(parentForm.save_submit && parentForm.df_form[field.modelKey+ fieldIndex].$error.required)? 'form_error_field' : ''">
+    <label   ng-class="{'hide' :!field.showTitle }" class="full_width">{{field.title}} <span ng-if="field.required" class="mandatory">*</span></label>
+    <input type="email" class="full_width" id="{{field.modelKey+ fieldIndex}}" dynamic-name="field.modelKey+ fieldIndex" 
+           ng-model="field.modelValue"
+           ng-required="field.required"
+           ng-disabled="(field.disabled || parentForm.readOnlyForm) ? true :false" event-dependents="field.dependants" />
+</div>-->
+
+<md-input-container ng-if="field.show" class="input_field left {{field.cssClass}}" ng-class="(parentForm.save_submit && parentForm.df_form[field.modelKey+ fieldIndex].$error.required)? 'form_error_field' : ''">
+    <label ng-class="{'hide' :!field.showTitle }" class="full_width">{{field.title}} <span ng-if="field.required" class="mandatory">*</span></label>
+    <input type="email" class="full_width" id="{{field.modelKey+ fieldIndex}}" dynamic-name="field.modelKey+ fieldIndex"
+           ng-model="field.modelValue"
+           ng-required="field.required"
+           ng-disabled="(field.disabled || parentForm.readOnlyForm ||(parentForm.screenMode=='EDIT' && field.disabledInEditMode)) ? true :false" event-dependents="field.dependants" />
+
+</md-input-container>

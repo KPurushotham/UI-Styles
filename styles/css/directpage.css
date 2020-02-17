@@ -1,0 +1,267 @@
+.success-accept {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.success-accept h4 {
+    font-size: 25px;
+    margin-top: 30px;
+    color: #7cb114;
+}
+.success-accept p {
+    margin-top: 20px;
+}
+
+/* --- direct page style end --- */
+.dirpage-main {
+    width: 100%;
+    /*height: 100vh;*/
+    margin: 0px;
+    padding: 20px 0;
+    float: left;
+    background: #f0f0f0;
+}
+
+.dirpage-main-inr {
+    width: 1004px;
+    margin: 0px auto;
+}
+
+.dirpage-bg {
+    padding: 20px 20px;
+    float: left;
+    background: #fff;
+    box-shadow: 0 0 7px rgba(104,104,104,0.5);
+}
+
+.contract-details-header {
+    width: 100%;
+    float: left;
+    margin-bottom: 5px;
+    color: #09b5b7;
+    font-size: 24px;
+}
+
+.contract-sub-heading {
+    width: 100%;
+    margin: 0px 0 10px;
+    padding: 0px;
+    float: left;
+}
+
+.contract-sub-heading-inr {
+    width: 50%;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+
+.contract-sub-heading-inr label {
+    width: 100%;
+    float: left;
+    margin-bottom: 2px;
+}
+
+.contract-sub-heading-inr label b {
+    margin: 0px 0 5px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.contract-sub-heading-inr label span {
+    color: #51b587;
+    /*color: #0f9960;*/
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.comments-heading {
+    color: #247da7;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    float: left;
+}
+
+.comments-txtarea {
+    width: 100%;
+    float: left;
+}
+
+.ag-header-row {
+    background: #247da7;
+    font-size: 14px;
+    color: #fff;
+}
+
+.ag-pinned-left-cols-container, .ag-center-cols-container {
+    font-size: 13px;
+    color: #666;
+    font-weight: 400;
+}
+
+.ag-theme-balham .ag-header-cell::after, .ag-theme-balham .ag-header-group-cell::after {
+    /*border-right:1px solid rgba(189, 195, 199, 0.5);*/
+    border-right: 1px solid #1b6f85;
+}
+
+.butns-main-cls {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    clear: both;
+}
+
+.loginform-btn_wrkflw_submt, .loginform-btn_actp, .loginform-btn_rej {
+    width: auto;
+    padding: 6px 8px;
+    border-radius: 2px;
+    color: #fff;
+    border: 0px;
+    margin: 10px 3px 0 0;
+    font-size: 13px;
+    cursor: pointer;
+    position: relative;
+    transition: all 200ms ease-in-out;
+}
+
+.loginform-btn_wrkflw_submt {
+    background: #88cae9;
+    color: #1e5975;
+}
+
+.loginform-btn_actp {
+    /*background:#007a22;*/
+    background: #51b587;
+}
+
+.loginform-btn_rej {
+    /*background:#f11f1f;*/
+    background: #db5566;
+}
+
+.loginform-btn_wrkflw_submt:hover, .loginform-btn_wrkflw_submt:focus {
+    color: #2e6e8d !important;
+}
+
+.loginform-btn_actp:hover, .loginform-btn_actp:focus {
+    /*background:#046921;*/
+    color: #276247 !important;
+}
+
+.loginform-btn_rej:hover, .loginform-btn_rej:focus {
+    /*background:#dd1010;*/
+    color: #910b0b !important;
+}
+
+.loginform-btn_wrkflw_submt:before, .loginform-btn_actp:before, .loginform-btn_rej:before {
+    font-family: FontAwesome;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    margin-right: 2px;
+}
+
+.loginform-btn_wrkflw_submt:before {
+    content: "\f0a9";
+}
+
+.loginform-btn_actp:before {
+    content: "\f058";
+}
+
+.loginform-btn_rej:before {
+    content: "\f05e";
+}
+
+.comments-tbl {
+    width: 100%;
+    text-align: left;
+    font-size: 13px;
+    color: #666;
+}
+
+.comments-tbl tr th {
+    color: #666;
+    width: 20%;
+    font-weight: 600;
+}
+
+.butns-main-cls h5#msg {
+    /*background:#09b5b7;*/
+    padding: 10px 6px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #36c56f;
+}
+
+.show_block {
+    display: block;
+}
+
+.hide_block {
+    display: none;
+}
+
+.badge_btn {
+    /*color: #777;
+    background: #ddd;*/
+    background: #d7ece3;
+    border-radius: 1px 5px 5px 1px;
+    position: relative;
+    width: auto !important;
+    float: right !important;
+    padding: 0 8px;
+    height: 32px;
+    line-height: 32px;
+}
+
+.badge_btn:before {
+    width: 0;
+    height: 0;
+    content: '';
+    border-top: 16px solid transparent;
+    /*border-right: 17px solid #ddd;*/
+    border-right: 17px solid #d7ece3;
+    border-bottom: 16px solid transparent;
+    position: absolute;
+    left: -17px;
+    top: 0px;
+}
+
+.badge_btn:after {
+    content: '';
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    float: left;
+    position: relative;
+    top: 10px;
+    left: -10px;
+    border-radius: 100%;
+    border: 1px solid rgba(153,153,153,.65);
+}
+
+.badge_btn span:before {
+    content: '';
+    width: 23px;
+    height: 20px;
+    background-image: url(../../images/threadicon-big.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -22px;
+    top: 1px;
+    z-index: 9;
+}
+.dirpage-bg .ag-theme-balham .ag-root {
+    border-left: 1px solid #BDC3C7;
+    border-right: 1px solid #bdc3c7;
+    border-bottom: 1px solid #bdc3c7;
+    border-top: none;
+}
+
+/* --- direct page style end --- */

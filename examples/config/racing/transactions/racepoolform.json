@@ -1,0 +1,75 @@
+  {  
+  "name":"racepoolfrom",
+  "saveUrl":"racepool/save",
+  "validationUrl":"",
+  "submitted":false,
+  "sections":[  
+    {  
+      "rowDivisions":[  
+        {  
+          "fields":[  
+            {  
+              "modelKey":"raceDate",
+              "title":"Race Date",
+              "cssClass":"col_1",
+              "fieldType":"date",
+               "dataConfig": {
+                "dataUrl": "vdi/olims/prospectus/racecalendar/all?fk-status=ACTIVE",
+                "displayKey": "raceDates",
+                "valueKey": "raceDates"
+              },
+               "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "modelKeyMapTobeFilled": {
+                    "raceDay": "raceDay",
+                    "season": "season"
+                  }
+                }
+              ],
+              "disabled":false,
+              "required":true
+            },
+            {  
+              "modelKey":"raceDay",
+              "title":"Race Day",
+               "ignoreInServiceModel": true,
+              "cssClass":"col_2",
+               "fieldType": "textbox",
+              "disabled":true,
+              "required":false
+            },
+            {  
+              "modelKey":"season",
+              "title":"Race Season",
+               "ignoreInServiceModel": true,
+              "cssClass":"col_1",
+              "fieldType":"textbox",
+              "disabled":true,
+              "required":false
+            }
+          ]
+        },
+        {  
+          "fields":[  
+            {  
+              "modelKey":"pool",
+              "title":"Pool",
+              "fieldType":"dropdown",
+              "dataConfig":{  
+                "localData":[  
+                  {  
+                    "text":"Jackpoot",
+                    "value":"JACK"
+                  }
+                ]
+              },
+              "disabled":false,
+              "required":true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

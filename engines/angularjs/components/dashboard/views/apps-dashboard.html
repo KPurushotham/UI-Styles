@@ -1,0 +1,136 @@
+<div class="portal-viewlist">
+    <md-progress-linear md-mode="indeterminate" ng-disabled="appListProgress_activated"></md-progress-linear>
+    <div class="">
+        <div class="breadcrumb-design">
+            <div class="portal-viewlist-serch">
+                <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12"></div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                    <div class="search-design search-dashboard-div paddingleft0" style="display: none;">
+                        <input ng-model="searchApps" class="form-control search-dashboard-items paddingleft0" placeholder="Search apps...." />
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12 dashboard-icons-padding pull-right">
+                    <ul class="list-inline dashboard-ul">
+                        <li class="dashboard-search-icon" ng-click="dashboardSearchbar()"><i class="fa fa-search"></i></li>
+                        <li class="dashboard-fav-icon dashboard-icons"><a href="javascript:void(0)"><i class="fa fa-heart-o heart" aria-hidden="true"></i></a></li>
+                        <li class="dashboard-grid-icon dashboard-icons dashboard-icons-selected" ng-click="appdashboardView('grid')"><a href="javascript:void(0)"><i class="fa fa-th-large" aria-hidden="true"></i></a></li>
+                        <li class="dashboard-list-icon dashboard-icons" ng-click="appdashboardView('list')"><a href="javascript:void(0)"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section layout="grid" layout-align="center start" class="dashboard-grid app-dashboard-grid" style="display:block;">
+
+    <ul class="main-dashbord">
+
+        <li class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12" style="padding-left:0px !important;padding-right:0px !important;" ng-repeat="appDef in appDefList  | filter: {title:searchApps}" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()" ng-click="navigateToAppMenu(appDef.key)" href="javascript:void(0);">
+            <a href="app/{{tenantCode}}/{{appDef.urlRoute}}">
+                <div class="dashboard-li bordr-animation foo">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 dashboard-grid-padding">
+                        <div class="col-xl-4 col-lg-4 col-md-4 paddingleft0">
+                            <div class="portal-logo">
+                                <!--<img class="portal-logo-img-width dashboard-img" src="--images/hostfee-icon.png--" onerror="this.src='images/logo.jpg';">-->
+                                <div class="dashboard-app-img-cls {{appDef.key}}-icon"></div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-8 dashboard-grid-padding">
+                            <div class="col-xl-12 col-lg-12 col-md-12 dashboard-grid-padding margn-botm8">
+
+                                <div class="col-xl-11 col-lg-11 col-md-11 dashboard-grid-padding">
+                                    <h6 class="app-db-heading"><a class="hdr-name"><span>{{appDef.title}}</span></a></h6>
+                                </div>
+                                <div class="col-xl-1 col-lg-1 col-md-1 dashboard-grid-padding">
+                                    <a class="like-icon pull-right" href="">
+                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 dashboard-grid-padding">
+                                <table class="dashboard-grid-table">
+                                    <tr>
+                                        <th>Contract Period</th>
+                                        <td class="dashboard-grid-table-td">01/01/2016 - 31/12/2026</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Subscription</th>
+                                        <td class="dashboard-grid-table-td">Users <span class="span-style"> 1</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Created On</th>
+                                        <td class="dashboard-grid-table-td">15 Sep 2018</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+    </ul>
+
+
+
+</section>
+
+<section class="app-dashboard-list" style="display:none;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 padding-lft padding-rht">
+                <div class="inrpage-forms-section">
+                    <table class="table table-bordered app-db-tble">
+                        <thead>
+                            <tr>
+                                <th class="dashboard-listview-th">Logo</th>
+                                <th class="dashboard-listview-th">Application's</th>
+                                <th class="dashboard-listview-th">#Users</th>
+                                <th class="dashboard-listview-th">Contract Period</th>
+                                <th class="dashboard-listview-th">Created On</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="listview-tr" ng-repeat="appDef in appDefList | filter: {title:searchApps}" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
+                                <a href="app/{{tenantCode}}/{{appDef.key}}">
+                                    <td class="dashboard-listview-td" style="width:70px !important" ng-click="navigateToAppMenu(appDef.key)" href="javascript:void(0);">
+                                        <!--<img class="portal-logo-img-width" src="" onerror="this.src='images/logo.jpg';" style="width: 50px;">-->
+                                        <div class="dashboard-applist-img-cls {{appDef.key}}-icon"></div>
+                                    </td>
+                                    <td class="dashboard-listview-td"><h6><a ng-click="navigateToAppMenu(appDef.key)" href="javascript:void(0);"><Strong>{{appDef.title}}</Strong></a></h6></td>
+                                    <td class="dashboard-listview-td">9</td>
+                                    <td class="dashboard-listview-td">01/01/2016 - 31/12/2026</td>
+                                    <td class="dashboard-listview-td">15 Jan 2018 18:10</td>
+                                </a>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--
+<div class="row">
+    <div class="col-lg-2 col-md-12 col-sm-12"
+         ids-panel
+         ids-panel-title="Net Settlements Admin"
+         ids-panel-class="small-panel traffic-panel" align="center" vertical-align="middle">
+
+        <a data-ui-sref="app.nsadmin" href="javascript:void(0);" style="color:chocolate"> <Strong>NS-ADMIN</Strong></a>
+
+    </div>
+    <div class="col-lg-2 col-md-12 col-sm-12"
+         ids-panel
+         ids-panel-title="Host Fee"
+         ids-panel-class="small-panel" align="center">
+        <a data-ui-sref="app.hostfee" href="javascript:void(0);" style="color:chocolate"><Strong>HOST FEE</Strong></a>
+
+    </div>
+
+
+</div>
+     -->

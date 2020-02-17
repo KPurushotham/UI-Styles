@@ -1,0 +1,177 @@
+﻿[
+  {
+    "key": "gapp.adminmasteraccounts",
+    "urlRoute": "masteraccounts",
+    "pattern": "LISTING",
+    "title": "Master accounts",
+    "viewName": "mainPagesection"
+
+  },
+  {
+    "key": "gapp.adminmasteraccountsform",
+    "urlRoute": "masteraccountsform",
+    "showInMenu": false,
+    "editKeys": [ "" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": ""
+
+  },
+
+  {
+    "key": "gapp.masteraccountsinfo",
+    "urlRoute": "masteraccountsinfo",
+    "pattern": "LISTING",
+    "title": "Info",
+    "viewName": "mainPagesection"
+
+  },
+  {
+    "key": "gapp.masteraccountsinfoform",
+    "urlRoute": "masteraccountsinfoform",
+    "showInMenu": false,
+    "editKeys": [ "" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": ""
+
+  },
+  {
+    "key": "gapp.exchangerates",
+    "urlRoute": "exchangerates",
+    "pattern": "LISTING",
+    "title": "Exchange Rates",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "gapp.exchangeratesform",
+    "urlRoute": "exchangeratesform",
+    "showInMenu": false,
+    "editKeys": [ "" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": ""
+  },
+  {
+    "key": "gapp.mastercommunitiesform",
+    "urlRoute": "mastercommunitiesform",
+    "showInMenu": false,
+    "editKeys": [ "" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": ""
+  },
+  {
+    "key": "gapp.accountsform",
+    "urlRoute": "accountsform",
+    "showInMenu": false,
+    "editKeys": [ "" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": ""
+  },
+  {
+    "key": "gapp.countries",
+    "urlRoute": "countries",
+    "pattern": "LISTING",
+    "title": "countries",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "gapp.countriesform",
+    "urlRoute": "countriesform",
+    "showInMenu": false,
+    "editKeys": [ "" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": ""
+  },
+  {
+    "key": "gapp.poolsform",
+    "urlRoute": "poolsform",
+    "showInMenu": false,
+    "editKeys": [ "" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": ""
+  },
+  {
+    "key": "gapp.clientpools",
+    "urlRoute": "clientpools",
+    "pattern": "LISTING",
+    "title": "Client Pools",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "gapp.clientpoolsform",
+    "urlRoute": "clientpoolsform",
+    "showInMenu": false,
+    "editKeys": [ "" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": ""
+  },
+  {
+    "key": "gapp.transactions",
+    "urlRoute": "transactions",
+    "pattern": "LISTING",
+    "title": "Transactions",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "gapp.transactionsform",
+    "urlRoute": "transactionsform",
+    "showInMenu": false,
+    "editKeys": [ "" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": ""
+  },
+  {
+    "key": "gapp.clientsform",
+    "urlRoute": "clientsform",
+    "showInMenu": false,
+    "editKeys": [ "" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": ""
+  },
+  {
+    "key": "gapp.racesfordateform",
+    "urlRoute": "racesfordateform",
+    "showInMenu": true,
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Race For Date"
+  },
+  {
+    "key": "gapp.getvalidateinfolist",
+    "urlRoute": "getvalidateinfolist",
+    "pattern": "LISTING",
+    "title": "Validate Info list",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "gapp.getvalidateinfolistform",
+    "urlRoute": "getvalidateinfolistform",
+    "showInMenu": false,
+    "editKeys": [ "" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": ""
+  }
+]
+
+
+

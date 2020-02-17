@@ -1,0 +1,45 @@
+﻿{
+  "columns": [
+    {
+      "key": "budgetType",
+      "headerText": "Budget Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "costCenter",
+      "headerText": "Cost Center",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "budget",
+      "headerText": "Budget",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "budgetAmount",
+      "headerText": "Budget Amount",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/budget/budgetrequisition/all",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

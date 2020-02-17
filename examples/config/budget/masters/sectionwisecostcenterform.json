@@ -1,0 +1,95 @@
+{
+  "name": "budgetitemwiseworkform",
+  "saveUrl": "budgetitemwicework/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "department",
+              "title": "Department",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "defaultValueByKey": "LS.departmentCode-LS.department",
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "section",
+              "title": "Section",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/sections/all?fk-status=ACTIVE",
+                "displayKey": "sectionCode-sectionName",
+                "valueKey": "entityObjectId"
+              },
+              "initLoad": true,
+              "dependancyConfig": [
+                {
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  }
+                }
+              ],
+              "disabled": false,
+              "required": true
+            }
+
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cost Centers:",
+      "rowDivisions": [
+        {
+          "fields": [
+            
+            {
+              "modelKey": "costCenters",
+              "title": "Cost Center",
+              "fieldType": "grid",
+              "initLoad": true,
+              "gridConfig": {
+                "gridFeatures": [ "selection" ],
+                "multiSelect": true,
+                "dataUrl": "vdi/olims/budget/deptcostcenters/all",
+                "modelKeyMap": [ "costCenterCode"],
+                "columns": [
+                  {
+                    "key": "costCenterCode",
+
+                    "headerText": "Cost Center Code",
+                    "filterMask": "Search",
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "costCenterName",
+                    "headerText": "Cost Center Name",
+                    "filterMask": "Search",
+                    "type": "uppercase",
+                    "editable": true
+                  }
+                ]
+              },
+              "dependancyConfig": [
+                {
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  }
+                }
+              ],
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+
+    }
+  ]
+}

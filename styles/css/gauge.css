@@ -1,0 +1,48 @@
+.guage-charts div span, .guage-charts div b {
+    width: 100%;
+    position: relative;
+    left: 0px;
+    color:#222;
+}
+.guage-charts div b {
+    color:#999;
+}
+.guage-charts {
+    width: auto;
+    float: left;
+    text-align: center;
+    margin: 0px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.guage-charts:hover, .guage-charts:focus {
+    outline: 0px;
+}
+.pendingClass {
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    /*color: #575b5adb;*/
+    color:#666;
+    font-family: "Segoe UI" !important;
+}
+.pendingSmClass {
+    width: 100px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    color: #666;
+    font-family: "Segoe UI" !important;
+    position: relative;
+    bottom: 21px;
+}
+.guage-chart-main-cls {
+    float: left;
+    margin-bottom: 15px;
+}
+.guage-chart-main-cls h6 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1692cc;
+}

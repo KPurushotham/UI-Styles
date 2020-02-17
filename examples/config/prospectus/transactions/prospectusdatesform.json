@@ -1,0 +1,178 @@
+{
+  "name": "prospectusdatesform",
+  "saveUrl": "prospectusracedates/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "handicaps_publish_date",
+              "title": "Race Date",
+              "fieldType": "date",
+              "cssClass": "col_2",
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "entity_type",
+              "title": "Race Day",
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+
+            },
+            {
+              "modelKey": "entity_type",
+              "title": "Race Season",
+              "fieldType": "textbox",
+              "cssClass": "col_1",
+              "disabled": true,
+              "required": false
+
+            },
+            {
+              "modelKey": "entity_type",
+              "title": "Race Name",
+              "cssClass": "col_9",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+
+            }
+
+          ]
+        }
+      ]
+    },
+     { "title": "Trainer Benevolent Fund Details" ,
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "entry_close_time",
+              "title": "Entries will close at",
+              "cssClass": "col_15",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": false
+
+            },
+
+            {
+              "modelKey": "entry_close_date",
+              "title": "entry",
+              "fieldType": "date",
+               "cssClass": "col_15",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "handicaps_publish_time",
+              "title": "Handicaps will publish at",
+               "cssClass": "col_15",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": false
+
+            },
+
+            {
+              "modelKey": "handicaps_publish_date",
+              "title": "handi",
+              "fieldType": "date",
+               "cssClass": "col_15",
+              "disabled": false,
+              "required": true
+
+            }
+
+
+          ]
+        },
+
+        {
+          "fields": [
+
+          
+            {
+              "modelKey": "qualification_time",
+              "title": "Qualification time by",
+              "cssClass": "col_15",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": false
+
+            },
+            {
+              "modelKey": "qualification_date",
+              "title": "qualification",
+              "cssClass": "col_15",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "forfeits_due_time",
+              "title": "Forfeits will fall due at",
+              "cssClass": "col_15",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": false
+
+            },
+            {
+              "modelKey": "forfeits_due_date",
+              "title": "Forfeits",
+              "cssClass": "col_15",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+
+            }
+
+
+          ]
+        },
+
+         {
+          "fields": [
+
+            {
+              "modelKey": "declaration_boxes_time",
+              "title": "Declaration boxes will be opened at",
+              "cssClass": "col_18",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": false
+
+            },
+            {
+              "modelKey": "declaration_boxes_date",
+              "title": "declare",
+              "cssClass": "col_15",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}

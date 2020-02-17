@@ -1,0 +1,12 @@
+/* --- common styles --- */
+.full_width {
+    width: 100%;
+    float: left;
+}
+/* --- common styles --- */
+
+.editor {
+    height: 200px;
+    width: 1325px;
+    border: 1px solid #7d7d7d;
+}

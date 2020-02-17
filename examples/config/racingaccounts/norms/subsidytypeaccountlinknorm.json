@@ -1,0 +1,46 @@
+﻿{
+  "columns": [
+     {
+      "key": "partyType",
+      "headerText": "Party Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "subsidyTypeId",
+      "headerText": "Subsidy Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "creditAccountId",
+      "headerText": "Credit Account",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "debitAccountId",
+      "headerText": "Debit Account",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+   
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/racingaccount/subsidytypeac/all",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

@@ -1,0 +1,30 @@
+{
+    "name":"typeofpeople",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.typeofpeopleform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/TypeOfPeople/all",
+    "editScreenState": "app.loaders.codes.typeofpeopleform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

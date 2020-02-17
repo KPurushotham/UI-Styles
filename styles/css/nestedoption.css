@@ -1,0 +1,66 @@
+nested-select-option {
+    display: block;
+    width: 100%;
+}
+nested-select-text {
+    display: flex;
+    height: 30px;
+    width: 100%;
+}
+nested-select-guide {
+    left: 8px;
+    position: relative;
+    top: -8px;
+}
+nested-select-options.collapsed {
+    display: none;
+}
+.nestd-chck-box nested-select-option {
+    font-size: 13px;
+}
+
+.nestd-chck-box md-checkbox .md-icon, md-select-menu[multiple] md-option.md-checkbox-enabled .md-icon {
+    width: 16px;
+    height: 16px;
+    border-width: 1px;
+}
+
+.nestd-chck-box ng-md-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.nestd-chck-box nested-select-guide {
+    height: 28px;
+}
+
+.nestd-chck-box .md-label {
+    line-height: 12px !important;
+}
+
+.nested-select-collapse.nested-select-collapse {
+    flex-shrink: 0;
+    left: 0px;
+    margin: 0px;
+    position: relative;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+}
+
+.nested-select-collapse ng-md-icon {
+    color: rgba(0,0,0,0.38);
+}
+
+.nested-select-collapse:focus ng-md-icon,
+.nested-select-collapse:hover ng-md-icon {
+    color: rgba(0,0,0,0.87);
+}
+
+.nested-select-collapse svg {
+    transition: transform 200ms linear 0s;
+}
+
+.nested-select-collapse.collapsed svg {
+    transform: rotate(-90deg);
+}

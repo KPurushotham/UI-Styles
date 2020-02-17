@@ -1,0 +1,38 @@
+.composite-repeter-files:nth-child(1n+2) .inline_checkbox {
+    margin-top: 3px;
+}
+.composite_repeater_container {
+    position: relative;
+}
+.tax_fields_composite {
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
+}
+    .tax_fields_composite .actions_icon {
+        color: #262626;
+        font-size: 18px;
+    }
+
+        .tax_fields_composite .actions_icon span {
+            font-weight: 900;
+        }
+.actions_icon:hover, .actions_icon:focus {
+    text-decoration: none;
+    outline: none !important;
+}
+
+.actions_icon {
+    color: #368036;
+    font-size: 18px;
+}
+
+/* --- common styles --- */
+.full_width {
+    width: 100%;
+    float: left;
+}
+.left {
+    float: left;
+}
+/* --- common styles --- */

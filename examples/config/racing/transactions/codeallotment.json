@@ -1,0 +1,70 @@
+{
+  "columns": [
+    {
+      "key": "gatePassrefNumber",
+      "headerText": "IGP No.",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "arrivalDate",
+      "headerText": "Arrival Date",
+      "type": "date"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Trainer",
+      "filterMask": "Search"
+    },
+    {
+      "key": "horseName",
+      "headerText": "Horse",
+      "filterMask": "Search"
+    },
+    {
+      "key": "sire",
+      "headerText": "Sire",
+      "filterMask": "Search",
+      "type": "initcaps"
+    },
+    {
+      "key": "dam",
+      "headerText": "Dam",
+      "filterMask": "Search",
+      "type": "initcaps"
+    },
+    {
+      "key": "age",
+      "headerText": "Age",
+      "filterMask": "Search"
+    },
+    {
+      "key": "sex",
+      "headerText": "Sex",
+      "filterMask": "Search"
+    },
+    {
+      "key": "color",
+      "headerText": "Color",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "yearOfFoaling",
+      "headerText": "Year of Foaling",
+      "filterMask": "Search"
+    },
+    {
+      "key": "dateOfBirth",
+      "headerText": "Date Of Birth",
+      "type": "date"
+    }
+  ],
+
+  "dataUrl": "vdi/olims/veterinary/horsecodeallotment/all",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

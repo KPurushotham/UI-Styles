@@ -1,0 +1,41 @@
+﻿{
+  "columns": [
+    {
+      "key": "trophyCode",
+      "headerText": "Code",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "trophyValue",
+      "headerText": "Value",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "trophyShortName",
+      "headerText": "Short Name",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/prospectus/trophy/all",
+
+  "rowKey": {
+    "trophyCode": "trophyCode",
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

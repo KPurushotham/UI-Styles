@@ -1,0 +1,200 @@
+.dropdownLoader svg path {
+    stroke: #f6c215;
+}
+md-select-header {
+    /*height: 26px !important;*/
+    border-bottom: 1px solid #f7f2ef85 !important;
+}
+md-select-header.demo-select-header input[type="search"] {
+    padding: 8px 4px !important;
+    font-size: 12px;
+}
+.demo-header-searchbox {
+    border: 1px solid #cdcdcd;
+}
+.selectdemoSelectHeader .demo-header-searchbox {
+    border: none !important;
+    outline: none !important;
+    /*height: 100% !important;*/
+    width: 100% !important;
+    padding: 0 !important;
+}
+.select-all-btn {
+    height: 28px !important;
+    padding: 0 0px !important;
+}
+md-option {
+    padding: 0 12px;
+    height: 28px !important;
+}
+.md-virtual-repeat-offsetter md-option {
+    padding: 0 30px !important;
+}
+md-select-menu[multiple] md-option.md-checkbox-enabled .md-icon {
+    width: 15px;
+    height: 15px;
+}
+md-select-menu[multiple] md-option.md-checkbox-enabled .md-container:after {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+md-select-menu[multiple] md-option.md-checkbox-enabled .md-container {
+    width: 16px;
+    height: 16px;
+}
+.demo-select-header {
+    /*box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1), 0 0 0 0 rgba(0, 0, 0, 0.14), 0 0 0 0 rgba(0, 0, 0, 0.12);
+    padding-left: 12px;
+    height: 48px;*/
+    cursor: pointer;
+    position: relative;
+    /*display: flex;*/
+    align-items: center;
+    width: auto;
+}
+.multi-selct-headr {
+    width: 100%;
+    margin: 0px;
+    padding: 0px 0px;
+}
+
+.multi-selct-headr input {
+    width: 100%;
+    float: left;
+    /*height: 28px;*/
+    margin: 3px 0px;
+}
+.multi-select-al {
+    width: 100%;
+    float: left;
+    margin: 0px 0 0 0px;
+}
+#vertical-container {
+    width: 100%;
+    float: left;
+    height: 100% !important;
+}
+.tooltip-multiline {
+    height: auto;
+    white-space: pre-line;
+}
+.dropDownViewModeValue {
+    display: inline-block;
+    max-width: 100%;
+    margin: 5px 0px;
+    font-weight: 300;
+    font-size: 10px
+}
+
+.md-select-value {
+    border: 1px solid #ddd !important;
+    font-size: 12px !important;
+    padding: 0px 4px !important;
+    color: #999 !important;
+}
+.input_field input[disabled], .textarea_field textarea[disabled] {
+    background-color: rgb(211, 211, 211) !important;
+    cursor: not-allowed;
+    color: #978c8c;
+}
+md-input-container.md-input-has-value label:not(.md-no-float) {
+    font-size: 18px !important;
+}
+md-input-container label {
+    font-weight: 600;
+    color: #666 !important;
+    line-height:20px;
+    font-size:14px;
+}
+md-input-container {
+    position: relative !important;
+    padding: 2px !important;
+    width: 100%;
+    height:32px;
+}
+md-input-container label:not(.md-container-ignore) {
+    /*left: auto;*/
+    left: 0;
+}
+.sub-heading-sec div h5 {
+    width: 100%;
+    float: left;
+    margin: 10px 0 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.section-heading {
+    margin: 0px;
+    /*color: #0baa9a;*/
+    color: #09b5b7;
+}
+.input_field input {
+    transition: .3s all;
+    border: 1px solid #ddd !important;
+    font-size: 12px !important;
+    border-radius: 0px;
+    padding: 0px 4px !important;
+    height: 28px;
+}
+.input_field label {
+    font-size: 14px !important;
+    color: #666 !important;
+    margin-bottom: 1px;
+    font-weight: 600;
+}
+.md-button-cancel {
+    /*background-color: #de5c36 !important;*/
+    background-color: #fba61a !important;
+    color: #fff !important;
+    padding: 6px 10px;
+}
+.md-select-menu-container {
+    position: absolute;
+    z-index: 99999;
+}
+md-select-menu:not(.md-overflow) md-content {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+md-content._md {
+    overflow-x: hidden;
+}
+
+.textarea_field textarea {
+    height: 148px;
+    border: 1px solid #cdcdcd;
+    padding: 5px;
+    color: #3b4046;
+    font-size: 13px;
+    resize: none;
+    transition: .3s all;
+    line-height: 18px;
+}
+.selectdemoSelectHeaderForMultiVirtual md-select-menu md-content {
+    height: 260px !important;
+}
+._md {
+    min-width: 100% !important;
+    width: 100% !important;
+    float: left;
+    padding: 0 0px;
+    margin-left: 0px;
+    background: #fff;
+    box-sizing: border-box;
+}
+/* --- dropdown new stayle start--- */
+.form-horizontal label {
+    font-size:14px;
+    color:#666;
+    text-align:left !important;
+}
+.md-select-value.md-select-placeholder {
+}
+.md-form label.active {
+    transform: translateY(0px) scale(.8) !important;
+}
+

@@ -1,0 +1,149 @@
+{
+    "name": "historyform",
+    "noWorkflow": true,
+    "submitted": false,
+    "externalService": "historyService",
+    "actions": [],
+    "sections": [
+        {
+            "rowDivisions": [
+                {
+                    "fields": [
+                        {
+                            "modelKey": "jobInstanceId",
+                            "title": "Job Instasnces",
+                            "cssClass": "col_2",
+                            "fieldType": "dropdown",
+                            "ismultiple": false,
+                            "dataConfig": {
+                              "dataUrl": "vdi/job/get/job/instance",
+                              "displayKey": "jobProcessInstanceId",
+                              "valueKey": "jobProcessInstanceId"
+                            },
+                            "parentmultiple":false,
+                            "childmultiple":false,
+                            "ignoreInServiceModel": false,
+                            "disabled": false,
+                            "required": false
+                          },
+                        {
+                            "modelKey": "gethistory",
+                            "title": "Get History",
+                            "fieldType": "button",
+                            "cssClass": "col-md-2",
+                            "ignoreInServiceModel": true,
+                            "handlerName": "getHistoryHandler",
+                            "required": false
+                        }
+                    ]
+                },
+                {
+                    "fields": [
+                        {
+                            "modelKey": "jobGrid",
+                            "title": "Job Details",
+                            "fieldType": "grid",
+                            "initLoad": true,
+                            "style": "display: none;",
+                            "localData": true,
+                            "show": false,
+                            "gridSummaryLabel": "total",
+                            "gridConfig": {
+                                "modelKeyMap": [],
+                                "features": {
+                                    "enableGridMenu": false,
+                                    "floatingFilter": false,
+                                    "enableFilter": true,
+                                    "enableSorting": true,
+                                    "toolPanelSuppressRowGroups": true,
+                                    "suppressSizeToFit": true,
+                                    "groupDefaultExpanded": true
+                                },
+                                "columns": [
+                                    {
+                                        "field": "jobName",
+                                        "headerName": "Job Name",
+                                        "tooltipField": "jobName",
+                                        "rowGroup": true,
+                                        "showRowGroup": "jobName",
+                                        "hide": true
+                                    },
+                                    {
+                                        "field": "stepName",
+                                        "headerName": "Step Name",
+                                        "tooltipField": "stepName",
+                                        "hide": false
+                                    },
+                                    {
+                                        "field": "stepStatus",
+                                        "headerName": "Step Status",
+                                        "tooltipField": "stepStatus",
+                                        "hide": false
+                                    },
+                                    {
+                                        "field": "jobInstanceId",
+                                        "tooltipField": "jobInstanceId",
+                                        "headerName": "Job Instance Id",
+                                        "hide": false
+                                    },
+                                    {
+                                        "field": "stepMessage",
+                                        "headerName": "Step Message",
+                                        "tooltipField": "stepMessage",
+                                        "hide": true
+                                    },
+                                    {
+                                        "field": "stepStartTime",
+                                        "headerName": "Step Start Time",
+                                        "tooltipField": "stepStartTime",
+                                        "hide": false,
+                                        "cellEditor": "datePicker",
+                                        "formatType": "DateTime"
+                                    },
+                                    {
+                                        "field": "stepEndTime",
+                                        "headerName": "Step End Time",
+                                        "tooltipField": "stepEndTime",
+                                        "hide": false,
+                                        "cellEditor": "datePicker",
+                                        "formatType": "DateTime"
+                                    },
+                                    {
+                                        "field": "jobStatus",
+                                        "headerName": "Job Status",
+                                        "tooltipField": "jobStatus",
+                                        "hide": false
+                                    },
+                                    {
+                                        "field": "jobMessage",
+                                        "headerName": "Job Message",
+                                        "tooltipField": "jobMessage",
+                                        "hide": false
+                                    },
+                                    {
+                                        "field": "jobStartTime",
+                                        "headerName": "Job Start Time",
+                                        "tooltipField": "jobStartTime",
+                                        "hide": false,
+                                        "cellEditor": "datePicker",
+                                        "formatType": "DateTime"
+                                    },
+                                    {
+                                        "field": "jobEndTime",
+                                        "headerName": "Job End Time",
+                                        "tooltipField": "jobEndTime",
+                                        "hide": false,
+                                        "cellEditor": "datePicker",
+                                        "formatType": "DateTime"
+                                    }
+                                ]
+                            },
+                            "disabled": false,
+                            "required": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

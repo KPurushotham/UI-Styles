@@ -1,0 +1,56 @@
+﻿{
+  "columns": [
+   {
+      "key": "feeTypeId",
+      "headerText": "Code",
+      "filterMask": "Search"
+    },
+	 {
+      "key": "feeAmount",
+      "headerText": "amount",
+      "filterMask": "Search"
+    },
+   {
+      "key": "amountTypes",
+      "headerText": "amount Type",
+      "filterMask": "Search"
+    },
+	 {
+      "key": "feeSubtype",
+      "headerText": "Fee Subtype",
+      "filterMask": "Search"
+    },
+	
+   {
+      "key": "frequencyName",
+      "headerText": "Frequency",
+      "filterMask": "Search"
+    },
+	 
+	
+	{
+      "key": "effectiveFromDate",
+      "headerText": "Effective From",
+       "filterMask": "Search",
+        "type": "date"
+    },
+   
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/prospectus/feetypeamountlink/all",
+
+  "rowKey": {
+  "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

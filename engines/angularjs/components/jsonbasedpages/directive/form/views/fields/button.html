@@ -1,0 +1,16 @@
+<div ng-if="field.show" ng-style="field.style" style="{{field.style}}"
+    class="select_field left butn-cls {{field.cssClass}}">
+     
+    <div ng-if="action.showAlways || ((action.show==undefined || action.show)&&
+        !readOnlyMode) " class="md-button-Grid">
+        <md-button id="{{field.modelKey+ fieldIndex}}"
+            ng-disabled="(field.disabled || parentForm.readOnlyForm
+            ||(parentForm.screenMode=='EDIT' && field.disabledInEditMode)) ?
+            true :false" ng-click="eventHandler()" class="md-raised md-primary
+            md-button-Grid-functionalitity">
+            {{field.title}}
+        </md-button>
+    </div>
+   
+
+</div>

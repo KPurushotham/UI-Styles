@@ -1,0 +1,176 @@
+﻿{
+  "name": "horsenameregfeenormform",
+  "saveUrl": "horsenameregfeenorm/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "startMonth",
+              "title": "Start Month",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "January",
+                    "value": "jan"
+                  },
+                  {
+                    "text": "February",
+                    "value": "feb"
+                  },
+                  {
+                    "text": "March",
+                    "value": "march"
+                  },
+                  {
+                    "text": "April",
+                    "value": "april"
+                  },
+                  {
+                    "text": "May",
+                    "value": "may"
+                  },
+                  {
+                    "text": "June",
+                    "value": "june"
+                  },
+                  {
+                    "text": "July",
+                    "value": "July"
+                  },
+                  {
+                    "text": "August",
+                    "value": "aug"
+                  },
+                  {
+                    "text": "September",
+                    "value": "sep"
+                  },
+                  {
+                    "text": "October",
+                    "value": "oct"
+                  },
+                  {
+                    "text": "November",
+                    "value": "nov"
+                  },
+                  {
+                    "text": "December",
+                    "value": "dec"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "endMonth",
+              "title": "End Month",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "January",
+                    "value": "jan"
+                  },
+                  {
+                    "text": "February",
+                    "value": "feb"
+                  },
+                  {
+                    "text": "March",
+                    "value": "march"
+                  },
+                  {
+                    "text": "April",
+                    "value": "april"
+                  },
+                  {
+                    "text": "May",
+                    "value": "may"
+                  },
+                  {
+                    "text": "June",
+                    "value": "june"
+                  },
+                  {
+                    "text": "July",
+                    "value": "July"
+                  },
+                  {
+                    "text": "August",
+                    "value": "aug"
+                  },
+                  {
+                    "text": "September",
+                    "value": "sep"
+                  },
+                  {
+                    "text": "October",
+                    "value": "oct"
+                  },
+                  {
+                    "text": "November",
+                    "value": "nov"
+                  },
+                  {
+                    "text": "December",
+                    "value": "dec"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "feeAmount",
+              "title": "Fee",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "processFee",
+              "title": "Processing Fee",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "effectiveFromDate",
+              "title": "Effective From",
+              "fieldType": "date",
+              "cssClass": "col_3",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "taxApplicable",
+              "title": "Service Tax Applicable",
+              "cssClass": "col_3",
+              "fieldType": "checkbox",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "1"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

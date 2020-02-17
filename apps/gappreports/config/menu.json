@@ -1,0 +1,12 @@
+﻿[
+  {
+    "key": "gappreports",
+    "pattern": "REPORT",
+    "title": "Activity Report",
+    "viewName": "mainPagesection",
+    "urlRoute": "",
+    "editKeys": [
+      "reportCode"
+    ]
+  }
+]

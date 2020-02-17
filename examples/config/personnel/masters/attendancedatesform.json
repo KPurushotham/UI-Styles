@@ -1,0 +1,84 @@
+﻿{
+  "name": "attendancedatesform",
+  "saveUrl": "attendancedates/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "employee",
+              "title": "Employee",
+               "cssClass": "col_3",
+              "fieldType": "radio",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Permanent",
+                    "value": "Permanent"
+                  },
+                   {
+                    "text": "Contract",
+                    "value": "Contract"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+
+            }
+          
+          ]
+        },
+        {
+          "fields": [
+                {
+              "modelKey": "financialYear",
+              "title": "Financial Year",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/financialYear/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+           
+            {
+              "modelKey": "month",
+              "title": "Month",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/functional/monthsbox/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "startDate",
+              "title": "Start Date",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+            },
+             {
+              "modelKey": "endDate",
+              "title": "End Date",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}

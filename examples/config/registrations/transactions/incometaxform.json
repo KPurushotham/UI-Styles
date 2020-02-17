@@ -1,0 +1,234 @@
+﻿{
+  "name": "incometaxform",
+  "saveUrl": "incometaxdetails/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "partyType",
+              "title": "Party Type",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/party/partytype/all?fk-licenseApplicable=1",
+                "displayKey": "description",
+                "valueKey": "shortName"
+              },
+              "initLoad": true,
+              "dependancyConfig": [
+                {
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "partyRegEntityId",
+              "title": "Party",
+              "fieldType": "dropdown",
+              "cssClass": "col_6",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "modelKeyMapTobeFilled": {
+                    "dob": "dob",
+                    "qualification": "qualification"
+                  }
+                }
+              ],
+              "dependancyConfig": [
+                {
+                  "sourceKey": "partyType",
+                  "event": "change",
+                  "dataConfigs": {
+                    "TRAINER": {
+                      "dataUrl": "vdi/olims/racing/trainerregistration/all?fk-status=ACTIVE",
+                      "displayKey": "trainerName",
+                      "valueKey": "entityObjectId"
+                    },
+                    "JOCKEY": {
+                      "dataUrl": "vdi/olims/racing/jockeyregistration/all?fk-status=ACTIVE",
+                      "displayKey": "jockeyName",
+                      "valueKey": "entityObjectId"
+                    }
+                  },
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "submitStatus",
+              "title": "IT Submitted",
+              "cssClass": "col_2",
+              "fieldType": "radio",
+              "defaultValue": "Y",
+              "initLoad": true,
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  },
+                  {
+                    "text": "No",
+                    "value": "N"
+                  }
+                ]
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "submitDate",
+              "title": "Submited Date",
+              "cssClass": "col_2",
+              "fieldType": "date",
+              "dependancyConfig": [
+                {
+                  "sourceKey": "submitStatus",
+                  "event": "change",
+                  "validations": {
+                    "ifSourceValue": {
+                      "in": [
+                        "N"
+                      ],
+                      "rules": {
+                        "show": false
+                      }
+                    }
+                  }
+                }
+              ],
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "financialYear",
+              "title": "Financial Year",
+              "fieldType": "dropdown",
+              "cssClass": "col_2",
+              "initLoad": true,
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/financialYear/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "dependancyConfig": [
+                {
+                  "sourceKey": "submitStatus",
+                  "event": "change",
+                  "validations": {
+                    "ifSourceValue": {
+                      "in": [
+                        "N"
+                      ],
+                      "rules": {
+                        "show": false
+                      }
+                    }
+                  }
+                }
+              ],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "assessmentYear",
+              "title": "Assessment Year", 
+              "initLoad": true,
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/financialYear/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "dependancyConfig": [
+                {
+                  "sourceKey": "submitStatus",
+                  "event": "change",
+                  "validations": {
+                    "ifSourceValue": {
+                      "in": [
+                        "N"
+                      ],
+                      "rules": {
+                        "show": false
+                      }
+                    }
+                  }
+                }
+              ],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "acknowledgementNumber",
+              "title": "Aknowledge Number",
+              "cssClass": "col_2",
+              "fieldType": "currency",
+              "dependancyConfig": [
+                {
+                  "sourceKey": "submitStatus",
+                  "event": "change",
+                  "validations": {
+                    "ifSourceValue": {
+                      "in": [
+                        "N"
+                      ],
+                      "rules": {
+                        "show": false
+                      }
+                    }
+                  }
+                }
+              ],
+              "disabled": false,
+              "required": false
+            }
+
+          ]
+        }
+      ]
+    }
+  ]
+} 

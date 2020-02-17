@@ -1,0 +1,80 @@
+{
+  "columns": [
+    {
+      "key": "horseName",
+      "headerText": "Season",
+      "type": "uppercase"
+    },
+    {
+      "key": "arrivalDate",
+      "headerText": "Race Date",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Race Day",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Race Name",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Race Category",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Race Classification",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Horse",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Pedigree",
+      "type": "uppercase"
+    },
+
+    {
+      "key": "trainerName",
+      "headerText": "Colour",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Age",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Sex",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Rating",
+      "type": "uppercase"
+    },
+    {
+      "key": "trainerName",
+      "headerText": "Weight",
+      "type": "uppercase"
+    }
+
+  ],
+
+  "dataUrl": "vdi/olims/veterinary/horsecodeallotment/all",
+
+  "rowKey": {
+    "horseColourMCode": "horseColourMCode",
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

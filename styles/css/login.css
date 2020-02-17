@@ -1,0 +1,201 @@
+.login-main-design {
+    float: left;
+    height: 100vh;
+    width: 100%;
+}
+.main-wapper {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+.login-page {
+    width: 100%;
+    height: 100vh;
+    float: left;
+    background: #e5fafa url(../../images/ids-loginbg.jpg) no-repeat center center;
+    background-size: cover;
+}
+.login-page md-input-container {
+	margin: 8px 0px !important;
+}
+.login-page md-input-container .md-input {
+	border-radius: 3px;
+	border: 1px solid #303445;
+	padding: 4px 3px;
+	height: 34px;
+	background: rgba(255,255,255,0.3) !important;
+}
+.login-page .input-group input.form-control {
+	height: 36px;
+}
+.login-page .input-group i {
+    color: #28b5e8;
+    font-size:16px;
+}
+.login-design-main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.login-design {
+    width: 320px;
+    margin-top: 30px;
+    padding: 15px;
+    float: right;
+    border-radius: 6px;
+    background: rgba(255,255,255,1);
+    border: 1px solid #fff;
+    box-shadow: 0px 7px 0px 2px rgba(0,0,0,0.3);
+}
+.login-design h3 {
+	font-size: 44px;
+	font-weight: 700;
+	color: #373634;
+}
+.login-design p {
+	font-size: 12px;
+	font-weight: 400;
+	margin: 0 0 8px;
+	float: left;
+	color: #666;
+}
+.ids-loginpg-logo {
+	width: 100%;
+	float: left;
+	text-align: center;
+	margin-top: -70px;
+}
+.ids-loginpg-logo img {
+	width: 100px;
+	text-align: center;
+}
+.login-form {
+	float: left;
+	width: 100%;
+	margin-top: 5px;
+}
+.loginform-btn {
+    background: #02747b;
+    border-radius: 3px;
+    padding: 10px 15px;
+    width: 100%;
+    border: 0px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: all 300ms;
+}
+.loginform-btn:hover, .loginform-btn:focus {
+    background: #004d62;
+}
+.loginform-btn_actp {
+	background: #4bd864;
+	border-radius: 15px;
+	padding: 10px 45px;
+	height: auto;
+	width: auto;
+	border: 0px;
+	color: #ffffff;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 700;
+	box-shadow: 0px 1px 5px 5px #f7efd6;
+	margin: 5px 0 20px 10px;
+}
+.loginform-btn_rej {
+	background: #fd392f;
+	border-radius: 15px;
+	padding: 10px 45px;
+	height: auto;
+	width: auto;
+	border: 0px;
+	color: #ffffff;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 700;
+	box-shadow: 0px 1px 5px 5px #f7efd6;
+	margin: 5px 0 20px 10px;
+}
+.login-disclaimer .loginform-btn {
+	font-size: 16px;
+	font-weight: 700;
+	font-family: 'Lato', sans-serif;
+	text-transform: initial;
+}
+
+/* --- form horizontal --- */
+/*.form-horizontal .checkbox, .form-horizontal .checkbox-inline, .form-horizontal .radio, .form-horizontal .radio-inline {
+	padding-top: 7px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.form-horizontal .checkbox, .form-horizontal .radio {
+	min-height: 27px;
+}
+
+.form-horizontal label {
+	line-height: 34px;
+	margin-bottom: 0;
+	padding-top: 0 !important;
+}
+.form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
+	padding-top: 0px;
+}*/
+/* --- form horizontal --- */
+/* --- alert message --- */
+.alertify-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.alertify-dialog {
+    padding: 15px !important;
+    background: url(../../images/disclaimer-bg.jpg) center no-repeat;
+    background-size: cover;
+    border-radius:7px;
+}
+.alertify-dialog h4 {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    float: left;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+}
+.alertify-dialog p {
+    width: 100%;
+    float: left;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    line-height: 20px;
+    font-size:14px;
+}
+.alertify-dialog p.alertify-message i.fa {
+    font-size: 40px !important;
+    color: #ffcc00;
+}
+/* --- alert message --- */
+
+.login-form .input-group {
+    margin-bottom:20px;
+}
+a.forgot-pass {
+    text-align: left;
+    float: left;
+    width: 100%;
+    margin: 0 0 8px 0;
+    font-size: 13px;
+    /*color:#f0f0f0;*/
+    color: #333;
+}
+
+.login-page .input-group-text {
+    padding:.375rem 1rem;
+}

@@ -1,0 +1,135 @@
+{
+  "name": "slotentryform",
+  "externalService": "slotentryService",
+  "saveUrl": "vdi/webportal/slotentry/save",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+  "actions": [
+    {
+      "title": "Save",
+      "navigateTo": "PARENT",
+      "actionType": "SUBMIT",
+      "cssClass": "green_btn",
+      "showModes": [ "ADD"]
+    }
+  ],
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "beginDate",
+              "cssClass": "col-md-2 padding-lftrht0",
+              "title": "Begin Date",
+              "fieldType": "date",
+              "ignoreInServiceModel": true,
+              "required": true
+            },
+            {
+              "modelKey": "endDate",
+              "cssClass": "col-md-2 padding-lftrht0",
+              "title": "End Date",
+              "fieldType": "date",
+              "ignoreInServiceModel": true,
+              "required": true
+            },
+            {
+              "title": "Get Data",
+              "fieldType": "button",
+              "handlerName": "getDataToGrid",
+              "cssClass": "col-md-2 padding-lftrht0 butn-cls-margntop",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Slot Details",
+      "cssClass": "slots-grid",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "slotsGridData",
+              "title": "Slot Details",
+              "fieldType": "grid",
+              "initLoad": true,
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "",
+              "gridConfig": {
+                "multiSelect": true,
+                "modelKeyMap": [
+                  "coaMiscSummaryID",
+                  "groupName",
+                  "tenantId",
+                  "raceDate",
+                  "corpId",
+                  "hostNo",
+                  "locTypeId",
+                  "meetTypeId",
+                  "locNo",
+                  "trackNo",
+                  "purTh",
+                  "purQT",
+                  "purMin",
+                  "operationType"
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "floatingFilter": false,
+                  "enableFilter": true,
+                  "enableSorting": true,
+                  "toolPanelSuppressRowGroups": true,
+                  "suppressSizeToFit": true
+
+                },
+                "columns": [
+                  {
+                    "field": "raceDate",
+                    "headerName": "Race Date",
+                    "filter": "agSetColumnFilter",
+                    "editable": false,
+                    "hide": false,
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "purTh",
+                    "headerName": "Pur Th",
+                    "filter": "agSetColumnFilter",
+                    "aggFunc": "sum",
+                    "enableValue": true,
+                    "editable": true,
+                    "hide": false,
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "purQT",
+                    "headerName": "Pur QT",
+                    "filter": "agSetColumnFilter",
+                    "editable": true,
+                    "hide": false,
+                    "suppressMovable": false
+                  },
+                  {
+                    "field": "purMin",
+                    "headerName": "Pur Min",
+                    "filter": "agSetColumnFilter",
+                    "editable": true,
+                    "hide": false,
+                    "suppressMovable": false
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

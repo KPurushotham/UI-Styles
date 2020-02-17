@@ -1,0 +1,56 @@
+﻿{
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "dataTool.manageappsform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "corporations",
+      "headerName": "Corporation Test",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter",
+      "rowGroup": true
+
+    },
+    {
+      "field": "id",
+      "headerName": "Contract No",
+      "filter": "agSetColumnFilter"
+
+    },
+    {
+      "field": "contract_name",
+      "headerName": "Contract Name",
+      "filter": "agSetColumnFilter"
+    },
+
+    {
+      "field": "contract_application",
+      "headerName": "Contract Application",
+      "type": "date",
+      "filter": "agSetColumnFilter"
+
+    },
+
+    {
+      "field": "finalized",
+      "headerName": "Contract Finalized",
+      "type": "uppercase",
+
+      "filter": "agSetColumnFilter",
+      "filterParams": {
+        "cellHeight": 20,
+        "values": [ "yes", "No" ],
+        "debounceMs": 1000
+      }
+    }
+
+  ],
+  "dataUrl": "contractList",
+  "rowKey": {
+    "id": "contractId"
+  },
+  "defaultSortColumn": "contract_name"
+}

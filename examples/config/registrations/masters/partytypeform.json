@@ -1,0 +1,138 @@
+﻿{
+  "name": "partytypeform",
+  "saveUrl": "partytype/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "partyGroup",
+              "title": "Party Type Group",
+              "codeKey": "shortName",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/Party/partygroup/all?fk-status=ACTIVE",
+                "displayKey": "partyGroupCode-description",
+                "valueKey": "shortName"
+              },
+              "disabled": false,
+              "required": true
+
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "partyTypeCode",
+              "title": "code",
+              "fieldType": "systemcode",
+              "keyGenConfig": {
+                "params": "entityCode=party&entityGroupCode=party&entityTypeCode=party"
+              }
+            },
+            {
+              "modelKey": "shortName",
+              "title": "Short Name",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "description",
+              "title": "Description",
+              "fieldType": "textbox",
+              "cssClass": "col_6",
+              "disabled": false,
+              "required": false
+
+            }
+          ]
+        }
+
+      ]
+    },
+      
+    { "title": "Party is applicable for:" ,
+      "rowDivisions": [
+        {
+          "fields": [
+          
+            {
+              "modelKey": "authorityApplicable",
+              "title": "Authority",
+              "fieldType": "checkbox",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Authority",
+                    "value": "CR"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+
+            },
+            {
+              "modelKey": "licenseApplicable",
+              "title": "License",
+              "fieldType": "checkbox",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+
+            },
+            {
+              "modelKey": "insuranceApplicable",
+              "title": "Insurance Applicable",
+              "fieldType": "checkbox",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+
+            },
+
+            {
+              "modelKey": "registrationFee",
+              "title": "Registration Fee",
+              "fieldType": "checkbox",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}

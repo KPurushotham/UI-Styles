@@ -1,0 +1,151 @@
+﻿[
+  {
+
+    "key": "hostfee",
+    "title": "Host Fee",
+    "urlRoute": "hostfee"
+  },
+  {
+    "key": "mailday",
+    "title": "Mail Day",
+    "urlRoute": "mailday"
+  },
+  {
+    "key": "reports",
+    "title": "Reports",
+    "urlRoute": "reports/dashboard",
+    "pattern": "dashboard"
+  },
+  {
+    "key": "bankReconcilation",
+    "title": "Bank Reconcilation",
+    "urlRoute": "bankReconcilation"
+  },
+  {
+    "key": "serviceBuilder",
+    "title": "Service Builder",
+    "urlRoute": "serviceBuilder"
+  },
+  {
+    "key": "dataTool",
+    "title": "Data Tool",
+    "urlRoute": "dataTool"
+  },
+  {
+    "key": "chrimscore",
+    "title": "Chrims Core",
+    "urlRoute": "chrimscore"
+  },
+  {
+    "key": "reportsdesigner",
+    "title": "Reports Designer",
+    "urlRoute": "reportsdesigner"
+  },
+  {
+    "key": "slotsentry",
+    "title": "Slots Entry",
+    "urlRoute": "slotsentry"
+  },
+  {
+    "key": "gapp",
+    "title": "G-App",
+    "urlRoute": "gapp"
+  },
+  {
+    "key": "tenantsetup",
+    "title": "Tenant Setup",
+    "urlRoute": "tenantsetup"
+  },
+  {
+    "key": "netsettlements",
+    "title": "Net Settlements",
+    "urlMap": {
+      "urlTemplate": "http://developeriis.chrims.com/Netsettlements_QA_UI/#{{tenantId}}/netsettlements/partners/{{accessToken}}/{{userName}}/{{tenantCode}}",
+      "params": {
+        "tenantCode": "CTC",
+        "tenantId": "CTI",
+        "accessToken": "AT",
+        "userName": "UN"
+      }
+    }
+  },
+  {
+    "key": "ns-hostconfig",
+    "title": "NS-Host Setup",
+    "urlMap": {
+      "urlTemplate": "http://developeriis.chrims.com/ns-admin-QA/#{{tenantId}}/admin-ui/tenants/{{accessToken}}/{{userName}}/{{tenantCode}}",
+      "params": {
+        "tenantCode": "CTC",
+        "tenantId": "CTI",
+        "accessToken": "AT",
+        "userName": "UN"
+      }
+    }
+  },
+  {
+    "key": "gappreports",
+    "title": "G-App Reports",
+    "urlRoute": "gappreports/dashboard",
+    "pattern": "dashboard"
+  },
+  {
+    "key": "gappadminportal",
+    "title": "Gapp Admin Portal",
+    "urlRoute": "gappadminportal"
+  },
+  {
+    "key": "gappwageringinterface",
+    "title": "G-App Wagering Interface",
+    "urlRoute": "gappwageringinterface"
+  },
+  {
+    "key": "loaders",
+    "title": "Race Master Data",
+    "urlRoute": "loaders"
+  },
+  {
+    "key": "larcentryscreen",
+    "title": "LARC Entries",
+    "urlRoute": "larcentryscreen"
+  },
+  {
+    "key": "reportdataconfig",
+    "title": "Budget Entry Screen",
+    "urlRoute": "reportdataconfig"
+  },
+  {
+    "key": "ogmscreen",
+    "title": "OGM Screen",
+    "urlRoute": "ogmscreen"
+  },
+  {
+    "key": "gappadminportal",
+    "title": "Gapp Admin Portal",
+    "urlRoute": "gappadminportal"
+  },
+  {
+    "key": "gappdashboard",
+    "title": "Gapp Dashboard",
+    "urlRoute": "gappdashboard"
+  },
+  {
+    "key": "dataconfig",
+    "title": "Reports Data Entry Screen",
+    "urlRoute": "dataconfig"
+  },
+  {
+    "key": "reportby",
+    "title": "Report By Screen",
+    "urlRoute": "reportby"
+  },
+  {
+    "key": "purseloader",
+    "title": "Purse Loader",
+    "urlRoute": "purseloader"
+  },
+  {
+    "key": "idsclientapp",
+    "title": "IDS Client Application",
+    "urlRoute": "idsclientapp"
+  }
+]

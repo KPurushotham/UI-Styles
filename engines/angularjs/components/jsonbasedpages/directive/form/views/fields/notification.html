@@ -1,0 +1,39 @@
+<div ng-if="field.show" class="select_field left notification-bell
+    {{field.cssClass}}" ng-class="(parentForm.save_submit &&
+    parentForm.df_form[field.modelKey+ fieldIndex].$error.required)?
+    'form_error_field' : ''">
+    <div id="{{field.modelKey+ fieldIndex}}" dynamic-name="field.modelKey+
+        fieldIndex" ng-model="field.modelValue" ng-required="field.required"
+        ng-disabled="(field.disabled || parentForm.readOnlyForm) ? true :false"
+        dependancy-events="field.dependancyEvents"
+        event-dependents="field.dependants"
+        ng-click="eventHandler()">
+
+        <div class="uib-dropdown">
+            <a uib-dropdown-toggle data-toggle="dropdown"
+               class="profile-toggle-link dropdown-toggle">
+                <div ng-if="field.dataCount > 0">
+                    <i class="fa fa-bell faa-ring animated bell-animation" style="color: grey;">
+                        <span class="p1 fa-stack fa-2x has-badge"
+                              data-count={{field.dataCount}}></span>
+                    </i>
+                </div>
+                <div ng-if="field.dataCount <= 0">
+                    <i class="fa fa-bell faa-ring animated bell-animation-mute" style="color: grey;">
+                        <span class="p1 fa-stack fa-2x has-badge"
+                              data-count={{field.dataCount}}></span>
+                    </i>
+                </div>
+            </a>
+            <ul class="top-dropdown-menu profile-dropdown dropdown-menu" uib-dropdown-menu>
+                <li></li>
+                <li>
+                    <i class="dropdown-arr"></i>
+                </li>
+                <li class="li-disc" ng-repeat="data in field.notificationData track by $index">
+                    <h6>{{data}}</h6>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

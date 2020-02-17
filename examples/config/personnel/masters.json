@@ -1,0 +1,467 @@
+﻿[
+
+   {
+    "stateName": "personnel.categorymaster",
+    "url": "categorymaster",
+    "pattern": "LISTING",
+    "viewName": "personnelSection",
+    "data": {
+      "title": "Categories",
+      "addScreenStateName": "personnel.categoryform"
+    }
+  },
+  {
+    "stateName": "personnel.categoryform",
+    "url": "categoryform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "CATEGORY",
+    "fieldMap": {
+      "entityCode": "categoryCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=category&entityGroupCode=per&entityTypeCode=per",
+    "viewName": "personnelSection",
+    "data": { "title": "New" }
+  },
+
+
+  {
+    "stateName": "personnel.departmentmaster",
+    "url": "departmentmaster",
+    "pattern": "LISTING",
+    "viewName": "personnelSection",
+    "data": {
+      "title": "Department",
+      "addScreenStateName": "personnel.departmentform"
+    }
+  },
+  {
+    "stateName": "personnel.departmentform",
+    "url": "departmentform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "DEPARTMENT",
+    "fieldMap": {
+      "entityCode": "departmentCode",
+      "shortName": "name",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=department&entityGroupCode=core&entityTypeCode=core",
+    "viewName": "personnelSection",
+    "data": { "title": "New" }
+  },
+
+  {
+    "stateName": "personnel.sectiontmaster",
+    "url": "sectiontmaster",
+    "pattern": "LISTING",
+    "viewName": "personnelSection",
+    "data": {
+      "title": "Section",
+      "addScreenStateName": "personnel.sectiontform"
+    }
+  },
+  {
+    "stateName": "personnel.sectiontform",
+    "url": "sectiontform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "SECTION",
+    "fieldMap": {
+      "categoryCode": {
+        "jsonKey": "departmentId",
+        "title": "Department",
+          "codeKey": "name",
+        "dataUrl": "vdi/olims/core/departmentlist/all?fk-status=ACTIVE",
+        "displayKey": "departmentCode-name",
+        "valueKey": "entityObjectId"
+      },
+      "entityCode": "sectionCode",
+      "shortName": "sectionName",
+      "note": "sectionDescription"
+    },
+    "codeKeyParam": "entityCode=section&entityGroupCode=core&entityTypeCode=core",
+    "viewName": "personnelSection",
+    "data": { "title": "New" }
+  },
+
+   {
+    "stateName": "personnel.designationmaster",
+    "url": "designationmaster",
+    "pattern": "LISTING",
+    "viewName": "personnelSection",
+    "data": {
+      "title": "Designation",
+      "addScreenStateName": "personnel.designationform"
+    }
+  },
+  {
+    "stateName": "personnel.designationform",
+    "url": "designationform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "DESIGNATION",
+    "fieldMap": {
+      "entityCode": "designationCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=designation&entityGroupCode=tote&entityTypeCode=tote",
+    "viewName": "personnelSection",
+    "data": { "title": "New" }
+  },
+
+  
+  {
+    "stateName": "personnel.shiftmaster",
+    "url": "shiftmaster",
+    "pattern": "LISTING",
+    "viewName": "personnelSection",
+    "data": {
+      "title": "Shift",
+      "addScreenStateName": "personnel.shiftform"
+    }
+  },
+  {
+    "stateName": "personnel.shiftform",
+    "url": "shiftform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "SHIFT",
+
+    "codeKeyParam": "entityCode=shift&entityGroupCode=tote&entityTypeCode=tote",
+    "viewName": "personnelSection",
+    "data": { "title": "New" }
+  },
+
+  {
+    "stateName": "personnel.conductmaster",
+    "url": "conductmaster",
+    "pattern": "LISTING",
+    "viewName": "personnelSection",
+    "data": {
+      "title": "Conduct",
+      "addScreenStateName": "personnel.conductform"
+    }
+  },
+  {
+    "stateName": "personnel.conductform",
+    "url": "conductform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "CONDUCT",
+    "fieldMap": {
+      "entityCode": "conductCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=conduct&entityGroupCode=per&entityTypeCode=per",
+    "viewName": "personnelSection",
+    "data": { "title": "New" }
+  },
+
+   {
+    "stateName": "personnel.leavesmaster",
+    "url": "leavesmaster",
+    "pattern": "LISTING",
+    "viewName": "personnelSection",
+    "data": {
+      "title": "Leaves",
+      "addScreenStateName": "personnel.leavesform"
+    }
+  },
+  {
+    "stateName": "personnel.leavesform",
+    "url": "leavesform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "LEAVES",
+    "fieldMap": {
+      "entityCode": "leavesCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=leaves&entityGroupCode=per&entityTypeCode=per",
+    "viewName": "personnelSection",
+    "data": { "title": "New" }
+  },
+
+   {
+    "stateName": "personnel.holidayentrymaster",
+    "url": "holidayentrymaster",
+    "pattern": "LISTING",
+    "viewName": "personnelSection",
+    "data": {
+      "title": "Holiday Entry",
+      "addScreenStateName": "personnel.holidayentryform"
+    }
+  },
+   {
+    "stateName": "personnel.holidayentryform",
+    "url": "holidayentryform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "HOLIDAY_ENTRY",
+    "viewName": "personnelSection",
+    "data": { "title": "New" }
+  },
+
+
+   {
+    "stateName": "personnel.racedaymaster",
+    "url": "racedaymaster",
+    "pattern": "LISTING",
+    "viewName": "personnelSection",
+    "data": {
+      "title": "Local Race Days",
+      "addScreenStateName": "personnel.racedayform"
+    }
+  },
+  {
+    "stateName": "personnel.racedayform",
+    "url": "racedayform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "LOCAL_RACE_DAYS",
+    "codeKeyParam": "entityCode=raceday&entityGroupCode=per&entityTypeCode=per",
+    "viewName": "personnelSection",
+    "data": { "title": "New" }
+  },
+
+  {
+    "stateName": "personnel.attendancedatesmaster",
+    "url": "attendancedatesmaster",
+    "pattern": "LISTING",
+    "viewName": "personnelSection",
+    "data": {
+      "title": "Attendance Dates",
+      "addScreenStateName": "personnel.attendancedatesform"
+    }
+  },
+  {
+    "stateName": "personnel.attendancedatesform",
+    "url": "attendancedatesform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "ATTENDANCE_DATES",
+    "viewName": "personnelSection",
+    "data": { "title": "New" }
+  },
+
+  
+  {
+    "stateName": "personnel.allowancemaster",
+    "url": "allowancemaster",
+    "pattern": "LISTING",
+    "viewName": "personnelSection",
+    "data": {
+      "title": "Allowance",
+      "addScreenStateName": "personnel.allowanceform"
+    }
+  },
+  {
+    "stateName": "personnel.allowanceform",
+    "url": "allowanceform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "ALLOWANCE",
+    "fieldMap": {
+      "entityCode": "allowanceCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=allowance&entityGroupCode=tote&entityTypeCode=tote",
+    "viewName": "personnelSection",
+    "data": { "title": "New" }
+  },
+
+  {
+    "stateName": "personnel.grademaster",
+    "url": "grademaster",
+    "pattern": "LISTING",
+    "viewName": "personnelSection",
+    "data": {
+      "title": "Grade",
+      "addScreenStateName": "personnel.gradeform"
+    }
+  },
+  {
+    "stateName": "personnel.gradeform",
+    "url": "gradeform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "GRADE",
+    "fieldMap": {
+      "entityCode": "gradeCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=grade&entityGroupCode=per&entityTypeCode=per",
+    "viewName": "personnelSection",
+    "data": { "title": "New" }
+  },
+ 
+   {
+    "stateName": "personnel.loansmaster",
+    "url": "loansmaster",
+    "pattern": "LISTING",
+    "viewName": "personnelSection",
+    "data": {
+      "title": "Loans",
+      "addScreenStateName": "personnel.loansform"
+    }
+  },
+  {
+    "stateName": "personnel.loansform",
+    "url": "loansform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "LOANS",
+    "fieldMap": {
+      "entityCode": "loansCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=loans&entityGroupCode=per&entityTypeCode=per",
+    "viewName": "personnelSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "personnel.jantamaster",
+    "url": "jantamaster",
+    "pattern": "LISTING",
+    "viewName": "personnelSection",
+    "data": {
+      "title": "Group Janta Level Entry",
+      "addScreenStateName": "personnel.jantaform"
+    }
+  },
+  {
+    "stateName": "personnel.jantaform",
+    "url": "jantaform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "GROUP_JANTA_LEVEL",
+    "codeKeyParam": "entityCode=janta&entityGroupCode=per&entityTypeCode=per",
+    "viewName": "personnelSection",
+    "data": { "title": "New" }
+  },
+
+
+ 
+
+  {
+    "stateName": "personnel.unionsmaster",
+    "url": "unionsmaster",
+    "pattern": "LISTING",
+    "viewName": "personnelSection",
+    "data": {
+      "title": "Unions",
+      "addScreenStateName": "personnel.unionsform"
+    }
+  },
+  {
+    "stateName": "personnel.unionsform",
+    "url": "unionsform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "UNIONS",
+    "fieldMap": {
+      "entityCode": "unionsCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=unions&entityGroupCode=per&entityTypeCode=per",
+    "viewName": "personnelSection",
+    "data": { "title": "New" }
+  },
+   {
+    "stateName": "personnel.basicsalarymaster",
+    "url": "basicsalarymaster",
+    "pattern": "LISTING",
+    "viewName": "personnelSection",
+    "data": {
+      "title": "Basic Salary",
+      "addScreenStateName": "personnel.basicsalaryform"
+    }
+  },
+  {
+    "stateName": "personnel.basicsalaryform",
+    "url": "basicsalaryform",
+    "showInLeftManu": false,
+    "editKeys": ["basicSalaryCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "BASIC_SALARY",
+    "fieldMap": {
+      "entityCode": "basicSalaryCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=basicsalary&entityGroupCode=per&entityTypeCode=per",
+    "viewName": "personnelSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "personnel.wagecomponentmaster",
+    "url": "wagecomponentmaster",
+    "pattern": "LISTING",
+    "viewName": "personnelSection",
+    "data": {
+      "title": "Wage Component",
+      "addScreenStateName": "personnel.wagecomponentform"
+    }
+  },
+  {
+    "stateName": "personnel.wagecomponentform",
+    "url": "wagecomponentform",
+    "showInLeftManu": false,
+    "editKeys": ["wageComponentsCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "WAGE_COMPONENTS",
+    "fieldMap": {
+      "entityCode": "wageComponentsCode",
+      "shortName": "shortName",
+      "note": "description"
+    },
+    "codeKeyParam": "entityCode=wagecomponents&entityGroupCode=per&entityTypeCode=per",
+    "viewName": "personnelSection",
+    "data": { "title": "New" }
+  }
+
+ 
+
+]

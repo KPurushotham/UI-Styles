@@ -1,0 +1,182 @@
+{
+  "name": "budgetentry",
+  "externalService": "budgetEntryService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "reportdataconfig.budgetentryform"
+    }
+  ],
+  "criteria": {
+    "showButton": true,
+    "rowDivisions": [
+      {
+        "columns": [
+          {
+            "fields": [
+              {
+                "modelKey": "corpId",
+                "title": "Corporation",
+                "fieldType": "dropdown",
+                "cssClass": "col-md-2",
+                "dependancyEvents": [
+                  {
+                    "eventName": "change",
+                    "handlerName": "corporationDropdownHandler"
+                  }
+                ],
+                "dataConfig": {
+                  "dataUrl": "vdi/webportal/corporations/get/all",
+                  "displayKey": "corpName",
+                  "valueKey": "corpId"
+                },
+                "disabled": false,
+                "required": true
+              },
+              {
+                "modelKey": "hostNo",
+                "title": "Host",
+                "fieldType": "dropdown",
+                "cssClass": "col-md-2",
+                "dependancyEvents": [
+                  {
+                    "eventName": "change",
+                    "handlerName": "hostDropdownHandler"
+                  }
+                ],
+                "dataConfig": {
+                  "dataUrl": "vdi/webportal/hosts/get/all",
+                  "displayKey": "hostName",
+                  "valueKey": "hostNo"
+                },
+                "disabled": false,
+                "required": true
+              },
+              {
+                "modelKey": "reportType",
+                "title": "Report Type",
+                "cssClass": "col-md-2",
+                "fieldType": "dropdown",
+                "dependancyEvents": [
+                  {
+                    "eventName": "change",
+                    "handlerName": "reportTypeDropdownHandler"
+                  }
+                ],
+                "dataConfig": {
+                  "localData": [
+                    {
+                      "text": "Budget",
+                      "value": "Budget"
+                    },
+                    {
+                      "text": "JournalEntries",
+                      "value": "JournalEntries"
+                    }
+                  ]
+                },
+                "disabled": false,
+                "required": true
+              },
+              {
+                "modelKey": "reportName",
+                "title": "Report",
+                "cssClass": "col-md-2",
+                "fieldType": "dropdown",
+                "dependancyEvents": [
+                  {
+                    "eventName": "change",
+                    "handlerName": "reportNameDropdownHandler"
+                  }
+                ],
+                "dataConfig": {
+                  "localData": [
+                    {
+                      "text": "BudgetSimulcast",
+                      "value": "BudgetSimulcast"
+                    },
+                    {
+                      "text": "BudgetExport",
+                      "value": "BudgetExport"
+                    },
+                    {
+                      "text": "BudgetLive",
+                      "value": "BudgetLive"
+                    }
+                  ]
+                },
+                "disabled": false,
+                "required": true
+              },
+              {
+                "cssClass": "col-md-2 padding-lftrht0 butn-cls-margntop",
+                "title": "GET RESULts",
+                "fieldType": "button",
+                "modelKey": "sendMailButton",
+                "handlerName": "getResults",
+                "ignoreInServiceModel": true,
+                "required": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "columns": [
+    {
+      "field": "corpId",
+      "headerName": "Corp Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "hostNo",
+      "headerName": "host No",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "reportType",
+      "headerName": "Report Type",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "reportName",
+      "headerName": "Report Name",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "columnHeader",
+      "headerName": "Column Header",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "tableColumm",
+      "headerName": "Table Columm",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "criteria",
+      "headerName": "Criteria",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    }
+  ],
+  "dataUrl": "vdi/budget/entry/by_host_id_get_one",
+  "editScreenState": "app.reportdataconfig.budgetentryform",
+  "rowKey": {
+    "Id": "Id"
+  },
+  "defaultSortColumn": "Id"
+}

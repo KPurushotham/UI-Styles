@@ -1,0 +1,82 @@
+{
+    "name": "clientsform",
+    "noWorkflow": true,
+    "submitted": false,
+    "externalService": "clientService",
+    "actions": [],
+    "isManidatoryRequired": false,
+    "sections": [
+      {
+        "rowDivisions": [
+            {
+                "fields": [
+                    {
+                        "modelKey": "clientgrid",
+                        "title": "Client Details",
+                        "fieldType": "grid",
+                        "initLoad": true,
+                        "style": "display: none;",
+                        "localData": true,
+                        "show": false,
+                        "gridSummaryLabel": "total",
+                        "gridConfig": {
+                            "modelKeyMap": [],
+                            "features": {
+                                "enableGridMenu": false,
+                                "floatingFilter": false,
+                                "enableFilter": true,
+                                "enableSorting": true,
+                                "toolPanelSuppressRowGroups": true,
+                                "suppressSizeToFit": true,
+                                "groupDefaultExpanded": true
+                            },
+                            "columns": [
+                                {
+                                    "field": "clientAccountId",
+                                    "headerName": "Account Id",
+                                    "tooltipField": "clientAccountId",
+                                    "hide": false
+                                },
+                                {
+                                    "field": "userName",
+                                    "headerName": "User Name",
+                                    "tooltipField": "userName",
+                                    "hide": false
+                                },
+                                {
+                                    "field": "email",
+                                    "tooltipField": "email",
+                                    "headerName": "Email",
+                                    "hide": false
+                                },
+                                {
+                                    "field": "masterAccountId",
+                                    "headerName": "masterAccountId",
+                                    "tooltipField": "masterAccountId",
+                                    "hide": true
+                                },
+                                {
+                                    "field":"CreateDate",
+                                    "headerName": "Create Date",
+                                    "tooltipField": "CreateDate",
+                                    "hide": false
+                                },
+                                {
+                                    "field":"LastUpdateDate",
+                                    "headerName": "Last updated Date",
+                                    "tooltipField": "LastUpdateDate",
+                                    "hide": false
+                                }
+                            ]
+                        },
+                        "disabled": false,
+                        "required": false
+                    }
+                ]
+            }
+       
+        ]
+      }
+
+    ]
+  }

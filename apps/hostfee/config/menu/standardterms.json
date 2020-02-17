@@ -1,0 +1,66 @@
+{
+  "name": "standardterms",
+  "actions": [
+    {
+      "title": "Add",
+      "modelKey": "addButton",
+      "navigateTo": "hostfee.standardtermsform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "serialId",
+      "hide": true
+    },
+    {
+      "field": "corpEntityId",
+      "hide": true
+    },
+    {
+      "field": "contractTypeName",
+      "headerName": "Contract Type",
+      "filter": "agSetColumnFilter",
+      "rowGroup": true,
+      "hide": true,
+      "skipDetailScreenNavigation": true
+    },
+    {
+      "field": "corpName",
+      "headerName": "Corporation Name",
+      "type": "uppercase",
+      "filter": "agSetColumnFilter",
+      "showRowGroup": "Corporation",
+      "hide": true
+    },
+    {
+      "field": "termsTitle",
+      "headerName": "Title",
+      "filter": "agSetColumnFilter",
+      "showRowGroup": "contractTypeCode",
+      "hide": false
+    },
+    {
+      "field": "genericTerms",
+      "headerName": "Terms",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "isActive",
+      "headerName": "isActive",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "status",
+      "headerName": "Status",
+      "filter": "agSetColumnFilter"
+    }
+  ],
+  "dataUrl": "vdi/hostfees/corporation/genericterms/all",
+  "editScreenState": "app.hostfee.standardtermsform",
+  "rowKey": {
+    "serialId": "serialId"
+  },
+  "defaultSortColumn": "serialId"
+}

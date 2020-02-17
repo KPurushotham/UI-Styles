@@ -1,0 +1,814 @@
+﻿
+[
+  {
+  "key": "loaders.jobdashboard",
+  "urlRoute": "jobdashboard",
+  "showInMenu": true,
+  "pattern": "FORM",
+  "viewName": "mainPagesection",
+  "title": "Dashboard"
+},
+{
+    "key": "loaders.loaderform",
+    "urlRoute": "loaderform",
+    "showInMenu": true,
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Loader"
+  } ,
+  {
+    "key": "loaders.historyform",
+    "urlRoute": "historyform",
+    "showInMenu": true,
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Loader Histroy"
+  },
+  {
+    "key": "loaders.reports",
+    "urlRoute": "reports",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Reports"
+  },
+  {
+    "key":"loaders.reports.racedataform",
+    "urlRoute": "racedataform",
+    "showInMenu": true,
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "RaceData loader Data"
+  },
+  {
+    "key": "loaders.codes",
+    "urlRoute": "codes",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Codes"
+  },
+  {
+    "key": "loaders.codes.agerestriction",
+    "urlRoute": "agerestriction",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Age Restriction"
+  },
+  {
+    "key": "loaders.codes.agerestrictionform",
+    "urlRoute": "agerestrictionform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.apprenticetype",
+    "urlRoute": "apprenticetype",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Apprentice Type"
+  },
+  {
+    "key": "loaders.codes.apprenticetypeform",
+    "urlRoute": "apprenticetypeform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.attendance",
+    "urlRoute": "attendance",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Attendance"
+  },
+  {
+    "key": "loaders.codes.attendanceform",
+    "urlRoute": "attendanceform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.country",
+    "urlRoute": "country",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Country"
+  },
+  {
+    "key": "loaders.codes.countryform",
+    "urlRoute": "countryform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.course",
+    "urlRoute": "course",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Course"
+  },
+  {
+    "key": "loaders.codes.courseform",
+    "urlRoute": "courseform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.dayevening",
+    "urlRoute": "dayevening",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Day Evening"
+  },
+  {
+    "key": "loaders.codes.dayeveningform",
+    "urlRoute": "dayeveningform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.distance",
+    "urlRoute": "distance",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Distance"
+  },
+  {
+    "key": "loaders.codes.distanceform",
+    "urlRoute": "distanceform",
+    "showInMenu": false,
+    "editKeys": [ "distanceId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.distanceindicator",
+    "urlRoute": "distanceindicator",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Distance Indicator"
+  },
+  {
+    "key": "loaders.codes.distanceindicatorform",
+    "urlRoute": "distanceindicatorform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.division",
+    "urlRoute": "division",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Division"
+  },
+  {
+    "key": "loaders.codes.divisionform",
+    "urlRoute": "divisionform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.dogindicator",
+    "urlRoute": "dogindicator",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Dog Indicator"
+  },
+  {
+    "key": "loaders.codes.dogindicatorform",
+    "urlRoute": "dogindicatorform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.eligibility",
+    "urlRoute": "eligibility",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Eligibility"
+  },
+  {
+    "key": "loaders.codes.eligibilityform",
+    "urlRoute": "eligibilityform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.entryequipment",
+    "urlRoute": "entryequipment",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Entry Equipment"
+  },
+  {
+    "key": "loaders.codes.entryequipmentform",
+    "urlRoute": "entryequipmentform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.gateindicator",
+    "urlRoute": "gateindicator",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Gate Indicator"
+  },
+  {
+    "key": "loaders.codes.gateindicatorform",
+    "urlRoute": "gateindicatorform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.guaranteedindicator",
+    "urlRoute": "guaranteedindicator",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Guaranteed Indicator"
+  },
+  {
+    "key": "loaders.codes.guaranteedindicatorform",
+    "urlRoute": "guaranteedindicatorform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.grade",
+    "urlRoute": "grade",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Grade"
+  },
+  {
+    "key": "loaders.codes.gradeform",
+    "urlRoute": "gradeform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.horsebreedcolor",
+    "urlRoute": "horsebreedcolor",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Horse Breed Color"
+  },
+  {
+    "key": "loaders.codes.horsebreedcolorform",
+    "urlRoute": "horsebreedcolorform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.horsesex",
+    "urlRoute": "horsesex",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Horse Sex"
+  },
+  {
+    "key": "loaders.codes.horsesexform",
+    "urlRoute": "horsesexform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.length",
+    "urlRoute": "length",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Length"
+  },
+  {
+    "key": "loaders.codes.lengthform",
+    "urlRoute": "lengthform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.medicationcodes",
+    "urlRoute": "medicationcodes",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Medication Codes"
+  },
+  {
+    "key": "loaders.codes.medicationcodesform",
+    "urlRoute": "medicationcodesform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.nonbettingindicator",
+    "urlRoute": "nonbettingindicator",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Non Betting Indicator"
+  },
+  {
+    "key": "loaders.codes.nonbettingindicatorform",
+    "urlRoute": "nonbettingindicatorform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.officialindicator",
+    "urlRoute": "officialindicator",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Official Indicator"
+  },
+  {
+    "key": "loaders.codes.officialindicatorform",
+    "urlRoute": "officialindicatorform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.plusindicator",
+    "urlRoute": "plusindicator",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Plus Indicator"
+  },
+  {
+    "key": "loaders.codes.plusindicatorform",
+    "urlRoute": "plusindicatorform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.purseenhancement",
+    "urlRoute": "purseenhancement",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Purse Enhancement"
+  },
+  {
+    "key": "loaders.codes.purseenhancementform",
+    "urlRoute": "purseenhancementform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.qualityindicator",
+    "urlRoute": "qualityindicator",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Quality Indicator"
+  },
+  {
+    "key": "loaders.codes.qualityindicatorform",
+    "urlRoute": "qualityindicatorform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.racebreeds",
+    "urlRoute": "racebreeds",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Race Breeds"
+  },
+  {
+    "key": "loaders.codes.racebreedsform",
+    "urlRoute": "racebreedsform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.racecondition",
+    "urlRoute": "racecondition",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Race Condition"
+  },
+  {
+    "key": "loaders.codes.raceconditionform",
+    "urlRoute": "raceconditionform",
+    "showInMenu": false,
+    "editKeys": ["code"],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.racetype",
+    "urlRoute": "racetype",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Race Type"
+  },
+  {
+    "key": "loaders.codes.racetypeform",
+    "urlRoute": "racetypeform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.restrictiontype",
+    "urlRoute": "restrictiontype",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Restriction Type"
+  },
+  {
+    "key": "loaders.codes.restrictiontypeform",
+    "urlRoute": "restrictiontypeform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.resultequipment",
+    "urlRoute": "resultequipment",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Result Equipment"
+  },
+  {
+    "key": "loaders.codes.resultequipmentform",
+    "urlRoute": "resultequipmentform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.ridertype",
+    "urlRoute": "ridertype",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Rider Type"
+  },
+  {
+    "key": "loaders.codes.ridertypeform",
+    "urlRoute": "ridertypeform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.scratchindicator",
+    "urlRoute": "scratchindicator",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Scratch Indicator"
+  },
+  {
+    "key": "loaders.codes.scratchindicatorform",
+    "urlRoute": "scratchindicatorform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.scratchreason",
+    "urlRoute": "scratchreason",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Scratch Reason"
+  },
+  {
+    "key": "loaders.codes.scratchreasonform",
+    "urlRoute": "scratchreasonform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.sexrestriction",
+    "urlRoute": "sexrestriction",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Sex Restriction"
+  },
+  {
+    "key": "loaders.codes.sexrestrictionform",
+    "urlRoute": "sexrestrictionform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.starterbreeds",
+    "urlRoute": "starterbreeds",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Starter Breeds"
+  },
+  {
+    "key": "loaders.codes.starterbreedsform",
+    "urlRoute": "starterbreedsform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.surfacecodes",
+    "urlRoute": "surfacecodes",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Surface Codes"
+  },
+  {
+    "key": "loaders.codes.surfacecodesform",
+    "urlRoute": "surfacecodesform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.timingmethod",
+    "urlRoute": "timingmethod",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Timing Method"
+  },
+  {
+    "key": "loaders.codes.timingmethodform",
+    "urlRoute": "timingmethodform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.trackcondition",
+    "urlRoute": "trackcondition",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Track Condition"
+  },
+  {
+    "key": "loaders.codes.trackconditionform",
+    "urlRoute": "trackconditionform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.trackrecord",
+    "urlRoute": "trackrecord",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Track Record"
+  },
+  {
+    "key": "loaders.codes.trackrecordform",
+    "urlRoute": "trackrecordform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.typeofpeople",
+    "urlRoute": "distribution",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Type Of People"
+  },
+  {
+    "key": "loaders.codes.typeofpeopleform",
+    "urlRoute": "typeofpeopleform",
+    "showInMenu": false,
+    "editKeys": ["code"],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.typesource",
+    "urlRoute": "typesource",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Type Source"
+  },
+  {
+    "key": "loaders.codes.typesourceform",
+    "urlRoute": "typesourceform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.wagertype",
+    "urlRoute": "wagertype",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Wager Type"
+  },
+  {
+    "key": "loaders.codes.wagertypeform",
+    "urlRoute": "wagertypeform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.weathercodes",
+    "urlRoute": "weathercodes",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Weather Codes"
+  },
+  {
+    "key": "loaders.codes.weathercodesform",
+    "urlRoute": "weathercodesform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.winddirection",
+    "urlRoute": "winddirection",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Wind Direction"
+  },
+  {
+    "key": "loaders.codes.winddirectionform",
+    "urlRoute": "winddirectionform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.won",
+    "urlRoute": "won",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Won"
+  },
+  {
+    "key": "loaders.codes.wonform",
+    "urlRoute": "wonform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  },
+  {
+    "key": "loaders.codes.workouttype",
+    "urlRoute": "workouttype",
+    "pattern": "LISTING",
+    "viewName": "mainPagesection",
+    "title": "Workout Type"
+  },
+  {
+    "key": "loaders.codes.workouttypeform",
+    "urlRoute": "workouttypeform",
+    "showInMenu": false,
+    "editKeys": [ "code" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "code"
+  }
+]

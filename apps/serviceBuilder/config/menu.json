@@ -1,0 +1,72 @@
+﻿[
+  {
+    "key": "serviceBuilder.source",
+    "urlRoute": "source",
+    "pattern": "LISTING",
+    "title": "Source",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "serviceBuilder.sourceform",
+    "urlRoute": "sourceform",
+    "showInMenu": false,
+    "editKeys": [ "serialId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "sourceName"
+  },
+  {
+    "key": "serviceBuilder.servicemetastore",
+    "urlRoute": "servicemetastore",
+    "pattern": "LISTING",
+    "title": "Service Meta Store",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "serviceBuilder.servicemetastoreform",
+    "urlRoute": "servicemetastoreform",
+    "showInMenu": false,
+    "editKeys": [ "serviceMetaStoreId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "serviceCode"
+  },
+  {
+    "key": "serviceBuilder.repometastore",
+    "urlRoute": "repometastore",
+    "pattern": "LISTING",
+    "title": "Repo Meta Store",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "serviceBuilder.repometastoreform",
+    "urlRoute": "repometastoreform",
+    "showInMenu": false,
+    "editKeys": [ "repoMetaStoreId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "sourceCode"
+
+  },
+  {
+    "key": "serviceBuilder.dataview",
+    "urlRoute": "dataview",
+    "pattern": "LISTING",
+    "title": "Data View",
+    "viewName": "mainPagesection"
+  },
+  {
+    "key": "serviceBuilder.dataviewform",
+    "urlRoute": "dataviewform",
+    "showInMenu": false,
+    "editKeys": [ "dataViewId" ],
+    "pattern": "FORM",
+    "viewName": "mainPagesection",
+    "title": "Add",
+    "editTitleKey": "dataViewCode"
+  }
+]
+

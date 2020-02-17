@@ -1,0 +1,79 @@
+﻿{
+  "name": "animaltaxform",
+  "saveUrl": "animaltax/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+       "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "licenseTypeId",
+              "title": "License Type",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racingaccount/licensetype/all?fk-status=ACTIVE",
+                "displayKey": "licenseTypeCode-licenseTypeShortName",
+                "valueKey": "licenseTypeShortName"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "amountTypeId",
+              "title": "Value/Percentage",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/functional/amounttypebox/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "frequencyId",
+              "title": "Frequency",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racingaccount/frequencybox/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+
+             {
+              "modelKey": "taxAmount",
+              "title": "Tax Amount",
+              "fieldType": "currency",
+              "disabled": false,
+              "required": true
+            }
+            
+          ]
+        },
+       
+        {
+          "fields": [
+           
+              {
+              "modelKey": "effectiveFromDate",
+              "title": "Effective From",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+            }
+            
+          ]
+        }
+
+      ]
+    }
+  ]
+}

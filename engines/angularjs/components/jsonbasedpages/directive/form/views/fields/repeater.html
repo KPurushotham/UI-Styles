@@ -1,0 +1,5 @@
+<div class="row_container composite-repeter-files composite_repeater_container full_width" ng-repeat="compositeField in repeateCompositFieldList">
+    <field-directive ng-repeat="subfield in compositeField.compositefields" field="subfield" field-division-count="compositeFieldCount" parent-form="parentForm" parent-section="parentSection" 
+                form-data-model="formDataModel"  section-data-model="compositeSectionDataModel[$parent.$index]" field-index="$parent.$index">
+    </field-directive>
+</div>

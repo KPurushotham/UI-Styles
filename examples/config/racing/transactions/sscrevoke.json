@@ -1,0 +1,66 @@
+{
+  "columns": [
+    {
+      "key": "raceDate",
+      "headerText": "Race year",
+      "filterMask": "Search",
+      "type": "textbox"
+
+    },
+    {
+      "key": "season",
+      "headerText": "Race Season",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+
+    {
+      "key": "raceDate",
+      "headerText": "Race Date",
+      "filterMask": "Search",
+      "type": "date"
+    },
+    {
+      "key": "raceDay",
+      "headerText": "Race Day",
+      "filterMask": "Search",
+      "type": "date"
+    },
+    {
+      "key": "raceNo",
+      "headerText": "Race No",
+      "filterMask": "Search"
+    },
+    {
+      "key": "runningRaceNo",
+      "headerText": "Race Running No",
+      "filterMask": "Search"
+    },
+    {
+      "key": "horseName",
+      "headerText": "Horse Name",
+      "filterMask": "Search"
+    },
+    {
+      "key": "status",
+      "headerText": "Current SSC Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "remarks",
+      "headerText": "Remarks",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Incident Date",
+      "filterMask": "Search",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/racing/sscrevoke/all",
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

@@ -1,0 +1,60 @@
+{
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "dataTool.appsubscriptionform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "applicationEntityId",
+      "headerName": "Application Entity Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "entityTypeCode",
+      "headerName": "Entity Type Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "appKey",
+      "headerName": "App Key",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "title",
+      "headerName": "Title",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "urlRoute",
+      "headerName": "Url Route",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "logo",
+      "headerName": "Logo",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "additionalConfig",
+      "headerName": "Additional Config",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+
+  ],
+  "dataUrl": "vdi/platform/apps/get/all"
+}

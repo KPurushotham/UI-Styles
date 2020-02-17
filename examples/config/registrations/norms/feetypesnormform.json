@@ -1,0 +1,58 @@
+﻿ {
+  "name": "feetypesnormform",
+  "saveUrl": "feetypesnorm/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "partyFeeType",
+              "title": "Party Fee Type",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/party/feetypes/all",
+                "displayKey": "description",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "feeTypeId",
+              "fieldType": "hidden",
+              "codeKeyParam": "entityCode=feetypen&entityGroupCode=party&entityTypeCode=party"
+            },
+            {
+              "modelKey": "feeAmount",
+              "title": "Fee",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "processFee",
+              "title": "Processing Fee",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "effectiveFromDate",
+              "title": "EffectiveFrom",
+              "fieldType": "date",
+              "cssClass": "col_3",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

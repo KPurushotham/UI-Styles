@@ -1,0 +1,88 @@
+{
+  "name": "datasource",
+  "externalService": "datasourceconfigService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "reportsdesigner.datasourcemenu.datasourceform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "dataSourceId",
+      "headerName": "Data Source Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "dataSourceCode",
+      "headerName": "Data Source Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "serviceIdParam",
+      "headerName": "Service Id Param",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "dataFormatJson",
+      "headerName": "Data Format Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "configJson",
+      "headerName": "Config Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "enableCache",
+      "headerName": "Enable Cache",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "childDataOnDemand",
+      "headerName": "Child Data On Demand",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "multiTenancyApplicable",
+      "headerName": "Multi Tenancy Applicable",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "overrideTypeCode",
+      "headerName": "Override Type Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "dataQueryRuleId",
+      "headerName": "Data Query Rule Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+
+  ],
+  "dataUrl": "vdi/reportsdesigner/datasource/get/all",
+  "editScreenState": "app.reportsdesigner.datasourcemenu.datasourceform",
+  "rowKey": {
+    "dataSourceId": "dataSourceId"
+  },
+  "defaultSortColumn": "dataSourceId"
+}

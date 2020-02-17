@@ -1,0 +1,31 @@
+{
+  "columns": [
+    {
+    "key": "effectiveToDate",
+    "headerText": "Race Date",
+    "filterMask": "Search",
+    "type": "date"
+    },
+    {
+    "key": "noOfWinsFrom",
+    "headerText": "Race Day",
+    "filterMask": "Search"
+    },
+    {
+    "key": "entityType",
+    "headerText": "Race Name",
+    "filterMask": "Search"
+    },
+    {
+      "key": "jockeyAgeId",
+      "headerText": "Season",
+      "filterMask": "Search",
+      "type": "uppercase"
+    }
+   ],
+  "dataUrl": "vdi/olims/racing/jockeyallowance/all",
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+   },
+  "defaultSortColumn": "lastUpdatedDate"
+}

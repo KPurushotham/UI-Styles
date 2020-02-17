@@ -1,0 +1,10 @@
+.body-bg {
+    display: none;
+}
+.bodysection {
+    min-height: 650px !important;
+    padding-bottom: 40px;
+    float: left;
+    background: #f6f6f6;
+    width: 100%;
+}

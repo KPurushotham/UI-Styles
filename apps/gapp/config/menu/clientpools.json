@@ -1,0 +1,57 @@
+{
+  "name": "clientpools",
+  "externalService": "",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "gapp.clientpoolsform"
+    }
+  ],
+  "queryStringParams": {
+    "@AccountId": 1
+  },
+  "columns": [
+    {
+      "field": "name",
+      "headerName": "Name",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "description",
+      "headerName": "Description",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "activeRebate",
+      "headerName": "ActiveRebate",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "activeRetention",
+      "headerName": "ActiveRetention",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "access",
+      "headerName": "Access",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "rateSchedule",
+      "headerName": "RateSchedule",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+  ],
+  "dataUrl": "vdi/postget/gapp/AccountCurrencyBalance/getall",
+  "editScreenState": "app.gapp.clientpoolsform",
+  "rowKey": {
+    "dataViewId": ""
+  },
+  "defaultSortColumn": ""
+}

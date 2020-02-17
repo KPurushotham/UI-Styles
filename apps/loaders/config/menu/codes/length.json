@@ -1,0 +1,30 @@
+{
+    "name":"length",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.lengthform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/Length/all",
+    "editScreenState": "app.loaders.codes.lengthform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

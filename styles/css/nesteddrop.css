@@ -1,0 +1,52 @@
+nested-select {
+    display: block;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+nested-select md-checkbox:last-of-type {
+    margin-left: 8px;
+    width: 100%;
+    display: flex;
+    margin-top: 8px;
+}
+
+nested-select md-checkbox > .md-label {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(100% - 16px);
+}
+
+nested-select[multiple] md-checkbox > .md-label {
+    line-height: 22px;
+}
+nested-select:not([multiple]) md-checkbox > .md-container {
+    display: none;
+}
+
+nested-select:not([multiple]) md-checkbox > .md-label {
+    margin-left: 0;
+}
+
+nested-select:not([multiple]) md-checkbox.md-checked {
+    color: #3F51B5;
+}
+    nested-select md-checkbox:focus::before,
+    nested-select md-checkbox:hover::before,
+    nested-select:not([multiple]) md-checkbox.md-checked::before {
+        content: "";
+        position: absolute;
+        height: 30px;
+        width: 200vw;
+        background-color: rgb(238, 238, 238);
+        transform: translate(-100vw,-8px);
+    }
+nested-select button,
+nested-select-guide {
+    z-index: 101;
+}
+
+nested-select[fixed-menu] button,
+nested-select[fixed-menu] nested-select-guide {
+    z-index: 1;
+}

@@ -1,0 +1,231 @@
+{
+  "name": "racingfinesentryform",
+  "saveUrl": "racefinesentry/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+             {
+              "modelKey": "partyTypeEntityObjectId",
+              "fieldType": "hidden"
+            },
+
+            {
+              "modelKey": "transactionDate",
+              "title": "Transaction Date",
+              "cssClass": "col_20",
+              "fieldType": "date",
+               "defaultValueByKey": "currentDate",
+              "disabled": true,
+              "required": true 
+
+            },
+             {
+              "modelKey": "partyTypeId",
+              "title": "Party Type",
+              "fieldType": "dropdown",
+              "cssClass": "col_2",
+              "dataConfig": {
+                  "dataUrl": "vdi/olims/party/partytypebox/all?fk-status=ACTIVE",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "initLoad": true,
+              "dependancyConfig": [
+                {
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "modelKeyMapTobeFilled": { "partyTypeEntityObjectId": "entityObjectId" }
+                }
+              ],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "partyId",
+              "title": "Party",
+              "fieldType": "dropdown",
+              "cssClass": "col_6",
+             
+              "dependancyConfig": [
+                {
+                  "sourceKey": "partyTypeId",
+                  "event": "change",
+                  "dataConfigs": {
+                      "OWNER": {
+                      "dataUrl": "vdi/olims/racing/ownerregistration/all?fk-status=ACTIVE",
+                      "displayKey": "ownerName",
+                      "valueKey": "entityObjectId"
+                    },
+                    "TRAINER": {
+                      "dataUrl": "vdi/olims/racing/trainerregistration/all?fk-status=ACTIVE",
+                      "displayKey": "trainerName",
+                      "valueKey": "entityObjectId"
+                    },
+                    "JOCKEY": {
+                      "dataUrl": "vdi/olims/racing/jockeyregistration/all?fk-status=ACTIVE",
+                      "displayKey": "jockeyName",
+                      "valueKey": "entityObjectId"
+                    }
+                  },
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "disabled": true,
+              "required": true
+            }
+
+            
+          ]
+        },
+{
+  "fields":[
+            
+            {
+              "modelKey": "fineTypeId",
+              "title": "Fine Type",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/racingfinetypes/all?fk-status=ACTIVE",
+                "displayKey": "fineCode-shortName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "amount",
+              "title": "Amount",
+              "fieldType": "currency",
+              "disabled": false,
+              "required": true
+
+            }
+          ]},
+
+          {
+          "fields": [
+
+            {
+              "modelKey": "raceDate",
+              "title": "Race Date",
+                "cssClass": "col_1",
+              "fieldType": "date",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/prospectus/racecalendar/all?fk-status=ACTIVE",
+                "displayKey": "raceDates",
+                "valueKey": "raceDates"
+              },
+                "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "modelKeyMapTobeFilled": {
+                    "raceDay": "raceDay",
+                    "season": "season"
+                  }
+                }
+              ],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "raceDay",
+              "title": "Race Day",
+                "ignoreInServiceModel": true,
+                "cssClass": "col_1",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "season",
+              "title": "Race Season",
+                "ignoreInServiceModel": true,
+                "cssClass": "col_1",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            }         
+
+]},
+{
+          "fields": [
+
+            {
+              "modelKey": "raceNameId",
+              "title": "Race Name",
+              "cssClass": "col_9",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/prospectus/racenames/all?fk-status=ACTIVE",
+                "displayKey": "description",
+                "valueKey": "entityObjectId"
+              },
+                 "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "modelKeyMapTobeFilled": {
+                    "raceNo": "raceNo",
+                    "runningRaceNo": "runningRaceNo"
+                  }
+                }
+              ],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "raceNo",
+              "title": "Race No",
+               "ignoreInServiceModel": true,
+              "cssClass": "col_16",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "runningRaceNo",
+              "title": "Running Race No",
+               "ignoreInServiceModel": true,
+              "cssClass": "col_16",
+              "fieldType": "textbox",
+              "disabled": true,
+              "required": false
+            }    
+            ]},
+            {
+          "fields": [
+
+            {
+              "modelKey": "particulars",
+              "title": "Particulars",
+              "cssClass": "col_9",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true 
+            }
+          ]}
+
+
+]
+    }
+  ]
+}

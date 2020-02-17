@@ -1,0 +1,40 @@
+{
+    "name": "horsebreedcolorform",
+    "saveUrl": "vdi/racemaster/HorseBreedColor/save",
+    "getOneUrl": "vdi/racemaster/HorseBreedColor/one",
+    "externalService": "",
+    "validationUrl": "",
+    "noWorkflow": true,
+    "submitted": false,
+    "sections": [
+        {
+            "rowDivisions": [
+                {
+                    "fields": [
+                        {
+                            "modelKey": "code",
+                            "title": "Code",
+                            "disabledInEditMode": true,
+                            "fieldType": "textbox",
+                            "required": true
+                        },
+                        {
+                            "modelKey": "breed",
+                            "title": "Breed",
+                            "disabledInEditMode": true,
+                            "fieldType": "textbox",
+                            "required": true
+                        },
+                        {
+                            "modelKey": "description",
+                            "title": "Description",
+                            "disabledInEditMode": true,
+                            "fieldType": "textbox",
+                            "required": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

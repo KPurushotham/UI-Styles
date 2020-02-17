@@ -1,0 +1,50 @@
+{
+  "name": "trophieform",
+  "saveUrl": "vdi/olims/prospectus/trophy/save",
+  "queryStringParams": {"entityObjectId":"entityObjectId" },
+  "validationUrl": "",
+  "submitted": false,
+  "externalService": "trophyFactory",
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "trophyCode",
+              "title": "Code",
+              "fieldType": "systemcode",
+			  "cssClass": "col-2",	
+              "keyGenConfig": {
+                "params": "entityCode=trophie&entityGroupCode=pro&entityTypeCode=pro"
+              }
+            },
+            {
+              "modelKey": "trophyValue",
+              "title": "Value",
+              "fieldType": "textbox",
+			  "cssClass": "col_3",		
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "setTrophyShortCode"
+                }
+              ],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "trophyShortName",
+              "title": "Short Name",
+              "fieldType": "textbox",
+			  "cssClass": "col_6",		
+              "disabled": true,
+              "required": true
+
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

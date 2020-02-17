@@ -1,0 +1,79 @@
+{
+  "columns": [
+     {
+      "key": "name",
+      "headerText": "Horse Name",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+   
+    {
+      "key": "trainerName",
+      "headerText": "Trainer Name",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "sex",
+      "headerText": "Sex",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "sire",
+      "headerText": "Sire",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "dam",
+      "headerText": "Dam",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+   
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "LastUpdate Date",
+      "filterMask": "Search",
+      "type": "date"
+    }
+  
+  ],
+  "childColumns": [
+    {
+      "key": "equipmentDescription",
+      "headerText": "Equipment Name",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "equipmentOnDate",
+      "headerText": "On Date",
+      "filterMask": "Search",
+      "type": "date"
+    },
+    {
+      "key": "equipmentOffDate",
+      "headerText": "Off Date",
+      "type": "date",
+      "filterMask": "Search"
+    },
+    {
+      "key": "remarks",
+      "headerText": "Remarks",
+      "type": "uppercase",
+      "filterMask": "Search"
+
+
+    }
+  ],
+  "dataUrl": "vdi/olims/veterinary/horse/all",
+  "childDataUrl": "vdi/olims/racing/horseequipmentlink/getone?horseId=",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "name",
+  "childDefaultSortColumn": "lastUpdatedDate" 
+}

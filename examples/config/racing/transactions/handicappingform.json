@@ -1,0 +1,214 @@
+{
+  "name": "handicappingform",
+  "saveUrl": "handicapping/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [{
+      "rowDivisions": [{
+
+          "fields": [ 
+            {
+          "modelKey": "raceDates",
+          "title": "Race Date",
+          "cssClass": "col_1",
+          "fieldType": "dropdown",
+          "dataConfig": {
+            "dataUrl": "vdi/olims/racing/starterobservationentry/all",
+            "displayKey": "raceDates",
+            "valueKey": "raceDates"
+          },
+          "dependancyEvents": [
+            {
+              "eventName": "change",
+              "modelKeyMapTobeFilled": {
+                "raceDay": "raceDay",
+                "season": "season"
+              }
+            }
+          ],
+          "disabled": false,
+          "required": true
+        },
+          {
+            "modelKey": "raceDay",
+            "title": "Race Day",
+            "ignoreInServiceModel": true,
+            "cssClass": "col_1",
+            "fieldType": "textbox",
+            "disabled": true,
+            "required": false
+          },
+          {
+            "modelKey": "season",
+            "title": "Race Season",
+            "ignoreInServiceModel": true,
+            "cssClass": "col_1",
+            "fieldType": "textbox",
+            "disabled": true,
+            "required": false
+          }
+
+           
+
+          ]
+        }, {
+
+          "fields": [
+
+           {
+          "modelKey": "raceNameId",
+          "title": "Race Name",
+          "cssClass": "col_7",
+          "fieldType": "dropdown",
+          "dataConfig": {
+              "dataUrl": "vdi/olims/prospectus/prospectusentry/all",
+            "displayKey": "raceName",
+            "valueKey": "entityObjectId"
+          },
+          "dependancyEvents": [
+            {
+              "eventName": "change",
+              "modelKeyMapTobeFilled": {
+                "raceNameId": "raceNameId",
+                "category": "category"
+                
+              }
+            }
+
+          ],
+          "disabled": false,
+          "required": true
+        },
+          
+          {
+            "modelKey": "category",
+            "title": "Race Category",
+            "ignoreInServiceModel": true,
+            "cssClass": "col_1",
+            "fieldType": "textbox",
+            "disabled": true,
+            "required": false
+          },
+           {
+              "modelKey": "raceClassification",
+              "title": "Race Classification ",
+                "cssClass": "col_",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/handicapping/all",
+                "displayKey": "raceClassification"
+                 },
+              "disabled": false,
+              "required": true
+            }
+
+          ]
+        }
+
+      ]
+    }, {
+      "title": "Weights & Ratings",
+      "modelKey": "licenseDetails",
+      "rowDivisions": [{
+          "fields": [{
+            "modelKey": "maxWeight",
+            "title": "Max.Weight",
+            "fieldType": "textbox",
+             "defaultValue": "60",
+            "disabled": false,
+            "required": true
+          },
+           {
+            
+            "fieldType":"label",
+            "defaultValue":"Kgs",
+            "title":"kgs",
+            "cssClass":"col_1",
+            "disabled": true,
+            "required": false
+           },
+          
+           {
+            "modelKey": "maxRating",
+            "title": "Rating",
+            "fieldType": "textbox",
+            "disabled": false,
+            "required": true
+          }]
+        }, {
+          "fields": [{
+            "modelKey": "minWeight",
+            "title": "Min.Weight",
+            "fieldType": "textbox",
+            "defaultValue": "50",
+            "disabled": false,
+            "required": true
+          },
+            {
+            
+            "fieldType":"label",
+            "defaultValue":"Kgs",
+            "title":"kgs",
+            "cssClass":"col_1",
+            "disabled": true,
+            "required": false
+           },
+           {
+            "modelKey": "maxRating",
+            "title": "Rating",
+            "fieldType": "textbox",
+            "disabled": false,
+            "required": true
+          }]
+        },
+        {
+          "fields": [{
+            "fieldType": "grid",
+              "gridSummaryLabel": "Total No Of Horses",
+           "show": true,
+              "initLoad": true,
+              "gridConfig": {
+                "gridFeatures": [
+                "selection", "edit"
+              ],
+              "multiSelect": true,
+              "dataUrl": "vdi/olims/veterinary/horse/all",
+              "modelKeyMap": ["name"],
+              "columns": [{
+                "key": "name",
+                "headerText": "Horse",
+                "filterMask": "search",
+                "type": "uppercase"
+              }, {
+                "key": "sex",
+                "headerText": "Sex",
+                "filterMask": "search",
+                "type": "uppercase",
+                "editable": true
+              }, {
+                "key": "rating",
+                "headerText": "Rating",
+                "filterMask": "search",
+                "type": "uppercase",
+                "editable": true
+              }, {
+                "key": "weight",
+                "headerText": "Weight",
+                "filterMask": "search",
+                "type": "uppercase",
+                  "dataConfig": {
+                      "dataUrl": "vdi/olims/racing/handicapping/all?fk-status=ACTIVE",
+                      "displayKey": "weight",
+                      "valueKey": "entityObjectId"
+                    },
+                "editable": true
+              }]
+            },
+            "disabled": false,
+            "required": true
+          }]
+        }
+      ]
+    } 
+   ]
+}

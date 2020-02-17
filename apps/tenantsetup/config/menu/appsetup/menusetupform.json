@@ -1,0 +1,159 @@
+{
+  "name": "menusetupform",
+  "saveUrl": "vdi/admin/application/menu/save",
+  "getOneUrl": "vdi/admin/application/menu/one",
+  "externalService": "menusetupService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+
+  "sections": [
+    {
+      "modelKey":"menuSave",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "menuId",
+              "fieldType": "hidden",
+              "required": false
+            },
+            {
+              "modelKey": "applicationEntityId",
+              "title": "Applications",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-2",
+              "disabledInEditMode": true,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "applicationDropdownHandler"
+                }
+              ],
+              "dataConfig": {
+                "dataUrl": "vdi/admin/application/config/getall",
+                "displayKey": "applicationTitle",
+                "valueKey": "applicationEntityId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "menuKey",
+              "cssClass": "col-md-2",
+              "title": "Menu Key",
+              "fieldType": "textbox",
+              "disabledInEditMode": false,
+              "required": true
+            },
+            {
+              "modelKey": "applicationMenuTitle",
+              "cssClass": "col-md-2",
+              "title": "Menu Title",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "logo",
+              "cssClass": "col-md-2",
+              "title": "Logo Path",
+              "fieldType": "textbox",
+              "required": false
+            },
+            {
+              "modelKey": "pattern",
+              "title": "Patterns",
+              "cssClass": "col-md-2",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "LISTING",
+                    "value": "LISTING"
+                  },
+                  {
+                    "text": "FORM",
+                    "value": "FORM"
+                  },
+                  {
+                    "text": "DASHBOARD",
+                    "value": "DASHBOARD"
+                  },
+                  {
+                    "text": "REPORT",
+                    "value": "REPORT"
+                  }
+                ]
+              },
+              "required": true
+            },
+            {
+              "modelKey": "viewName",
+              "title": "View Names",
+              "fieldType": "hidden",
+              "defaultValue": "mainPagesection"
+            },
+            {
+              "modelKey": "showInMenu",
+              "title": "Show In Menu",
+              "defaultValue": false,
+              "fieldType": "checkbox",
+              "cssClass": "selectall col-md-2 margn-top20",
+              "required": true,
+              "show": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "editKey",
+              "cssClass": "col-md-2",
+              "title": "Edit Keys",
+              "fieldType": "textbox",
+              "required": false
+            },
+            {
+              "modelKey": "editTitleKey",
+              "cssClass": "col-md-2",
+              "title": "Edit Title Key",
+              "fieldType": "textbox",
+              "required": false
+            },
+            {
+              "modelKey": "urlRoute",
+              "cssClass": "col-md-2",
+              "title": "Url Route",
+              "fieldType": "textbox",
+              "required": false
+            },
+            {
+              "modelKey": "urlKey",
+              "title": "Check for Url Map",
+              "defaultValue": false,
+              "fieldType": "checkbox",
+              "cssClass": "selectall col-md-2 margn-top20",
+              "required": false,
+              "show": true,
+              "ignoreInServiceModel": true,
+              "handlerName": "urlRouteOrMapHandler"
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "urlMap",
+              "cssClass": "field-hide col-md-2",
+              "title": "Url Map",
+              "fieldType": "ace",
+              "required": false,
+              "disabled": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

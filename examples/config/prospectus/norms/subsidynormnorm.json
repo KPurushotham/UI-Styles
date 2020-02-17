@@ -1,0 +1,63 @@
+﻿{
+  "columns": [
+   {
+      "key": "financialYear",
+      "headerText": "Financial Year",
+      "filterMask": "Search"
+    },
+	 {
+      "key": "season",
+      "headerText": "Season",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+   {
+      "key": "subsidytype",
+      "headerText": "subsidy Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+	
+   {
+      "key": "amountType",
+      "headerText": "Value/Percentage",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+	 {
+      "key": "frequency",
+      "headerText": "Frequency",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+	{
+      "key": "amount",
+      "headerText": "amount",
+      "filterMask": "Search"
+    },
+	{
+      "key": "effectiveFromDate",
+      "headerText": "Effective From",
+      "filterMask": "Search",
+      "type": "date"
+    },
+   
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/prospectus/subsidynorms/all",
+
+  "rowKey": {
+  "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

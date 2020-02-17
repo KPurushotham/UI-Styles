@@ -1,0 +1,80 @@
+{
+  "name": "client",
+  "externalService": "clientAppService",
+  "initLoad": true,
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "idsclientapp.clientform"
+    }
+  ],
+  "criteria": {
+    "showButton": true,
+    "rowDivisions": [
+      {
+        "columns": [
+          {
+            "fields": [
+              {
+                "cssClass": "padding0 right",
+                "title": "Send Email",
+                "fieldType": "button",
+                "modelKey": "sendMailButton",
+                "handlerName": "sendEmail",
+                "required": false
+              },
+              {
+                "cssClass": "padding0 right",
+                "title": "EXCEL",
+                "fieldType": "button",
+                "modelKey": "excelButton",
+                "handlerName": "downloadExcel",
+                "required": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "columns": [
+    {
+      "field": "clientId",
+      "headerName": "Client Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "clientName",
+      "headerName": "Client Name",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "clientCountry",
+      "headerName": "Country",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "clientMobile",
+      "headerName": "Mobile",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "clientProject",
+      "headerName": "Project",
+      "filter": "agSetColumnFilter"
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    }
+  ],
+  "dataUrl": "vdi/ids/client/details/all",
+  "editScreenState": "app.idsclientapp.clientform",
+  "rowKey": {
+    "clientId": "clientId"
+  },
+  "defaultSortColumn": "clientId"
+}

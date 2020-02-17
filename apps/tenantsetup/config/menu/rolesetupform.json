@@ -1,0 +1,179 @@
+{
+  "name": "rolesetupform",
+  "saveUrl": "vdi/admin/tenant/role/save",
+  "getOneUrl": "vdi/admin/tenant/role/get/one",
+  "externalService": "rolesetupService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "tenantId",
+              "title": "Tenants",
+              "fieldType": "dropdown",
+              "cssClass": "col-md-3",
+              "disabledInEditMode": false,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "tenantRoleHandler"
+                }
+              ],
+              "dataConfig": {
+                "dataUrl": "vdi/admin/tenant/all",
+                "displayKey": "tenantTitle",
+                "valueKey": "tenantId"
+              },
+              "ignoreInServiceModel": true,
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rowDivisions": [
+        {
+          "hideInViewMode": true,
+          "fields": [
+            {
+              "modelKey": "trRoleCode",
+              "title": "Role Code",
+              "fieldType": "textbox",
+              "cssClass": "col-md-2",
+              "ignoreInServiceModel": true
+            },
+            {
+              "modelKey": "trRoleName",
+              "title": "Role Name",
+              "fieldType": "textbox",
+              "cssClass": "col-md-2",
+              "ignoreInServiceModel": true
+            },
+            {
+              "modelKey": "trDescription",
+              "title": "Description",
+              "fieldType": "textbox",
+              "cssClass": "col-md-3",
+              "ignoreInServiceModel": true
+            },
+            {
+              "title": "Add to Grid",
+              "fieldType": "button",
+              "handlerName": "addToGrid",
+              "cssClass": "col-md-2 butn-cls-margntop padding-lftrht0",
+              "required": false
+            }
+          ]
+        },
+        {
+          "hideInViewMode": true,
+          "fields": [
+            {
+              "modelKey": "defaultRoles",
+              "title": "Add Default Roles",
+              "defaultValue": false,
+              "fieldType": "checkbox",
+              "cssClass": "selectall col-md-2 padding-lftrht0",
+              "required": false,
+              "show": true,
+              "ignoreInServiceModel": true,
+              "handlerName": "addDefaultRoles"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "roleSave",
+              "title": "Tenant Role",
+              "fieldType": "grid",
+              "initLoad": true,
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "total",
+              "gridConfig": {
+                "multiSelect": true,
+                "modelKeyMap": [
+                  "operationType",
+                  "roleId",
+                  "tenantId",
+                  "roleCode",
+                  "roleName",
+                  "description",
+                  "isActive"
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "toolPanelSuppressRowGroups": true,
+                  "rowSelection": "multiple"
+                },
+                "columns": [
+                  {
+                    "field": "operationType",
+                    "hide": true
+                  },
+                  {
+                    "field": "tenantId",
+                    "hide": true
+                  },
+                  {
+                    "field": "roleId",
+                    "hide": true
+                  },
+                  {
+                    "field": "roleCode",
+                    "headerName": "Role Code",
+                    "hide": false,
+                    "editable": true
+                  },
+                  {
+                    "field": "roleName",
+                    "headerName": "Role Name",
+                    "hide": false,
+                    "editable": true
+                  },
+                  {
+                    "field": "description",
+                    "headerName": "Description",
+                    "hide": false,
+                    "editable": true
+                  },
+                  {
+                    "field": "isActive",
+                    "headerName": "Is Active",
+                    "hide": true
+                  },
+                  {
+                    "field": "deleteId",
+                    "headerName": "Delete",
+                    "actionType": "DELETE",
+                    "actionIconClass": "fa fa-trash",
+                    "actionToggleField": "isActive",
+                    "actionModeField": "roleId",
+                    "actionToggle": {
+                      "true": "fa fa-toggle-off",
+                      "false": "fa fa-toggle-on"
+                    },
+                    "handlerName": "deleteFromGrid"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "name": "tenantdatasourceitem",
+  "externalService": "tenantdatasourceitemconfigService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "reportsdesigner.datasourcemenu.tenantdatasourceitemform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "tenantDataSourceItemId",
+      "headerName": "Tenant Data Source Item Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "tenantId",
+      "headerName": "Tenant Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "dataSourceId",
+      "headerName": "Data Source Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "itemValue",
+      "headerName": "Item Value",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "itemText",
+      "headerName": "Item Text",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "childDataSourceId",
+      "headerName": "Child Data Source Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "configJson",
+      "headerName": "Config Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "dataQueryRuleId",
+      "headerName": "Data Query Rule Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "beginDate",
+      "headerName": "Begin Date",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "endDate",
+      "headerName": "End Date",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+
+  ],
+  "dataUrl": "vdi/reportsdesigner/tenantdatasourceitem/get/all",
+  "editScreenState": "app.reportsdesigner.datasourcemenu.tenantdatasourceitemform",
+  "rowKey": {
+    "tenantDataSourceItemId": "tenantDataSourceItemId"
+  },
+  "defaultSortColumn": "tenantDataSourceItemId"
+}

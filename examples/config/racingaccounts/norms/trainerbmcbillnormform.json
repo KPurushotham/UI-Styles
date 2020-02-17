@@ -1,0 +1,133 @@
+﻿{
+  "name": "trainerbmcbillnormform",
+  "saveUrl": "trainerbmcbillnorms/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+
+            {
+              "modelKey": "effectiveFromDate",
+              "title": "Effective From",
+              "fieldType": "date",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "taxApplicable",
+              "title": "Tax Applicable",
+              "fieldType": "checkbox",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": false
+
+            }
+
+          ]
+        }
+
+      ]
+    },
+      { "title": "Deducation priority:" ,
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "deduction",
+              "fieldType": "composite-repeater-field",
+              "compositefields": [
+                {
+                  "modelKey": "categoryId",
+                  "title": "Category ",
+                  "cssClass": "col_16",
+                  "fieldType": "dropdown",
+                  "dataConfig": {
+                    "dataUrl": "vdi/olims/racingaccount/horsemaintanancecost/all?fk-status=ACTIVE",
+                    "displayKey": "hmcCode-hmcShortName",
+                    "valueKey": "entityObjectId"
+                  },
+                  "disabled": false,
+                  "required": true
+
+                },
+                {
+                  "modelKey": "priorityId",
+                  "title": "priority",
+                  "cssClass": "col_16",
+                  "fieldType": "dropdown",
+                  "dataConfig": {
+                    "dataUrl": "vdi/olims/racingaccount/priority/all",
+                    "displayKey": "priority",
+                    "valueKey": "priority"
+                  },
+                  "disabled": false,
+                  "required": true
+
+                },
+                {
+                  "modelKey": "billDeductionId",
+                  "title": "Deduction",
+                  "cssClass": "col_16",
+                  "fieldType": "dropdown",
+                  "dataConfig": {
+                    "dataUrl": "vdi/olims/racingaccount/billdeduction/all?fk-status=ACTIVE",
+                    "displayKey": "billDeducCode-billDeducShortName",
+                    "valueKey": "entityObjectId"
+                  },
+                  "disabled": false,
+                  "required": true
+
+                },
+                {
+                  "modelKey": "amountTypeId",
+                  "title": "Value/Percentage",
+                  "cssClass": "col_16",
+                  "fieldType": "dropdown",
+                  "dataConfig": {
+                    "dataUrl": "vdi/olims/functional/amounttypebox/all",
+                    "displayKey": "text",
+                    "valueKey": "value"
+                  },
+                  "disabled": false,
+                  "required": true
+
+                },
+                {
+                  "modelKey": "amount",
+                  "title": "Amount",
+                  "cssClass": "col_16",
+                  "fieldType": "textbox",
+                  "disabled": false,
+                  "required": true
+                },
+                {
+                  "modelKey": "accountId",
+                   "title": "Account",
+                  "cssClass": "col_16",
+                  "fieldType": "dropdown",
+                  "dataConfig": {
+                    "dataUrl": "vdi/olims/generalaccount/accounts/all?fk-status=ACTIVE",
+                    "displayKey": "acCode-shortname",
+                    "valueKey": "entityObjectId"
+                  },
+                  "disabled": false,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

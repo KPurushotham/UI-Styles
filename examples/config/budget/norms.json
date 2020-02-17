@@ -1,0 +1,44 @@
+﻿[
+   {
+    "stateName": "budget.acccodeallotment",
+    "url": "acccodeallotment",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "data": {
+      "title": "Account Code Allocation To Budget Code  ",
+      "addScreenStateName": "budget.acccodeallotmentform"
+    }
+  },
+  {
+    "stateName": "budget.acccodeallotmentform",
+    "url": "acccodeallotmentform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "ACC_CODE_ALLOTMENT",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "budget.secwiseccallocationnorm",
+    "url": "secwiseccallocationnorm",
+    "pattern": "LISTING",
+    "viewName": "budgetSection",
+    "data": {
+      "title": "Section Wise Cost Center Allocation  ",
+      "addScreenStateName": "budget.secwiseccallocationform"
+    }
+  },
+  {
+    "stateName": "budget.secwiseccallocationform",
+    "url": "secwiseccallocationform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "SEC_WISE_CC_ALLOCATION",
+    "viewName": "budgetSection",
+    "data": { "title": "New" }
+  }
+]

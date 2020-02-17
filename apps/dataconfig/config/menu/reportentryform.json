@@ -1,0 +1,254 @@
+{
+  "name": "reportentryform",
+  "saveUrl": "vdi/webportal/reports/mapping/columns/save",
+  "getOneUrl": "vdi/webportal/reports/mapping/columns/getone",
+  "externalService": "reportEntryService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "rptElementId",
+              "ignoreInServiceModel": true,
+              "fieldType": "hidden"
+            },
+            {
+              "modelKey": "hostNo",
+              "title": "Host name",
+              "fieldType": "dropdown",
+              "ignoreInServiceModel": true,
+              "disabledInEditMode": true,
+              "cssClass": "col-md-2",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "hasDependants": true,
+                  "handlerName": "hostDropdownHandler"
+                }
+              ],
+              "dataConfig": {
+                "dataUrl": "vdi/webportal/hosts/get/all",
+                "displayKey": "hostName",
+                "valueKey": "hostNo"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "hostGroupId",
+              "title": "Host Group Id",
+              "fieldType": "dropdown",
+              "ignoreInServiceModel": true,
+              "disabledInEditMode": true,
+              "cssClass": "col-md-2",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "hostGroupDropdownHandler"
+                }
+              ],
+              "dependancyConfig": [
+                {
+                  "sourceKey": "hostNo",
+                  "event": "change",
+                  "loadData": {
+                    "keyParams": {
+                      "hostNo": "hostNo"
+                    }
+                  }
+                }
+              ],
+              "dataConfig": {
+                "dataUrl": "vdi/webportal/reports/hostgroups/one",
+                "displayKey": "hostGroupId",
+                "valueKey": "hostGroupId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "corpId",
+              "title": "Corporation",
+              "fieldType": "dropdown",
+              "ignoreInServiceModel": true,
+              "disabledInEditMode": true,
+              "cssClass": "col-md-2",
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "handlerName": "corporationDropdownHandler"
+                }
+              ],
+              "dependancyConfig": [
+                {
+                  "sourceKey": "hostNo",
+                  "event": "change",
+                  "loadData": {
+                    "keyParams": {
+                      "hostNo": "hostNo"
+                    }
+                  }
+                }
+              ],
+              "dataConfig": {
+                "dataUrl": "vdi/webportal/reports/host/corp",
+                "displayKey": "corpName",
+                "valueKey": "corpId"
+              },
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "reportLabel",
+              "cssClass": "col-md-2",
+              "title": "Report Label",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "elementLabel",
+              "cssClass": "col-md-2",
+              "title": "Element Label",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "seqNo",
+              "cssClass": "col-md-2",
+              "title": "Seq No",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "activeFlag",
+              "cssClass": "col-md-2",
+              "title": "Active Flag",
+              "ignoreInServiceModel": true,
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "elementString",
+              "cssClass": "col-md-12 padding-lftrht0",
+              "title": "Element String",
+              "ignoreInServiceModel": true,
+              "fieldType": "textarea"
+            },
+            {
+              "title": "Add to Grid",
+              "fieldType": "button",
+              "handlerName": "addToGrid",
+              "ignoreInServiceModel": true,
+              "cssClass": "col-md-2 padding-lftrht0 butn-cls-margntop10",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "reportConfig",
+              "title": "Report Data Entry",
+              "fieldType": "grid",
+              "initLoad": true,
+              "localData": true,
+              "show": false,
+              "gridSummaryLabel": "total",
+              "gridConfig": {
+                "multiSelect": true,
+                "modelKeyMap": [
+                  "rptElementId",
+                  "operationType",
+                  "hostGroupId",
+                  "corpId",
+                  "hostNo",
+                  "reportLabel",
+                  "elementLabel",
+                  "seqNo",
+                  "elementString",
+                  "activeFlag"
+                ],
+                "features": {
+                  "enableGridMenu": false,
+                  "toolPanelSuppressRowGroups": true,
+                  "enableSorting": true
+                },
+                "columns": [
+                  {
+                    "field": "rptElementId",
+                    "hide": true
+                  },
+                  {
+                    "field": "operationType",
+                    "hide": true
+                  },
+                  {
+                    "field": "corpId",
+                    "hide": true
+                  },
+                  {
+                    "field": "hostGroupId",
+                    "hide": true
+                  },
+                  {
+                    "field": "hostNo",
+                    "hide": false
+                  },
+                  {
+                    "field": "reportLabel",
+                    "headerName": "Report Label",
+                    "hide": false
+                  },
+                  {
+                    "field": "elementLabel",
+                    "headerName": "Element Label",
+                    "hide": false
+                  },
+                  {
+                    "field": "seqNo",
+                    "headerName": "Seq No",
+                    "tooltip": "seqNo",
+                    "hide": false
+                  },
+                  {
+                    "field": "elementString",
+                    "headerName": "Element String",
+                    "hide": true
+                  },
+                  {
+                    "field": "activeFlag",
+                    "headerName": "Active Flag",
+                    "hide": true
+                  },
+                  {
+                    "field": "deleteId",
+                    "headerName": "Delete",
+                    "actionType": "DELETE",
+                    "actionIconClass": "fa fa-trash",
+                    "actionToggleField": "activeFlag",
+                    "actionModeField": "rptElementId",
+                    "actionToggle": {
+                      "true": "fa fa-toggle-off",
+                      "false": "fa fa-toggle-on"
+                    },
+                    "handlerName": "deleteFromGrid"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

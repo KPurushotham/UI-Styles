@@ -1,0 +1,255 @@
+{
+  "name": "trainerjockeystatsform",
+  "saveUrl": "trainerjockeystatisticsservice/save",
+  "getOneUrl": "vdi/olims/racing/trainerjockeystatistics/getone",
+  "queryStringParams": { "partyId": "partyId" },
+    "noWorkflow": true,
+  "workflowUrl": "",
+  "validationUrl": "",
+  "submitted": false,
+  "alwaysUpdateMode": true,
+   "mainModelName": "ownerColorLinkData",
+  "titleByKey": "UP.partyId",
+  "entityTypeKey": "entityType",
+  "defaultStatus": "ACTIVE",
+  "getOneMultipleItems": true,
+  "sections": [
+    {
+      "rowDivisions": [
+      
+       {
+          "fields": [
+           
+            {
+              "modelKey": "partyTypeMain",
+              "title": "Party Type",
+               "ignoreInServiceModel": true,
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Trainer",
+                    "value": "TRAINER"
+                  },
+                  {
+                    "text": "Jockey",
+                    "value": "JOCKEY"
+                  }                  
+                ]
+              },
+              "initLoad": true,            
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "partyMainId",
+              "title": "Party",
+              "fieldType": "dropdown",
+               "ignoreInServiceModel": true,
+              "cssClass": "col_6",
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "dependancyConfig": [
+                {
+                  "sourceKey": "partyTypeMain",
+                  "event": "change",
+                  "dataConfigs": {
+                    "TRAINER": {
+                      "dataUrl": "vdi/olims/racing/trainerregistration/all?fk-status=ACTIVE&fk-licenseType=A",
+                      "displayKey": "trainerName",
+                      "valueKey": "entityObjectId"
+                    },
+                    "JOCKEY": {
+                      "dataUrl": "vdi/olims/racing/jockeyregistration/all?fk-status=ACTIVE&fk-licenseType=A",
+                      "displayKey": "jockeyName",
+                      "valueKey": "entityObjectId"
+                    }
+                  },
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "disabled": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "raceYearMain",
+              "title": "Race Year",
+               "ignoreInServiceModel": true,
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "defaultValueByKey": "LS.financial_year",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/financialYear/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+               "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "disabled": false,
+              "required": true
+
+            },            
+            {
+              "modelKey": "seasonMainId",
+              "title": "Season",
+               "ignoreInServiceModel": true,
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/seasonmaster/all?fk-status=ACTIVE",
+                "displayKey": "shortName-seasonDescription",
+                "valueKey": "shortName"
+              },
+               "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    { "title": "Details" ,
+      "rowDivisions": [        
+        {
+          "fields": [
+            {
+             "fieldType": "composite-repeater-field",
+              "compositefields": [
+                {
+                  "modelKey": "partyType",
+                  "fieldType": "hidden",
+                  "defaultValueByKey": "partyTypeMain",
+                  "dependancyConfig": [
+                    {
+                      "sourceKey": "partyTypeMain",
+                      "event": "change",
+                      "defaultValueByKey": "partyTypeMain"
+                    }
+                  ]
+                },
+                {
+                  "modelKey": "partyId",
+                  "fieldType": "hidden",
+                  "defaultValueByKey": "partyMainId",
+                  "dependancyConfig": [
+                    {
+                      "sourceKey": "partyMainId",
+                      "event": "change",
+                      "defaultValueByKey": "partyMainId"
+                    }
+                  ]
+                },
+                {
+                  "modelKey": "raceYear",
+                  "fieldType": "hidden",
+                  "defaultValueByKey": "raceYearMain",
+                  "dependancyConfig": [
+                    {
+                      "sourceKey": "raceYearMain",
+                      "event": "change",
+                      "defaultValueByKey": "raceYearMain"
+                    }
+                  ]
+                },
+                   {
+                  "modelKey": "seasonId",
+                  "fieldType": "hidden",
+                  "defaultValueByKey": "seasonMainId",
+                  "dependancyConfig": [
+                    {
+                      "sourceKey": "seasonMainId",
+                      "event": "change",
+                      "defaultValueByKey": "seasonMainId"
+                    }
+                  ]
+                },
+                {
+                  "modelKey": "winType",
+                  "title": "Win Type",
+                  "cssClass": "col_30",
+                  "fieldType": "dropdown",
+                  "dataConfig": {
+                    "localData": [
+                      {
+                        "text": "Win",
+                        "value": "Win"
+                      },
+                      {
+                        "text": "Second",
+                        "value": "Second"
+                      },
+                      {
+                        "text": "Third",
+                        "value": "Third"
+                      },
+                      {
+                        "text": "Fourth",
+                        "value": "Fourth"
+                      },
+                      {
+                        "text": "Fifth",
+                        "value": "Fifth"
+                      },
+                      {
+                        "text": "Sixth",
+                        "value": "Sixth"
+                      },
+                      {
+                        "text": "Unplaced",
+                        "value": "Unplaced"
+                      }
+                    ]
+                  },
+                  "disabled": false,
+                  "required": true
+                },
+                {
+                  "modelKey": "count",
+                  "title": "Count",                  
+                  "fieldType": "textbox",
+                  "cssClass": "col_30",
+                  "disabled": false,
+                  "required": true
+                },
+                {
+                  "modelKey": "winsDeadHeat",
+                  "title": "Dead Heat",                  
+                  "fieldType": "checkbox",
+                  "cssClass": "col_30",
+                  "disabled": false,
+                  "required": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

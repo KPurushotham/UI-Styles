@@ -1,0 +1,62 @@
+
+<div class="wrapper full_width login_bg">
+    <div class="message" ng-show="showInvalidToken">
+        <div class="success-accept invalid_token">
+            <img src="https://invoices.chrims.com/ui/images/rejected.png" />
+            <h4>Invaid Access Token!</h4>
+        </div>
+    </div>
+
+    <div style="margin: 20px">
+        <div style="margin: 5px auto; width: 1000px" ng-show="showMainContent">
+            <!-- <h3>Hi Welcome to OnePage...</h3> -->
+            <!-- <iframe width="1000" height="550" src="{{pdf.src}}"></iframe> -->
+
+            <pdfjs-viewer data="pdfData"></pdfjs-viewer>
+
+            <!-- <pdfjs-viewer src="{{ pdf.src }}"></pdfjs-viewer> -->
+            <!--<div class="col-md-12" ng-show="(showActions)? true :false">-->
+            <div>
+                <div class="col-md-12" ng-show="(showActions)? true :false">
+                    <br />
+                    <div class="col-md-12" style="align-content:center!important; margin: 0px 150px;">
+                        <textarea id="txtComments" rows="4" cols="80" ng-model="txtComments"></textarea>
+                    </div>
+                    <br />
+                    <div style="align-content:center!important; margin: 0px 300px;">
+                        <button id="accept" class="loginform-btn_actp" ng-click="updateStatus('ACCEPTED')">Accept</button>
+
+                        <button id="reject" class="loginform-btn_rej" ng-click="updateStatus('REJECTED')">Reject</button>
+                    </div>
+                </div>
+                <div ng-show="(showActions)? false :true" style="align-content:center!important; margin: 0px 150px;">
+                    <br />
+                    <table style="width:100%" ; align="center">
+                        <tr id="status">
+                            <th style="width:20%; font-weight:bold" ;> Status</th>
+                            <td>:-</td>
+                            <td>{{status}}</td>
+                        </tr>
+                        <tr id="comments">
+                            <th style="width:20%; font-weight:bold" ;> Comments </th>
+                            <td>:-</td>
+                            <td>{{comments}}</td>
+                        </tr>
+                        <tr id="actionTimeDate">
+                            <th style="width:20%; font-weight:bold" ;> Action Time </th>
+                            <td>:-</td>
+                            <td>{{actionTimeDate}}</td>
+                        </tr>
+                        <tr id="actionTimeDate">
+                            <th style="width:20%; font-weight:bold" ;>Action Done By</th>
+                            <td>:-</td>
+                            <td>{{actionDoneBy}}</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,102 @@
+{
+  "name": "larcentries",
+  "saveUrl": "vdi/entryscreen/application/save",
+  "getOneUrl": "vdi/entryscreen/application/remapevent_get_one",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "hostgroupid",
+              "cssClass": "col-md-2",
+              "title": "Host Group Id",
+              "fieldType": "number"
+            },
+            {
+              "modelKey": "hostno",
+              "cssClass": "col-md-2",
+              "title": "Host No",
+              "fieldType": "number"
+            },
+            {
+              "modelKey": "startdate",
+              "cssClass": "col-md-2 padding-lftrht0",
+              "title": "Start Date",
+              "fieldType": "date"
+            },
+            {
+              "modelKey": "enddate",
+              "cssClass": "col-md-2 padding-lftrht0",
+              "title": "End Date",
+              "fieldType": "date"
+            },
+            {
+              "modelKey": "fromtrackno",
+              "cssClass": "col-md-2",
+              "title": "From Track No",
+              "fieldType": "number"
+            },
+            {
+              "modelKey": "fromeventcode",
+              "cssClass": "col-md-2",
+              "title": "From Event Code",
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "totrackno",
+              "cssClass": "col-md-2",
+              "title": "To Track No",
+              "fieldType": "number"
+            },
+            {
+              "modelKey": "toeventcode",
+              "cssClass": "col-md-2",
+              "title": "To Event Code",
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "fromraceno",
+              "cssClass": "col-md-2",
+              "title": "From Race No",
+              "fieldType": "number"
+            },
+            {
+              "modelKey": "toraceno",
+              "cssClass": "col-md-2",
+              "title": "To Race No",
+              "fieldType": "number"
+            },
+            {
+              "modelKey": "createdate",
+              "cssClass": "col-md-2 padding-lftrht0",
+              "title": "Create Date",
+              "fieldType": "date"
+            },
+            {
+              "modelKey": "prepostprocess",
+              "cssClass": "col-md-2",
+              "title": "Pre Post Process",
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "lastupdate",
+              "cssClass": "col-md-2",
+              "title": "Last Update",
+              "fieldType": "textbox"
+            },
+            {
+              "modelKey": "lastupdateby",
+              "cssClass": "col-md-2",
+              "title": "Last Update By",
+              "fieldType": "textbox"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

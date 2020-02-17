@@ -1,0 +1,83 @@
+﻿{
+  "columns": [{
+      "key": "jockeyAgeId",
+      "headerText": "Season",
+      "filterMask": "Search",
+      "type": "uppercase"
+    }, {
+
+      "key": "effectiveFromDate",
+      "headerText": "Race Date",
+      "filterMask": "Search",
+      "type": "date"
+    }, {
+      "key": "entityType",
+      "headerText": "Race Day",
+      "filterMask": "Search"
+    }, {
+      "key": "noOfWinsTo",
+      "headerText": "Race Name",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+
+    {
+      "key": "noOfWinsTo",
+      "headerText": "Race No",
+      "filterMask": "Search",
+      "type": "uppercase"
+    }, {
+      "key": "effectiveFromDate",
+      "headerText": " Running Race No",
+      "filterMask": "Search",
+      "type": "uppercase"
+    }, {
+      "key": "noOfWinsTo",
+      "headerText": "Race Category",
+      "filterMask": "Search",
+      "type": "uppercase"
+    }, {
+      "key": "effectiveFromDate",
+      "headerText": "Race Classification",
+      "filterMask": "Search",
+      "type": "uppercase"
+    }, {
+      "key": "noOfWinsTo",
+      "headerText": "Horse",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+
+    {
+      "key": "jockeyKages",
+      "headerText": "Last Run",
+      "filterMask": "Search"
+    }, {
+      "key": "jockeyKages",
+      "headerText": "Last Place",
+      "filterMask": "Search"
+    }, {
+      "key": "jockeyKages",
+      "headerText": "Jockey",
+      "filterMask": "Search"
+    }, {
+      "key": "jockeyKages",
+      "headerText": "Draw No",
+      "filterMask": "Search"
+    }, {
+      "key": "jockeyKages",
+      "headerText": "Shoeing",
+      "filterMask": "Search"
+    }
+
+  ],
+
+
+
+  "dataUrl": "vdi/olims/racing/jockeyallowance/all",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

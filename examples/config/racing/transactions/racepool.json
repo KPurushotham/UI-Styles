@@ -1,0 +1,40 @@
+{
+  "columns": [
+    {
+      "key": "raceDate",
+      "headerText": "Race Date",
+      "filterMask": "Search",
+      "type": "textbox"
+     
+    },
+    {
+      "key": "season",
+      "headerText": "Race Season",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+   
+    {
+        "key": "raceDay",
+        "headerText": "Race Day",
+        "filterMask": "Search",
+        "type": "date"
+      },
+      {
+    "key": "status",
+    "headerText": "Status",
+    "filterMask": "Search"
+  }, 
+  {
+    "key": "lastUpdatedDate",
+    "headerText": "Last Updated Date",
+    "filterMask": "Search",
+    "type": "date"
+  }
+  ],
+  "dataUrl": "vdi/olims/racing/racepool/all",
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+  "defaultSortColumn": "lastUpdatedDate"
+}

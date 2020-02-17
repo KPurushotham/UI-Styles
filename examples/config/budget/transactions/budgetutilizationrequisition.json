@@ -1,0 +1,46 @@
+﻿{
+  "columns": [
+    {
+      "key": "materialWorkService",
+      "headerText": "Material/Service/Work",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "processType",
+      "headerText": "Process Type",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "referenceNum",
+      "headerText": "Reference Number",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    {
+      "key": "recommendations",
+      "headerText": "Recommendations",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+    
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/budget/budgetutilizationrequisition/all",
+
+  "rowKey": {
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

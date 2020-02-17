@@ -1,0 +1,8 @@
+<div class="breadcrumbs left" ng-repeat="item in breadcrumbMap">
+    <a class="left " href="javascript:void(0);" data-ui-sref="{{item.stateKey}}">{{item.title}}</a>
+        <!--<span class="icon-right-arrow left"></span>-->
+    <i class="fa fa-chevron-right"></i>
+    <span class="left breadcrumb_heading" data-container="body" data-placement="right" data-toggle="tooltip"
+                title="{{activePageTitle}}" tooltip>{{activePageTitle}}</span>
+</div>
+<!--<div class="breadcrumbs left bread-margin"></div>-->

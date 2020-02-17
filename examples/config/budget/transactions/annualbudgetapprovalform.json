@@ -1,0 +1,142 @@
+﻿ {
+  "name": "annualbudgetapprovalform",
+  "saveUrl": "annualbudgetapproval/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "financialYear",
+              "title": "Financial Year",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "defaultValueByKey": "LS.financial_year",
+              "disabled": true
+            },
+            {
+              "modelKey": "department",
+              "title": "Department",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "defaultValueByKey": "LS.departmentCode-LS.department",
+              "dependancyEvents": [ "change" ],
+              "disabled": true
+            },
+            {
+              "modelKey": "costCenterId",
+              "fieldType": "hidden"
+            },
+            {
+              "modelKey": "costCenter",
+              "title": "Cost Center",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/deptcostcenters/all",
+                "displayKey": "costCenterCode-costCenterName",
+                "valueKey": "entityObjectId"
+              },
+              "initLoad": true,
+              "dependancyConfig": [
+                {
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "dependancyEvents": [ "change" ],
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+            {
+      "title": "Budget Approval",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "budget",
+              "fieldType": "grid",
+              "show": true,
+              "gridConfig": {
+                "gridFeatures": [ "row-edit", "edit" ],
+                "multiSelect": false,
+                "dataUrl": "vdi/olims/budget/annualbudgetapproval/all",
+                "modelKeyMap": [ "approvedBudget" ],
+                "columns": [
+                  {
+                    "key": "budgets",
+                    "headerText": "Budget Code - Description",
+                    "filterMask": "Search",
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "approvedBudget",
+                    "headerText": "Total Sanctioned Amount",
+                    "filterMask": "Search",
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "requestedBudget",
+                    "headerText": "Expenses",
+                    "filterMask": "Search",
+                    "type": "uppercase",
+                    "editable": true
+                  },
+                  {
+                    "key": "requestedBudget",
+                    "headerText": "Projected Expenses",
+                    "filterMask": "Search",
+                    "type": "uppercase",
+                    "editable": false
+                  },
+                  {
+                    "key": "requestedBudget",
+                    "headerText": "Total Expenses",
+                    "type": "uppercase",
+                    "editable": false
+                  },
+                  {
+                    "key": "approvedBudget",
+                    "headerText": "Required Budget",
+                    "filterMask": "Search",
+                    "type": "uppercase",
+                    "editable": false
+                  },
+                  {
+                    "key": "approvedBudget",
+                    "headerText": "Approved Budget",
+                    "filterMask": "Search",
+                    "type": "uppercase",
+                    "editable": true
+                  }
+                ]
+              },
+              "dependancyConfig": [
+                {
+                  "sourceKey": "costCenter",
+                  "event": "change",
+                  "loadData": {
+                    "keyParams": { "costCenterId": "costCenterId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "show": true }
+                }
+              ],
+              "disabled": false
+            }
+          ]
+        }
+      ]
+    }    
+  ]
+}

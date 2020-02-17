@@ -1,0 +1,273 @@
+﻿define(['angularAMD'], function (angularAMD) {
+    'use strict';
+
+	angularAMD.service('gridService', function ($rootScope, $q, $location, httpService, uiGridConstants, gridColumnMapping, gridDefaultFeatures, gridFeaturesMapping, constants, Notification, overlay) {
+        var self = this;
+        this.SUPPORTED_GRID_FEATURES = ["edit", "selection", "pagination", "row-edit"];
+
+        //this.defaultGridOptions = {
+        //    paginationPageSizes: [25, 50, 75],
+        //    paginationPageSize: 15,
+        //    rowHeight: 37,
+        //    useExternalPagination: true,
+        //    useExternalSorting: true,
+
+        //    enableGridMenu: true,
+        //    enableFiltering: true,
+        //    useExternalFiltering: true,
+        //    autoResize: true,
+        //    rowTemplate: "<div ng-dblclick=\"grid.appScope.rowDblClick(row)\" ng-repeat=\"(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name\" class=\"ui-grid-cell\" ng-class=\"{ 'ui-grid-row-header-cell': col.isRowHeader }\" ui-grid-cell dbl-click-row></div>",
+        //};
+
+        this.defaultGridOptions = {
+            paginationPageSizes: [25, 50, 75],
+            paginationPageSize: 15,
+            rowHeight: 37,
+            useExternalPagination: false,
+            useExternalSorting: false,
+            enableGridMenu: false,
+            enableFiltering: false,
+            useExternalFiltering: false,
+            autoResize: true,
+            rowTemplate: "<div ng-dblclick=\"grid.appScope.rowDblClick(row)\" ng-repeat=\"(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name\" class=\"ui-grid-cell\" ng-class=\"{ 'ui-grid-row-header-cell': col.isRowHeader }\" ui-grid-cell dbl-click-row></div>",
+        };
+        this.isSupportedGridFeatures = function (feature) {
+            return self.SUPPORTED_GRID_FEATURES.indexOf(feature) >= 0;
+        };
+        this.buildAndOverwriteDefaultOptions = function (gridParams) {
+            var currentFieldGridOptions = {};
+            var colInfo = self.buildColumnMap(gridParams.columns);
+			currentFieldGridOptions["columnDefs"] = colInfo;
+
+            var gridFeatures = gridParams["gridFeatures"];
+            if (gridFeatures && gridFeatures.indexOf("selection") >= 0) {
+                currentFieldGridOptions["enableRowSelection"] = true;
+                currentFieldGridOptions["multiSelect"] = gridParams["multiSelect"] || false;
+            }
+
+            for (var optionKey in self.defaultGridOptions) {
+                if (gridParams[optionKey] != undefined) {
+                    currentFieldGridOptions[optionKey] = gridParams[optionKey];
+                }
+            }
+
+            return currentFieldGridOptions;
+        };
+        this.buildEmptyRecord = function (columnsDef) {
+            if (columnsDef === undefined || columnsDef === null || columnsDef.length == 0) {
+                return null;
+            }
+            var emptyRow = {};
+            for (var i = 0; i < columnsDef.length; i++) {
+                var column = columnsDef[i];
+                emptyRow[column["key"]] = "";
+            }
+
+            return emptyRow;
+		};
+
+        this.buildColumnMap = function (columnsDef) {
+            if (columnsDef === undefined || columnsDef === null || columnsDef.length == 0) {
+                return null;
+            }
+            var gridColumns = [];
+			angular.forEach(columnsDef, function (column, key) {
+                    console.log("column ", column);
+                    
+                  
+
+                if (column[self.getMappedColumnName("hide")] == undefined ||
+                    column[self.getMappedColumnName("hide")] === false) {
+                        var gridColumn = {};
+
+                    angular.forEach(column,function(columPropValue,columProp){
+                        console.log("column prop",  columProp);
+                        gridColumn[self.getMappedColumnName(columProp)]=columPropValue
+                    });
+                    gridColumn.suppressRemoveSort = true;
+ 
+					gridColumns.push(gridColumn);
+					console.log("gridColumns=", gridColumns);
+                }
+            });
+			return gridColumns;//columnsDef;// gridColumns;
+		};
+
+        this.setEditableSetting = function (gridColumn, column) {
+            if (!angular.isUndefined(column["edittype"]) && column["edittype"] === "dropdown") {
+                gridColumn["editableCellTemplate"] = 'BootstrapSelect.html';
+
+                var columnDataConfig = column["dataConfig"];
+                var displayKey;
+                var valueKey;
+
+                if (!angular.isUndefined(columnDataConfig)) {
+                    displayKey = columnDataConfig["displayKey"];
+                    valueKey = columnDataConfig["valueKey"];
+
+                    if (!angular.isUndefined(columnDataConfig["localData"])) {
+                        gridColumn["editDropdownOptionsArray"] = columnDataConfig["localData"];
+                    }
+                }
+                gridColumn["editDropdownValueLabel"] = displayKey || "text";
+                gridColumn["editDropdownIdLabel"] = valueKey || "value";
+               // gridColumn["editModelField"] = column["key"];
+                
+            }
+		};
+
+        this.getGridPageData = function (gridParams, currentPage, pageSize, sortOrder, sortColumn, filterParams) {
+            var def = $q.defer();
+
+            var paginationCriteria;
+            var gridFeatures = gridParams["gridFeatures"];
+            if (gridFeatures && gridFeatures.indexOf("pagination") >= 0) {
+                var startIndex = ((currentPage - 1) * pageSize) || 1;
+                pageSize = pageSize || this.defaultGridOptions.paginationPageSize;
+                sortOrder = (sortOrder == uiGridConstants.ASC) ? "asc" : "desc"
+                sortColumn = sortColumn || gridParams.defaultSortColumn;
+
+                paginationCriteria = { "si": startIndex, "ps": pageSize, "so": sortOrder, "sc": sortColumn };
+            }
+            var gridUrls = buildGridUrls(gridParams, paginationCriteria, filterParams);
+            var dataUrl = gridUrls.dataUrl;
+            if (dataUrl) {
+                def.resolve();
+            }
+            return httpService.get(dataUrl)
+                .success(function (results) {
+                    if (results.success == false) {
+                        Notification.error({ message: 'URL<br/>' + constants.api_url + url, title: 'CODE ERROR - ' + results.code, delay: 5000 });
+                        overlay.hide();
+                    } else {
+                        overlay.hide();
+                        def.resolve(results);
+                    }
+                });
+            return def.promise;
+        };
+
+        var buildGridUrls = function (gridParams, paginationCriteria, filterParams) {
+            var dataUrl = gridParams.gridDataUrl || gridParams.dataUrl || "";
+            var pdfUrl = gridParams.gridPdfUrl || gridParams.pdfUrl || "";
+
+            dataUrl = self.buildUrlWithPaginationParams(dataUrl, paginationCriteria, filterParams, gridParams["additionalQSParams"], false);
+            pdfUrl = self.buildUrlWithPaginationParams(pdfUrl, paginationCriteria, filterParams, gridParams["additionalQSParams"], false);
+
+            return { "dataUrl": dataUrl, "pdfUrl": pdfUrl };
+		};
+
+        this.buildUrlWithPaginationParams = function (url, paginationCriteria, filterParams, additionalQSParams, isForfullData) {
+            var urlpath = $location.path();
+            var notificationParams = '';
+            if (urlpath.indexOf("/app/thingstodo/") > 0) {
+                notificationParams = "&append=notification";
+            }
+            var paginationParams = '';
+            if (paginationCriteria) {
+                var paramPairs = [];
+                for (var key in paginationCriteria) {
+                    if (!isForfullData || (isForfullData && ["si", "ps"].indexOf(key) < 0)) {
+                        paramPairs.push(key + "=" + paginationCriteria[key]);
+                    }
+                }
+                paginationParams = paramPairs.join("&");
+            }
+
+            if (url.indexOf("?") == -1) {
+                url = url + "?";
+            }
+            else {
+                url = url + "&";
+            }
+
+            url = url + paginationParams + notificationParams;
+            if (filterParams) {
+                if (!angular.isString(filterParams)) {
+
+                    var filterParamsPairs = [];
+                    for (var key in filterParams) {
+                        var valueObj = filterParams[key];
+                        var value;
+                        if (!angular.isString(valueObj)) {
+                            value = valueObj["value"];
+                        }
+                        else {
+                            value = valueObj;
+                        }
+                        filterParamsPairs.push(key + "=" + value);
+                    }
+                    filterParams = filterParamsPairs.join("&");
+                }
+                if (!filterParams.startsWith("&")) {
+                    filterParams = "&" + filterParams;
+                }
+                url = url + filterParams;
+            }
+            if (additionalQSParams) {
+                if (!additionalQSParams.startsWith("&")) {
+                    additionalQSParams = "&" + additionalQSParams;
+                }
+                url = url + additionalQSParams;
+            }
+
+            return url;
+        };
+
+		this.getMappedColumnName = function (key) {
+<<<<<<< Updated upstream
+           var val = "";
+=======
+          //  debugger;
+			var val = "";
+>>>>>>> Stashed changes
+			if (gridColumnMapping[key] != "" && gridColumnMapping[key] != undefined) {
+				val = gridColumnMapping[key];
+			} else {
+				val = key;
+			}
+			return val;
+		}
+
+		this.getMappedGridFeatures = function (key) {
+			var val = "";
+			if (gridFeaturesMapping[key] != "" && gridFeaturesMapping[key] != undefined) {
+				val = gridFeaturesMapping[key];
+			} else {
+				val = key;
+			}
+			return val;
+		}
+	 
+		this.buildGridFeatures = function (gridCurFeatures) {
+			var gFeatures = {};
+			if (gridCurFeatures === undefined || gridCurFeatures === null || gridCurFeatures.length == 0) {
+				gFeatures = gridDefaultFeatures;
+			} else {
+				gFeatures = {};
+				
+				angular.forEach(gridCurFeatures, function (value, key) {
+					gFeatures[self.getMappedGridFeatures(key)] = value;
+					
+				});
+
+				 
+			}
+			return gFeatures;
+        }
+        
+        this.getGridData = function(gridApi){
+            var rowData =[];
+
+            gridApi.forEachNode( function(node) {  
+                rowData.push(node.data);
+            });
+            return rowData;
+        }
+        
+
+        //this.
+    });
+
+    return angularAMD;
+});

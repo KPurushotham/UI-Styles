@@ -1,0 +1,16 @@
+<div ng-if="field.show" class="select_field left {{field.cssClass}}"  ng-class="(parentForm.save_submit && parentForm.df_form[field.modelKey+ fieldIndex].$error.required)? 'form_error_field' : ''">
+    <div id="{{field.modelKey+ fieldIndex}}" dynamic-name="field.modelKey+ fieldIndex" ng-model="field.modelValue" ng-required="field.required"
+        ng-disabled="(field.disabled || parentForm.readOnlyForm) ? true :false" dependancy-events="field.dependancyEvents" event-dependents="field.dependants"
+        ng-click="eventHandler()">
+        <span class="glyphicon glyphicon-refresh"></span>
+    </div>
+</div>
+<!--<button type="button" class="btn btn-default btn-sm" id="{{field.modelKey+ fieldIndex}}" dynamic-name="field.modelKey+ fieldIndex"
+        ng-model="field.modelValue"
+        ng-required="field.required"
+        ng-disabled="(field.disabled || parentForm.readOnlyForm) ? true :false"  dependancy-events="field.dependancyEvents" event-dependents="field.dependants" ng-click="eventHandler()" >
+        <!--ng-disabled="(field.disabled || parentForm.readOnlyForm) ? true :false" event-dependents="field.dependants" onclick="eventHandler()" dependancy-events="field.dependancyEvents">-->
+<!--ng-disabled="(field.disabled || parentForm.readOnlyForm) ? true :false" event-dependents="field.dependants" ng-click="eventHandler()dependancy-events="field.dependancyEvents" >-->
+<!--<span class="glyphicon glyphicon-refresh"></span>
+   </button>
+</div>-->

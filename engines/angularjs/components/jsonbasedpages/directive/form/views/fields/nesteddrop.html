@@ -1,0 +1,22 @@
+<!--parentmultiple--{{field.parentmultiple}}-->
+<nested-select options="field.options"
+class="input_field left {{field.cssClass}}"
+    placeholder="Search items"
+    label="{{field.title}}"
+    id="{{field.modelKey+ fieldIndex}}"
+    dynamic-name="field.modelKey+ fieldIndex"
+    dependancy-events="field.dependancyEvents"
+    modelValue="field.modelValue"
+    defaultvalue="{{field.defaultValue}}"
+    isloaded="{{field.isLoaded}}"
+    ng-required="field.required"
+    ng-disabled="(field.disabled || parentForm.readOnlyForm ||(parentForm.screenMode=='EDIT' && field.disabledInEditMode)) ? true :false"
+    showSelectAll="false"
+    parentmultiple ={{field.parentmultiple}}
+    childtmultiple ={{field.childtmultiple}}
+    multiple
+    collapsible
+    show-selection
+    allow-select-all>
+</nested-select>
+

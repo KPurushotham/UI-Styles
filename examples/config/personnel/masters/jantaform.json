@@ -1,0 +1,64 @@
+{
+  "name": "jantaform",
+  "saveUrl": "groupjantalevel/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "financialYear",
+              "title": "Financial Year",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/core/financialYear/all",
+                "displayKey": "text",
+                "valueKey": "value"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+           {
+              "modelKey": "gradeLevel",
+              "title": "Grade Level",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "coverageAmount",
+              "title": "Coverage Amount",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "gpaAmount",
+              "title": "GPA Amount",
+			  "cssClass": "col-2",	
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+            },
+             {
+              "modelKey": "gjpaAmount",
+              "title": "GJPA Amount",
+			  "cssClass": "col-2",		 
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}

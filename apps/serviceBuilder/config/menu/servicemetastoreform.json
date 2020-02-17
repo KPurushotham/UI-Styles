@@ -1,0 +1,79 @@
+{
+  "name": "servicemetastoreform",
+  "saveUrl": "vdi/servicebuilder/servicemetastore/save",
+  "getOneUrl": "vdi/servicebuilder/servicemetastore/get/one",
+  "externalService": "servicemetastoreService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "apiCode",
+              "cssClass": "col_2",
+              "title": "Api Code",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "contextCode",
+              "cssClass": "col_2",
+              "title": "Context Code",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "serviceCode",
+              "cssClass": "col_1",
+              "title": "Service Code",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "tenantId",
+              "cssClass": "col_1",
+              "title": "Tenant Id",
+              "fieldType": "number",
+              "required": true
+            },
+            {
+              "modelKey": "isActive",
+              "title": "Is Active",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "metaJson",
+              "cssClass": "col_2",
+              "title": "Meta Json",
+              "fieldType": "ace",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

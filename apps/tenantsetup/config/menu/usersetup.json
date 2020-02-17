@@ -1,0 +1,132 @@
+{
+  "name": "usersetup",
+  "externalService": "usersetupService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "tenantsetup.usersetupform"
+    }
+  ],
+  "criteria": {
+    "showButton": true,
+    "cssClass": "col-md-12 padding0 ",
+    "rowDivisions": [
+      {
+        "columns": [
+          {
+            "fields": [
+              {
+                "modelKey": "tenantId",
+                "title": "Tenants",
+                "fieldType": "dropdown",
+                "cssClass": "col-md-3",
+                "dataConfig": {
+                  "dataUrl": "vdi/admin/tenant/all",
+                  "displayKey": "tenantTitle",
+                  "valueKey": "tenantId"
+                },
+                "disabled": false,
+                "required": true
+              },
+              {
+                "cssClass": "col-md-2 butn-cls-margntop padding-lftrht0",
+                "title": "GET RESULTS",
+                "fieldType": "button",
+                "handlerName": "getResults",
+                "ignoreInServiceModel": true,
+                "required": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "columns": [
+    {
+      "field": "userEntityId",
+      "headerName": "User Entity Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "entityTypeCode",
+      "headerName": "Entity Type Code",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "tenantId",
+      "headerName": "Tenant Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "tenantName",
+      "headerName": "Tenant Name",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "firstName",
+      "headerName": "First Name",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "lastName",
+      "headerName": "Last Name",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "userName",
+      "headerName": "User Name",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "email",
+      "headerName": "Email",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "phone",
+      "headerName": "Phone No",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "company",
+      "headerName": "Company",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "additionalConfig",
+      "headerName": "Additional Config",
+      "filter": "agSetColumnFilter",
+      "formatType": "Json",
+      "hide": true
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "isPrimary",
+      "headerName": "Is Primary",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    }
+  ],
+  "dataUrl": "vdi/admin/application/user/setup/all",
+  "editScreenState": "app.tenantsetup.usersetupform",
+  "rowKey": {
+    "userEntityId": "userEntityId"
+  },
+  "defaultSortColumn": "userEntityId"
+}

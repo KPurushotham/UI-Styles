@@ -1,0 +1,87 @@
+{
+  "name": "outstationwinsjockeyform",
+  "saveUrl": "master/workflow",
+  "validationUrl": "",
+  "alwaysUpdateMode": true,
+  "submitted": false,
+  "sections": [
+
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "jockeyId",
+              "title": "Jockey",
+              "fieldType": "dropdown",
+              "cssClass": "col_3",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/appjockeyoutwins/all",
+                "displayKey": "jockeyName",
+                "valueKey": "entityObjectId"
+              },
+              "defaultValue": "UP.entityObjectId",
+              "initLoad": true,
+              "dependancyEvents": [
+                {
+                  "eventName": "change",
+                  "modelKeyMapTobeFilled": {
+                    "age": "age",
+                    "allowance": "allowance",
+                    "hrcWins": "hrcwins"
+                  }
+                }
+              ],
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "age",
+              "title": "Age",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "allowance",
+              "title": "Allowances",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "disabled": true,
+              "required": false
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "hrcWins",
+              "title": "HRC Wins",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "outstationWins",
+              "title": "Out Station Wins",
+              "fieldType": "textbox",
+              "cssClass": "col_3",
+              "disabled": true,
+              "required": false
+            },
+            {
+              "modelKey": "outstationWins",
+              "title": "Current O.S. Wins",
+              "cssClass": "col_3",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

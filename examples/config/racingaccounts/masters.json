@@ -1,0 +1,95 @@
+﻿[
+  
+  {
+    "stateName": "racingaccounts.horsemaintanancecostmaster",
+    "url": "horsemaintanancecostmaster",
+    "pattern": "LISTING",
+    "viewName": "racingAccountsSection",
+    "data": {
+      "title": "Basic Maintenance Cost(BMC)",
+      "addScreenStateName" :"racingaccounts.horsemaintanancecostform"
+    }
+  },
+  {
+    "stateName": "racingaccounts.horsemaintanancecostform",
+    "url": "horsemaintanancecostform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId"],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "BMC",
+    "fieldMap": {
+      "entityCode": "hmcCode",
+      "shortName": "hmcShortName",
+      "note": "hmcDescription"
+    },
+    "codeKeyParam": "entityCode=maintanance&entityGroupCode=racac&entityTypeCode=racac",
+    "viewName": "racingAccountsSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "racingaccounts.billdeductionmaster",
+    "url": "billdeductionmaster",
+    "pattern": "LISTING",
+    "viewName": "racingAccountsSection",
+    "data": {
+      "title": "BMC Bill Deduction",
+      "addScreenStateName" :"racingaccounts.billdeductionform"
+
+    }
+  },
+   {
+    "stateName": "racingaccounts.billdeductionform",
+    "url": "billdeductionform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId"],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "BILL_DEDUCTION",
+    "fieldMap": {
+      "categoryCode": {
+        "jsonKey": "categoryId",
+        "title": "Category Type",
+         "codeKey": "hmcShortName",
+        "dataUrl": "vdi/olims/racingaccount/horsemaintanancecost/all?fk-status=ACTIVE",
+        "displayKey": "hmcCode-hmcShortName",
+        "valueKey": "entityObjectId"
+      },
+      "entityCode": "billDeducCode",
+      "shortName": "billDeducShortName",
+      "note": "billDeducDescription"
+    },
+    "codeKeyParam": "entityCode=billdeduction&entityGroupCode=racac&entityTypeCode=racac",
+    "viewName": "racingAccountsSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "racingaccounts.oatsmaster",
+    "url": "oatsmaster",
+    "pattern": "LISTING",
+    "viewName": "racingAccountsSection",
+    "data": {
+      "title": "Oats and WheatBran/Barley",
+      "addScreenStateName" :"racingaccounts.oatsform"
+
+    }
+  },
+  {
+    "stateName": "racingaccounts.oatsform",
+    "url": "oatsform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityCode", "entityObjectId"],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "SF",
+    "entityType": "FODDER",
+    "fieldMap": {
+      "entityCode": "fodderCode",
+      "shortName": "fodderShortName",
+      "note": "fodderDescription"
+    },
+    "codeKeyParam": "entityCode=fodder&entityGroupCode=racac&entityTypeCode=racac",
+    "viewName": "racingAccountsSection",
+    "data": { "title": "New" }
+  }
+  
+]

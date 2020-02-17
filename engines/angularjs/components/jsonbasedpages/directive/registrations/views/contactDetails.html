@@ -1,0 +1,31 @@
+<div class="paid_vendor_container full_width">
+    <div class="sub_heading full_width no-margin">
+        <h5 class="full_width">Contact Details</h5>
+    </div>
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.contactName.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Represented By <span class="mandatory">*</span></label>
+        <div>
+            <input type="text" class="full_width" name="contactName" ng-disabled="disableFlag" ng-model="partyModel.contact.contactName" required>
+        </div>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Phone</label>
+        <div>
+            <input type="text" class="full_width" name="phoneNumber" ng-disabled="disableFlag" ng-model="partyModel.contact.phoneNumber" numbers-only>
+        </div>
+    </div>
+    <div class="input_field col_3 left" ng-class="(saveSubmit && partyForm.mobileNumber.$error.required)? 'form_error_field' : ''">
+        <label class="full_width">Mobile <span class="mandatory">*</span></label>
+        <div>
+            <input type="text" class="full_width" name="mobileNumber" ng-disabled="disableFlag" ng-model="partyModel.contact.mobileNumber" numbers-only required>
+        </div>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Fax</label>
+        <input type="text" class="full_width" name="fax" ng-disabled="disableFlag" ng-model="partyModel.contact.fax" numbers-only>
+    </div>
+    <div class="input_field col_3 left">
+        <label class="full_width">Email</label>
+        <input type="email" class="full_width" name="emailId" ng-disabled="disableFlag" ng-model="partyModel.contact.emailId">
+    </div>
+</div>

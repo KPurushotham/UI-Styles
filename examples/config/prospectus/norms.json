@@ -1,0 +1,189 @@
+﻿[
+  {
+    "stateName": "prospectus.stakenorm",
+    "url": "stakenorm",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Stakes",
+      "addScreenStateName": "prospectus.stakeform"
+    }
+  },
+
+  {
+    "stateName": "prospectus.stakeform",
+    "url": "stakeform",
+    "showInLeftManu": false,
+    "editKeys": [ "stakesCode", "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "STAKES",
+    "viewName": "prospectusSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "prospectus.racecalendarnorm",
+    "url": "racecalendarnorm",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Race Calendar",
+      "addScreenStateName": "prospectus.racecalendarnormform"
+    }
+  },
+  {
+    "stateName": "prospectus.racecalendarnormform",
+    "url": "racecalendarnormform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "RACE_CALENDAR",
+    "viewName": "prospectusSection",
+    "data": { "title": "New" }
+  },
+  {
+    "stateName": "prospectus.subsidynormnorm",
+    "showInLeftManu": false,
+    "url": "subsidynormnorm",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Subsidy",
+      "addScreenStateName": "prospectus.subsidynormform"
+    }
+  },
+  {
+    "stateName": "prospectus.subsidynormform",
+    "url": "subsidynormform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "SUBSIDY_NORM",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "stateName": "prospectus.contingencynorm",
+    "showInLeftManu": false,
+    "url": "contingencynorm",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Contingency",
+      "addScreenStateName": "prospectus.contingencyform"
+    }
+  },
+  {
+    "stateName": "prospectus.contingencyform",
+    "url": "contingencyform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "COTINGENCY",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "stateName": "prospectus.breederpremiumnorm",
+    "showInLeftManu": false,
+    "url": "breederpremiumnorm",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Breeder Premium",
+      "addScreenStateName": "prospectus.breederpremiumform"
+    }
+  },
+  {
+    "stateName": "prospectus.breederpremiumform",
+    "url": "breederpremiumform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "BREEDER_PREMIUM_NORM",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "stateName": "prospectus.trainersbeneloventfundnormnorm",
+    "showInLeftManu": false,
+    "url": "trainersbeneloventfundnormnorm",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Trainers Benelovent Fund",
+      "addScreenStateName": "prospectus.trainersbeneloventfundform"
+    }
+  },
+  {
+    "stateName": "prospectus.trainersbeneloventfundform",
+    "url": "trainersbeneloventfundform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "TRAINERS_BENELOVENT_FUND_NORM",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "stateName": "prospectus.feetypeamountlinknorm",
+    "showInLeftManu": false,
+    "url": "feetypeamountlinknorm",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "Fee Type Amount",
+      "addScreenStateName": "prospectus.feetypeamountlinkform"
+    }
+  },
+  {
+    "stateName": "prospectus.feetypeamountlinkform",
+    "url": "feetypeamountlinkform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "FEE_TYPE_AC_NORM",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "New"
+    }
+  },
+  {
+    "stateName": "prospectus.houserentconcessionnorm",
+    "showInLeftManu": false,
+    "url": "houserentconcessionnorm",
+    "pattern": "LISTING",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "House Rent Concession",
+      "addScreenStateName": "prospectus.houserentconcessionform"
+    }
+  },
+  {
+    "stateName": "prospectus.houserentconcessionform",
+    "url": "houserentconcessionform",
+    "showInLeftManu": false,
+    "editKeys": [ "entityObjectId" ],
+    "notificationKey": [ "notificationId" ],
+    "pattern": "CF",
+    "entityType": "HOUSE_RENT_CONCESSION",
+    "viewName": "prospectusSection",
+    "data": {
+      "title": "New"
+    }
+  }
+]

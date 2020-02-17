@@ -1,0 +1,86 @@
+{
+  "name": "dataqueryruleform",
+  "saveUrl": "vdi/reportsdesigner/dataqueryrule/get/save",
+  "getOneUrl": "vdi/reportsdesigner/dataqueryrule/get/one",
+  "externalService": "dataqueryruleconfigService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "queryRuleCode",
+              "cssClass": "col_1",
+              "title": "Query Rule Code",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "fromClause",
+              "cssClass": "col_1",
+              "title": "From Clause",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "groupByClause",
+              "cssClass": "col_1",
+              "title": "Group By Clause",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "whereClause",
+              "cssClass": "col_1",
+              "title": "Where Clause",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "isActive",
+              "title": "Is Active",
+              "cssClass": "col_1",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "procConfigJson",
+              "cssClass": "col_2",
+              "title": "Proc Config Json",
+              "fieldType": "ace",
+              "required": true
+            },
+            {
+              "modelKey": "selectClause",
+              "cssClass": "col_2",
+              "title": "Select Clause",
+              "fieldType": "ace",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

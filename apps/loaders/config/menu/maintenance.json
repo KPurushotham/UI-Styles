@@ -1,0 +1,70 @@
+{
+    "name": "maintenance",
+    "externalService": "",
+    "initLoad": true,
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.maintenanceform"
+      }
+    ],
+    "features": {
+      "enableGridMenu": false,
+      "groupSelectsChildren": true,
+      "suppressRowClickSelection": true
+    },
+    "criteria": {
+      "showButton": true,
+      "cssClass": "col-md-12 padding0",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "raceDate",
+              "fieldType": "date",
+              "ignoreInServiceModel": true,
+              "defaultValue": false,
+              "title": "Race Date",
+              "cssClass": "default-css",
+              "required": false,
+              "show": true,
+              "style": "width:10%;"
+            }
+          ]
+        }
+      ]
+    },
+    "columns": [
+      {
+        "field": "trackId",
+        "hide": true
+      },
+      {
+        "field": "trackName",
+        "headerName": "Track Name",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "raceDate",
+        "headerName": "Race Date",
+        "filter": "agSetColumnFilter",
+        "formatType": "Date"
+      },
+      {
+        "field": "noOfRaces",
+        "headerName": "Number of Races",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "totalPurse",
+        "headerName": "Total Daily Purse Paid",
+        "filter": "agSetColumnFilter"
+      }
+    ],
+    "dataUrl": "",
+    "editScreenState": "app.loaders.maintainceform",
+    "rowKey": {
+      "trackId": "trackId"
+    },
+    "defaultSortColumn": "trackId"
+  }

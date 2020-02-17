@@ -1,0 +1,79 @@
+﻿ {
+  "name": "departmentbudgetstatusform",
+  "saveUrl": "annualbudgetapproval/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "title": "Cost Center Wise Budget Status",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "fieldType": "grid",
+              "show": true,
+              "gridConfig": {
+                "gridFeatures": [ "selection", "edit" ],
+                "multiSelect": true,
+                "dataUrl": "vdi/olims/budget/annualbudgetapproval/all",
+                "modelKeyMap": [ "" ],
+                "columns": [
+                  {
+                    "key": "budget",
+                    "headerText": "Cost Center Code-Description",
+                    "filterMask": "Search",
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "approvedBudget",
+                    "headerText": "Sanctioned Budget",
+                    "filterMask": "Search",
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "requestedBudget",
+                    "headerText": "Additional Sanctioned",
+                    "filterMask": "Search",
+                    "type": "uppercase",
+                    "editable": true
+                  },
+                  {
+                    "key": "approvedBudget",
+                    "headerText": "Special Sanctioned",
+                    "filterMask": "Search",
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "requestedBudget",
+                    "headerText": "Trans Out",
+                    "filterMask": "Search",
+                    "type": "uppercase",
+                    "editable": true
+                  },
+                  {
+                    "key": "approvedBudget",
+                    "headerText": "Received Amount",
+                    "filterMask": "Search",
+                    "type": "uppercase"
+                  }
+                ]
+              },
+              "initLoad": true,
+              "dependancyConfig": [
+                {
+                  "loadData": {
+                    "keyParams": { "departmentId": "LS.departmentId" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "show": true }
+
+                }
+              ],
+              "disabled": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

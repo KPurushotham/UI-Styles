@@ -1,0 +1,204 @@
+{
+    "name": "manageaccountreportsform",
+    "noWorkflow": true,
+    "submitted": false,
+    "externalService": "manageaccountreportsService",
+    "sections": [
+        {
+            "rowDivisions": [
+                {
+                    "fields": [
+                        {
+                            "fieldType": "label",
+                            "modelKey": "note",
+                            "innerHtml": "<span style=\"font-weight:bold; margin-top:25px; display:block; font-size:13px; color:#a8a8a8\">Global Wagering Group:</span>",
+                            "ignoreInServiceModel": true,
+                            "disabled": true,
+                            "required": false
+                        },
+                        {
+                            "modelKey": "beginDate",
+                            "title": "Begin Date",
+                            "fieldType": "date",
+                            "ignoreInServiceModel": true,
+                            "required": false
+                        },
+                        {
+                            "modelKey": "endDate",
+                            "title": "End Date",
+                            "fieldType": "date",
+                            "ignoreInServiceModel": true,
+                            "required": false
+                        },
+                        {
+                            "modelKey": "download",
+                            "title": "Get Data",
+                            "fieldType": "button",
+                            "handlerName": "downloadExcel",
+                            "ignoreInServiceModel": true,
+                            "required": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Tote Pool Report",
+            "rowDivisions": [
+                {
+                    "fields": [
+                        {
+                            "modelKey": "gridData",
+                            "title": "Report Details",
+                            "fieldType": "grid",
+                            "initLoad": true,
+                            "localData": true,
+                            "show": false,
+                            "gridSummaryLabel": "",
+                            "gridConfig": {
+                                "modelKeyMap": [
+                                    "gwgPlayer",
+                                    "gwgMaster",
+                                    "prgCode",
+                                    "program",
+                                    "poolType",
+                                    "community",
+                                    "bettingGroup",
+                                    "LWO",
+                                    "turnOver",
+                                    "payout",
+                                    "rebate",
+                                    "rebatePct",
+                                    "grossPL",
+                                    "playerNetPl"
+                                ],
+                                "features": {
+                                    "enableGridMenu": false,
+                                    "floatingFilter": false,
+                                    "enableFilter": true,
+                                    "enableSorting": true,
+                                    "toolPanelSuppressRowGroups": true,
+                                    "suppressSizeToFit": true
+                                },
+                                "columns": [
+                                    {
+                                        "field": "gwgPlayer",
+                                        "headerName": "Player",
+                                        "headerCssClass": "resizable-header",
+                                        "filter": "agSetColumnFilter",
+                                        "editable": false,
+                                        "hide": false,
+                                        "tooltipField": "gwgPlayer",
+                                        "suppressMovable": false
+                                    },
+                                    {
+                                        "field": "gwgMaster",
+                                        "headername": "Master",
+                                        "headerCssClass": "resizable-header",
+                                        "hide": false,
+                                        "editable": false,
+                                        "tooltipField": "gwgMaster",
+                                        "suppressMovable": false
+                                    },
+                                    {
+                                        "field": "prgCode",
+                                        "headername": "Code",
+                                        "headerCssClass": "resizable-header",
+                                        "hide": false,
+                                        "editable": false,
+                                        "tooltipField": "prgCode",
+                                        "suppressMovable": false
+                                    },
+                                    {
+                                        "headerName": "Program",
+                                        "field": "program",
+                                        "headerCssClass": "resizable-header",
+                                        "hide": false,
+                                        "editable": false,
+                                        "tooltipField": "program",
+                                        "suppressMovable": false
+                                    },
+                                    {
+                                        "field": "poolType",
+                                        "headerName": "Pool Type",
+                                        "filter": "agDateColumnFilter",
+                                        "cellEditor": "datePicker",
+                                        "hide": false,
+                                        "editable": false,
+                                        "tooltipField": "poolType",
+                                        "suppressMovable": false
+                                    },
+                                    {
+                                        "headerName": "Community ",
+                                        "field": "community",
+                                        "filter": "agSetColumnFilter",
+                                        "hide": false,
+                                        "editable": false,
+                                        "tooltipField": "community",
+                                        "suppressMovable": false
+                                    },
+                                    {
+                                        "field": "bettingGroup",
+                                        "headerName": "Betting Group",
+                                        "filter": "agSetColumnFilter",
+                                        "hide": false,
+                                        "editable": false,
+                                        "tooltipField": "bettingGroup",
+                                        "suppressMovable": false
+                                    },
+                                    {
+                                        "field": "LWO",
+                                        "headerName": "LWO",
+                                        "filter": "agSetColumnFilter",
+                                        "hide": false,
+                                        "editable": false,
+                                        "tooltipField": "LWO",
+                                        "suppressMovable": false
+                                    },
+                                    {
+                                        "field": "turnOver",
+                                        "headerName": "Turn Over",
+                                        "filter": "agSetColumnFilter",
+                                        "hide": false,
+                                        "editable": false,
+                                        "tooltipField": "turnOver",
+                                        "suppressMovable": false
+                                    },
+                                    {
+                                        "field": "payout",
+                                        "headerName": "Payout",
+                                        "tooltipField": "payout",
+                                        "suppressMovable": false
+                                    },
+                                    {
+                                        "field": "rebate",
+                                        "headerName": "Rebate",
+                                        "tooltipField": "rebate",
+                                        "suppressMovable": false
+                                    },
+                                    {
+                                        "field": "grossPL",
+                                        "headerName": "Gross PLy",
+                                        "filter": "agSetColumnFilter",
+                                        "hide": false,
+                                        "editable": false,
+                                        "tooltipField": "grossPL",
+                                        "suppressMovable": false
+                                    },
+                                    {
+                                        "field": "playerNetPl",
+                                        "headerName": "Player NetPl",
+                                        "tooltipField": "playerNetPl",
+                                        "suppressMovable": false
+                                    }
+                                ]
+                            },
+                            "disabled": false,
+                            "required": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

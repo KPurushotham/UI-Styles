@@ -1,0 +1,35 @@
+﻿
+    <div class="table_container full_width table_container-grid inside-grid-container ag-theme-material {{field.cssClass}}" ng-if="field.show">
+        <label ng-class="{'hide' :!field.showTitle }" class="full_width">{{field.title}}</label>
+        <div>
+            <a class="btn green_btn" ng-click="actionHanlder(action, this, sectionDataModel);" ng-repeat="action in field.externalActions">
+                <span class="icon-btn icon-check"></span>
+                <span class="btn-text">{{action.actionLabel}}</span>
+            </a>
+        </div>
+<<<<<<< Updated upstream
+    
+        <div dynamic-name="field.modelKey+ fieldIndex" id="{{field.modelKey+ fieldIndex}}" ag-grid="field.gridOptions" ng-model="field.modelValue"
+             ng-disabled="(field.disabled || parentForm.readOnlyForm) ? true :false"
+         grid-features="gridFeatures" class="grid ag-theme-material" style="height:500px">
+=======
+        <button class="btn btn-success" id='toggleFiltering' ng-click="toggleFiltering()">Toggle Filtering 1</button>
+        <div dynamic-name="field.modelKey+ fieldIndex" id="{{field.modelKey+ fieldIndex}}" ag-grid="field.gridOptions" ng-model="field.modelValue"
+             ng-disabled="(field.disabled || parentForm.readOnlyForm) ? true :false"
+             grid-features="gridFeatures" class="grid ag-theme-material">
+>>>>>>> Stashed changes
+            <div class="no-rows ag-theme-material" ng-show="!field.gridOptions.data.length">
+                <div class="msg">
+                    <span>{{field.gridLoadData}}</span>
+                </div>
+            </div>
+        </div>
+        <div ng-show="field.gridSummaryLabel!=null">
+            <strong>{{field.gridSummaryLabel }}:</strong>
+            {{ (field.gridOptions.data!=null ? field.gridOptions.data.length: 0) | number }}
+        </div>
+
+    </div>
+
+
+

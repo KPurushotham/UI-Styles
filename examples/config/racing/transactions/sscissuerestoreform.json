@@ -1,0 +1,95 @@
+{
+  "name": "sscissueform",
+  "saveUrl": "sscissuerestore/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+
+          "fields": [
+
+            {
+              "modelKey": "trainerId",
+              "title": "Trainer",
+              "cssClass": "col_3",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/trainerregistration/all",
+                "displayKey": "trainerName",
+                "valueKey": "trainerId"
+              },
+              "disabled": false,
+              "required": true
+            }
+
+          ]
+
+        },
+        {
+
+          "fields": [
+
+            {
+              "modelKey": "horseId",
+              "title": "Horse",
+              "cssClass": "col_6",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/veterinary/horse/all",
+                "displayKey": "name",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            },
+
+            {
+              "modelKey": "currentSscStatus",
+              "title": "Current SSC Status",
+              "cssClass": "col_2",
+              "fieldType": "dropdown",
+              "disabled": false,
+              "required": true
+            },
+
+            {
+              "modelKey": "lastUpdatedDate",
+              "title": "Incident Date",
+              "fieldType": "date",
+              "defaultValueByKey": "currentDate",
+              "cssClass": "col_2",
+              "disabled": true,
+              "required": true
+
+            }
+
+
+
+          ]
+
+        },
+        {
+
+          "fields": [
+            {
+              "modelKey": "starterObsrRemarksId",
+              "title": "Starte Observation Remarks",
+              "cssClass": "col_9",
+              "fieldType": "dropdown"
+              "disabled": false,
+              "required": true
+
+            }
+
+
+
+          ]
+
+        }
+      ]
+    }
+  ]
+
+}

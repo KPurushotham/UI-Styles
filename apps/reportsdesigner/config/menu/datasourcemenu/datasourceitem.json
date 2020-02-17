@@ -1,0 +1,68 @@
+{
+  "name": "datasourceitem",
+  "externalService": "datasourceitemconfigService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "reportsdesigner.datasourcemenu.datasourceitemform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "dataSourceItemId",
+      "headerName": "Data Source Item Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "dataSourceId",
+      "headerName": "Data Source Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "itemValue",
+      "headerName": "Item Value",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "itemText",
+      "headerName": "Item Text",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "childDataSourceId",
+      "headerName": "Child Data Source Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "configJson",
+      "headerName": "Config Json",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "dataQueryRuleId",
+      "headerName": "Data Query Rule Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+
+  ],
+  "dataUrl": "vdi/reportsdesigner/datasourceitem/get/all",
+  "editScreenState": "app.reportsdesigner.datasourcemenu.datasourceitemform",
+  "rowKey": {
+    "dataSourceItemId": "dataSourceItemId"
+  },
+  "defaultSortColumn": "dataSourceItemId"
+}

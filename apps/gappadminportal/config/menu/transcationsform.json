@@ -1,0 +1,124 @@
+{
+    "name": "transcationsform",
+    "noWorkflow": true,
+    "submitted": false,
+    "externalService": "transcationService",
+    "actions": [],
+    "isManidatoryRequired": false,
+    "sections": [
+      {
+        "rowDivisions": [
+            {
+                "fields": [
+                    {
+                        "modelKey": "transcationgrid",
+                        "title": "Transcation Details",
+                        "fieldType": "grid",
+                        "initLoad": true,
+                        "style": "display: none;",
+                        "localData": true,
+                        "show": false,
+                        "gridSummaryLabel": "total",
+                        "gridConfig": {
+                            "modelKeyMap": [],
+                            "features": {
+                                "enableGridMenu": false,
+                                "floatingFilter": false,
+                                "enableFilter": true,
+                                "enableSorting": true,
+                                "toolPanelSuppressRowGroups": true,
+                                "suppressSizeToFit": true,
+                                "groupDefaultExpanded": true
+                            },
+                            "columns": [
+                                {
+                                    "field": "id",
+                                    "headerName": "id",
+                                    "tooltipField": "id",
+                                    "hide": true
+                                },
+                                {
+                                    "field": "activityDate",
+                                    "headerName": "Activity Date",
+                                    "tooltipField": "activityDate",
+                                    "hide": true
+                                },
+                                {
+                                    "field": "activity",
+                                    "headerName": "Activity",
+                                    "tooltipField": "activity",
+                                    "hide": false
+                                },
+                                {
+                                    "field": "amount",
+                                    "headerName": "Amount",
+                                    "tooltipField": "amount",
+                                    "hide": false
+                                },
+                                {
+                                    "field":"meet",
+                                    "headerName": "Meet",
+                                    "tooltipField": "meet",
+                                    "hide": true
+                                },
+                                {
+                                    "field":"raceNumber",
+                                    "headerName": "Race Number",
+                                    "tooltipField": "raceNumber",
+                                    "hide": true
+                                },
+                                {
+                                    "field":"bettingGroup",
+                                    "headerName": "Betting Group",
+                                    "tooltipField": "bettingGroup",
+                                    "hide": true
+                                },
+                                {
+                                    "field":"raceNumber",
+                                    "headerName": "Race Number",
+                                    "tooltipField": "raceNumber",
+                                    "hide": true
+                                },
+                                {
+                                    "field":"comment",
+                                    "headerName": "Comment",
+                                    "tooltipField": "comment",
+                                    "hide": false
+                                },
+                                {
+                                    "field":"postDate",
+                                    "headerName": "Date",
+                                    "tooltipField": "postDate",
+                                    "hide": false
+                                },
+                                {
+                                    "field":"currencyCode",
+                                    "headerName": "Currency Code",
+                                    "tooltipField": "currencyCode",
+                                    "hide": true
+                                },
+                                {
+                                    "field":"currencyId",
+                                    "headerName": "currency Id",
+                                    "tooltipField": "currencyId",
+                                    "hide": true
+                                },
+                                {
+                                    "field":"communityAccountId",
+                                    "headerName": "community Account Id",
+                                    "tooltipField": "communityAccountId",
+                                    "hide": true
+                                }
+                            ]
+                        },
+                        "disabled": false,
+                        "required": false
+                    }
+                ]
+            }
+       
+        ]
+      }
+
+    ]
+  }

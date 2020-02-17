@@ -1,0 +1,35 @@
+{
+    "name": "weathercodesform",
+    "saveUrl": "vdi/racemaster/WeatherCodes/save",
+    "getOneUrl": "vdi/racemaster/WeatherCodes/one",
+    "externalService": "",
+    "validationUrl": "",
+    "noWorkflow": true,
+    "submitted": false,
+  
+    "sections": [
+      {
+        "rowDivisions": [
+          {
+            "fields": [
+              {
+                "modelKey": "code",
+                "title": "Code",
+                "disabledInEditMode": true,
+                "fieldType": "textbox",
+                "required": true
+              },
+              {
+                "modelKey": "description",
+                "title": "Description",
+                "disabledInEditMode": true,
+                "fieldType": "textbox",
+                "required": true
+              }
+            ]
+          }
+  
+        ]
+      }
+    ]
+  }

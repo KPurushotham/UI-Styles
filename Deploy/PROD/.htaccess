@@ -1,0 +1,9 @@
+
+RewriteEngine on
+RewriteBase /ids/
+RewriteCond %{ENV:REDIRECT_STATUS} 200 [OR]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^ - [L]
+RewriteRule ^ index.html [L]

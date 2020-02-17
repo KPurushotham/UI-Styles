@@ -1,0 +1,377 @@
+﻿{
+  "name": "authoritymappingform",
+  "saveUrl": "authority/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "authorityNumber",
+              "title": "Authority Num",
+              "cssClass": "col_1",
+              "initLoad": true,
+              "fieldType": "systemcode",
+              "keyGenConfig": {
+                "params": "entityCode=authority&entityGroupCode=rac&entityTypeCode=rac"
+              },
+
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "raceYear",
+              "title": "Race Year",
+              "fieldType": "date",
+              "cssClass": "col_1",
+              "disabled": false,
+              "required": false
+            },
+            {
+              "modelKey": "partyTypeId",
+              "title": "Party Type",
+              "codeKey": "entityObjectId",
+              "fieldType": "dropdown",
+              "cssClass": "col_2",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Trainer(hrc)",
+                    "value": "TRAINER(HRC)"
+                  },
+                  {
+                    "text": "owner",
+                    "value": "OWNER"
+                  },
+                  {
+                    "text": "Trainer(otherclub)",
+                    "value": "TRAINER(OTHERCLUB)"
+                  },
+                  {
+                    "text": "agent",
+                    "value": "AGENT"
+                  }
+                ]
+              },
+              "initLoad": true,
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "disabled": false,
+              "required": true
+            },
+            {
+              "modelKey": "partyId",
+              "title": "Party",
+              "fieldType": "dropdown",
+              "cssClass": "col_2",
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "dependancyConfig": [
+                {
+                  "sourceKey": "partyTypeId",
+                  "event": "change",
+                  "dataConfigs": {
+                    "AGENT": {
+                      "dataUrl": "vdi/olims/racing/agentregistration/all?fk-status=ACTIVE",
+                      "displayKey": "agentName",
+                      "valueKey": "entityObjectId"
+                    },
+                    "TRAINER(HRC)": {
+                      "dataUrl": "vdi/olims/racing/trainerregistration/all?fk-status=ACTIVE&fk-licenseType=A",
+                      "displayKey": "trainerName",
+                      "valueKey": "entityObjectId"
+                    },
+                    "TRAINER(OTHERCLUB)": {
+                      "dataUrl": "vdi/olims/racing/trainerregistration/all?fk-status=ACTIVE&fk-licenseType=B",
+                      "displayKey": "trainerName",
+                      "valueKey": "entityObjectId"
+                    },
+                    "OWNER": {
+                      "dataUrl": "vdi/olims/racing/ownerregistration/all?fk-status=ACTIVE",
+                      "displayKey": "ownerName",
+                      "valueKey": "entityObjectId"
+                    }
+
+                  },
+                  "loadData": {
+                    "keyParams": {
+                      "departmentId": "LS.departmentId"
+                    }
+                  },
+                  "defaultValue": "",
+                  "validations": {
+                    "disabled": false
+                  }
+                }
+              ],
+              "disabled": true,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "title": "Existing Authority Details:",
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+
+              "initLoad": true,
+              "fieldType": "grid",
+              "show": true,
+              "gridConfig": {
+                "gridFeatures": [ "edit", "row-edit" ],
+                "multiSelect": false,
+                "dataUrl": "vdi/olims/racing/authority/all",
+                "modelKeyMap": [ "partyTypeId", "partyId", "authorizationEntities", "authorityNumber","effectiveFromDate" ],
+                "columns": [
+                  {
+
+                    "key": "partyTypeId",
+                    "headerText": "Praty Type",
+                    "filterMask": "Search",
+                    "edittype": "textbox",
+                    "editable": false,
+                    "type": "uppercase"
+                  },
+                  {
+
+                    "key": "partyId",
+                    "headerText": "Party",
+                    "filterMask": "Search",
+                    "edittype": "textbox",
+                    "editable": false,
+                    "type": "uppercase"
+                  },
+                  {
+
+                    "key": "authorizationEntities",
+                    "headerText": "Authorization Entries",
+                    "filterMask": "Search",
+                    "edittype": "textbox",
+                    "editable": false,
+                    "type": "uppercase"
+                  },
+                  {
+
+                    "key": "authorityNumber",
+                    "headerText": "Authority No",
+                    "fieldType": "systemcode",
+                    "edittype": "textbox",
+                    "editable": false,
+                    "type": "uppercase"
+                  },
+                  {
+
+                    "key": "effectiveFromDate",
+                    "headerText": "Effective From",
+                    "filterMask": "Search",
+                    "edittype": "date",
+                    "editable": false,
+                    "type": "uppercase"
+                  },
+                  {
+                    "key": "effectiveToDate",
+                    "headerText": "Effective To",
+                    "filterMask": "Search",
+                    "edittype": "date",
+                    "editable": true
+                  }
+                  
+                ]
+              },
+              "dependancyConfig": [
+                {
+                  "sourceKey": "entityObjectId",
+                  "event": "change",
+                  "loadData": {
+                    "keyParams": {
+                      "trainerId": "UP.entityObjectId"
+                    }
+                  },
+                  "defaultValue": "",
+                  "validations": {
+                    "show": true
+                  }
+                }
+              ],
+
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "New Authority Details:",
+      "rowDivisions": [
+        {
+          "fields": [
+
+            {
+              "useGetOneModelAsFieldDataModel": true,
+              "fieldType": "composite-repeater-field",
+              "existingItemConfig": {
+                "removable": false,
+                "updatable": true
+              },
+              "modelKeyMap": [ "partyTypeId", "partyId", "equipmentOnPeriod", "remarks", "entityObjectId", "status" ],
+              "compositefields": [
+                {
+                  "modelKey": "partyTypeId",
+                  "title": "Party Type",
+                  "codeKey": "entityObjectId",
+                  "fieldType": "dropdown",
+                  "cssClass": "col_2",
+                  "dataConfig": {
+                    "localData": [
+                      {
+                        "text": "Trainer(hrc)",
+                        "value": "TRAINER(HRC)"
+                      },
+                      {
+                        "text": "owner",
+                        "value": "OWNER"
+                      },
+                      {
+                        "text": "agent",
+                        "value": "AGENT"
+                      },
+                      {
+                        "text": "Trainer(otherclub)",
+                        "value": "TRAINER(OTHERCLUB)"
+                      }
+                    ]
+                  },
+                  "initLoad": true,
+                  "dependancyEvents": [
+                    {
+                      "eventName": "change"
+                    }
+                  ],
+                  "disabled": false,
+                  "required": true
+                },
+                {
+                  "modelKey": "partyId",
+                  "title": "Party",
+                  "fieldType": "dropdown",
+                  "cssClass": "col_2",
+                  "dependancyEvents": [
+                    {
+                      "eventName": "change"
+                    }
+                  ],
+                  "dependancyConfig": [
+                    {
+                      "sourceKey": "partyTypeId",
+                      "event": "change",
+                      "dataConfigs": {
+                        "AGENT": {
+                          "dataUrl": "vdi/olims/racing/agentregistration/all?fk-status=ACTIVE",
+                          "displayKey": "agentName",
+                          "valueKey": "entityObjectId"
+                        },
+                        "TRAINER(HRC)": {
+                          "dataUrl": "vdi/olims/racing/trainerregistration/all?fk-status=ACTIVE&fk-licenseType=A",
+                          "displayKey": "trainerName",
+                          "valueKey": "entityObjectId"
+                        },
+                        "TRAINER(OTHERCLUB)": {
+                          "dataUrl": "vdi/olims/racing/trainerregistration/all?fk-status=ACTIVE&fk-licenseType=B",
+                          "displayKey": "trainerName",
+                          "valueKey": "entityObjectId"
+                        },
+                        "OWNER": {
+                          "dataUrl": "vdi/olims/racing/ownerregistration/all?fk-status=ACTIVE",
+                          "displayKey": "ownerName",
+                          "valueKey": "entityObjectId"
+                        }
+
+                      },
+                      "loadData": {
+                        "keyParams": {
+                          "departmentId": "LS.departmentId"
+                        }
+                      },
+                      "defaultValue": "",
+                      "validations": {
+                        "disabled": false
+                      }
+                    }
+                  ],
+                  "disabled": true,
+                  "required": true
+                },
+                {
+                  "modelKey": "authorizationEntities",
+                  "title": " Authorization entries",
+                  "cssClass": "col_20",
+                  "fieldType": "dropdown",
+                  "dataConfig": {
+                    "localData": [
+                      {
+                        "text": "Horse Entry / Scratch",
+                        "value": "HORSE ENTRY/SCRATCH"
+                      },
+                      {
+                        "text": "Horse Declaration",
+                        "value": "HORSE DECLARATION"
+                      },
+                      {
+                        "text": "Payment",
+                        "value": "PAYMENT"
+                      },
+                      {
+                        "text": "Receive",
+                        "value": "RECEIVE"
+                      },
+                      {
+                        "text": "Transfer",
+                        "value": "TRANSFER"
+                      },
+                      {
+                        "text": "Horse Buy",
+                        "value": "HORSE BUY"
+                      },
+                      {
+                        "text": "Horse Sale",
+                        "value": "HORSE SALE"
+                      },
+                      {
+                        "text": "Horse Lease",
+                        "value": "HORSE LEASE"
+                      }
+                    ]
+                  },
+                  "disabled": false,
+                  "required": false
+                },
+                {
+                  "modelKey": "effectiveToDate",
+                  "title": " Effective From",
+                  "cssClass": "col_20",
+                  "fieldType": "date",
+                  "disabled": false,
+                  "required": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

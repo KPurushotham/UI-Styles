@@ -1,0 +1,43 @@
+﻿{
+  "columns": [
+    {
+      "key": "stakesCode",
+      "headerText": "Code",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+
+    {
+      "key": "stakesValue",
+      "headerText": "Value",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+
+    {
+      "key": "stakesShortName",
+      "headerText": "Short Name",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/prospectus/stakesm/all",
+
+  "rowKey": {
+    "stakesCode":"stakesCode",
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

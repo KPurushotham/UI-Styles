@@ -1,0 +1,139 @@
+{
+  "name": "reportby",
+  "externalService": "reportByService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "reportby.reportbyform"
+    }
+  ],
+  "criteria": {
+    "showButton": true,
+    "cssClass": "col-md-12 padding0",
+    "rowDivisions": [
+      {
+        "columns": [
+          {
+            "fields": [
+              {
+                "modelKey": "tenantId",
+                "title": "Tenants",
+                "fieldType": "dropdown",
+                "defaultValue":"0",
+                "cssClass": "col-md-3",
+                "dependancyEvents": [
+                  {
+                    "eventName": "change",
+                    "handlerName": "listingTenantDropdownHandler"
+                  }
+                ],
+                "dataConfig": {
+                  "dataUrl": "vdi/admin/tenant/all",
+                  "displayKey": "tenantTitle",
+                  "valueKey": "tenantId"
+                },
+                "disabled": false,
+                "required": true
+              },
+              {
+                "cssClass": "col-md-2 butn-cls-margntop padding-lftrht0",
+                "title": "GET RESULTS",
+                "fieldType": "button",
+                "handlerName": "getResults",
+                "ignoreInServiceModel": true,
+                "required": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "columns": [
+    {
+      "field": "dataSourceItemId",
+      "headerName": "Data Source Item Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "dataSourceCode",
+      "headerName": "Data Source Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "selectClause",
+      "headerName": "Select Clause",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "fromClause",
+      "headerName": "From Clause",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "whereClause",
+      "headerName": "where Clause",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "orderByClause",
+      "headerName": "Order By Clause",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "groupByClause",
+      "headerName": "Group By Clause",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "tenantId",
+      "headerName": "Tenant Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "dataSourceId",
+      "headerName": "Data Source Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "itemValue",
+      "headerName": "Item Value",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "itemText",
+      "headerName": "Item Text",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "dataQueryRuleId",
+      "headerName": "Data QueryRule Id",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "queryRuleCode",
+      "headerName": "Query Rule Code",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    }
+  ],
+  "dataUrl": "vdi/reports/reportby/options/all",
+  "editScreenState": "app.reportby.reportbyform",
+  "rowKey": {
+    "dataSourceItemId": "dataSourceItemId",
+    "tenantId": "tenantId"
+  },
+  "defaultSortColumn": "dataSourceItemId"
+}

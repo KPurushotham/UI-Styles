@@ -1,0 +1,33 @@
+{
+    "name": "plusindicatorform",
+    "saveUrl": "vdi/racemaster/PlusIndicator/save",
+    "getOneUrl": "vdi/racemaster/PlusIndicator/one",
+    "externalService": "",
+    "validationUrl": "",
+    "noWorkflow": true,
+    "submitted": false,
+    "sections": [
+        {
+            "rowDivisions": [
+                {
+                    "fields": [
+                        {
+                            "modelKey": "code",
+                            "title": "Code",
+                            "disabledInEditMode": true,
+                            "fieldType": "textbox",
+                            "required": true
+                        },
+                        {
+                            "modelKey": "description",
+                            "title": "Description",
+                            "disabledInEditMode": true,
+                            "fieldType": "textbox",
+                            "required": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

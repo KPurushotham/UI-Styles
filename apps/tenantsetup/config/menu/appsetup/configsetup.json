@@ -1,0 +1,75 @@
+{
+  "name": "configsetup",
+  "externalService": "configsetupService",
+  "actions": [
+    {
+      "title": "Add",
+      "navigateTo": "tenantsetup.appsetup.configsetupform"
+    }
+  ],
+  "columns": [
+    {
+      "field": "applicationEntityId",
+      "headerName": "Application Entity Id",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "entityTypeCode",
+      "headerName": "Entity Type Code",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    },
+    {
+      "field": "appKey",
+      "headerName": "App Key",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "applicationTitle",
+      "headerName": "Application Title",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "urlRoute",
+      "headerName": "Url Route",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "urlMap",
+      "headerName": "Url Map",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": false
+    },
+    {
+      "field": "logo",
+      "headerName": "Application Logo",
+      "filter": "agSetColumnFilter",
+      "hide": false
+    },
+    {
+      "field": "additionalConfig",
+      "headerName": "Additional Config",
+      "filter": "agSetColumnFilter",
+      "formatType": "JSON",
+      "hide": true
+    },
+    {
+      "field": "isActive",
+      "headerName": "Is Active",
+      "filter": "agSetColumnFilter",
+      "hide": true
+    }
+
+  ],
+  "dataUrl": "vdi/admin/application/config/getall",
+  "editScreenState": "app.tenantsetup.appsetup.configsetupform",
+  "rowKey": {
+    "applicationEntityId": "applicationEntityId"
+  },
+  "defaultSortColumn": "applicationEntityId"
+}

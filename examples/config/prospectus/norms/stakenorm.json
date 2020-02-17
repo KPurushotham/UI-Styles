@@ -1,0 +1,59 @@
+﻿{
+  "columns": [
+   {
+      "key": "stakesCode",
+      "headerText": "Code",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+	 {
+      "key": "shortName",
+      "headerText": "Short Name",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+   {
+      "key": "financialYear",
+      "headerText": "Race Year",
+      "filterMask": "Search"
+    },
+	
+   {
+      "key": "season",
+      "headerText": "Race Season",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+	 {
+      "key": "raceCategory",
+      "headerText": "Race Category",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+	{
+      "key": "raceSubCategory",
+      "headerText": "Race Sub Category",
+      "filterMask": "Search",
+      "type": "uppercase"
+    },
+	
+   
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/prospectus/stakes/all",
+
+  "rowKey": {
+  "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

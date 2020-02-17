@@ -1,0 +1,34 @@
+﻿{
+  "columns": [
+    {
+      "key": "jockeyAge",
+      "headerText": "Age Limit",
+      "filterMask": "Search"
+    },
+    {
+      "key": "effectiveFromDate",
+      "headerText": "Effective From",
+      "filterMask": "Search"
+    },
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+
+  "dataUrl": "vdi/olims/racing/jockeyallowance/all",
+
+  "rowKey": {
+   
+    "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate",
+  "editPageUrl": "racing/jockeyallowanceform"
+}

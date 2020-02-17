@@ -1,0 +1,30 @@
+{
+    "name":"timingmethod",
+    "actions": [
+      {
+        "title": "Add",
+        "navigateTo": "loaders.codes.timingmethodform"
+      }
+    ],
+    "columns": [
+      {
+        "field": "code",
+        "headerName": "Code",
+        "filter": "agSetColumnFilter"
+      },
+      {
+        "field": "description",
+        "headerName": "Description",
+        "filter": "agSetColumnFilter"
+      }
+  
+    ],
+    "dataUrl": "vdi/racemaster/TimingMethod/all",
+    "editScreenState": "app.loaders.codes.timingmethodform",
+    "rowKey": {
+      "code": "code"
+    },
+    "defaultSortColumn": "code"
+  }
+
+  

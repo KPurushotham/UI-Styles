@@ -1,0 +1,8 @@
+{
+    "name": "poolsreport",
+    "noWorkflow": true,
+    "submitted": false,
+    "externalService": "reportService",
+    "ReportConfigUrl":"",
+    "reportCode":"POOLS_REPORT"
+  }

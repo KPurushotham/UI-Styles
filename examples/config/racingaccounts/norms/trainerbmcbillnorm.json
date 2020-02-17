@@ -1,0 +1,29 @@
+﻿{
+  "columns": [
+   {
+      "key": "effectiveFromDate",
+      "headerText": "Effective From",
+    "filterMask": "Search",
+    "type": "date"
+    },
+	
+	
+    {
+      "key": "status",
+      "headerText": "Status",
+      "filterMask": "Search"
+    },
+    {
+      "key": "lastUpdatedDate",
+      "headerText": "Last Updated Date",
+      "type": "date"
+    }
+  ],
+  "dataUrl": "vdi/olims/racingaccount/trainerbmcbillnorms/all",
+
+  "rowKey": {
+  "entityObjectId": "entityObjectId"
+  },
+
+  "defaultSortColumn": "lastUpdatedDate"
+}

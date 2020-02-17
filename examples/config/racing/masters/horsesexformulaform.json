@@ -1,0 +1,69 @@
+{
+  "name": "horsesexformulaform",
+  "saveUrl": "horsesexformula/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+
+            {
+              "modelKey": "horseSexCode",
+              "title": "Code",
+              "fieldType": "systemcode",
+              "cssClass": "col-1",
+              "keyGenConfig": {
+                "params": "entityCode=horsesexformula&entityGroupCode=rac&entityTypeCode=rac"
+              }
+            },
+            {
+              "modelKey": "minAge",
+              "title": "Min Age",
+              "fieldType": "textbox",
+              "cssClass": "col-6",
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "maxAge",
+              "title": "Max Age",
+              "fieldType": "textbox",
+              "cssClass": "col-6",
+              "disabled": false,
+              "required": true
+
+            }
+
+          ]
+        },
+        {
+          "fields": [
+
+
+            {
+              "modelKey": "shortSexCode",
+              "title": "Short Name",
+              "fieldType": "textbox",
+              "cssClass": "col_20",
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "sexDescription",
+              "title": "Description",
+              "fieldType": "textbox",
+              "cssClass": "col_80",
+              "disabled": false,
+              "required": false
+
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

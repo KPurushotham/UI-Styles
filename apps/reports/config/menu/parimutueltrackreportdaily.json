@@ -1,0 +1,8 @@
+{
+  "name": "parimutueltrackreportdaily",
+  "noWorkflow": true,
+  "submitted": false,
+  "externalService": "reportService",
+  "ReportConfigUrl": "",
+  "reportCode": "PARIMUTUEL_TRACK_REPORT_DAILY"
+}

@@ -1,0 +1,7 @@
+﻿<div class="table_container full_width table_container-grid inside-grid-container ag-theme-material {{field.cssClass}}" 
+     style="{{field.style}}"  ng-show="field.show">
+    <label ng-class="{'hide' :!field.showTitle }" class="full_width">{{field.title}}</label>
+    <div class="full_width" id="{{field.modelKey}}"
+         dynamic-name="field.modelKey"  ng-disabled="(field.disabled || parentForm.readOnlyForm) ? true :false" ></div>
+</div>
+

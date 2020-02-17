@@ -1,0 +1,87 @@
+﻿{
+  "name": "trainersbeneloventfundform",
+  "saveUrl": "trainersbeneloventfund/save",
+  "queryStringParams": {"entityObjectId":"entityObjectId" },
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "licenseTypeId",
+              "title": "License Type",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racingaccount/licensetype/all?fk-status=ACTIVE",
+                "displayKey": "licenseTypeCode-licenseTypeShortName",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "indicater",
+              "title": "Indicater",
+              "fieldType": "radio",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Credit",
+                    "value": "Cr"
+                  },
+                  {
+                    "text": "Debit",
+                    "value": "Dr"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "withStakes",
+              "title": "With Stakes",
+              "fieldType": "radio",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "Yes",
+                    "value": "Y"
+                  },
+                  {
+                    "text": "No",
+                    "value": "N"
+                  }
+                ]
+              },
+              "disabled": false,
+              "required": true
+
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "accountId",
+              "title": "Account",
+              "fieldType": "dropdown",
+               "dataConfig": {
+                "dataUrl": "vdi/olims/generalaccount/accounts/all?fk-status=ACTIVE",
+                "displayKey": "acCode-shortname",
+                "valueKey": "entityObjectId"
+              },
+              "disabled": false,
+              "required": true
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}

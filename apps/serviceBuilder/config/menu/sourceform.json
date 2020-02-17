@@ -1,0 +1,97 @@
+{
+  "name": "sourceform",
+  "saveUrl": "vdi/servicebuilder/source/save",
+  "getOneUrl": "vdi/servicebuilder/source/get/one",
+  "externalService": "sourceService",
+  "validationUrl": "",
+  "noWorkflow": true,
+  "submitted": false,
+
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "sourceCode",
+              "cssClass": "col_4",
+              "title": "Source Code",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "sourceType",
+              "cssClass": "col_4",
+              "title": "Source Type",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "sourceName",
+              "cssClass": "col_4",
+              "title": "Source Name",
+              "fieldType": "textbox",
+              "required": true
+            },
+            {
+              "modelKey": "tenantId",
+              "cssClass": "col_4",
+              "title": "Tenant Id",
+              "fieldType": "number",
+              "required": true
+            }            
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "description",
+              "cssClass": "col_6",
+              "title": "Description",
+              "fieldType": "textbox",
+              "required": false
+            },
+            {
+              "modelKey": "globalEntitySourceCode",
+              "cssClass": "col_4",
+              "title": "Global Entity Source Code",
+              "fieldType": "textbox",
+              "required": false
+            },
+            {
+              "modelKey": "isActive",
+              "title": "Is Active",
+              "cssClass": "col_4",
+              "fieldType": "dropdown",
+              "mode": "Edit",
+              "dataConfig": {
+                "localData": [
+                  {
+                    "text": "True",
+                    "value": "t"
+                  },
+                  {
+                    "text": "False",
+                    "value": "f"
+                  }
+                ]
+              },
+              "required": true
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "connectionJson",
+              "cssClass": "col_2",
+              "title": "Connection Json",
+              "fieldType": "ace",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

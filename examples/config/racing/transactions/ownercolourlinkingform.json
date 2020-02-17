@@ -1,0 +1,85 @@
+{
+  "name": "ownercolourlinkingform",
+  "saveUrl": "vdi/olims/racing/ownercolorlinkservice/save",
+  "getOneUrl": "vdi/olims/racing/ownercolorlink/getone",
+  "queryStringParams": { "ownerId": "ownerId" },
+  "noWorkflow": true,
+  "workflowUrl": "",
+  "validationUrl": "",
+  "submitted": false,
+  "alwaysUpdateMode": true,
+  "mainModelName": "ownerColorLinkData",
+  "titleByKey": "UP.ownerId",
+  "entityTypeKey": "entityType",
+  "defaultStatus": "Active",
+  "getOneMultipleItems": true,
+  "sections": [
+    {
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "ownerMainId",
+              "ignoreInServiceModel": true,
+              "title": "Owner Name",
+              "codeKey": "id",
+              "fieldType": "dropdown",
+              "cssClass": "col_6",
+              "defaultValueByKey": "UP.ownerId",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/ownerbox/all?fk-status=ACTIVE",
+                "displayKey": "ownerName",
+                "valueKey": "entityObjectId"
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+
+              ],
+
+              "disabled": true,
+              "required": true
+            },
+
+            {
+              "modelKey": "suiteColorMainId",
+              "title": "Suit Colour",
+              "ignoreInServiceModel": true,
+              "codeKey": "entityObjectId",
+              "fieldType": "dropdown",
+              "cssClass": "col_22",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/racing/ownercolorctg/all?colorCtgId=1",
+                "displayKey": "ownerColorDescription",
+                "valueKey": "entityObjectId"
+              },
+              "dependancyEvents": [
+                {
+                  "eventName": "change"
+                }
+              ],
+              "disabled": false,
+              "required": true
+            },
+             {
+                  "modelKey": "capColorId",
+                  "title": "Cap Colour",
+                  "codeKey": "entityObjectId",
+                  "sectionDataModel": "",
+                  "fieldType": "dropdown",
+                  "cssClass": "col_22",
+                  "dataConfig": {
+                    "dataUrl": "vdi/olims/racing/ownercolorctg/all?colorCtgId=2",
+                    "displayKey": "ownerColorDescription",
+                    "valueKey": "entityObjectId"
+                  },
+                  "disabled": false,
+                  "required": true
+                }
+          ]
+        }
+      ]
+    }
+  ]
+}

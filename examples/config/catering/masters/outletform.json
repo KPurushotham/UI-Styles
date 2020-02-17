@@ -1,0 +1,101 @@
+﻿{
+  "name": "trainersbeneloventfundform",
+  "saveUrl": "trainersbeneloventfund/save",
+  "validationUrl": "",
+  "submitted": false,
+  "sections": [
+    {
+      
+      "rowDivisions": [
+        {
+          "fields": [
+            {
+              "modelKey": "costCenter",
+              "title": "Cost Center",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/costcenter/all?fk-status=ACTIVE",
+                "displayKey": "costCenterCode-costCenterName",
+                "valueKey": "entityObjectId"
+              },
+              "dependancyEvents": [ "change" ],
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "budget",
+              "title": "Budget",
+              "fieldType": "dropdown",
+              "dataConfig": {
+                "dataUrl": "vdi/olims/budget/budgetm/all?fk-status=ACTIVE",
+                "displayKey": "budgetCode-shortName",
+                "valueKey": "entityObjectId"
+              },
+              "dependancyEvents": [ "change" ],
+             "dependancyConfig": [
+                {
+                  "sourceKey": "costCenter",
+                  "event": "change",
+                  "loadData": {
+                    "keyParams": { "costCenterCode": "costCenter" }
+                  },
+                  "defaultValue": "",
+                  "validations": { "disabled": false }
+
+                }
+              ],
+              "disabled": true,
+              "required": true
+            },
+            {
+              "modelKey": "outletsCode",
+              "title": "code",
+              "fieldType": "systemcode", 
+               "keyGenConfig": {
+                "params": "entityCode=party&entityGroupCode=party&entityTypeCode=party"
+              },             
+              "dependancyConfig": [
+                {
+                  "sourceKey": [ "costCenter", "budget" ],
+                  "event": "change",
+                  "valuePrefix": {
+                    "keys": [ "costCenter", "budget" ],
+                    "delimiter": "-"
+                  },
+                  "defaultValue": ""
+
+                }
+
+              ],
+              "disabled": true,
+              "required": true
+
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "modelKey": "shortName",
+              "title": "Short Name",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+
+            },
+            {
+              "modelKey": "description",
+              "title": "Description",
+              "fieldType": "textbox",
+              "disabled": false,
+              "required": true
+
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}
